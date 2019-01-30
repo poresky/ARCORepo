@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="17008000">
+<Project Type="Project" LVVersion="18008000">
 	<Property Name="varPersistentID:{1272C918-97F8-49AB-97B0-382D81688D04}" Type="Ref">/My Computer/BoP Libraries/BoPInputs.lvlib/Shaft RPM</Property>
 	<Property Name="varPersistentID:{1B39138B-682B-4554-B55B-D8DEC281B744}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/Compressor Temperature Out</Property>
 	<Property Name="varPersistentID:{1EA96E21-E785-47A5-B4D8-07A6BAF7B075}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/CTAH 1 Temperature Out</Property>
