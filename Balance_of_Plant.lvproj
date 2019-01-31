@@ -35,7 +35,6 @@
 			<Item Name="BoPOutputs.lvlib" Type="Library" URL="../BoPOutputs.lvlib"/>
 		</Item>
 		<Item Name="BoP.vi" Type="VI" URL="../BoP.vi"/>
-		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
