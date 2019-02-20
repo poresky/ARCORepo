@@ -524,14 +524,22 @@ DirectoryIndex index.htm
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 			</Item>
 			<Item Name="FM_Unit_Conversion.vi" Type="VI" URL="../FM_Unit_Conversion.vi"/>
-			<Item Name="GENser Config Current Limit.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Current Limit.vi"/>
-			<Item Name="GENser Config Local-Remote.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Local-Remote.vi"/>
-			<Item Name="GENser Config Output On-Off.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Output On-Off.vi"/>
-			<Item Name="GENser Config Voltage Limit.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Voltage Limit.vi"/>
-			<Item Name="GENser Initialize.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Initialize.vi"/>
-			<Item Name="GENser Meas Output Current.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Meas Output Current.vi"/>
-			<Item Name="GENser Meas Output Voltage.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Meas Output Voltage.vi"/>
-			<Item Name="GENser Wait.vi" Type="VI" URL="/../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Wait.vi"/>
+			<Item Name="GENser Address Select.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/_GENser.llb/GENser Address Select.vi"/>
+			<Item Name="GENser Checksum Append.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/_GENser.llb/GENser Checksum Append.vi"/>
+			<Item Name="GENser Checksum Verify.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/_GENser.llb/GENser Checksum Verify.vi"/>
+			<Item Name="GENser Config Current Limit.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Current Limit.vi"/>
+			<Item Name="GENser Config Local-Remote.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Local-Remote.vi"/>
+			<Item Name="GENser Config Output On-Off.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Output On-Off.vi"/>
+			<Item Name="GENser Config Voltage Limit.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Config Voltage Limit.vi"/>
+			<Item Name="GENser Convert Errors.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/_GENser.llb/GENser Convert Errors.vi"/>
+			<Item Name="GENser Formulate VI Call Chain.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/_GENser.llb/GENser Formulate VI Call Chain.vi"/>
+			<Item Name="GENser Initialize.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Initialize.vi"/>
+			<Item Name="GENser Meas Output Current.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Meas Output Current.vi"/>
+			<Item Name="GENser Meas Output Voltage.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Meas Output Voltage.vi"/>
+			<Item Name="GENser Read Instrument Data.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Read Instrument Data.vi"/>
+			<Item Name="GENser Revision Query.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Revision Query.vi"/>
+			<Item Name="GENser Wait.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Wait.vi"/>
+			<Item Name="GENser Write to Instrument.vi" Type="VI" URL="../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser.llb/GENser Write to Instrument.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -542,17 +550,6 @@ DirectoryIndex index.htm
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{0DF06F52-8FF9-4B62-919B-713A6FB06FB5}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">Brain_Distribution</Property>
-				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
-				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
-				<Property Name="Bld_excludedDirectory[1].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectory[2]" Type="Path">/C/ProgramData/National Instruments/InstCache/17.0</Property>
-				<Property Name="Bld_excludedDirectory[3]" Type="Path">/C/Users/Darcy/Documents/LabVIEW Data/2017(32-bit)/ExtraVILib</Property>
-				<Property Name="Bld_excludedDirectory[4]" Type="Path">instr.lib</Property>
-				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectory[5]" Type="Path">user.lib</Property>
-				<Property Name="Bld_excludedDirectory[5].pathType" Type="Str">relativeToAppDir</Property>
-				<Property Name="Bld_excludedDirectoryCount" Type="Int">6</Property>
 				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/Brain_Distribution</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
@@ -566,7 +563,7 @@ DirectoryIndex index.htm
 				<Property Name="Destination[1].path" Type="Path">/c/ni-rt/startup/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{DD86BA4D-88BB-43FB-8B41-FB687BC24894}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{072AFA9B-97EB-4B93-8846-421D0EB09198}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/CIET-PXIe/Core.vi</Property>
