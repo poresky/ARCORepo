@@ -77,7 +77,6 @@
 	<Property Name="varPersistentID:{3D7EB087-E676-423C-8E97-FA1BF9A8821C}" Type="Ref">/My Computer/Spoof Libraries/SpoofDAQ_Variables.lvlib/SysFluidTemps_S</Property>
 	<Property Name="varPersistentID:{3DFCE313-A423-4A6E-BED6-378F44E1FFB4}" Type="Ref">/My Computer/DAQ Libraries/Core_Variables.lvlib/Output Voltage 1</Property>
 	<Property Name="varPersistentID:{3E1EB3DF-0FE3-48FD-B522-A7328BA333C3}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/ST-12-SE</Property>
-	<Property Name="varPersistentID:{3E90ACF6-794E-42BC-8EAF-BED7FED898C3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Chat</Property>
 	<Property Name="varPersistentID:{3EBCB4DC-787A-4CB2-A73B-B1467E85F5DF}" Type="Ref">/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/TCHX Frequency_R</Property>
 	<Property Name="varPersistentID:{3F7F2DED-780C-4BF8-BD49-D8FBCCB80218}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-2_R</Property>
 	<Property Name="varPersistentID:{415DE37C-BFD1-49BA-8CCF-51CFE3D62BBB}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/AT-01</Property>
@@ -100,6 +99,7 @@
 	<Property Name="varPersistentID:{4F17D939-2BC9-4D22-8E74-007362F15F92}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-24</Property>
 	<Property Name="varPersistentID:{4F435BD7-03F8-4AAB-BAD4-4EB80D6C53D4}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-20</Property>
 	<Property Name="varPersistentID:{4F842FB9-80C8-44A8-A3CA-C8F47ED0E0BF}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-31</Property>
+	<Property Name="varPersistentID:{50A8182D-D37D-403A-B22D-26F02A1D39C9}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Broadcasting</Property>
 	<Property Name="varPersistentID:{51BBD523-56D3-47F8-AF22-60B1C23DEB77}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/BT-32_S</Property>
 	<Property Name="varPersistentID:{52B205E8-B0CA-4974-9858-F6EB755159F1}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Core Error Out_R</Property>
 	<Property Name="varPersistentID:{532AB04C-88C4-4366-A868-38D957D1CBF6}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Loop Period_S</Property>
@@ -153,6 +153,7 @@
 	<Property Name="varPersistentID:{7E1DC355-D1C9-4E99-BD71-4DBE201BF4D1}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-35_S</Property>
 	<Property Name="varPersistentID:{7EB270EE-5818-41AC-97EA-839F7B908ED1}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/ST-12-N_S</Property>
 	<Property Name="varPersistentID:{806FF7F9-FC60-4ADF-BD48-8B223D3F7B62}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-64_S</Property>
+	<Property Name="varPersistentID:{80D385D6-31B3-4497-9C0F-18BBC6D96A91}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Core Error Msg</Property>
 	<Property Name="varPersistentID:{81460F03-6D0C-4CBE-9557-68777C987A84}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/ST-14-W</Property>
 	<Property Name="varPersistentID:{82E7BE6D-7692-453E-B93F-878DD22F99AA}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/ST-13_R</Property>
 	<Property Name="varPersistentID:{82F25156-4961-432C-AA2B-48BD687D36E0}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Connection</Property>
@@ -191,6 +192,7 @@
 	<Property Name="varPersistentID:{9AC2834D-01EC-4A8E-B720-7E7B8769D869}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/CX-10-1</Property>
 	<Property Name="varPersistentID:{9C3EA93C-5EA2-48CF-B2E9-B851269CF448}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/VISA Out_S</Property>
 	<Property Name="varPersistentID:{9C521016-564E-491D-9EE2-0B5D0E27FF3A}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Profile Step_S</Property>
+	<Property Name="varPersistentID:{9E87C53C-6BE8-460A-8735-BDD1FB20E3D3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Write Connection</Property>
 	<Property Name="varPersistentID:{9EBAF07D-2933-405A-8872-8D55F482A44D}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/CTAH Variables/CTAH Operating Case</Property>
 	<Property Name="varPersistentID:{9EFA50A9-96D4-473C-B4B8-80ED8E4FC96F}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-26_R</Property>
 	<Property Name="varPersistentID:{9F2B42EF-B7F4-4623-9187-3A11C2FDD442}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/BT-43_S</Property>
@@ -236,7 +238,6 @@
 	<Property Name="varPersistentID:{CE61597F-3475-4D5D-85A9-22815DCC452D}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-40_S</Property>
 	<Property Name="varPersistentID:{CF834C3E-1E2D-4147-940C-19504B6421BC}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-13</Property>
 	<Property Name="varPersistentID:{CFF4C686-6BEF-4366-A229-2DDE835C279A}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Exit Profile_R</Property>
-	<Property Name="varPersistentID:{D24568E6-3E24-4377-80C1-4A1D9BFF0BC4}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Broadcasting</Property>
 	<Property Name="varPersistentID:{D65BB29C-E3BE-49CB-A628-7626501BF35A}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/ST-12-SW_S</Property>
 	<Property Name="varPersistentID:{D737C982-612A-4F9F-BE8B-E92EEC12161A}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/CX-10-4</Property>
 	<Property Name="varPersistentID:{D9563EE8-DA42-459F-9F03-B188F0D83E5B}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-4_R</Property>
@@ -256,19 +257,24 @@
 	<Property Name="varPersistentID:{E46F59EE-8075-4254-BC41-FE7B22BEDB66}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Time_R</Property>
 	<Property Name="varPersistentID:{E4BEF31B-F995-4FF0-AD87-392BD7B1FB7C}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/SysFluidTemps_R</Property>
 	<Property Name="varPersistentID:{E52B411C-DD30-4941-9455-C741391A3F9B}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-62_S</Property>
+	<Property Name="varPersistentID:{E5AD2F6D-5E11-4D49-9536-EA9731B79EBB}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/VFD Error Msg</Property>
 	<Property Name="varPersistentID:{E6069DF2-6011-4396-B35D-9B4384580ECA}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/BT-29</Property>
 	<Property Name="varPersistentID:{E61219F5-74D1-4D47-80B0-D24FFA2697BC}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/CX-11-4_S</Property>
+	<Property Name="varPersistentID:{E6F36240-2825-4AEB-B8A3-B075181A18EB}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Chat</Property>
 	<Property Name="varPersistentID:{E8849E4B-F21E-47FA-8C7E-61D8604CB9EC}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-67</Property>
+	<Property Name="varPersistentID:{E94E773F-03A7-4CFE-95F2-4E272F045DCF}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Error Msg</Property>
 	<Property Name="varPersistentID:{E9653D9B-6B1C-4E62-A740-B504B64C1635}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Select Operation Mode_R</Property>
 	<Property Name="varPersistentID:{E9BD942A-B5C8-4032-B563-549340440EA0}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/TCHX Variables/Activate TCHX</Property>
-	<Property Name="varPersistentID:{E9CBCCDE-0564-412C-B8D1-57AE1520CB68}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Write Connection</Property>
 	<Property Name="varPersistentID:{EBCCD45A-11ED-4B98-A526-CBFB03FA02D5}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-22_R</Property>
+	<Property Name="varPersistentID:{ED778147-E336-4AD3-AF4F-7EAE0EF10712}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Spoof Enabled</Property>
 	<Property Name="varPersistentID:{F0B105C9-B675-4E3C-848C-73CCDA44D64E}" Type="Ref">/My Computer/DAQ Libraries/DAQ_Variables.lvlib/Flow Data?</Property>
 	<Property Name="varPersistentID:{F10E0650-4CB9-4133-977F-677E2BA5D9F0}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/ST-11</Property>
+	<Property Name="varPersistentID:{F235B8D3-2A60-4368-B80E-D94E8BBF51FF}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Status</Property>
 	<Property Name="varPersistentID:{F37BBA72-39D4-4029-AC37-6E5DF3A5EFD5}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-20_S</Property>
 	<Property Name="varPersistentID:{F3B581D9-D7F8-4687-8C58-179946C7A77B}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/BT-43</Property>
 	<Property Name="varPersistentID:{F3D1D202-8976-4CA7-85E7-C53D38BEFB8A}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Power Input Signal_S</Property>
 	<Property Name="varPersistentID:{F5B984AE-072A-4EC3-AFCB-FD92D9A01BCC}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/Pump Variables/Pump Mass Flow Set-Point</Property>
+	<Property Name="varPersistentID:{F60778D4-38F4-4037-9982-2B138F6FBF84}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Connection</Property>
 	<Property Name="varPersistentID:{F6BA096F-EA5A-486B-9483-A15BC52FA72D}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-W_R</Property>
 	<Property Name="varPersistentID:{F8ACE285-971C-46FA-8313-2799A8AF4F04}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/BT-21</Property>
 	<Property Name="varPersistentID:{FB7D51FC-2515-422E-AD9E-623EF50A6B36}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Power Output On_R</Property>
@@ -307,10 +313,10 @@
 			<Item Name="ResultNPSVariables.lvlib" Type="Library" URL="../ResultNPSVariables.lvlib"/>
 			<Item Name="ResultVFD_Variables.lvlib" Type="Library" URL="../ResultVFD_Variables.lvlib"/>
 		</Item>
-		<Item Name="ARCO Instructor Write Client.vi" Type="VI" URL="../ARCO Instructor Write Client.vi"/>
+		<Item Name="ARCO Instructor Write Client.vi" Type="VI" URL="../../Networking VIs/ARCO Instructor Write Client.vi"/>
 		<Item Name="ARCO Main Server.vi" Type="VI" URL="../ARCO Main Server.vi"/>
-		<Item Name="ARCO Read Client.vi" Type="VI" URL="../ARCO Read Client.vi"/>
-		<Item Name="Chat_Instructor.vi" Type="VI" URL="../Chat_Instructor.vi"/>
+		<Item Name="ARCO Read Client.vi" Type="VI" URL="../../Networking VIs/ARCO Read Client.vi"/>
+		<Item Name="Chat_Instructor.vi" Type="VI" URL="../../Networking VIs/Chat_Instructor.vi"/>
 		<Item Name="Instructor.vi" Type="VI" URL="../Instructor.vi"/>
 		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
