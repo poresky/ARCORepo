@@ -373,6 +373,8 @@
 			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
 			<Item Name="No_Spoof_ARCO.vi" Type="VI" URL="../No_Spoof_ARCO.vi"/>
 			<Item Name="No_Spoof_ARCO_Boolean.vi" Type="VI" URL="../No_Spoof_ARCO_Boolean.vi"/>
+			<Item Name="No_Spoof_ARCO_Data.vi" Type="VI" URL="../No_Spoof_ARCO_Data.vi"/>
+			<Item Name="Spoof_ARCO_Data.vi" Type="VI" URL="../Spoof_ARCO_Data.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
