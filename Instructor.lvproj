@@ -371,6 +371,8 @@
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
+			<Item Name="No_Spoof_ARCO.vi" Type="VI" URL="../No_Spoof_ARCO.vi"/>
+			<Item Name="No_Spoof_ARCO_Boolean.vi" Type="VI" URL="../No_Spoof_ARCO_Boolean.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
