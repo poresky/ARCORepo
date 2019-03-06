@@ -4,12 +4,14 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="DAQ?_R" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+		<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -19,36 +21,42 @@
 	<Item Name="Flow Data?_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">TRUE: Collecting mass flow rate data.
 FALSE: Stop collecting mass flow rate data to allow analog control of heater. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="SysFlowRates_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of system flow rates, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:SingleWriter" Type="Str">False</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!""01!!!"=!A!!!!!!#!!V!#1!(4H6N:8*J9Q!=1%!!!@````]!!!^"=H*B?3"P:C"4;7ZH&lt;'5!!1!"!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="SysFluidTemps_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of all system fluid temperatures, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:SingleWriter" Type="Str">False</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:ArrayLength" Type="Str">40</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
@@ -59,12 +67,14 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 	</Item>
 	<Item Name="SysSurfTemps_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of system surface temperatures, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!""01!!!"=!A!!!!!!#!!V!#1!(4H6N:8*J9Q!=1%!!!@````]!!!^"=H*B?3"P:C"4;7ZH&lt;'5!!1!"!!!!!!!!!!!!!!!!</Property>
 	</Item>

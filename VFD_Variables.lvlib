@@ -28,6 +28,7 @@
 		</Item>
 		<Item Name="CTAH Operating Case" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>

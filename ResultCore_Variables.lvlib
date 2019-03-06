@@ -5,13 +5,14 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Item Name="Core Error Out_R" Type="Variable">
-		<Property Name="Description:Description" Type="Str">Error in CIET's core module. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Network</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
+		<Property Name="Network:ElemSize" Type="Str">1</Property>
+		<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+		<Property Name="Network:SingleWriter" Type="Str">False</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
-		<Property Name="Network:UseBuffering" Type="Str">False</Property>
+		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!U-!!!!"=!A!!!!!!"!!R!5Q&gt;798*J97ZU!!%!!"=!A!!!!!!"!!1!!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -22,7 +23,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -36,7 +37,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -48,7 +49,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!""01!!!"=!A!!!!!!#!!V!#A!(4H6N:8*J9Q!=1%!!!@````]!!!^"=H*B?3"P:C"%&lt;X6C&lt;'5!!1!"!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -59,7 +60,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!H)Q!!!"=!A!!!!!!"!!N!"!!&amp;37ZU.D1!!1!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -70,7 +71,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -82,7 +83,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -93,7 +94,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -104,7 +105,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -115,7 +116,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -127,7 +128,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -138,7 +139,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -149,7 +150,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"=!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -160,7 +161,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -174,7 +175,7 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 	</Item>
@@ -182,10 +183,11 @@
 		<Property Name="Description:Description" Type="Str">VISA address in use. </Property>
 		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
+		<Property Name="Network:SingleWriter" Type="Str">False</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultCore_Variables.lvlib/</Property>
+		<Property Name="Path" Type="Str">/CIET_Control.lvproj/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!U-!!!!"=!A!!!!!!"!!R!5Q&gt;798*J97ZU!!%!!"=!A!!!!!!"!!1!!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>

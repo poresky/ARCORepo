@@ -1,0 +1,27 @@
+Time,Action,Value,Units
+44,Activate pump,True,--
+45.599998,Activate CTAH,True,--
+52.5,Pump frequency changed,5,Hz
+68.199997,Pump frequency changed,10,Hz
+95.400002,Pump frequency changed,15,Hz
+109,Pump frequency changed,20,Hz
+124.800003,Pump frequency changed,25,Hz
+138.800003,Pump frequency changed,30,Hz
+159.399994,Pump frequency changed,35,Hz
+196.600006,Pump frequency changed,38.5,Hz
+217.199997,Power output on,True,--
+224.5,Desired power output changed,500,W
+1158.900024,Desired power output changed,1000,W
+1599.5,Desired power output changed,5000,W
+3193.5,Desired power output changed,0,W
+3221,Desired power output changed,5000,W
+5262.200195,Pump frequency changed,38,Hz
+6820.5,Pump frequency changed,37,Hz
+6858.899902,Desired power output changed,0,W
+6875.799805,Power output on,False,--
+7330,Pump frequency changed,38,Hz
+7464.299805,Pump frequency changed,36,Hz
+7666.799805,Activate CTAH,False,--
+7684.299805,Pump frequency changed,0,Hz
+7708.5,Activate pump,False,--
+7718.5,Text log stop,True,--
