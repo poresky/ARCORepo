@@ -31,7 +31,11 @@
 	<Property Name="Serialized ACL" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!A1%!!!@````]!!".V&lt;H.J:WZF:#"C?82F)'&amp;S=G&amp;Z!!%!!1!!!!A)!!!!#!!!!!!!!!!</Property>
 	<Property Name="Use Data Logging Database" Type="Bool">true</Property>
 	<Item Name="Air Flow Rate" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:ElemSize" Type="Str">1</Property>
 		<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
@@ -39,101 +43,147 @@
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Balance_of_Plant.lvproj/My Computer/BoP Libraries/BoPInputs.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="Ambient Pressure" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="Ambient Temperature" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="CTAH 1 Heat Transfer Rate" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="CTAH 2 Heat Transfer Rate" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="HPT PR" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Balance_of_Plant.lvproj/My Computer/BoP Libraries/BoPInputs.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="LPT PR" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Balance_of_Plant.lvproj/My Computer/BoP Libraries/BoPInputs.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="NG Flow Rate" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="NG Pressure In" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Balance_of_Plant.lvproj/My Computer/BoP Libraries/BoPInputs.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="NG Temp In" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
-		<Property Name="Path" Type="Str">/Balance_of_Plant.lvproj/My Computer/BoP Libraries/BoPInputs.lvlib/</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>
 	<Item Name="Shaft RPM" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
+		<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">True</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/BoPInputs.lvlib/</Property>
 		<Property Name="type" Type="Str">Network</Property>
 		<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 	</Item>

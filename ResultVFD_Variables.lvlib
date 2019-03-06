@@ -7,22 +7,28 @@
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Result CTAH Variables" Type="Folder">
 		<Item Name="Activate CTAH_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="CTAH Frequency_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -30,13 +36,15 @@
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="CTAH Operating Case_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -45,13 +53,17 @@
 		</Item>
 		<Item Name="CTAH Outlet Set-Point_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Set-point for the outlet temperature of the CTAH, in degrees Celcius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -61,22 +73,28 @@
 	</Item>
 	<Item Name="Result TCHX Variables" Type="Folder">
 		<Item Name="Activate TCHX_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="TCHX Frequency_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -84,13 +102,15 @@
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="TCHX Operating Case_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -100,22 +120,28 @@
 	</Item>
 	<Item Name="Result Pump Variables" Type="Folder">
 		<Item Name="Activate Pump_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="Pump Frequency_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -123,13 +149,15 @@
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!F)1!!!"=!A!!!!!!"!!V!#1!'5WFO:WRF!!!"!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="Pump Operating Case_R" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
+			<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
 			<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 			<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 			<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>
@@ -138,25 +166,32 @@
 		</Item>
 		<Item Name="Pump Mass Flow Set-Point_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">The desired mass flow rate for the pump. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Instructor_20181105.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 	</Item>
 	<Item Name="GS1 Stop_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Stop the VFD loop deployed on the RT Target from the host computer/user interface. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="Logging:LogData" Type="Str">True</Property>
+		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
 		<Property Name="Network:SingleWriter" Type="Str">True</Property>
 		<Property Name="Network:UseBinding" Type="Str">False</Property>
 		<Property Name="Network:UseBuffering" Type="Str">False</Property>
 		<Property Name="numTypedefs" Type="UInt">0</Property>
+		<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Result Libraries/ResultVFD_Variables.lvlib/</Property>
 		<Property Name="Real-Time Features:ApplyNetworkConfig" Type="Str">False</Property>
 		<Property Name="Real-Time Features:BufferLength" Type="Str">1</Property>
 		<Property Name="Real-Time Features:UseBuffering" Type="Str">False</Property>

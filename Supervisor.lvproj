@@ -19,6 +19,7 @@
 	<Property Name="varPersistentID:{115FC75B-B5B1-4F34-BCE1-1113DAF1507C}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/AT-02_R</Property>
 	<Property Name="varPersistentID:{12377C24-0F67-4DAE-BFAC-2DD68D56710E}" Type="Ref">/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Operating Case_R</Property>
 	<Property Name="varPersistentID:{12B1B12D-D293-4B7D-B9EC-0DE2DF638AA9}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-65_R</Property>
+	<Property Name="varPersistentID:{12C28390-0FC9-4B8B-A8F9-59413DEC1261}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Input Read</Property>
 	<Property Name="varPersistentID:{13144B77-F226-4109-8112-7488F8E55129}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/ST-11</Property>
 	<Property Name="varPersistentID:{13356822-3AAB-4B49-B8B5-5ED0447A3CDC}" Type="Ref">/My Computer/Result Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Outlet Set-Point_R</Property>
 	<Property Name="varPersistentID:{13837929-2626-4970-BEE6-D82AF92B85E6}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/ST-12-SE</Property>
@@ -249,10 +250,12 @@
 	<Property Name="varPersistentID:{BCDF66F6-6521-45D6-B8AD-A5BD8928F86E}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/Power Input Signal_R</Property>
 	<Property Name="varPersistentID:{BFB73555-E4BE-4DA4-A39B-35844A3821C5}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Connection</Property>
 	<Property Name="varPersistentID:{C00662FE-216A-441C-9CC5-B7E0F8FA1FE1}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/WT-40</Property>
+	<Property Name="varPersistentID:{C035D6DF-0940-479D-80F1-116A93C4E3BC}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Output Write</Property>
 	<Property Name="varPersistentID:{C1432CF7-44E4-48C3-A976-E5B8E4E70D3B}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/WT-61</Property>
 	<Property Name="varPersistentID:{C1D52512-23D2-4D38-B0D3-27A5D629FEEF}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/CX-11-2</Property>
 	<Property Name="varPersistentID:{C4A6DCD1-DB1D-4B39-A2F8-A24259B98AD5}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-27_R</Property>
 	<Property Name="varPersistentID:{C5DABBDD-C886-4C21-8732-D55B40A82DA6}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-65_R</Property>
+	<Property Name="varPersistentID:{C66D219A-BBA3-424F-9146-26327F0063D1}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Model</Property>
 	<Property Name="varPersistentID:{C7CE83A4-53E0-4685-8D67-DE7AB6D36473}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/CTAH Variables/Activate CTAH</Property>
 	<Property Name="varPersistentID:{C7CEE463-8211-46C3-A3E3-298FD444E86D}" Type="Ref">/CIET-PXIe/PXI_Libraries/Core_Variables.lvlib/Desired Power</Property>
 	<Property Name="varPersistentID:{C7E872D4-F1CA-4D63-B13E-AD200C3FA248}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/TCHX Variables/TCHX Operating Case</Property>
@@ -320,6 +323,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Control Styles" Type="Folder">
+			<Item Name="Bulk TC Pointer.ctl" Type="VI" URL="../Bulk TC Pointer.ctl"/>
+			<Item Name="Modified Fill Bar Indicator.ctl" Type="VI" URL="../Modified Fill Bar Indicator.ctl"/>
+		</Item>
+		<Item Name="General SubVIs" Type="Folder">
+			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
+			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
+		</Item>
 		<Item Name="Host Test VIs" Type="Folder">
 			<Item Name="Core_Host.vi" Type="VI" URL="../Core_Host.vi"/>
 			<Item Name="DAQ_Host.vi" Type="VI" URL="../DAQ_Host.vi"/>
@@ -341,39 +352,49 @@
 				<Item Name="rhoT.m" Type="Document" URL="../Power Function/Matlab/rhoT.m"/>
 			</Item>
 		</Item>
+		<Item Name="Reference Files" Type="Folder">
+			<Item Name="Data_Column_Headers.txt" Type="Document" URL="../Data_Column_Headers.txt"/>
+		</Item>
 		<Item Name="Result Libraries" Type="Folder">
 			<Item Name="ResultDAQ_Variables.lvlib" Type="Library" URL="../ResultDAQ_Variables.lvlib"/>
 			<Item Name="ResultNPSVariables.lvlib" Type="Library" URL="../ResultNPSVariables.lvlib"/>
 			<Item Name="ResultVFD_Variables.lvlib" Type="Library" URL="../ResultVFD_Variables.lvlib"/>
 		</Item>
-		<Item Name="Add_Data_ARCO.vi" Type="VI" URL="../Add_Data_ARCO.vi"/>
-		<Item Name="ARCO Main Server.vi" Type="VI" URL="../ARCO Main Server.vi"/>
+		<Item Name="Server-Client VIs" Type="Folder">
+			<Item Name="Server SubVIs" Type="Folder">
+				<Item Name="Add_Data_ARCO.vi" Type="VI" URL="../Add_Data_ARCO.vi"/>
+				<Item Name="No_Spoof_ARCO.vi" Type="VI" URL="../No_Spoof_ARCO.vi"/>
+				<Item Name="No_Spoof_ARCO_Boolean.vi" Type="VI" URL="../No_Spoof_ARCO_Boolean.vi"/>
+				<Item Name="No_Spoof_ARCO_Data.vi" Type="VI" URL="../No_Spoof_ARCO_Data.vi"/>
+				<Item Name="Spoof_ARCO.vi" Type="VI" URL="../Spoof_ARCO.vi"/>
+				<Item Name="Spoof_ARCO_Boolean.vi" Type="VI" URL="../Spoof_ARCO_Boolean.vi"/>
+				<Item Name="Spoof_ARCO_Data.vi" Type="VI" URL="../Spoof_ARCO_Data.vi"/>
+			</Item>
+			<Item Name="ARCO Main Server.vi" Type="VI" URL="../ARCO Main Server.vi"/>
+			<Item Name="Supervisor Chat.vi" Type="VI" URL="../Supervisor Chat.vi"/>
+			<Item Name="Supervisor Read Client.vi" Type="VI" URL="../Supervisor Read Client.vi"/>
+		</Item>
+		<Item Name="BoP Input Read Client.vi" Type="VI" URL="../BoP Input Read Client.vi"/>
+		<Item Name="BoP Model Control.vi" Type="VI" URL="../BoP Model Control.vi"/>
+		<Item Name="BoP Output Client.vi" Type="VI" URL="../BoP Output Client.vi"/>
 		<Item Name="BoPInputs.lvlib" Type="Library" URL="../BoPInputs.lvlib"/>
 		<Item Name="BoPOutputs.lvlib" Type="Library" URL="../BoPOutputs.lvlib"/>
 		<Item Name="Brain.vi" Type="VI" URL="../Brain.vi"/>
-		<Item Name="Bulk TC Pointer.ctl" Type="VI" URL="../Bulk TC Pointer.ctl"/>
-		<Item Name="Data_Column_Headers.txt" Type="Document" URL="../Data_Column_Headers.txt"/>
-		<Item Name="Modified Fill Bar Indicator.ctl" Type="VI" URL="../Modified Fill Bar Indicator.ctl"/>
-		<Item Name="No_Spoof_ARCO.vi" Type="VI" URL="../No_Spoof_ARCO.vi"/>
-		<Item Name="No_Spoof_ARCO_Boolean.vi" Type="VI" URL="../No_Spoof_ARCO_Boolean.vi"/>
-		<Item Name="No_Spoof_ARCO_Data.vi" Type="VI" URL="../No_Spoof_ARCO_Data.vi"/>
 		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
-		<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
-		<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
-		<Item Name="Spoof_ARCO.vi" Type="VI" URL="../Spoof_ARCO.vi"/>
-		<Item Name="Spoof_ARCO_Boolean.vi" Type="VI" URL="../Spoof_ARCO_Boolean.vi"/>
-		<Item Name="Spoof_ARCO_Data.vi" Type="VI" URL="../Spoof_ARCO_Data.vi"/>
-		<Item Name="Supervisor Chat.vi" Type="VI" URL="../Supervisor Chat.vi"/>
-		<Item Name="Supervisor Read Client.vi" Type="VI" URL="../Supervisor Read Client.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
+				<Item Name="Clear Timing Source.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/Clear Timing Source.vi"/>
 				<Item Name="Close File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Close File+.vi"/>
 				<Item Name="compatReadText.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatReadText.vi"/>
 				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
+				<Item Name="Create Timing Source.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/Create Timing Source.vi"/>
+				<Item Name="Create_1kHz_TSource.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/_suppVIs/Create_1kHz_TSource.vi"/>
+				<Item Name="Create_1MHz_TSource.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/_suppVIs/Create_1MHz_TSource.vi"/>
+				<Item Name="Create_SoftwareTrigger_TSource.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/_suppVIs/Create_SoftwareTrigger_TSource.vi"/>
 				<Item Name="Details Display Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Details Display Dialog.vi"/>
 				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
 				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
@@ -382,6 +403,7 @@
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
+				<Item Name="Fire Software-Triggered Timing Source.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/Fire Software-Triggered Timing Source.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
@@ -392,6 +414,8 @@
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
+				<Item Name="NI_MIT.lvlib" Type="Library" URL="/&lt;vilib&gt;/Model Interface Toolkit/NI_MIT.lvlib"/>
+				<Item Name="NIVeriStand_MdlWrap.dll" Type="Document" URL="/&lt;vilib&gt;/Model Interface Toolkit/data/NIVeriStand_MdlWrap.dll"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
 				<Item Name="Open File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Open File+.vi"/>
 				<Item Name="Read Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (DBL).vi"/>
@@ -404,6 +428,7 @@
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="Stop Timed Structure.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/TimedLoop/scheduler/LVUserAPI/Stop Timed Structure.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
@@ -414,6 +439,12 @@
 				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
 				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
 				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
+			</Item>
+			<Item Name="lvalarms.dll" Type="Document" URL="lvalarms.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="lvuste.dll" Type="Document" URL="lvuste.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
