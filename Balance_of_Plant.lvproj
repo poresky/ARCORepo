@@ -60,6 +60,7 @@
 		<Item Name="BoP Output Client.vi" Type="VI" URL="../BoP Output Client.vi"/>
 		<Item Name="BoP Read Client.vi" Type="VI" URL="../BoP Read Client.vi"/>
 		<Item Name="BoP.vi" Type="VI" URL="../BoP.vi"/>
+		<Item Name="Log BoP.vi" Type="VI" URL="../Log BoP.vi"/>
 		<Item Name="Model_Ctrl_Example.vi" Type="VI" URL="../Model_Ctrl_Example.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
