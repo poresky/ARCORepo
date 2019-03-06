@@ -141,6 +141,7 @@
 	<Property Name="varPersistentID:{73651CCD-47C5-4B22-B59F-D07DA58B3522}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-65_R</Property>
 	<Property Name="varPersistentID:{74F87933-736C-4624-9821-9E3D0E35CF39}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/ST-10</Property>
 	<Property Name="varPersistentID:{75518AFE-1C3E-46F5-893A-0170C130D0F5}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/Pump Variables/Activate Pump</Property>
+	<Property Name="varPersistentID:{75C0420F-F560-4273-BE85-1D5778FA2167}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Output Write</Property>
 	<Property Name="varPersistentID:{761860D3-3012-49CD-8F87-C950493C35DB}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-S_R</Property>
 	<Property Name="varPersistentID:{76E03618-0110-48F5-9A7A-41CDA73506B3}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Flowmeters_S/FM-60_S</Property>
 	<Property Name="varPersistentID:{77727CEA-18F7-4586-9C48-101236CFD060}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Power Input Signal_R</Property>
@@ -174,6 +175,7 @@
 	<Property Name="varPersistentID:{8F3D3CFE-CF39-413C-86D2-436815DDCA81}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Flowmeters_R/FM-60_R</Property>
 	<Property Name="varPersistentID:{8F61A5D1-8724-4756-90AB-1573FC94EA66}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/BT-27</Property>
 	<Property Name="varPersistentID:{8FB34F93-8F62-4D51-9399-5BC2772AE527}" Type="Ref">/My Computer/DAQ Libraries/Core_Variables.lvlib/Exit Profile</Property>
+	<Property Name="varPersistentID:{8FD44DA9-9D97-40A5-89A9-C3B8A41D97ED}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Input Read</Property>
 	<Property Name="varPersistentID:{920636C2-6CEF-483D-9B24-F2B45821DF55}" Type="Ref">/My Computer/Spoof Libraries/SpoofVFD_Variables.lvlib/Spoof Pump Variables/Pump Operating Case_S</Property>
 	<Property Name="varPersistentID:{924595FB-99E6-44B3-99B6-30C1B312A050}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Select Operation Mode_S</Property>
 	<Property Name="varPersistentID:{9324F7DD-90B7-4F45-933D-7E1EBF3D37A3}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Flowmeters_S/FM-30_S</Property>
@@ -192,6 +194,7 @@
 	<Property Name="varPersistentID:{9AC2834D-01EC-4A8E-B720-7E7B8769D869}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/CX-10-1</Property>
 	<Property Name="varPersistentID:{9C3EA93C-5EA2-48CF-B2E9-B851269CF448}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/VISA Out_S</Property>
 	<Property Name="varPersistentID:{9C521016-564E-491D-9EE2-0B5D0E27FF3A}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Profile Step_S</Property>
+	<Property Name="varPersistentID:{9D3335A7-45AE-40D6-964A-C4947708ECE9}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Model</Property>
 	<Property Name="varPersistentID:{9E87C53C-6BE8-460A-8735-BDD1FB20E3D3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Write Connection</Property>
 	<Property Name="varPersistentID:{9EBAF07D-2933-405A-8872-8D55F482A44D}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/CTAH Variables/CTAH Operating Case</Property>
 	<Property Name="varPersistentID:{9EFA50A9-96D4-473C-B4B8-80ED8E4FC96F}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-26_R</Property>
