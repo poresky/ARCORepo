@@ -61,6 +61,9 @@ for i = 2:length(data)
         if text_log_stop(i) == 1 && text_log_stop(i) ~= text_log_stop(i-1)
             c(j,1) = {timestamp}; c(j,2) = {'Text log stop'}; c(j,3) = {'True'}; c(j,4) = {'--'};
         end
+        if text_log_stop(i) == 0 && text_log_stop(i) ~= text_log_stop(i-1)
+            c(j,1) = {timestamp}; c(j,2) = {'Text log stop'}; c(j,3) = {'False'}; c(j,4) = {'--'};
+        end
         if interface_stop(i) == 1
             c(j,1) = {timestamp}; c(j,2) = {'Inteface stop'}; c(j,3) = {'True'}; c(j,4) = {'--'};
         end
