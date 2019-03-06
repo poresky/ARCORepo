@@ -61,6 +61,11 @@
 		<Item Name="BoP Output Client.vi" Type="VI" URL="../BoP Output Client.vi"/>
 		<Item Name="BoP Read Client.vi" Type="VI" URL="../BoP Read Client.vi"/>
 		<Item Name="BoP.vi" Type="VI" URL="../BoP.vi"/>
+<<<<<<< HEAD
+=======
+		<Item Name="Log BoP.vi" Type="VI" URL="../Log BoP.vi"/>
+		<Item Name="Model_Ctrl_Example.vi" Type="VI" URL="../Model_Ctrl_Example.vi"/>
+>>>>>>> a0e24ae5ea8c2c477bd79509a71dee5a461ae366
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
