@@ -6,7 +6,7 @@
 	<Item Name="Flowmeters_R" Type="Folder">
 		<Item Name="FM-20_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed mass flow rate in DHX branch; units of kilograms/second. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -22,7 +22,7 @@
 		</Item>
 		<Item Name="FM-30_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed mass flow rate in by-pass branch; units of kilograms/second. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -38,7 +38,7 @@
 		</Item>
 		<Item Name="FM-40_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed mass flow rate in CTAH branch; units of kilograms/second. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -54,7 +54,7 @@
 		</Item>
 		<Item Name="FM-60_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed mass flow rate in DRACS loop; units of kilograms/second. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -72,7 +72,7 @@
 	<Item Name="Thermocouples_R" Type="Folder">
 		<Item Name="AT-01_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed ambient temperature at primary manometer level; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -88,7 +88,7 @@
 		</Item>
 		<Item Name="AT-02_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed ambient temperature at DRACS manometer level; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -104,7 +104,7 @@
 		</Item>
 		<Item Name="BT-11_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at heater inlet; units of degrees Celsius.</Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -120,7 +120,7 @@
 		</Item>
 		<Item Name="BT-12_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -136,7 +136,7 @@
 		</Item>
 		<Item Name="BT-21_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature above DHX (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -152,7 +152,7 @@
 		</Item>
 		<Item Name="BT-23_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature above DHX (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -168,7 +168,7 @@
 		</Item>
 		<Item Name="BT-25_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature below DHX (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -184,7 +184,7 @@
 		</Item>
 		<Item Name="BT-27_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature below DHX (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -200,7 +200,7 @@
 		</Item>
 		<Item Name="BT-29_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at bottom of DHX branch; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -216,7 +216,7 @@
 		</Item>
 		<Item Name="BT-30_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at by-pass branch inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -232,7 +232,7 @@
 		</Item>
 		<Item Name="BT-32_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature in by-pass branch; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -248,7 +248,7 @@
 		</Item>
 		<Item Name="BT-34_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at by-pass branch outlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -264,7 +264,7 @@
 		</Item>
 		<Item Name="BT-41_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at CTAH outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -280,7 +280,7 @@
 		</Item>
 		<Item Name="BT-43_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at CTAH inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -296,7 +296,7 @@
 		</Item>
 		<Item Name="BT-60_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at DRACS DHX inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -312,7 +312,7 @@
 		</Item>
 		<Item Name="BT-63_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at DRACS DHX outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -328,7 +328,7 @@
 		</Item>
 		<Item Name="BT-65_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at TCHX inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -344,7 +344,7 @@
 		</Item>
 		<Item Name="BT-66_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed bulk temperature at TCHX outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -360,7 +360,7 @@
 		</Item>
 		<Item Name="CX-10-1_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -376,7 +376,7 @@
 		</Item>
 		<Item Name="CX-10-2_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -392,7 +392,7 @@
 		</Item>
 		<Item Name="CX-10-3_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -408,7 +408,7 @@
 		</Item>
 		<Item Name="CX-10-4_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -424,7 +424,7 @@
 		</Item>
 		<Item Name="CX-11-1_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -440,7 +440,7 @@
 		</Item>
 		<Item Name="CX-11-2_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -456,7 +456,7 @@
 		</Item>
 		<Item Name="CX-11-3_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -472,7 +472,7 @@
 		</Item>
 		<Item Name="CX-11-4_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed Conax temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -488,7 +488,7 @@
 		</Item>
 		<Item Name="ST-10_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at bottom of heater; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -504,7 +504,7 @@
 		</Item>
 		<Item Name="ST-11_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at bottom-middle of heater; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -520,7 +520,7 @@
 		</Item>
 		<Item Name="ST-12-N_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater middle, north position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -536,7 +536,7 @@
 		</Item>
 		<Item Name="ST-12-SE_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater middle, southeast position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -552,7 +552,7 @@
 		</Item>
 		<Item Name="ST-12-SW_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater middle, southwest position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -568,7 +568,7 @@
 		</Item>
 		<Item Name="ST-13_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater upper-middle; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -584,7 +584,7 @@
 		</Item>
 		<Item Name="ST-14-E_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater top, east position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -600,7 +600,7 @@
 		</Item>
 		<Item Name="ST-14-N_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater top, north position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -616,7 +616,7 @@
 		</Item>
 		<Item Name="ST-14-S_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater top, south position; units of degrees Celsius.</Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -632,7 +632,7 @@
 		</Item>
 		<Item Name="ST-14-W_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed surface temperature at heater top, west position; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -648,7 +648,7 @@
 		</Item>
 		<Item Name="WT-10_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at heater inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -664,7 +664,7 @@
 		</Item>
 		<Item Name="WT-13_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at heater outlet (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -680,7 +680,7 @@
 		</Item>
 		<Item Name="WT-20_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature above DHX (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -696,7 +696,7 @@
 		</Item>
 		<Item Name="WT-22_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature above DHX (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -712,7 +712,7 @@
 		</Item>
 		<Item Name="WT-24_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature below DHX (above mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -728,7 +728,7 @@
 		</Item>
 		<Item Name="WT-26_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature below DHX (below mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -744,7 +744,7 @@
 		</Item>
 		<Item Name="WT-28_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at bottom of DHX branch; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -760,7 +760,7 @@
 		</Item>
 		<Item Name="WT-31_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at by-pass branch inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -776,7 +776,7 @@
 		</Item>
 		<Item Name="WT-33_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature in by-pass branch; units of degrees Celsius.</Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -792,7 +792,7 @@
 		</Item>
 		<Item Name="WT-35_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at by-pass branch outlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -808,7 +808,7 @@
 		</Item>
 		<Item Name="WT-40_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at CTAH outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -824,7 +824,7 @@
 		</Item>
 		<Item Name="WT-42_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at CTAH inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -840,7 +840,7 @@
 		</Item>
 		<Item Name="WT-61_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at DRACS DHX inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -856,7 +856,7 @@
 		</Item>
 		<Item Name="WT-62_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at DRACS DHX outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -872,7 +872,7 @@
 		</Item>
 		<Item Name="WT-64_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at TCHX inlet; units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -888,7 +888,7 @@
 		</Item>
 		<Item Name="WT-67_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Spoofed wall temperature at TCHX outlet (after mixer); units of degrees Celsius. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+			<Property Name="featurePacks" Type="Str">Description,Network</Property>
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
@@ -905,7 +905,7 @@
 	</Item>
 	<Item Name="Time_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Spoofed experimental time; units of seconds. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>

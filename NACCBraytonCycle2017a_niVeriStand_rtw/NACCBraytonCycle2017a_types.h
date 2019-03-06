@@ -7,9 +7,9 @@
  *
  * Code generation for model "NACCBraytonCycle2017a".
  *
- * Model version              : 1.136
+ * Model version              : 1.138
  * Simulink Coder version : 8.12 (R2017a) 16-Feb-2017
- * C source code generated on : Mon Mar 04 16:21:35 2019
+ * C source code generated on : Wed Mar 06 14:28:17 2019
  *
  * Target selection: NIVeriStand.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

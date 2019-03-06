@@ -4,7 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="DAQ?_R" Type="Variable">
-		<Property Name="featurePacks" Type="Str">Network,Real-Time Features,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Network,Real-Time Features</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
@@ -21,7 +21,7 @@
 	<Item Name="Flow Data?_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">TRUE: Collecting mass flow rate data.
 FALSE: Stop collecting mass flow rate data to allow analog control of heater. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
@@ -34,7 +34,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 	</Item>
 	<Item Name="SysFlowRates_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of system flow rates, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
@@ -48,7 +48,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 	</Item>
 	<Item Name="SysFluidTemps_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of all system fluid temperatures, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>
@@ -67,7 +67,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 	</Item>
 	<Item Name="SysSurfTemps_R" Type="Variable">
 		<Property Name="Description:Description" Type="Str">Array of system surface temperatures, for safety purposes. </Property>
-		<Property Name="featurePacks" Type="Str">Description,Network,Logging</Property>
+		<Property Name="featurePacks" Type="Str">Description,Network</Property>
 		<Property Name="Logging:LogData" Type="Str">True</Property>
 		<Property Name="Logging:LogEvents" Type="Str">True</Property>
 		<Property Name="Network:BuffSize" Type="Str">50</Property>

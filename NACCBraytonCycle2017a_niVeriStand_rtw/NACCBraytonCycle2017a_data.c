@@ -12,9 +12,9 @@
  *
  * Code generation for model "NACCBraytonCycle2017a".
  *
- * Model version              : 1.136
+ * Model version              : 1.138
  * Simulink Coder version : 8.12 (R2017a) 16-Feb-2017
- * C source code generated on : Mon Mar 04 16:21:35 2019
+ * C source code generated on : Wed Mar 06 14:28:17 2019
  *
  * Target selection: NIVeriStand.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -2309,6 +2309,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
 
   { 100000.0, 100000.0, 1.0, 0.0 },
@@ -2335,6 +2336,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   0.001,
   1.0,
@@ -2346,6 +2348,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   850.0,
   0.0,
@@ -2485,6 +2488,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   0.001,
   1.0,
@@ -2496,6 +2500,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   2.0,
   1.0,
@@ -2522,6 +2527,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   850.0,
   0.0,
@@ -2661,6 +2667,7 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
   1.0E-5,
   0.0,
   1.0,
+  1.0E-6,
   0.0,
   0.0,
   1000.0,
@@ -2716,9 +2723,9 @@ P_NACCBraytonCycle2017a_T NACCBraytonCycle2017a_P = {
  * NI VeriStand Model Framework code generation
  *
  * Model : NACCBraytonCycle2017a
- * Model version : 1.136
+ * Model version : 1.138
  * VeriStand Model Framework version : 2017.0.1.0 (2017 f1)
- * Source generated on : Mon Mar 04 16:21:35 2019
+ * Source generated on : Wed Mar 06 14:28:16 2019
  *========================================================================*/
 #if defined VXWORKS || defined kNIOSLinux
 
@@ -3426,6 +3433,8 @@ NI_ParamSizeWidth P_NACCBraytonCycle2017a_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
+  { sizeof(real_T), 1, 0 },
+
   { sizeof(real_T), 4, 0 },
 
   { sizeof(real_T), 1, 0 },
@@ -3514,130 +3523,6 @@ NI_ParamSizeWidth P_NACCBraytonCycle2017a_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
-  { sizeof(real_T), 49, 0 },
-
-  { sizeof(real_T), 49, 0 },
-
-  { sizeof(real_T), 24, 0 },
-
-  { sizeof(real_T), 21, 0 },
-
-  { sizeof(real_T), 504, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
   { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
@@ -3651,6 +3536,142 @@ NI_ParamSizeWidth P_NACCBraytonCycle2017a_T_sizes[] DataSection(
   { sizeof(real_T), 21, 0 },
 
   { sizeof(real_T), 504, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 49, 0 },
+
+  { sizeof(real_T), 49, 0 },
+
+  { sizeof(real_T), 24, 0 },
+
+  { sizeof(real_T), 21, 0 },
+
+  { sizeof(real_T), 504, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 

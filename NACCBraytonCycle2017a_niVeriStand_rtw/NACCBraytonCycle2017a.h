@@ -7,9 +7,9 @@
  *
  * Code generation for model "NACCBraytonCycle2017a".
  *
- * Model version              : 1.136
+ * Model version              : 1.138
  * Simulink Coder version : 8.12 (R2017a) 16-Feb-2017
- * C source code generated on : Mon Mar 04 16:21:35 2019
+ * C source code generated on : Wed Mar 06 14:28:17 2019
  *
  * Target selection: NIVeriStand.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -2776,6 +2776,9 @@ struct P_NACCBraytonCycle2017a_T_ {
   real_T Gain1_Gain_ln;                /* Expression: mult_fac
                                         * Referenced by: '<S29>/Gain1'
                                         */
+  real_T Constant2_Value_c;            /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant2'
+                                        */
   real_T additionfactor1_Value_f;      /* Expression: add_fac
                                         * Referenced by: '<S14>/addition factor1'
                                         */
@@ -2851,6 +2854,9 @@ struct P_NACCBraytonCycle2017a_T_ {
   real_T Gain1_Gain_m;                 /* Expression: mult_fac
                                         * Referenced by: '<S34>/Gain1'
                                         */
+  real_T Constant3_Value_d;            /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant3'
+                                        */
   real_T additionfactor1_Value_h;      /* Expression: add_fac
                                         * Referenced by: '<S36>/addition factor1'
                                         */
@@ -2883,6 +2889,9 @@ struct P_NACCBraytonCycle2017a_T_ {
                                         */
   real_T Gain1_Gain_e;                 /* Expression: mult_fac
                                         * Referenced by: '<S38>/Gain1'
+                                        */
+  real_T Constant5_Value;              /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant5'
                                         */
   real_T additionfactor1_Value_kh;     /* Expression: add_fac
                                         * Referenced by: '<S40>/addition factor1'
@@ -2965,6 +2974,9 @@ struct P_NACCBraytonCycle2017a_T_ {
   real_T Gain1_Gain_k3;                /* Expression: mult_fac
                                         * Referenced by: '<S16>/Gain1'
                                         */
+  real_T Constant6_Value_l;            /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant6'
+                                        */
   real_T additionfactor1_Value_b5;     /* Expression: add_fac
                                         * Referenced by: '<S20>/addition factor1'
                                         */
@@ -2997,6 +3009,9 @@ struct P_NACCBraytonCycle2017a_T_ {
                                         */
   real_T Gain1_Gain_fe;                /* Expression: mult_fac
                                         * Referenced by: '<S18>/Gain1'
+                                        */
+  real_T Constant7_Value;              /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant7'
                                         */
   real_T additionfactor1_Value_fu;     /* Expression: add_fac
                                         * Referenced by: '<S24>/addition factor1'
@@ -3075,6 +3090,9 @@ struct P_NACCBraytonCycle2017a_T_ {
                                         */
   real_T Gain1_Gain_j;                 /* Expression: mult_fac
                                         * Referenced by: '<S22>/Gain1'
+                                        */
+  real_T Constant8_Value;              /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant8'
                                         */
   real_T additionfactor1_Value_hc;     /* Expression: add_fac
                                         * Referenced by: '<S33>/addition factor1'
@@ -3156,6 +3174,9 @@ struct P_NACCBraytonCycle2017a_T_ {
                                         */
   real_T Gain1_Gain_py;                /* Expression: mult_fac
                                         * Referenced by: '<S31>/Gain1'
+                                        */
+  real_T Constant9_Value;              /* Expression: 10^-6
+                                        * Referenced by: '<Root>/Constant9'
                                         */
   real_T PFin_Value;                   /* Expression: 0
                                         * Referenced by: '<S4>/PFin'
@@ -3814,9 +3835,9 @@ extern RT_MODEL_NACCBraytonCycle2017_T *const NACCBraytonCycle2017a_M;
  * NI VeriStand Model Framework code generation
  *
  * Model : NACCBraytonCycle2017a
- * Model version : 1.136
+ * Model version : 1.138
  * VeriStand Model Framework version : 2017.0.1.0 (2017 f1)
- * Source generated on : Mon Mar 04 16:21:35 2019
+ * Source generated on : Wed Mar 06 14:28:16 2019
  *========================================================================*/
 #if !defined(NI_HEADER_NACCBraytonCycle2017a_h_)
 #define NI_HEADER_NACCBraytonCycle2017a_h_
