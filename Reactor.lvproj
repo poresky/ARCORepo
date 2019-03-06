@@ -151,6 +151,7 @@
 		<Item Name="Core_Variables.lvlib" Type="Library" URL="../Core_Variables.lvlib"/>
 		<Item Name="DAQ_Variables.lvlib" Type="Library" URL="../DAQ_Variables.lvlib"/>
 		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
+		<Item Name="Reactor Write Client.vi" Type="VI" URL="../Reactor Write Client.vi"/>
 		<Item Name="Reactor.vi" Type="VI" URL="../Reactor.vi"/>
 		<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
 		<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
