@@ -4,6 +4,7 @@
 	<Property Name="varPersistentID:{02A6D697-FDC2-45BC-9A7D-EBE59348EBDD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-2_R</Property>
 	<Property Name="varPersistentID:{0A5713F6-7B55-4F77-84B2-27A7E63865F4}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Exit Profile_R</Property>
 	<Property Name="varPersistentID:{0C08FA3F-0141-4E35-9B25-7CE4F2E3552E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-40_R</Property>
+	<Property Name="varPersistentID:{0C2CCD85-D303-49B8-A0C9-F1B1AE5A5E70}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Model</Property>
 	<Property Name="varPersistentID:{0DF0F792-CF26-4116-9E60-0B0E08A0FA19}" Type="Ref">/My Computer/DAQ_Variables.lvlib/Flow Data?</Property>
 	<Property Name="varPersistentID:{0E65ABFB-07EE-48D3-A440-7F2FF2260043}" Type="Ref">/My Computer/VFD_Variables.lvlib/Pump Variables/Pump Mass Flow Set-Point</Property>
 	<Property Name="varPersistentID:{0E9C6707-0FFE-42AD-8840-0899FEB2B864}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Connection</Property>
@@ -53,6 +54,7 @@
 	<Property Name="varPersistentID:{607753E6-6B69-4BC3-9BD7-5923CC442EA0}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-2_R</Property>
 	<Property Name="varPersistentID:{6093AA36-E4D3-4AF5-88F0-94B465D62781}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-65_R</Property>
 	<Property Name="varPersistentID:{60C8581D-61A1-49F6-BABB-436F0D423F3B}" Type="Ref">/My Computer/Core_Variables.lvlib/Desired Power</Property>
+	<Property Name="varPersistentID:{6280B2E7-560F-4A92-9010-286CC511ECF3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Input Read</Property>
 	<Property Name="varPersistentID:{6597317A-FEBE-4C97-9B9C-E6F9E20D5BC5}" Type="Ref">/My Computer/Core_Variables.lvlib/Power Output</Property>
 	<Property Name="varPersistentID:{65F2329B-1D45-45FF-ADFA-E7ACD50986E5}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-13_R</Property>
 	<Property Name="varPersistentID:{688624F2-0298-4920-A7A5-6F1D81515496}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Loop Period_R</Property>
@@ -76,6 +78,7 @@
 	<Property Name="varPersistentID:{8160E632-C22A-4088-9313-8E4ED94E1838}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Operating Case_R</Property>
 	<Property Name="varPersistentID:{83B581B8-5B0A-4E36-9D77-573AB7D67D83}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Mass Flow Set-Point_R</Property>
 	<Property Name="varPersistentID:{84BAC114-4AB5-4C70-AD44-AD91DAABD2E0}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Operating Case_R</Property>
+	<Property Name="varPersistentID:{860FAA5F-C7E2-432A-ADCF-2CB436D33719}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Output Write</Property>
 	<Property Name="varPersistentID:{87C2E634-256F-4D46-BBEF-27CBE5F9CB1A}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Desired Power_R</Property>
 	<Property Name="varPersistentID:{8ABF5B5E-1D75-4CE0-B225-0FAE29DE2A33}" Type="Ref">/My Computer/Core_Variables.lvlib/VISA Out</Property>
 	<Property Name="varPersistentID:{8D17B249-47BE-428A-9220-BEBEDE4B574C}" Type="Ref">/My Computer/Core_Variables.lvlib/Output Current 2</Property>
@@ -147,14 +150,16 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="ARCO Reactor Read Client.vi" Type="VI" URL="../ARCO Reactor Read Client.vi"/>
+		<Item Name="Support VIs" Type="Folder">
+			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
+			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
+		</Item>
 		<Item Name="Core_Variables.lvlib" Type="Library" URL="../Core_Variables.lvlib"/>
 		<Item Name="DAQ_Variables.lvlib" Type="Library" URL="../DAQ_Variables.lvlib"/>
 		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
+		<Item Name="Reactor Read Client.vi" Type="VI" URL="../Reactor Read Client.vi"/>
 		<Item Name="Reactor Write Client.vi" Type="VI" URL="../Reactor Write Client.vi"/>
 		<Item Name="Reactor.vi" Type="VI" URL="../Reactor.vi"/>
-		<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
-		<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
 		<Item Name="ResultCore_Variables.lvlib" Type="Library" URL="../ResultCore_Variables.lvlib"/>
 		<Item Name="ResultDAQ_Variables.lvlib" Type="Library" URL="../ResultDAQ_Variables.lvlib"/>
