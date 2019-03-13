@@ -5,8 +5,10 @@ function States = GenProcedure(csvFileName,Headers)
 %% 
 % Configuration: Cassify the variable columns as controllable or measurable 
 % variables.
-    controlVars = 7:9;
-    measureVars = 10:22;
+    %controlVars = 7:9;
+    %measureVars = 10:22;
+    controlVars = 7:8;
+    measureVars = 9;
 %% 
 % Read the scheme structure file and prepare the output.
     States = readtable(csvFileName);

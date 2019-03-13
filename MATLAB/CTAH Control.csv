@@ -1,0 +1,33 @@
+Summary Override,Desc. Override,Comment,Control,Record,T,CTAH Frequency,Pump Frequency,Power Output
+Set Controller to Mode 0,"Set the IHX Controller Mode to ""Open Loop Frequency [Hz]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 20 seconds.",,,,20,0,NaN,NaN
+,Set the IHX Frequency to -15Hz. The system should not go below 0Hz. This step will automatically complete after 20 seconds.,,CTAH Frequency,,20,0,,
+,,,CTAH Frequency,,0,0,,
+,,,CTAH Frequency,,0,15,,
+,,,CTAH Frequency,,0,30,,
+,,,CTAH Frequency,,0,45,,
+,,,CTAH Frequency,,0,60,,
+Set CTAH Frequency,Set the IHX Frequency to 75Hz. The system should not go beyond 60Hz. This step will automatically complete after 20 seconds.,,,,20,60,,
+Set Controller to Mode 1,"Set the IHX Controller Mode to ""LabView Feedback BT-41 [C]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 20 seconds.",,,,20,,,
+Set BT-41 Setpoint,Set the BT-41 Setpoint to 80C. This step will automatically complete after 20 seconds.,,,,20,,,
+,,,Pump Frequency,,0,,5,
+,,,Pump Frequency,,0,,10,
+,,,Pump Frequency,,0,,15,
+Achieve mass flow,Change Pump Frequency to achieve mass flow rate in FM-40 of 0.18 kg/s. This step will automatically complete after 60 seconds.,,Pump Frequency,,60,,,
+Record Pump Frequency,,This step will automatically complete after 10 seconds.,,Pump Frequency,10,,,
+,,,,,0,,,500
+,,,,,0,,,1000
+,,,,,0,,,3000
+,,,,,0,,,8000
+Steady State,Wait for system to achieve steady-state AND adjust Pump Frequency to maintain FM-40 flowrate of 0.18 kg/s. This step will automatically complete after 90 seconds.,,,,90,,,
+Record Values,Record the Pump Frequency and CTAH Frequency. This step will automatically complete after 10 seconds.,,,,10,,,
+Decrease BT-41,Decrease the BT-41 setpoint to 75C. Record the Convergence Time. This step will automatically complete after 20 seconds.,,,,20,,,
+Decrease BT-41,Decrease the BT-41 setpoint to 70C. Record the Convergence Time. This step will automatically complete after 20 seconds.,,,,20,,,
+Increase BT-41,Increase the BT-41 setpoint to 80C. Record the Convergence Time. This step will automatically complete after 20 seconds.,,,,20,,,
+Decrease BT-41,Decrease the BT-41 setpoint to 70C. Record the Convergence Time. This step will automatically complete after 20 seconds.,,,,20,,,
+Set Controller to Mode 0,"Set the IHX Controller Mode to ""Open Loop Frequency [Hz]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 20 seconds.",,,,20,,,
+Set Controller to Mode 1,"Set the IHX Controller Mode to ""LabView Feedback BT-41 [C]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 20 seconds.",,,,20,,,
+Set Controller to Mode 0,"Set the IHX Controller Mode to ""Open Loop Frequency [Hz]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 15 seconds.",,,,15,,,
+Set Controller to Mode 1,"Set the IHX Controller Mode to ""LabView Feedback BT-41 [C]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 10 seconds.",,,,10,,,
+Set Controller to Mode 0,"Set the IHX Controller Mode to ""Open Loop Frequency [Hz]"" and click ""Reset IHX Controller Mode"". This step will automatically complete after 10 seconds.",,,,10,,,
+Complete!,"Experiment complete! This step will advance in 5 minutes. Press ""STOP"" before that happens.",,,,300,,,
+"Press ""STOP""","Experiment complete! This step will advance in 5 minutes. Press ""STOP"" before that happens.",,,,300,,,
