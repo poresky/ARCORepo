@@ -7,9 +7,9 @@
  *
  * Code generation for model "NACCBraytonCycle2017a".
  *
- * Model version              : 1.138
+ * Model version              : 1.151
  * Simulink Coder version : 8.12 (R2017a) 16-Feb-2017
- * C source code generated on : Wed Mar 06 14:28:17 2019
+ * C source code generated on : Wed Mar 06 17:30:56 2019
  *
  * Target selection: NIVeriStand.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -66,7 +66,7 @@ typedef struct {
 /* Parameters for system: '<S1>/MassFlow' */
 typedef struct P_MassFlow_NACCBraytonCycle20_T_ P_MassFlow_NACCBraytonCycle20_T;
 
-/* Parameters for system: '<S57>/calculate  conversion' */
+/* Parameters for system: '<S62>/calculate  conversion' */
 typedef struct P_calculateconversion_NACCBra_T_ P_calculateconversion_NACCBra_T;
 
 /* Parameters (auto storage) */
