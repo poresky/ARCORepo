@@ -7,9 +7,9 @@
  *
  * Code generation for model "NACCBraytonCycle2017a".
  *
- * Model version              : 1.138
+ * Model version              : 1.151
  * Simulink Coder version : 8.12 (R2017a) 16-Feb-2017
- * C source code generated on : Wed Mar 06 14:28:17 2019
+ * C source code generated on : Wed Mar 06 17:30:56 2019
  *
  * Target selection: NIVeriStand.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -198,18 +198,18 @@ void LookUp_real_T_real_T(real_T *pY, const real_T *pYData, real_T u, const
 /*
  * Output and update for action system:
  *    '<S1>/MolarFlow'
- *    '<S12>/MolarFlow'
+ *    '<S17>/MolarFlow'
  */
 void NACCBraytonCycle2017a_MolarFlow(real_T rtu_ndotmoles, real_T *rty_moles)
 {
-  /* Inport: '<S42>/ndot[mole//s]' */
+  /* Inport: '<S47>/ndot[mole//s]' */
   *rty_moles = rtu_ndotmoles;
 }
 
 /*
  * Output and update for action system:
  *    '<S1>/MassFlow'
- *    '<S12>/MassFlow'
+ *    '<S17>/MassFlow'
  */
 void NACCBraytonCycle2017a_MassFlow(real_T rtu_mdotkgs, const real_T rtu_psi[7],
   real_T *rty_ndotmols, P_MassFlow_NACCBraytonCycle20_T *localP)
@@ -217,26 +217,26 @@ void NACCBraytonCycle2017a_MassFlow(real_T rtu_mdotkgs, const real_T rtu_psi[7],
   real_T tmp;
   int32_T i;
 
-  /* Product: '<S41>/Product' incorporates:
-   *  Constant: '<S49>/M1'
-   *  Math: '<S41>/Math Function'
+  /* Product: '<S46>/Product' incorporates:
+   *  Constant: '<S54>/M1'
+   *  Math: '<S46>/Math Function'
    */
   tmp = 0.0;
   for (i = 0; i < 7; i++) {
     tmp += rtu_psi[i] * NACCBraytonCycle2017a_P.th_M[i];
   }
 
-  /* Product: '<S41>/Divide' incorporates:
-   *  Gain: '<S41>/Gain'
-   *  Product: '<S41>/Product'
+  /* Product: '<S46>/Divide' incorporates:
+   *  Gain: '<S46>/Gain'
+   *  Product: '<S46>/Product'
    */
   *rty_ndotmols = localP->Gain_Gain * rtu_mdotkgs / tmp;
 }
 
-/* Start for atomic system: '<S48>/T-p-Vapor Fractions' */
+/* Start for atomic system: '<S53>/T-p-Vapor Fractions' */
 void NACCBray_TpVaporFractions_Start(void)
 {
-  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S52>/S-Function1' incorporates:
+  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S57>/S-Function1' incorporates:
    *  Constant: '<S1>/psi'
    */
   {
@@ -244,13 +244,13 @@ void NACCBray_TpVaporFractions_Start(void)
   }
 }
 
-/* Output and update for atomic system: '<S48>/T-p-Vapor Fractions' */
+/* Output and update for atomic system: '<S53>/T-p-Vapor Fractions' */
 void NACCBraytonCyc_TpVaporFractions(void)
 {
-  /* S-Function (th_TpVaporFractions_PR_S): '<S52>/S-Function1' incorporates:
+  /* S-Function (th_TpVaporFractions_PR_S): '<S57>/S-Function1' incorporates:
    *  Constant: '<S1>/psi'
    */
-  /*Block <S52>/S-Function1*/
+  /*Block <S57>/S-Function1*/
   {
     int* error;
     Par param;
@@ -288,10 +288,10 @@ void NACCBraytonCyc_TpVaporFractions(void)
   }
 }
 
-/* Start for atomic system: '<S44>/T-p-Vapor Fractions' */
+/* Start for atomic system: '<S49>/T-p-Vapor Fractions' */
 void NACCBr_TpVaporFractions_h_Start(void)
 {
-  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S50>/S-Function1' incorporates:
+  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S55>/S-Function1' incorporates:
    *  Constant: '<S1>/psi'
    */
   {
@@ -299,13 +299,13 @@ void NACCBr_TpVaporFractions_h_Start(void)
   }
 }
 
-/* Output and update for atomic system: '<S44>/T-p-Vapor Fractions' */
+/* Output and update for atomic system: '<S49>/T-p-Vapor Fractions' */
 void NACCBraytonC_TpVaporFractions_i(void)
 {
-  /* S-Function (th_TpVaporFractions_PR_S): '<S50>/S-Function1' incorporates:
+  /* S-Function (th_TpVaporFractions_PR_S): '<S55>/S-Function1' incorporates:
    *  Constant: '<S1>/psi'
    */
-  /*Block <S50>/S-Function1*/
+  /*Block <S55>/S-Function1*/
   {
     int* error;
     Par param;
@@ -346,12 +346,12 @@ void NACCBraytonC_TpVaporFractions_i(void)
 /* Start for atomic system: '<S1>/T-p-State' */
 void NACCBraytonCycle2_TpState_Start(void)
 {
-  /* Start for Atomic SubSystem: '<S44>/T-p-Vapor Fractions' */
+  /* Start for Atomic SubSystem: '<S49>/T-p-Vapor Fractions' */
   NACCBr_TpVaporFractions_h_Start();
 
-  /* End of Start for SubSystem: '<S44>/T-p-Vapor Fractions' */
+  /* End of Start for SubSystem: '<S49>/T-p-Vapor Fractions' */
 
-  /* Start for S-Function (th_TpxState_S): '<S51>/S-Function1' */
+  /* Start for S-Function (th_TpxState_S): '<S56>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
@@ -362,36 +362,36 @@ void NACCBraytonCycle2017a_TpState(void)
 {
   int32_T i;
 
-  /* Outputs for Atomic SubSystem: '<S44>/T-p-Vapor Fractions' */
+  /* Outputs for Atomic SubSystem: '<S49>/T-p-Vapor Fractions' */
   NACCBraytonC_TpVaporFractions_i();
 
-  /* End of Outputs for SubSystem: '<S44>/T-p-Vapor Fractions' */
+  /* End of Outputs for SubSystem: '<S49>/T-p-Vapor Fractions' */
 
-  /* Gain: '<S51>/Gain' */
+  /* Gain: '<S56>/Gain' */
   NACCBraytonCycle2017a_B.ndot_lp = NACCBraytonCycle2017a_P.Gain_Gain *
     NACCBraytonCycle2017a_B.ndot;
 
-  /* Gain: '<S51>/Gain1' */
+  /* Gain: '<S56>/Gain1' */
   NACCBraytonCycle2017a_B.T_gw = NACCBraytonCycle2017a_P.Gain1_Gain *
     NACCBraytonCycle2017a_B.UnitOffset;
 
-  /* Gain: '<S51>/Gain2' */
+  /* Gain: '<S56>/Gain2' */
   NACCBraytonCycle2017a_B.p_d = NACCBraytonCycle2017a_P.Gain2_Gain *
     NACCBraytonCycle2017a_B.UnitOffset_h;
   for (i = 0; i < 7; i++) {
-    /* Gain: '<S51>/Gain3' */
+    /* Gain: '<S56>/Gain3' */
     NACCBraytonCycle2017a_B.x_g[i] = NACCBraytonCycle2017a_P.Gain3_Gain *
       NACCBraytonCycle2017a_B.SFunction1_o1_n[i];
 
-    /* Gain: '<S51>/Gain4' incorporates:
+    /* Gain: '<S56>/Gain4' incorporates:
      *  Constant: '<S1>/psi'
      */
     NACCBraytonCycle2017a_B.psi_eg[i] = NACCBraytonCycle2017a_P.Gain4_Gain *
       NACCBraytonCycle2017a_P.Ambientair_psi[i];
   }
 
-  /* S-Function (th_TpxState_S): '<S51>/S-Function1' */
-  /*Block <S51>/S-Function1*/
+  /* S-Function (th_TpxState_S): '<S56>/S-Function1' */
+  /*Block <S56>/S-Function1*/
   {
     Par param;
     flow pflow;
@@ -494,7 +494,7 @@ void NACCBraytonCycle2017a_TpState(void)
     /* Map outputs */
     pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot_a;
     pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot_c0;
-    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot_ny;
+    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot_nyp;
     pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot_f;
     error = (int *) &NACCBraytonCycle2017a_B.SFunction1_o5_o;
     error[0] = th_T_p_x_State_new (&pflow, &param);
@@ -506,131 +506,131 @@ void NACCBraytonCycle2017a_TpState(void)
 
 /*
  * Output and update for atomic system:
- *    '<S57>/calculate  conversion'
- *    '<S65>/calculate  conversion'
+ *    '<S62>/calculate  conversion'
+ *    '<S70>/calculate  conversion'
  */
 void NACCBrayton_calculateconversion(const real_T rtu_reaction[7], const real_T
   rtu_psi[7], real_T rtu_conversionrate, B_calculateconversion_NACCBra_T *localB,
   P_calculateconversion_NACCBra_T *localP)
 {
-  int8_T rtb_Compare_j2[7];
+  int8_T rtb_Compare_l[7];
   real_T rtb_Subtract2[7];
-  real_T rtb_Product1_e;
+  real_T rtb_Product1_ak;
   int32_T i;
-  uint8_T rtb_Compare_k;
+  uint8_T rtb_Compare_p;
   for (i = 0; i < 7; i++) {
-    /* RelationalOperator: '<S63>/Compare' incorporates:
-     *  Constant: '<S63>/Constant'
+    /* RelationalOperator: '<S68>/Compare' incorporates:
+     *  Constant: '<S68>/Constant'
      */
-    rtb_Compare_k = (uint8_T)(rtu_reaction[i] < localP->CompareToConstant1_const);
+    rtb_Compare_p = (uint8_T)(rtu_reaction[i] < localP->CompareToConstant1_const);
 
-    /* Gain: '<S60>/Gain1' */
-    rtb_Product1_e = localP->Gain1_Gain * rtu_reaction[i];
+    /* Gain: '<S65>/Gain1' */
+    rtb_Product1_ak = localP->Gain1_Gain * rtu_reaction[i];
 
-    /* Saturate: '<S60>/Saturation2' */
-    if (rtb_Product1_e > localP->Saturation2_UpperSat) {
-      rtb_Product1_e = localP->Saturation2_UpperSat;
+    /* Saturate: '<S65>/Saturation2' */
+    if (rtb_Product1_ak > localP->Saturation2_UpperSat) {
+      rtb_Product1_ak = localP->Saturation2_UpperSat;
     } else {
-      if (rtb_Product1_e < localP->Saturation2_LowerSat) {
-        rtb_Product1_e = localP->Saturation2_LowerSat;
+      if (rtb_Product1_ak < localP->Saturation2_LowerSat) {
+        rtb_Product1_ak = localP->Saturation2_LowerSat;
       }
     }
 
-    /* End of Saturate: '<S60>/Saturation2' */
+    /* End of Saturate: '<S65>/Saturation2' */
 
-    /* Product: '<S60>/Product3' */
-    rtb_Subtract2[i] = rtu_psi[i] / rtb_Product1_e * (real_T)rtb_Compare_k;
+    /* Product: '<S65>/Product3' */
+    rtb_Subtract2[i] = rtu_psi[i] / rtb_Product1_ak * (real_T)rtb_Compare_p;
 
-    /* RelationalOperator: '<S63>/Compare' */
-    rtb_Compare_j2[i] = (int8_T)rtb_Compare_k;
+    /* RelationalOperator: '<S68>/Compare' */
+    rtb_Compare_l[i] = (int8_T)rtb_Compare_p;
   }
 
-  /* MinMax: '<S60>/MinMax2' */
-  rtb_Product1_e = rtb_Subtract2[0];
+  /* MinMax: '<S65>/MinMax2' */
+  rtb_Product1_ak = rtb_Subtract2[0];
   for (i = 0; i < 6; i++) {
-    if (!((rtb_Product1_e > rtb_Subtract2[i + 1]) || rtIsNaN(rtb_Subtract2[i + 1])))
-    {
-      rtb_Product1_e = rtb_Subtract2[i + 1];
+    if (!((rtb_Product1_ak > rtb_Subtract2[i + 1]) || rtIsNaN(rtb_Subtract2[i +
+          1]))) {
+      rtb_Product1_ak = rtb_Subtract2[i + 1];
     }
   }
 
-  /* Sum: '<S60>/Subtract2' incorporates:
-   *  Logic: '<S60>/Logical Operator'
-   *  MinMax: '<S60>/MinMax2'
-   *  Product: '<S60>/Product2'
+  /* Sum: '<S65>/Subtract2' incorporates:
+   *  Logic: '<S65>/Logical Operator'
+   *  MinMax: '<S65>/MinMax2'
+   *  Product: '<S65>/Product2'
    */
   for (i = 0; i < 7; i++) {
-    rtb_Subtract2[i] += (real_T)!(rtb_Compare_j2[i] != 0) * rtb_Product1_e;
+    rtb_Subtract2[i] += (real_T)!(rtb_Compare_l[i] != 0) * rtb_Product1_ak;
   }
 
-  /* End of Sum: '<S60>/Subtract2' */
+  /* End of Sum: '<S65>/Subtract2' */
 
-  /* MinMax: '<S60>/MinMax1' */
-  rtb_Product1_e = rtb_Subtract2[0];
+  /* MinMax: '<S65>/MinMax1' */
+  rtb_Product1_ak = rtb_Subtract2[0];
   for (i = 0; i < 6; i++) {
-    if (!((rtb_Product1_e < rtb_Subtract2[i + 1]) || rtIsNaN(rtb_Subtract2[i + 1])))
-    {
-      rtb_Product1_e = rtb_Subtract2[i + 1];
+    if (!((rtb_Product1_ak < rtb_Subtract2[i + 1]) || rtIsNaN(rtb_Subtract2[i +
+          1]))) {
+      rtb_Product1_ak = rtb_Subtract2[i + 1];
     }
   }
 
-  /* Product: '<S60>/Product1' incorporates:
-   *  MinMax: '<S60>/MinMax1'
+  /* Product: '<S65>/Product1' incorporates:
+   *  MinMax: '<S65>/MinMax1'
    */
-  rtb_Product1_e *= rtu_conversionrate;
+  rtb_Product1_ak *= rtu_conversionrate;
 
-  /* Sum: '<S64>/Subtract2' incorporates:
-   *  Product: '<S64>/Product3'
+  /* Sum: '<S69>/Subtract2' incorporates:
+   *  Product: '<S69>/Product3'
    */
   for (i = 0; i < 7; i++) {
-    rtb_Subtract2[i] = rtb_Product1_e * rtu_reaction[i] + rtu_psi[i];
+    rtb_Subtract2[i] = rtb_Product1_ak * rtu_reaction[i] + rtu_psi[i];
   }
 
-  /* End of Sum: '<S64>/Subtract2' */
+  /* End of Sum: '<S69>/Subtract2' */
 
-  /* Sum: '<S64>/Subtract5' */
-  rtb_Product1_e = rtb_Subtract2[0];
+  /* Sum: '<S69>/Subtract5' */
+  rtb_Product1_ak = rtb_Subtract2[0];
   for (i = 0; i < 6; i++) {
-    rtb_Product1_e += rtb_Subtract2[i + 1];
+    rtb_Product1_ak += rtb_Subtract2[i + 1];
   }
 
-  localB->Subtract5 = rtb_Product1_e;
+  localB->Subtract5 = rtb_Product1_ak;
 
-  /* End of Sum: '<S64>/Subtract5' */
+  /* End of Sum: '<S69>/Subtract5' */
 
-  /* Saturate: '<S64>/Saturation2' */
-  if (localB->Subtract5 > localP->Saturation2_UpperSat_l) {
-    rtb_Product1_e = localP->Saturation2_UpperSat_l;
-  } else if (localB->Subtract5 < localP->Saturation2_LowerSat_h) {
-    rtb_Product1_e = localP->Saturation2_LowerSat_h;
+  /* Saturate: '<S69>/Saturation2' */
+  if (localB->Subtract5 > localP->Saturation2_UpperSat_m) {
+    rtb_Product1_ak = localP->Saturation2_UpperSat_m;
+  } else if (localB->Subtract5 < localP->Saturation2_LowerSat_p) {
+    rtb_Product1_ak = localP->Saturation2_LowerSat_p;
   } else {
-    rtb_Product1_e = localB->Subtract5;
+    rtb_Product1_ak = localB->Subtract5;
   }
 
-  /* End of Saturate: '<S64>/Saturation2' */
+  /* End of Saturate: '<S69>/Saturation2' */
 
-  /* Product: '<S64>/Product6' */
+  /* Product: '<S69>/Product6' */
   for (i = 0; i < 7; i++) {
-    localB->Product6[i] = rtb_Subtract2[i] / rtb_Product1_e;
+    localB->Product6[i] = rtb_Subtract2[i] / rtb_Product1_ak;
   }
 
-  /* End of Product: '<S64>/Product6' */
+  /* End of Product: '<S69>/Product6' */
 }
 
-/* Start for atomic system: '<S80>/T-p-Vapor Fractions' */
+/* Start for atomic system: '<S85>/T-p-Vapor Fractions' */
 void NACCBr_TpVaporFractions_o_Start(void)
 {
-  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S86>/S-Function1' */
+  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S91>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
 }
 
-/* Output and update for atomic system: '<S80>/T-p-Vapor Fractions' */
+/* Output and update for atomic system: '<S85>/T-p-Vapor Fractions' */
 void NACCBraytonC_TpVaporFractions_f(void)
 {
-  /* S-Function (th_TpVaporFractions_PR_S): '<S86>/S-Function1' */
-  /*Block <S86>/S-Function1*/
+  /* S-Function (th_TpVaporFractions_PR_S): '<S91>/S-Function1' */
+  /*Block <S91>/S-Function1*/
   {
     int* error;
     Par param;
@@ -668,53 +668,53 @@ void NACCBraytonC_TpVaporFractions_f(void)
   }
 }
 
-/* Start for atomic system: '<S73>/T-p-State' */
+/* Start for atomic system: '<S78>/T-p-State' */
 void NACCBraytonCycl_TpState_j_Start(void)
 {
-  /* Start for Atomic SubSystem: '<S80>/T-p-Vapor Fractions' */
+  /* Start for Atomic SubSystem: '<S85>/T-p-Vapor Fractions' */
   NACCBr_TpVaporFractions_o_Start();
 
-  /* End of Start for SubSystem: '<S80>/T-p-Vapor Fractions' */
+  /* End of Start for SubSystem: '<S85>/T-p-Vapor Fractions' */
 
-  /* Start for S-Function (th_TpxState_S): '<S87>/S-Function1' */
+  /* Start for S-Function (th_TpxState_S): '<S92>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
 }
 
-/* Output and update for atomic system: '<S73>/T-p-State' */
+/* Output and update for atomic system: '<S78>/T-p-State' */
 void NACCBraytonCycle2017a_TpState_f(void)
 {
   int32_T i;
 
-  /* Outputs for Atomic SubSystem: '<S80>/T-p-Vapor Fractions' */
+  /* Outputs for Atomic SubSystem: '<S85>/T-p-Vapor Fractions' */
   NACCBraytonC_TpVaporFractions_f();
 
-  /* End of Outputs for SubSystem: '<S80>/T-p-Vapor Fractions' */
+  /* End of Outputs for SubSystem: '<S85>/T-p-Vapor Fractions' */
 
-  /* Gain: '<S87>/Gain' */
+  /* Gain: '<S92>/Gain' */
   NACCBraytonCycle2017a_B.ndot_c0 = NACCBraytonCycle2017a_P.Gain_Gain_j *
     NACCBraytonCycle2017a_B.ndot_nc;
 
-  /* Gain: '<S87>/Gain1' */
+  /* Gain: '<S92>/Gain1' */
   NACCBraytonCycle2017a_B.p_pg = NACCBraytonCycle2017a_P.Gain1_Gain_n *
     NACCBraytonCycle2017a_B.T_gw;
 
-  /* Gain: '<S87>/Gain2' */
+  /* Gain: '<S92>/Gain2' */
   NACCBraytonCycle2017a_B.p_f = NACCBraytonCycle2017a_P.Gain2_Gain_m *
     NACCBraytonCycle2017a_B.p_d;
   for (i = 0; i < 7; i++) {
-    /* Gain: '<S87>/Gain3' */
+    /* Gain: '<S92>/Gain3' */
     NACCBraytonCycle2017a_B.x_da[i] = NACCBraytonCycle2017a_P.Gain3_Gain_m *
       NACCBraytonCycle2017a_B.SFunction1_o1_c[i];
 
-    /* Gain: '<S87>/Gain4' */
+    /* Gain: '<S92>/Gain4' */
     NACCBraytonCycle2017a_B.psi_ip[i] = NACCBraytonCycle2017a_P.Gain4_Gain_i *
       NACCBraytonCycle2017a_B.psi_eg[i];
   }
 
-  /* S-Function (th_TpxState_S): '<S87>/S-Function1' */
-  /*Block <S87>/S-Function1*/
+  /* S-Function (th_TpxState_S): '<S92>/S-Function1' */
+  /*Block <S92>/S-Function1*/
   {
     Par param;
     flow pflow;
@@ -827,24 +827,24 @@ void NACCBraytonCycle2017a_TpState_f(void)
   }
 }
 
-/* Start for atomic system: '<S158>/T-p-Vapor Fractions' */
+/* Start for atomic system: '<S163>/T-p-Vapor Fractions' */
 void NACCBr_TpVaporFractions_f_Start(void)
 {
-  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S162>/S-Function1' incorporates:
-   *  Constant: '<S12>/psi'
+  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S167>/S-Function1' incorporates:
+   *  Constant: '<S17>/psi'
    */
   {
     th_ThermolibInitialize();
   }
 }
 
-/* Output and update for atomic system: '<S158>/T-p-Vapor Fractions' */
+/* Output and update for atomic system: '<S163>/T-p-Vapor Fractions' */
 void NACCBraytonC_TpVaporFractions_p(void)
 {
-  /* S-Function (th_TpVaporFractions_PR_S): '<S162>/S-Function1' incorporates:
-   *  Constant: '<S12>/psi'
+  /* S-Function (th_TpVaporFractions_PR_S): '<S167>/S-Function1' incorporates:
+   *  Constant: '<S17>/psi'
    */
-  /*Block <S162>/S-Function1*/
+  /*Block <S167>/S-Function1*/
   {
     int* error;
     Par param;
@@ -882,24 +882,24 @@ void NACCBraytonC_TpVaporFractions_p(void)
   }
 }
 
-/* Start for atomic system: '<S154>/T-p-Vapor Fractions' */
+/* Start for atomic system: '<S159>/T-p-Vapor Fractions' */
 void NACCBr_TpVaporFractions_b_Start(void)
 {
-  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S160>/S-Function1' incorporates:
-   *  Constant: '<S12>/psi'
+  /* Start for S-Function (th_TpVaporFractions_PR_S): '<S165>/S-Function1' incorporates:
+   *  Constant: '<S17>/psi'
    */
   {
     th_ThermolibInitialize();
   }
 }
 
-/* Output and update for atomic system: '<S154>/T-p-Vapor Fractions' */
+/* Output and update for atomic system: '<S159>/T-p-Vapor Fractions' */
 void NACCBraytonC_TpVaporFractions_m(void)
 {
-  /* S-Function (th_TpVaporFractions_PR_S): '<S160>/S-Function1' incorporates:
-   *  Constant: '<S12>/psi'
+  /* S-Function (th_TpVaporFractions_PR_S): '<S165>/S-Function1' incorporates:
+   *  Constant: '<S17>/psi'
    */
-  /*Block <S160>/S-Function1*/
+  /*Block <S165>/S-Function1*/
   {
     int* error;
     Par param;
@@ -937,55 +937,55 @@ void NACCBraytonC_TpVaporFractions_m(void)
   }
 }
 
-/* Start for atomic system: '<S12>/T-p-State' */
+/* Start for atomic system: '<S17>/T-p-State' */
 void NACCBraytonCycl_TpState_d_Start(void)
 {
-  /* Start for Atomic SubSystem: '<S154>/T-p-Vapor Fractions' */
+  /* Start for Atomic SubSystem: '<S159>/T-p-Vapor Fractions' */
   NACCBr_TpVaporFractions_b_Start();
 
-  /* End of Start for SubSystem: '<S154>/T-p-Vapor Fractions' */
+  /* End of Start for SubSystem: '<S159>/T-p-Vapor Fractions' */
 
-  /* Start for S-Function (th_TpxState_S): '<S161>/S-Function1' */
+  /* Start for S-Function (th_TpxState_S): '<S166>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
 }
 
-/* Output and update for atomic system: '<S12>/T-p-State' */
+/* Output and update for atomic system: '<S17>/T-p-State' */
 void NACCBraytonCycle2017a_TpState_a(void)
 {
   int32_T i;
 
-  /* Outputs for Atomic SubSystem: '<S154>/T-p-Vapor Fractions' */
+  /* Outputs for Atomic SubSystem: '<S159>/T-p-Vapor Fractions' */
   NACCBraytonC_TpVaporFractions_m();
 
-  /* End of Outputs for SubSystem: '<S154>/T-p-Vapor Fractions' */
+  /* End of Outputs for SubSystem: '<S159>/T-p-Vapor Fractions' */
 
-  /* Gain: '<S161>/Gain' */
+  /* Gain: '<S166>/Gain' */
   NACCBraytonCycle2017a_B.ndot_nc = NACCBraytonCycle2017a_P.Gain_Gain_b *
     NACCBraytonCycle2017a_B.ndot_ka;
 
-  /* Gain: '<S161>/Gain1' */
+  /* Gain: '<S166>/Gain1' */
   NACCBraytonCycle2017a_B.T_c = NACCBraytonCycle2017a_P.Gain1_Gain_l *
     NACCBraytonCycle2017a_B.UnitOffset_l;
 
-  /* Gain: '<S161>/Gain2' */
+  /* Gain: '<S166>/Gain2' */
   NACCBraytonCycle2017a_B.p_pg = NACCBraytonCycle2017a_P.Gain2_Gain_j *
     NACCBraytonCycle2017a_B.UnitOffset_f;
   for (i = 0; i < 7; i++) {
-    /* Gain: '<S161>/Gain3' */
+    /* Gain: '<S166>/Gain3' */
     NACCBraytonCycle2017a_B.x_a[i] = NACCBraytonCycle2017a_P.Gain3_Gain_n *
       NACCBraytonCycle2017a_B.SFunction1_o1[i];
 
-    /* Gain: '<S161>/Gain4' incorporates:
-     *  Constant: '<S12>/psi'
+    /* Gain: '<S166>/Gain4' incorporates:
+     *  Constant: '<S17>/psi'
      */
     NACCBraytonCycle2017a_B.psi_c[i] = NACCBraytonCycle2017a_P.Gain4_Gain_iu *
       NACCBraytonCycle2017a_P.NaturalGas_psi[i];
   }
 
-  /* S-Function (th_TpxState_S): '<S161>/S-Function1' */
-  /*Block <S161>/S-Function1*/
+  /* S-Function (th_TpxState_S): '<S166>/S-Function1' */
+  /*Block <S166>/S-Function1*/
   {
     Par param;
     flow pflow;
@@ -1148,14 +1148,14 @@ real_T rt_powd_snf(real_T u0, real_T u1)
 static void NACCBraytonCycle2017a_output(void)
 {
   /* local block i/o variables */
-  real_T rtb_Product7;
-  real_T rtb_Product4;
-  real_T rtb_PRatio;
-  real_T rtb_eta;
   real_T rtb_Switch2;
   real_T rtb_PR;
-  real_T rtb_Switch2_f;
-  real_T rtb_PR_l;
+  real_T rtb_Product7_d;
+  real_T rtb_Product4_i;
+  real_T rtb_PRatio;
+  real_T rtb_eta;
+  real_T rtb_Switch2_e;
+  real_T rtb_PR_e;
   real_T rtb_mdotequivalent;
   real_T rtb_Product11_d;
   real_T rtb_EfficiencyLookupTable;
@@ -1164,29 +1164,29 @@ static void NACCBraytonCycle2017a_output(void)
   real_T rtb_EfficiencyLookupTable_e;
   real_T rtb_u;
   real_T rtb_u_j;
-  real_T rtb_ModeSwitch2;
+  real_T rtb_MathFunction_p;
   real_T rtb_UnitOffset;
   real_T rtb_Product8_m[7];
   real_T rtb_Sum2_p5;
-  real_T rtb_Sum2_g;
+  real_T rtb_Sum2_k;
   int32_T i;
 
-  /* Bias: '<S45>/UnitOffset' incorporates:
-   *  Gain: '<S45>/UnitScale'
+  /* Bias: '<S50>/UnitOffset' incorporates:
+   *  Gain: '<S50>/UnitScale'
    *  Inport: '<Root>/In3'
    */
   rtb_UnitOffset = NACCBraytonCycle2017a_P.UnitScale_Gain *
     NACCBraytonCycle2017a_U.In3 + NACCBraytonCycle2017a_P.UnitOffset_Bias;
 
-  /* Bias: '<S46>/UnitOffset' incorporates:
-   *  Gain: '<S46>/UnitScale'
+  /* Bias: '<S51>/UnitOffset' incorporates:
+   *  Gain: '<S51>/UnitScale'
    *  Inport: '<Root>/In1'
    */
   NACCBraytonCycle2017a_B.UnitOffset = NACCBraytonCycle2017a_P.UnitScale_Gain_i *
     NACCBraytonCycle2017a_U.In1 + NACCBraytonCycle2017a_P.UnitOffset_Bias_c;
 
-  /* Bias: '<S47>/UnitOffset' incorporates:
-   *  Gain: '<S47>/UnitScale'
+  /* Bias: '<S52>/UnitOffset' incorporates:
+   *  Gain: '<S52>/UnitScale'
    *  Inport: '<Root>/In2'
    */
   NACCBraytonCycle2017a_B.UnitOffset_h =
@@ -1196,11 +1196,11 @@ static void NACCBraytonCycle2017a_output(void)
   /* If: '<S1>/If1' incorporates:
    *  Constant: '<S1>/Constant1'
    *  Constant: '<S1>/psi'
-   *  Constant: '<S43>/Sonstiges1'
+   *  Constant: '<S48>/Sonstiges1'
    */
   if (NACCBraytonCycle2017a_P.Constant1_Value_d == 1.0) {
     /* Outputs for IfAction SubSystem: '<S1>/MolarFlow' incorporates:
-     *  ActionPort: '<S42>/Action Port'
+     *  ActionPort: '<S47>/Action Port'
      */
     NACCBraytonCycle2017a_MolarFlow(rtb_UnitOffset,
       &NACCBraytonCycle2017a_B.ndot);
@@ -1208,7 +1208,7 @@ static void NACCBraytonCycle2017a_output(void)
     /* End of Outputs for SubSystem: '<S1>/MolarFlow' */
   } else if (NACCBraytonCycle2017a_P.Constant1_Value_d == 2.0) {
     /* Outputs for IfAction SubSystem: '<S1>/MassFlow' incorporates:
-     *  ActionPort: '<S41>/Action Port'
+     *  ActionPort: '<S46>/Action Port'
      */
     NACCBraytonCycle2017a_MassFlow(rtb_UnitOffset,
       NACCBraytonCycle2017a_P.Ambientair_psi, &NACCBraytonCycle2017a_B.ndot,
@@ -1217,18 +1217,18 @@ static void NACCBraytonCycle2017a_output(void)
     /* End of Outputs for SubSystem: '<S1>/MassFlow' */
   } else if (NACCBraytonCycle2017a_P.Constant1_Value_d == 3.0) {
     /* Outputs for IfAction SubSystem: '<S1>/VolumeFlow' incorporates:
-     *  ActionPort: '<S48>/Action Port'
+     *  ActionPort: '<S53>/Action Port'
      */
 
-    /* Outputs for Atomic SubSystem: '<S48>/T-p-Vapor Fractions' */
+    /* Outputs for Atomic SubSystem: '<S53>/T-p-Vapor Fractions' */
     NACCBraytonCyc_TpVaporFractions();
 
-    /* End of Outputs for SubSystem: '<S48>/T-p-Vapor Fractions' */
+    /* End of Outputs for SubSystem: '<S53>/T-p-Vapor Fractions' */
 
-    /* S-Function (th_Density_S): '<S54>/S-Function' incorporates:
+    /* S-Function (th_Density_S): '<S59>/S-Function' incorporates:
      *  Constant: '<S1>/psi'
      */
-    /*Block <S54>/S-Function*/
+    /*Block <S59>/S-Function*/
     {
       Par param;
       flow pflow;
@@ -1267,33 +1267,33 @@ static void NACCBraytonCycle2017a_output(void)
       (&NACCBraytonCycle2017a_B.SFunction_o3_o)[0] = calculated_density[2];
     }
 
-    /* Product: '<S55>/Product8' incorporates:
+    /* Product: '<S60>/Product8' incorporates:
      *  Constant: '<S1>/psi'
-     *  Constant: '<S56>/M1'
+     *  Constant: '<S61>/M1'
      */
     rtb_Product8_m[0] = NACCBraytonCycle2017a_P.Ambientair_psi[0] *
       NACCBraytonCycle2017a_P.th_M[0];
 
-    /* Sum: '<S55>/Sum2' */
+    /* Sum: '<S60>/Sum2' */
     rtb_Sum2_p5 = rtb_Product8_m[0];
     for (i = 0; i < 6; i++) {
-      /* Product: '<S55>/Product8' incorporates:
+      /* Product: '<S60>/Product8' incorporates:
        *  Constant: '<S1>/psi'
-       *  Constant: '<S56>/M1'
+       *  Constant: '<S61>/M1'
        */
       rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_P.Ambientair_psi[i + 1] *
         NACCBraytonCycle2017a_P.th_M[i + 1];
 
-      /* Sum: '<S55>/Sum2' incorporates:
-       *  Product: '<S55>/Product8'
+      /* Sum: '<S60>/Sum2' incorporates:
+       *  Product: '<S60>/Product8'
        */
       rtb_Sum2_p5 += rtb_Product8_m[i + 1];
     }
 
-    /* Product: '<S53>/Product1' incorporates:
-     *  Constant: '<S53>/Constant'
-     *  Product: '<S53>/Product'
-     *  Product: '<S55>/Product11'
+    /* Product: '<S58>/Product1' incorporates:
+     *  Constant: '<S58>/Constant'
+     *  Product: '<S58>/Product'
+     *  Product: '<S60>/Product11'
      */
     NACCBraytonCycle2017a_B.ndot = rtb_UnitOffset *
       NACCBraytonCycle2017a_B.SFunction_o2_f /
@@ -1303,7 +1303,7 @@ static void NACCBraytonCycle2017a_output(void)
   } else {
     if (NACCBraytonCycle2017a_P.Constant1_Value_d == 4.0) {
       /* Outputs for IfAction SubSystem: '<S1>/Reservoir' incorporates:
-       *  ActionPort: '<S43>/Action Port'
+       *  ActionPort: '<S48>/Action Port'
        */
       NACCBraytonCycle2017a_B.ndot = NACCBraytonCycle2017a_P.Sonstiges1_Value;
 
@@ -1318,52 +1318,53 @@ static void NACCBraytonCycle2017a_output(void)
 
   /* End of Outputs for SubSystem: '<S1>/T-p-State' */
 
-  /* Product: '<S322>/Product8' incorporates:
-   *  Constant: '<S326>/M1'
-   */
-  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_eg[0] *
-    NACCBraytonCycle2017a_P.th_M[0];
-
-  /* Sum: '<S322>/Sum2' */
-  rtb_ModeSwitch2 = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    /* Product: '<S322>/Product8' incorporates:
-     *  Constant: '<S326>/M1'
+  /* Sum: '<S327>/Sum2' */
+  rtb_UnitOffset = -0.0;
+  for (i = 0; i < 7; i++) {
+    /* Sum: '<S327>/Sum2' incorporates:
+     *  Constant: '<S331>/M1'
+     *  Product: '<S327>/Product8'
      */
-    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_eg[i + 1] *
-      NACCBraytonCycle2017a_P.th_M[i + 1];
+    rtb_UnitOffset += NACCBraytonCycle2017a_B.psi_eg[i] *
+      NACCBraytonCycle2017a_P.th_M[i];
 
-    /* Sum: '<S322>/Sum2' incorporates:
-     *  Product: '<S322>/Product8'
+    /* Memory: '<S13>/Memory4' */
+    NACCBraytonCycle2017a_B.psi[i] =
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput[i];
+
+    /* Product: '<S327>/Product8' incorporates:
+     *  Constant: '<S188>/M1'
+     *  Product: '<S184>/Product8'
      */
-    rtb_ModeSwitch2 += rtb_Product8_m[i + 1];
+    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi[i] *
+      NACCBraytonCycle2017a_P.th_M[i];
   }
 
   /* Outport: '<Root>/Out1' incorporates:
-   *  Constant: '<S27>/addition factor1'
-   *  Gain: '<S27>/Gain1'
-   *  Gain: '<S27>/Gain2'
-   *  Product: '<S322>/Product11'
-   *  Sum: '<S27>/Add'
+   *  Constant: '<S32>/addition factor1'
+   *  Gain: '<S32>/Gain1'
+   *  Gain: '<S32>/Gain2'
+   *  Product: '<S327>/Product11'
+   *  Sum: '<S32>/Add'
    */
   NACCBraytonCycle2017a_Y.Out1 = NACCBraytonCycle2017a_B.ndot_lp *
-    rtb_ModeSwitch2 * NACCBraytonCycle2017a_P.Gain2_Gain_a3 *
+    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_a3 *
     NACCBraytonCycle2017a_P.Gain1_Gain_g +
     NACCBraytonCycle2017a_P.additionfactor1_Value;
 
   /* Outport: '<Root>/Out2' incorporates:
-   *  Constant: '<S26>/addition factor1'
-   *  Gain: '<S26>/Gain1'
-   *  Sum: '<S26>/Add'
+   *  Constant: '<S31>/addition factor1'
+   *  Gain: '<S31>/Gain1'
+   *  Sum: '<S31>/Add'
    */
   NACCBraytonCycle2017a_Y.Out2 = NACCBraytonCycle2017a_P.Gain1_Gain_l3 *
     NACCBraytonCycle2017a_B.T_gw +
     NACCBraytonCycle2017a_P.additionfactor1_Value_m;
 
   /* Outport: '<Root>/Out3' incorporates:
-   *  Constant: '<S28>/addition factor1'
-   *  Gain: '<S28>/Gain1'
-   *  Sum: '<S28>/Add'
+   *  Constant: '<S33>/addition factor1'
+   *  Gain: '<S33>/Gain1'
+   *  Sum: '<S33>/Add'
    */
   NACCBraytonCycle2017a_Y.Out3 = NACCBraytonCycle2017a_P.Gain1_Gain_c *
     NACCBraytonCycle2017a_B.p_d +
@@ -1371,86 +1372,1668 @@ static void NACCBraytonCycle2017a_output(void)
 
   /* Outport: '<Root>/Out4' incorporates:
    *  Constant: '<Root>/Constant2'
-   *  Constant: '<S29>/addition factor1'
-   *  Gain: '<S29>/Gain1'
+   *  Constant: '<S34>/addition factor1'
+   *  Gain: '<S34>/Gain1'
    *  Product: '<Root>/Product'
-   *  Sum: '<S29>/Add'
+   *  Sum: '<S34>/Add'
    */
   NACCBraytonCycle2017a_Y.Out4 = (NACCBraytonCycle2017a_P.Gain1_Gain_ln *
     NACCBraytonCycle2017a_B.Hdot_a +
     NACCBraytonCycle2017a_P.additionfactor1_Value_p) *
     NACCBraytonCycle2017a_P.Constant2_Value_c;
 
-  /* Gain: '<S81>/Gain' incorporates:
-   *  Constant: '<S81>/Constant4'
-   *  Memory: '<S73>/Memory1'
-   *  Sum: '<S81>/Subtract'
-   */
-  rtb_ModeSwitch2 = (NACCBraytonCycle2017a_DW.Memory1_PreviousInput[0] -
-                     NACCBraytonCycle2017a_P.Constant4_Value_p) *
-    NACCBraytonCycle2017a_P.Gain_Gain_f;
+  /* Memory: '<S13>/Memory9' */
+  NACCBraytonCycle2017a_B.ndot_e =
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput;
 
-  /* Sum: '<S81>/Subtract1' incorporates:
-   *  Constant: '<S81>/Constant'
-   *  Fcn: '<S81>/Fcn [-2 2]'
-   *  Gain: '<S81>/p_Relaxation'
+  /* Sum: '<S184>/Sum2' incorporates:
+   *  Constant: '<S430>/M1'
+   *  Product: '<S426>/Product8'
    */
-  rtb_Sum2_g = ((((0.0116 * rt_powd_snf(rtb_ModeSwitch2, 5.0) - 6.0e-16 *
-                   rt_powd_snf(rtb_ModeSwitch2, 4.0)) + 0.0148 * rt_powd_snf
-                  (rtb_ModeSwitch2, 3.0)) + 7.0e-16 * rt_powd_snf
-                 (rtb_ModeSwitch2, 2.0)) + 0.0064 * rtb_ModeSwitch2) *
-    NACCBraytonCycle2017a_P.p_Relaxation_Gain +
-    NACCBraytonCycle2017a_P.Constant_Value_l;
+  rtb_UnitOffset = -0.0;
+  for (i = 0; i < 7; i++) {
+    rtb_UnitOffset += rtb_Product8_m[i];
 
-  /* Saturate: '<S81>/Saturation' */
-  if (rtb_Sum2_g > NACCBraytonCycle2017a_P.Saturation_UpperSat_p) {
-    rtb_Sum2_g = NACCBraytonCycle2017a_P.Saturation_UpperSat_p;
+    /* Memory: '<S9>/Memory4' */
+    NACCBraytonCycle2017a_B.psi_k[i] =
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b[i];
+    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi_k[i] *
+      NACCBraytonCycle2017a_P.th_M[i];
+  }
+
+  /* Outport: '<Root>/Out5' incorporates:
+   *  Constant: '<S19>/addition factor1'
+   *  Gain: '<S19>/Gain1'
+   *  Gain: '<S19>/Gain2'
+   *  Product: '<S184>/Product11'
+   *  Sum: '<S19>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out5 = NACCBraytonCycle2017a_B.ndot_e * rtb_UnitOffset
+    * NACCBraytonCycle2017a_P.Gain2_Gain_mh *
+    NACCBraytonCycle2017a_P.Gain1_Gain_p +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_f;
+
+  /* Outport: '<Root>/Out6' incorporates:
+   *  Constant: '<S18>/addition factor1'
+   *  Gain: '<S18>/Gain1'
+   *  Memory: '<S13>/Memory1'
+   *  Sum: '<S18>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out6 = NACCBraytonCycle2017a_P.Gain1_Gain_k *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_k;
+
+  /* Outport: '<Root>/Out7' incorporates:
+   *  Constant: '<S30>/addition factor1'
+   *  Gain: '<S30>/Gain1'
+   *  Memory: '<S13>/Memory2'
+   *  Sum: '<S30>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out7 = NACCBraytonCycle2017a_P.Gain1_Gain_lj *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_mr;
+
+  /* Outport: '<Root>/Out8' incorporates:
+   *  Constant: '<Root>/Constant3'
+   *  Constant: '<S39>/addition factor1'
+   *  Gain: '<S39>/Gain1'
+   *  Memory: '<S13>/Memory3'
+   *  Product: '<Root>/Product1'
+   *  Sum: '<S39>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out8 = (NACCBraytonCycle2017a_P.Gain1_Gain_m *
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_d) *
+    NACCBraytonCycle2017a_P.Constant3_Value_d;
+
+  /* Sum: '<S426>/Sum2' incorporates:
+   *  Constant: '<S474>/M1'
+   *  Product: '<S470>/Product8'
+   */
+  rtb_UnitOffset = -0.0;
+  for (i = 0; i < 7; i++) {
+    rtb_UnitOffset += rtb_Product8_m[i];
+
+    /* Memory: '<S12>/Memory4' */
+    NACCBraytonCycle2017a_B.psi_n[i] =
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f[i];
+    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi_n[i] *
+      NACCBraytonCycle2017a_P.th_M[i];
+  }
+
+  /* Outport: '<Root>/Out9' incorporates:
+   *  Constant: '<S41>/addition factor1'
+   *  Gain: '<S41>/Gain1'
+   *  Gain: '<S41>/Gain2'
+   *  Memory: '<S9>/Memory9'
+   *  Product: '<S426>/Product11'
+   *  Sum: '<S41>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out9 =
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i * rtb_UnitOffset *
+    NACCBraytonCycle2017a_P.Gain2_Gain_g * NACCBraytonCycle2017a_P.Gain1_Gain_g2
+    + NACCBraytonCycle2017a_P.additionfactor1_Value_h;
+
+  /* Outport: '<Root>/Out10' incorporates:
+   *  Constant: '<S40>/addition factor1'
+   *  Gain: '<S40>/Gain1'
+   *  Memory: '<S9>/Memory1'
+   *  Sum: '<S40>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out10 = NACCBraytonCycle2017a_P.Gain1_Gain_lr *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_md;
+
+  /* Outport: '<Root>/Out11' incorporates:
+   *  Constant: '<S42>/addition factor1'
+   *  Gain: '<S42>/Gain1'
+   *  Memory: '<S9>/Memory2'
+   *  Sum: '<S42>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out11 = NACCBraytonCycle2017a_P.Gain1_Gain_mv *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_c;
+
+  /* Outport: '<Root>/Out12' incorporates:
+   *  Constant: '<Root>/Constant5'
+   *  Constant: '<S43>/addition factor1'
+   *  Gain: '<S43>/Gain1'
+   *  Memory: '<S9>/Memory3'
+   *  Product: '<Root>/Product2'
+   *  Sum: '<S43>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out12 = (NACCBraytonCycle2017a_P.Gain1_Gain_e *
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_b) *
+    NACCBraytonCycle2017a_P.Constant5_Value;
+
+  /* Memory: '<S12>/Memory9' */
+  NACCBraytonCycle2017a_B.ndot_ea =
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv;
+
+  /* Sum: '<S470>/Sum2' */
+  rtb_UnitOffset = rtb_Product8_m[0];
+
+  /* Product: '<S250>/Product8' incorporates:
+   *  Constant: '<S254>/M1'
+   *  Memory: '<S8>/Memory4'
+   */
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
+  for (i = 0; i < 6; i++) {
+    /* Sum: '<S470>/Sum2' incorporates:
+     *  Sum: '<S103>/Sum2'
+     *  Sum: '<S105>/Sum'
+     *  Sum: '<S110>/Sum2'
+     *  Sum: '<S127>/Sum2'
+     *  Sum: '<S129>/Sum'
+     *  Sum: '<S134>/Sum2'
+     *  Sum: '<S147>/Sum2'
+     *  Sum: '<S154>/Sum2'
+     *  Sum: '<S170>/Sum2'
+     *  Sum: '<S184>/Sum2'
+     *  Sum: '<S250>/Sum2'
+     *  Sum: '<S294>/Sum2'
+     *  Sum: '<S327>/Sum2'
+     *  Sum: '<S393>/Sum2'
+     *  Sum: '<S426>/Sum2'
+     *  Sum: '<S60>/Sum2'
+     *  Sum: '<S66>/Sum2'
+     *  Sum: '<S74>/Sum2'
+     *  Sum: '<S78>/Sum'
+     *  Sum: '<S82>/Sum2'
+     *  Sum: '<S93>/Sum2'
+     */
+    rtb_UnitOffset += rtb_Product8_m[i + 1];
+
+    /* Product: '<S250>/Product8' incorporates:
+     *  Constant: '<S254>/M1'
+     *  Memory: '<S8>/Memory4'
+     *  Sum: '<S103>/Sum2'
+     *  Sum: '<S105>/Sum'
+     *  Sum: '<S110>/Sum2'
+     *  Sum: '<S127>/Sum2'
+     *  Sum: '<S129>/Sum'
+     *  Sum: '<S134>/Sum2'
+     *  Sum: '<S147>/Sum2'
+     *  Sum: '<S154>/Sum2'
+     *  Sum: '<S170>/Sum2'
+     *  Sum: '<S184>/Sum2'
+     *  Sum: '<S250>/Sum2'
+     *  Sum: '<S294>/Sum2'
+     *  Sum: '<S327>/Sum2'
+     *  Sum: '<S393>/Sum2'
+     *  Sum: '<S426>/Sum2'
+     *  Sum: '<S470>/Sum2'
+     *  Sum: '<S60>/Sum2'
+     *  Sum: '<S66>/Sum2'
+     *  Sum: '<S74>/Sum2'
+     *  Sum: '<S78>/Sum'
+     *  Sum: '<S82>/Sum2'
+     *  Sum: '<S93>/Sum2'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[i +
+      1] * NACCBraytonCycle2017a_P.th_M[i + 1];
+  }
+
+  /* Outport: '<Root>/Out13' incorporates:
+   *  Constant: '<S45>/addition factor1'
+   *  Gain: '<S45>/Gain1'
+   *  Gain: '<S45>/Gain2'
+   *  Product: '<S470>/Product11'
+   *  Sum: '<S45>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out13 = NACCBraytonCycle2017a_B.ndot_ea *
+    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_o *
+    NACCBraytonCycle2017a_P.Gain1_Gain_n0 +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_kh;
+
+  /* Outport: '<Root>/Out14' incorporates:
+   *  Constant: '<S44>/addition factor1'
+   *  Gain: '<S44>/Gain1'
+   *  Memory: '<S12>/Memory1'
+   *  Sum: '<S44>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out14 = NACCBraytonCycle2017a_P.Gain1_Gain_o *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_ok;
+
+  /* Outport: '<Root>/Out15' incorporates:
+   *  Constant: '<S20>/addition factor1'
+   *  Gain: '<S20>/Gain1'
+   *  Memory: '<S12>/Memory2'
+   *  Sum: '<S20>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out15 = NACCBraytonCycle2017a_P.Gain1_Gain_i *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_f1;
+
+  /* Outport: '<Root>/Out16' incorporates:
+   *  Constant: '<Root>/Constant6'
+   *  Constant: '<S21>/addition factor1'
+   *  Gain: '<S21>/Gain1'
+   *  Memory: '<S12>/Memory3'
+   *  Product: '<Root>/Product3'
+   *  Sum: '<S21>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out16 = (NACCBraytonCycle2017a_P.Gain1_Gain_k3 *
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_kx) *
+    NACCBraytonCycle2017a_P.Constant6_Value_l;
+
+  /* Sum: '<S250>/Sum2' incorporates:
+   *  Constant: '<S298>/M1'
+   *  Product: '<S294>/Product8'
+   */
+  rtb_MathFunction_p = -0.0;
+  for (i = 0; i < 7; i++) {
+    rtb_MathFunction_p += rtb_Product8_m[i];
+
+    /* Memory: '<S7>/Memory4' */
+    NACCBraytonCycle2017a_B.psi_b[i] =
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i[i];
+    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi_b[i] *
+      NACCBraytonCycle2017a_P.th_M[i];
+  }
+
+  /* Outport: '<Root>/Out17' incorporates:
+   *  Constant: '<S25>/addition factor1'
+   *  Gain: '<S25>/Gain1'
+   *  Gain: '<S25>/Gain2'
+   *  Memory: '<S8>/Memory9'
+   *  Product: '<S250>/Product11'
+   *  Sum: '<S25>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out17 =
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a * rtb_MathFunction_p *
+    NACCBraytonCycle2017a_P.Gain2_Gain_as *
+    NACCBraytonCycle2017a_P.Gain1_Gain_k0 +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_b5;
+
+  /* Outport: '<Root>/Out18' incorporates:
+   *  Constant: '<S24>/addition factor1'
+   *  Gain: '<S24>/Gain1'
+   *  Memory: '<S8>/Memory1'
+   *  Sum: '<S24>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out18 = NACCBraytonCycle2017a_P.Gain1_Gain_ea *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_d1;
+
+  /* Outport: '<Root>/Out19' incorporates:
+   *  Constant: '<S22>/addition factor1'
+   *  Gain: '<S22>/Gain1'
+   *  Memory: '<S8>/Memory2'
+   *  Sum: '<S22>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out19 = NACCBraytonCycle2017a_P.Gain1_Gain_b *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_g;
+
+  /* Outport: '<Root>/Out20' incorporates:
+   *  Constant: '<Root>/Constant7'
+   *  Constant: '<S23>/addition factor1'
+   *  Gain: '<S23>/Gain1'
+   *  Memory: '<S8>/Memory3'
+   *  Product: '<Root>/Product4'
+   *  Sum: '<S23>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out20 = (NACCBraytonCycle2017a_P.Gain1_Gain_fe *
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_l) *
+    NACCBraytonCycle2017a_P.Constant7_Value;
+
+  /* Sum: '<S294>/Sum2' incorporates:
+   *  Sum: '<S103>/Sum2'
+   *  Sum: '<S105>/Sum'
+   *  Sum: '<S110>/Sum2'
+   *  Sum: '<S127>/Sum2'
+   *  Sum: '<S129>/Sum'
+   *  Sum: '<S134>/Sum2'
+   *  Sum: '<S147>/Sum2'
+   *  Sum: '<S154>/Sum2'
+   *  Sum: '<S170>/Sum2'
+   *  Sum: '<S184>/Sum2'
+   *  Sum: '<S250>/Sum2'
+   *  Sum: '<S327>/Sum2'
+   *  Sum: '<S393>/Sum2'
+   *  Sum: '<S426>/Sum2'
+   *  Sum: '<S470>/Sum2'
+   *  Sum: '<S60>/Sum2'
+   *  Sum: '<S66>/Sum2'
+   *  Sum: '<S74>/Sum2'
+   *  Sum: '<S78>/Sum'
+   *  Sum: '<S82>/Sum2'
+   *  Sum: '<S93>/Sum2'
+   */
+  rtb_MathFunction_p = rtb_Product8_m[0];
+  for (i = 0; i < 6; i++) {
+    rtb_MathFunction_p += rtb_Product8_m[i + 1];
+  }
+
+  /* Outport: '<Root>/Out21' incorporates:
+   *  Constant: '<S29>/addition factor1'
+   *  Gain: '<S29>/Gain1'
+   *  Gain: '<S29>/Gain2'
+   *  Memory: '<S7>/Memory9'
+   *  Product: '<S294>/Product11'
+   *  Sum: '<S29>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out21 =
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b * rtb_MathFunction_p *
+    NACCBraytonCycle2017a_P.Gain2_Gain_e * NACCBraytonCycle2017a_P.Gain1_Gain_nb
+    + NACCBraytonCycle2017a_P.additionfactor1_Value_fu;
+
+  /* Outport: '<Root>/Out22' incorporates:
+   *  Constant: '<S28>/addition factor1'
+   *  Gain: '<S28>/Gain1'
+   *  Memory: '<S7>/Memory1'
+   *  Sum: '<S28>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out22 = NACCBraytonCycle2017a_P.Gain1_Gain_ck *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_e;
+
+  /* Outport: '<Root>/Out23' incorporates:
+   *  Constant: '<S26>/addition factor1'
+   *  Gain: '<S26>/Gain1'
+   *  Memory: '<S7>/Memory2'
+   *  Sum: '<S26>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out23 = NACCBraytonCycle2017a_P.Gain1_Gain_is *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_hp;
+
+  /* Outport: '<Root>/Out24' incorporates:
+   *  Constant: '<Root>/Constant8'
+   *  Constant: '<S27>/addition factor1'
+   *  Gain: '<S27>/Gain1'
+   *  Memory: '<S7>/Memory3'
+   *  Product: '<Root>/Product5'
+   *  Sum: '<S27>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out24 = (NACCBraytonCycle2017a_P.Gain1_Gain_j *
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_dv) *
+    NACCBraytonCycle2017a_P.Constant8_Value;
+
+  /* Product: '<S129>/Product2' incorporates:
+   *  Constant: '<S129>/T-normal'
+   *  Memory: '<S7>/Memory1'
+   */
+  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m /
+    NACCBraytonCycle2017a_P.Tnormal_Value;
+
+  /* Math: '<S129>/Math Function'
+   *
+   * About '<S129>/Math Function':
+   *  Operator: sqrt
+   */
+  if (rtb_UnitOffset < 0.0) {
+    rtb_MathFunction_p = -sqrt(fabs(rtb_UnitOffset));
   } else {
-    if (rtb_Sum2_g < NACCBraytonCycle2017a_P.Saturation_LowerSat_k) {
-      rtb_Sum2_g = NACCBraytonCycle2017a_P.Saturation_LowerSat_k;
+    rtb_MathFunction_p = sqrt(rtb_UnitOffset);
+  }
+
+  /* End of Math: '<S129>/Math Function' */
+
+  /* Product: '<S129>/Product7' incorporates:
+   *  Constant: '<S15>/RPM'
+   */
+  rtb_UnitOffset = NACCBraytonCycle2017a_P.RPM_Value / rtb_MathFunction_p;
+
+  /* Switch: '<S144>/Switch2' incorporates:
+   *  Constant: '<S132>/Constant'
+   *  Constant: '<S132>/Constant4'
+   *  RelationalOperator: '<S144>/LowerRelop1'
+   *  RelationalOperator: '<S144>/UpperRelop'
+   *  Switch: '<S144>/Switch'
+   */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Constant_Value_j) {
+    rtb_Switch2 = NACCBraytonCycle2017a_P.Constant_Value_j;
+  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Constant4_Value_d) {
+    /* Switch: '<S144>/Switch' incorporates:
+     *  Constant: '<S132>/Constant4'
+     */
+    rtb_Switch2 = NACCBraytonCycle2017a_P.Constant4_Value_d;
+  } else {
+    rtb_Switch2 = rtb_UnitOffset;
+  }
+
+  /* End of Switch: '<S144>/Switch2' */
+
+  /* Switch: '<S137>/Switch2' incorporates:
+   *  Constant: '<Root>/Constant11'
+   *  Constant: '<S129>/Constant1'
+   *  Memory: '<S7>/Memory2'
+   *  RelationalOperator: '<S137>/LowerRelop1'
+   *  RelationalOperator: '<S137>/UpperRelop'
+   *  Switch: '<S137>/Switch'
+   */
+  if (NACCBraytonCycle2017a_P.Constant11_Value >
+      NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e) {
+    NACCBraytonCycle2017a_B.Switch2 =
+      NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e;
+  } else if (NACCBraytonCycle2017a_P.Constant11_Value <
+             NACCBraytonCycle2017a_P.Constant1_Value_e) {
+    /* Switch: '<S137>/Switch' incorporates:
+     *  Constant: '<S129>/Constant1'
+     */
+    NACCBraytonCycle2017a_B.Switch2 = NACCBraytonCycle2017a_P.Constant1_Value_e;
+  } else {
+    NACCBraytonCycle2017a_B.Switch2 = NACCBraytonCycle2017a_P.Constant11_Value;
+  }
+
+  /* End of Switch: '<S137>/Switch2' */
+
+  /* Product: '<S129>/Product8' incorporates:
+   *  Memory: '<S7>/Memory2'
+   */
+  rtb_PR = 1.0 / NACCBraytonCycle2017a_B.Switch2 *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e;
+
+  /* MultiPortSwitch: '<S129>/Multiport Switch' incorporates:
+   *  Constant: '<S129>/T-normal1'
+   *  Memory: '<S7>/Memory9'
+   *  Product: '<S129>/Product9'
+   */
+  if ((int32_T)NACCBraytonCycle2017a_P.LPGasTurbine_Mode == 1) {
+    NACCBraytonCycle2017a_B.MultiportSwitch =
+      NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b;
+  } else {
+    /* Lookup2D: '<S132>/Lookup Table (2-D)' */
+    /*
+     * About '<S132>/Lookup Table (2-D)':
+     * Input0  Data Type:  Floating Point real_T
+     * Input1  Data Type:  Floating Point real_T
+     * Output0 Data Type:  Floating Point real_T
+     * Lookup Method: Linear_Endpoint
+     *
+     * Row Data    parameter uses the same data type and scaling as Input0
+     * Column Data parameter uses the same data type and scaling as Input1
+     * Table Data  parameter uses the same data type and scaling as Output0
+     */
+    Look2D_real_T_real_T_real_T( &(rtb_mdotequivalent),
+      NACCBraytonCycle2017a_P.LookupTable2D_Table_l, rtb_Switch2,
+      NACCBraytonCycle2017a_P.LookupTable2D_RowIdx_i, 5U, rtb_PR,
+      NACCBraytonCycle2017a_P.LookupTable2D_ColIdx_h, 20U);
+
+    /* Product: '<S132>/Divide1' incorporates:
+     *  Constant: '<S132>/Constant1'
+     *  Constant: '<S132>/Constant2'
+     *  Constant: '<S140>/Constant'
+     *  Constant: '<S141>/Constant'
+     *  Constant: '<S142>/Constant'
+     *  Constant: '<S143>/Constant'
+     *  DataTypeConversion: '<S132>/Data Type Conversion1'
+     *  DataTypeConversion: '<S132>/Data Type Conversion2'
+     *  DataTypeConversion: '<S132>/Data Type Conversion3'
+     *  Logic: '<S132>/Logical Operator2'
+     *  Lookup2D: '<S132>/Lookup Table (2-D)'
+     *  Product: '<S132>/Divide'
+     *  Product: '<S132>/Divide3'
+     *  RelationalOperator: '<S140>/Compare'
+     *  RelationalOperator: '<S141>/Compare'
+     *  RelationalOperator: '<S142>/Compare'
+     *  RelationalOperator: '<S143>/Compare'
+     *  Sum: '<S132>/Add2'
+     */
+    rtb_UnitOffset = (((real_T)(rtb_UnitOffset >
+      NACCBraytonCycle2017a_P.CompareToConstant1_const) * rtb_UnitOffset /
+                       NACCBraytonCycle2017a_P.Constant1_Value_h + (real_T)
+                       ((rtb_UnitOffset >=
+                         NACCBraytonCycle2017a_P.CompareToConstant5_const) &&
+                        (rtb_UnitOffset <=
+                         NACCBraytonCycle2017a_P.CompareToConstant6_const))) +
+                      (real_T)(rtb_UnitOffset <
+      NACCBraytonCycle2017a_P.CompareToConstant2_const) * rtb_UnitOffset /
+                      NACCBraytonCycle2017a_P.Constant2_Value_e) *
+      rtb_mdotequivalent;
+
+    /* Saturate: '<S132>/Saturation' */
+    if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_e) {
+      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation_UpperSat_e;
+    } else {
+      if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_i) {
+        rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation_LowerSat_i;
+      }
+    }
+
+    /* End of Saturate: '<S132>/Saturation' */
+
+    /* Product: '<S129>/Product1' incorporates:
+     *  Constant: '<S129>/p-normal'
+     *  Memory: '<S7>/Memory2'
+     *  Product: '<S129>/Product3'
+     */
+    rtb_MathFunction_p = NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e /
+      NACCBraytonCycle2017a_P.pnormal_Value_k / rtb_MathFunction_p *
+      rtb_UnitOffset;
+
+    /* Product: '<S129>/Product5' incorporates:
+     *  Constant: '<S135>/M1'
+     */
+    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_b[0] *
+      NACCBraytonCycle2017a_P.th_M[0];
+
+    /* Sum: '<S129>/Sum' */
+    rtb_UnitOffset = rtb_Product8_m[0];
+    for (i = 0; i < 6; i++) {
+      /* Product: '<S129>/Product5' incorporates:
+       *  Constant: '<S135>/M1'
+       */
+      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_b[i + 1] *
+        NACCBraytonCycle2017a_P.th_M[i + 1];
+
+      /* Sum: '<S129>/Sum' incorporates:
+       *  Product: '<S129>/Product5'
+       */
+      rtb_UnitOffset += rtb_Product8_m[i + 1];
+    }
+
+    NACCBraytonCycle2017a_B.MultiportSwitch = 1.0 / rtb_UnitOffset *
+      rtb_MathFunction_p;
+  }
+
+  /* End of MultiPortSwitch: '<S129>/Multiport Switch' */
+
+  /* Gain: '<S138>/Gain' */
+  NACCBraytonCycle2017a_B.ndot_i = NACCBraytonCycle2017a_P.Gain_Gain_l *
+    NACCBraytonCycle2017a_B.MultiportSwitch;
+
+  /* Gain: '<S138>/Gain1' incorporates:
+   *  Memory: '<S7>/Memory1'
+   */
+  NACCBraytonCycle2017a_B.T = NACCBraytonCycle2017a_P.Gain1_Gain_d *
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m;
+
+  /* Gain: '<S138>/Gain2' incorporates:
+   *  Memory: '<S7>/Memory2'
+   */
+  NACCBraytonCycle2017a_B.p = NACCBraytonCycle2017a_P.Gain2_Gain_oa *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e;
+  for (i = 0; i < 7; i++) {
+    /* Gain: '<S138>/Gain3' incorporates:
+     *  Memory: '<S7>/Memory8'
+     */
+    NACCBraytonCycle2017a_B.x[i] = NACCBraytonCycle2017a_P.Gain3_Gain_p *
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i];
+
+    /* Gain: '<S138>/Gain4' */
+    NACCBraytonCycle2017a_B.psi_o[i] = NACCBraytonCycle2017a_P.Gain4_Gain_l *
+      NACCBraytonCycle2017a_B.psi_b[i];
+  }
+
+  /* S-Function (th_TpxState_S): '<S138>/S-Function1' */
+  /*Block <S138>/S-Function1*/
+  {
+    Par param;
+    flow pflow;
+    int* error;
+    nasa *pNASA = (nasa*)EUallocate(sizeof(nasa));
+    nasa *pNASA1 = (nasa*)EUallocate(sizeof(nasa));
+    th_SPoly3 *pCp_liq = (th_SPoly3*)EUallocate(sizeof(th_SPoly3));
+    th_InitParameters(&param);
+    th_InitFlow(&pflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
+      pCp_liq->len * 2);
+    param.nr_species = (int)7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.water_index = (int)0.0;
+    param.if97_index = (int)-1.0;
+    param.gas_eos_method = (int)1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.pCp_liq = pCp_liq;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction1_P12_m;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P13_br[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P14_g[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+
+    /* Map inputs */
+    pflow.nr_flows = 1;
+    pflow.ndot_ = (double *)&NACCBraytonCycle2017a_B.ndot_i;
+    pflow.T_ = (double *)&NACCBraytonCycle2017a_B.T;
+    pflow.p_ = (double *)&NACCBraytonCycle2017a_B.p;
+    pflow.x = (double *)&NACCBraytonCycle2017a_B.x[0];
+    pflow.psi = (double *)&NACCBraytonCycle2017a_B.psi_o[0];
+
+    /* Map outputs */
+    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot;
+    pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot;
+    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot;
+    pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot;
+    error = (int *) &NACCBraytonCycle2017a_B.SFunction1_o5;
+    error[0] = th_T_p_x_State_new (&pflow, &param);
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* Outputs for Atomic SubSystem: '<S129>/S-p-State' */
+
+  /* S-Function (th_SpState_S): '<S136>/S-Function' */
+  /* Block <S136>/S-Function */
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace SpTrace;
+    Options SpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_m;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_k;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_n[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_j[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    SpOpt.derivative_neighbor_factor = 0.02;
+    SpOpt.x_conv_limit = 0.0001;
+    SpOpt.y_conv_limit = 1.0E-9;
+    SpOpt.max_iterations = (int) 100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_i;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2;
+    inflow.psi = &NACCBraytonCycle2017a_B.psi_o[0];
+    inflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_b;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_n;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_pc;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_d0;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_k0;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_km;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_e;
+    outflow.x = &NACCBraytonCycle2017a_B.x_o[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_cu[0];
+    (&NACCBraytonCycle2017a_B.error_codes_i)[0] = th_S_p_State(&inflow,&param,
+      &SpOpt,&outflow,&SpTrace);
+    (&NACCBraytonCycle2017a_B.iter)[0] = SpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S129>/S-p-State' */
+
+  /* MultiPortSwitch: '<S129>/Multiport Switch1' incorporates:
+   *  Constant: '<S129>/T-normal2'
+   *  Lookup: '<S129>/Efficiency Lookup Table'
+   *  Product: '<S134>/Product11'
+   */
+  if ((int32_T)NACCBraytonCycle2017a_P.LPGasTurbine_Mode == 1) {
+    /* Product: '<S134>/Product8' incorporates:
+     *  Constant: '<S146>/M1'
+     */
+    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_b[0] *
+      NACCBraytonCycle2017a_P.th_M[0];
+
+    /* Sum: '<S134>/Sum2' */
+    rtb_Sum2_k = rtb_Product8_m[0];
+    for (i = 0; i < 6; i++) {
+      /* Product: '<S134>/Product8' incorporates:
+       *  Constant: '<S146>/M1'
+       */
+      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_b[i + 1] *
+        NACCBraytonCycle2017a_P.th_M[i + 1];
+
+      /* Sum: '<S134>/Sum2' incorporates:
+       *  Product: '<S134>/Product8'
+       */
+      rtb_Sum2_k += rtb_Product8_m[i + 1];
+    }
+
+    /* Product: '<S134>/Product11' */
+    rtb_Product11_d = NACCBraytonCycle2017a_B.MultiportSwitch * rtb_Sum2_k;
+
+    /* Lookup: '<S129>/Efficiency Lookup Table' incorporates:
+     *  Product: '<S134>/Product11'
+     */
+    /*
+     * About '<S129>/Efficiency Lookup Table':
+     * Input0  Data Type:  Floating Point real_T
+     * Output0 Data Type:  Floating Point real_T
+     * Lookup Method: Linear_Endpoint
+     *
+     * XData parameter uses the same data type and scaling as Input0
+     * YData parameter uses the same data type and scaling as Output0
+     */
+    LookUp_real_T_real_T( &(rtb_EfficiencyLookupTable),
+                         NACCBraytonCycle2017a_P.LPGasTurbine_efficiency,
+                         rtb_Product11_d,
+                         NACCBraytonCycle2017a_P.LPGasTurbine_mdot2, 4U);
+    rtb_UnitOffset = rtb_EfficiencyLookupTable;
+  } else {
+    /* Lookup2D: '<S132>/Lookup Table (2-D)2' */
+    /*
+     * About '<S132>/Lookup Table (2-D)2':
+     * Input0  Data Type:  Floating Point real_T
+     * Input1  Data Type:  Floating Point real_T
+     * Output0 Data Type:  Floating Point real_T
+     * Lookup Method: Linear_Endpoint
+     *
+     * Row Data    parameter uses the same data type and scaling as Input0
+     * Column Data parameter uses the same data type and scaling as Input1
+     * Table Data  parameter uses the same data type and scaling as Output0
+     */
+    Look2D_real_T_real_T_real_T( &(rtb_u),
+      NACCBraytonCycle2017a_P.LookupTable2D2_Table_l, rtb_Switch2,
+      NACCBraytonCycle2017a_P.LookupTable2D2_RowIdx_d, 5U, rtb_PR,
+      NACCBraytonCycle2017a_P.LookupTable2D2_ColIdx_g, 20U);
+
+    /* Saturate: '<S132>/Saturation1' */
+    if (rtb_u > NACCBraytonCycle2017a_P.Saturation1_UpperSat_m) {
+      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_m;
+    } else if (rtb_u < NACCBraytonCycle2017a_P.Saturation1_LowerSat_n) {
+      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_n;
+    } else {
+      rtb_UnitOffset = rtb_u;
+    }
+
+    /* End of Saturate: '<S132>/Saturation1' */
+  }
+
+  /* End of MultiPortSwitch: '<S129>/Multiport Switch1' */
+
+  /* Product: '<S129>/Product10' incorporates:
+   *  Gain: '<S129>/Gain1'
+   *  Sum: '<S129>/Sum3'
+   */
+  rtb_UnitOffset = (NACCBraytonCycle2017a_B.Hdot_d0 -
+                    NACCBraytonCycle2017a_B.Hdot) *
+    (NACCBraytonCycle2017a_P.Gain1_Gain_fh * rtb_UnitOffset);
+
+  /* Saturate: '<S129>/Saturation1' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation1_UpperSat_a) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_a;
+  } else {
+    if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation1_LowerSat_l) {
+      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_l;
     }
   }
 
-  /* End of Saturate: '<S81>/Saturation' */
+  /* End of Saturate: '<S129>/Saturation1' */
 
-  /* Product: '<S81>/Product1' incorporates:
-   *  Memory: '<S81>/Memory'
+  /* Sum: '<S129>/Subtract2' */
+  NACCBraytonCycle2017a_B.Subtract2 = rtb_UnitOffset +
+    NACCBraytonCycle2017a_B.Hdot;
+
+  /* Outputs for Atomic SubSystem: '<S129>/H-p-State with Heat Exchange' */
+
+  /* S-Function (th_HpStateHeatExchange_S): '<S131>/S-Function' */
+  /* Block <S131>/S-Function*/
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace HpTrace;
+    Options HpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.T_env = 300.0;
+    param.k_loss = 0.0;
+    param.A_total = 0.0;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_a;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_n;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_cy[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_go[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    HpOpt.derivative_neighbor_factor = 0.02;
+    HpOpt.x_conv_limit = 0.0001;
+    HpOpt.y_conv_limit = 1.0E-6;
+    HpOpt.max_iterations = (int)100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.MultiportSwitch;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2;
+    inflow.psi = &NACCBraytonCycle2017a_B.psi_b[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Subtract2;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_c;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_p;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_a;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_o;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_m;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_b;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_g;
+    outflow.x = &NACCBraytonCycle2017a_B.x_k[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_m[0];
+    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_p;
+    (&NACCBraytonCycle2017a_B.error_codes_j)[0] = th_H_p_State_heat_Exchange
+      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
+    (&NACCBraytonCycle2017a_B.num_iterations_a)[0] = HpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S129>/H-p-State with Heat Exchange' */
+
+  /* Product: '<S393>/Product8' incorporates:
+   *  Constant: '<S397>/M1'
    */
-  NACCBraytonCycle2017a_B.Product1 = rtb_Sum2_g *
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_m[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
+
+  /* Sum: '<S393>/Sum2' */
+  rtb_UnitOffset = rtb_Product8_m[0];
+  for (i = 0; i < 6; i++) {
+    /* Product: '<S393>/Product8' incorporates:
+     *  Constant: '<S397>/M1'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_m[i + 1] *
+      NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S393>/Sum2' incorporates:
+     *  Product: '<S393>/Product8'
+     */
+    rtb_UnitOffset += rtb_Product8_m[i + 1];
+  }
+
+  /* Outport: '<Root>/Out25' incorporates:
+   *  Constant: '<S38>/addition factor1'
+   *  Gain: '<S38>/Gain1'
+   *  Gain: '<S38>/Gain2'
+   *  Product: '<S393>/Product11'
+   *  Sum: '<S38>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out25 = NACCBraytonCycle2017a_B.ndot_c *
+    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_h *
+    NACCBraytonCycle2017a_P.Gain1_Gain_gr +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_hc;
+
+  /* Outport: '<Root>/Out26' incorporates:
+   *  Constant: '<S37>/addition factor1'
+   *  Gain: '<S37>/Gain1'
+   *  Sum: '<S37>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out26 = NACCBraytonCycle2017a_P.Gain1_Gain_kz *
+    NACCBraytonCycle2017a_B.T_p +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_cl;
+
+  /* Outport: '<Root>/Out27' incorporates:
+   *  Constant: '<S35>/addition factor1'
+   *  Gain: '<S35>/Gain1'
+   *  Sum: '<S35>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out27 = NACCBraytonCycle2017a_P.Gain1_Gain_dv *
+    NACCBraytonCycle2017a_B.p_a +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_el;
+
+  /* Outport: '<Root>/Out28' incorporates:
+   *  Constant: '<Root>/Constant9'
+   *  Constant: '<S36>/addition factor1'
+   *  Gain: '<S36>/Gain1'
+   *  Product: '<Root>/Product6'
+   *  Sum: '<S36>/Add'
+   */
+  NACCBraytonCycle2017a_Y.Out28 = (NACCBraytonCycle2017a_P.Gain1_Gain_py *
+    NACCBraytonCycle2017a_B.Hdot_o +
+    NACCBraytonCycle2017a_P.additionfactor1_Value_gl) *
+    NACCBraytonCycle2017a_P.Constant9_Value;
+
+  /* Outputs for Atomic SubSystem: '<S62>/calculate  conversion' */
+
+  /* Constant: '<S62>/Reaction Coefficients' incorporates:
+   *  Constant: '<Root>/Constant1'
+   *  Memory: '<S11>/Memory4'
+   */
+  NACCBrayton_calculateconversion
+    (NACCBraytonCycle2017a_P.CombustionChamber_reaction,
+     NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e,
+     NACCBraytonCycle2017a_P.Constant1_Value_em,
+     &NACCBraytonCycle2017a_B.calculateconversion,
+     (P_calculateconversion_NACCBra_T *)
+     &NACCBraytonCycle2017a_P.calculateconversion);
+
+  /* End of Outputs for SubSystem: '<S62>/calculate  conversion' */
+
+  /* Product: '<S62>/Product' incorporates:
+   *  Memory: '<S11>/Memory9'
+   */
+  NACCBraytonCycle2017a_B.Product =
+    NACCBraytonCycle2017a_B.calculateconversion.Subtract5 *
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o;
+
+  /* Product: '<S66>/Product8' incorporates:
+   *  Constant: '<S67>/M1'
+   *  Memory: '<S11>/Memory4'
+   */
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
+
+  /* Sum: '<S66>/Sum2' */
+  rtb_Sum2_p5 = rtb_Product8_m[0];
+  for (i = 0; i < 6; i++) {
+    /* Product: '<S66>/Product8' incorporates:
+     *  Constant: '<S67>/M1'
+     *  Memory: '<S11>/Memory4'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e[i +
+      1] * NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S66>/Sum2' incorporates:
+     *  Product: '<S66>/Product8'
+     */
+    rtb_Sum2_p5 += rtb_Product8_m[i + 1];
+  }
+
+  /* Product: '<S66>/Product11' incorporates:
+   *  Memory: '<S11>/Memory9'
+   */
+  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o *
+    rtb_Sum2_p5;
+
+  /* Sum: '<S64>/Sum' incorporates:
+   *  Gain: '<S64>/Gain'
+   *  Math: '<S64>/Math Function'
+   *  Memory: '<S11>/Memory2'
+   */
+  rtb_MathFunction_p = NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m -
+    rtb_UnitOffset * rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain_Gain_lp;
+
+  /* MinMax: '<S64>/MinMax' incorporates:
+   *  Constant: '<S64>/p_downstrem_min'
+   */
+  if (!((rtb_MathFunction_p > NACCBraytonCycle2017a_P.p_downstrem_min_Value_h) ||
+        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_h))) {
+    rtb_MathFunction_p = NACCBraytonCycle2017a_P.p_downstrem_min_Value_h;
+  }
+
+  /* End of MinMax: '<S64>/MinMax' */
+
+  /* Saturate: '<S64>/Saturation' */
+  if (rtb_MathFunction_p > NACCBraytonCycle2017a_P.Saturation_UpperSat_g) {
+    NACCBraytonCycle2017a_B.Saturation =
+      NACCBraytonCycle2017a_P.Saturation_UpperSat_g;
+  } else if (rtb_MathFunction_p < NACCBraytonCycle2017a_P.Saturation_LowerSat_d)
+  {
+    NACCBraytonCycle2017a_B.Saturation =
+      NACCBraytonCycle2017a_P.Saturation_LowerSat_d;
+  } else {
+    NACCBraytonCycle2017a_B.Saturation = rtb_MathFunction_p;
+  }
+
+  /* End of Saturate: '<S64>/Saturation' */
+
+  /* Memory: '<S11>/Memory3' */
+  NACCBraytonCycle2017a_B.Hdot_d =
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a;
+
+  /* Outputs for Atomic SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* S-Function (th_HpStateHeatExchange_S): '<S63>/S-Function' */
+  /* Block <S63>/S-Function*/
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace HpTrace;
+    Options HpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] - pNASA->len *
+                          1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
+                          5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.T_env = 288.15;
+    param.k_loss = 0.0;
+    param.A_total = 10.0;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_g;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    HpOpt.derivative_neighbor_factor = 0.02;
+    HpOpt.x_conv_limit = 0.0001;
+    HpOpt.y_conv_limit = 1.0E-6;
+    HpOpt.max_iterations = (int)100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.Product;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation;
+    inflow.psi = &NACCBraytonCycle2017a_B.calculateconversion.Product6[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_d;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_nu;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_mj;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_e;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_f5;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_ki;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_f0;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_aw;
+    outflow.x = &NACCBraytonCycle2017a_B.x_dt[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_le[0];
+    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_e;
+    (&NACCBraytonCycle2017a_B.error_codes_n)[0] = th_H_p_State_heat_Exchange
+      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
+    (&NACCBraytonCycle2017a_B.num_iterations_o)[0] = HpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* Outputs for Atomic SubSystem: '<S70>/calculate  conversion' */
+
+  /* Constant: '<S70>/Reaction Coefficients' incorporates:
+   *  Constant: '<Root>/Constant4'
+   *  Memory: '<S10>/Memory4'
+   */
+  NACCBrayton_calculateconversion
+    (NACCBraytonCycle2017a_P.CombustionChamber1_reaction,
+     NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m,
+     NACCBraytonCycle2017a_P.Constant4_Value_b,
+     &NACCBraytonCycle2017a_B.calculateconversion_b,
+     (P_calculateconversion_NACCBra_T *)
+     &NACCBraytonCycle2017a_P.calculateconversion_b);
+
+  /* End of Outputs for SubSystem: '<S70>/calculate  conversion' */
+
+  /* Product: '<S70>/Product' incorporates:
+   *  Memory: '<S10>/Memory9'
+   */
+  NACCBraytonCycle2017a_B.Product_a =
+    NACCBraytonCycle2017a_B.calculateconversion_b.Subtract5 *
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d;
+
+  /* Product: '<S74>/Product8' incorporates:
+   *  Constant: '<S75>/M1'
+   *  Memory: '<S10>/Memory4'
+   */
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
+
+  /* Sum: '<S74>/Sum2' */
+  rtb_MathFunction_p = rtb_Product8_m[0];
+  for (i = 0; i < 6; i++) {
+    /* Product: '<S74>/Product8' incorporates:
+     *  Constant: '<S75>/M1'
+     *  Memory: '<S10>/Memory4'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m[i +
+      1] * NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S74>/Sum2' incorporates:
+     *  Product: '<S74>/Product8'
+     */
+    rtb_MathFunction_p += rtb_Product8_m[i + 1];
+  }
+
+  /* Product: '<S74>/Product11' incorporates:
+   *  Memory: '<S10>/Memory9'
+   */
+  rtb_Sum2_p5 = NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d *
+    rtb_MathFunction_p;
+
+  /* Sum: '<S72>/Sum' incorporates:
+   *  Gain: '<S72>/Gain'
+   *  Math: '<S72>/Math Function'
+   *  Memory: '<S10>/Memory2'
+   */
+  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d -
+    rtb_Sum2_p5 * rtb_Sum2_p5 * NACCBraytonCycle2017a_P.Gain_Gain_m;
+
+  /* MinMax: '<S72>/MinMax' incorporates:
+   *  Constant: '<S72>/p_downstrem_min'
+   */
+  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_b) ||
+        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_b))) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_b;
+  }
+
+  /* End of MinMax: '<S72>/MinMax' */
+
+  /* Saturate: '<S72>/Saturation' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_k) {
+    NACCBraytonCycle2017a_B.Saturation_m =
+      NACCBraytonCycle2017a_P.Saturation_UpperSat_k;
+  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_c) {
+    NACCBraytonCycle2017a_B.Saturation_m =
+      NACCBraytonCycle2017a_P.Saturation_LowerSat_c;
+  } else {
+    NACCBraytonCycle2017a_B.Saturation_m = rtb_UnitOffset;
+  }
+
+  /* End of Saturate: '<S72>/Saturation' */
+
+  /* Memory: '<S10>/Memory3' */
+  NACCBraytonCycle2017a_B.Hdot_j =
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k;
+
+  /* Outputs for Atomic SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* S-Function (th_HpStateHeatExchange_S): '<S71>/S-Function' */
+  /* Block <S71>/S-Function*/
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace HpTrace;
+    Options HpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_a[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_a[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_a[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_a[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.T_env = 288.15;
+    param.k_loss = 45.0;
+    param.A_total = 10.0;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_g3;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_p[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_k[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    HpOpt.derivative_neighbor_factor = 0.02;
+    HpOpt.x_conv_limit = 0.0001;
+    HpOpt.y_conv_limit = 1.0E-6;
+    HpOpt.max_iterations = (int)100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.Product_a;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_m;
+    inflow.psi = &NACCBraytonCycle2017a_B.calculateconversion_b.Product6[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_j;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_d;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_po;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_c;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_k;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_fc;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_ny;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_o;
+    outflow.x = &NACCBraytonCycle2017a_B.x_ok[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_mo[0];
+    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_o;
+    (&NACCBraytonCycle2017a_B.error_codes_m4)[0] = th_H_p_State_heat_Exchange
+      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
+    (&NACCBraytonCycle2017a_B.num_iterations_i)[0] = HpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* Gain: '<S86>/Gain' incorporates:
+   *  Constant: '<S86>/Constant4'
+   *  Memory: '<S78>/Memory1'
+   *  Sum: '<S86>/Subtract'
+   */
+  rtb_Sum2_p5 = (NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[0] -
+                 NACCBraytonCycle2017a_P.Constant4_Value_p) *
+    NACCBraytonCycle2017a_P.Gain_Gain_f;
+
+  /* Sum: '<S86>/Subtract1' incorporates:
+   *  Constant: '<S86>/Constant'
+   *  Fcn: '<S86>/Fcn [-2 2]'
+   *  Gain: '<S86>/p_Relaxation'
+   */
+  rtb_UnitOffset = ((((0.0116 * rt_powd_snf(rtb_Sum2_p5, 5.0) - 6.0e-16 *
+                       rt_powd_snf(rtb_Sum2_p5, 4.0)) + 0.0148 * rt_powd_snf
+                      (rtb_Sum2_p5, 3.0)) + 7.0e-16 * rt_powd_snf(rtb_Sum2_p5,
+    2.0)) + 0.0064 * rtb_Sum2_p5) * NACCBraytonCycle2017a_P.p_Relaxation_Gain +
+    NACCBraytonCycle2017a_P.Constant_Value_l;
+
+  /* Saturate: '<S86>/Saturation' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_p) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation_UpperSat_p;
+  } else {
+    if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_k) {
+      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation_LowerSat_k;
+    }
+  }
+
+  /* End of Saturate: '<S86>/Saturation' */
+
+  /* Product: '<S86>/Product1' incorporates:
+   *  Memory: '<S86>/Memory'
+   */
+  NACCBraytonCycle2017a_B.Product1 = rtb_UnitOffset *
     NACCBraytonCycle2017a_DW.Memory_PreviousInput;
 
-  /* MultiPortSwitch: '<S73>/Mode Switch3' incorporates:
-   *  Constant: '<S73>/Constant8'
-   *  Constant: '<S81>/Constant3'
-   *  Memory: '<S73>/Memory1'
-   *  Product: '<S81>/Product'
-   *  Product: '<S88>/Product11'
+  /* MultiPortSwitch: '<S78>/Mode Switch3' incorporates:
+   *  Constant: '<S78>/Constant8'
+   *  Constant: '<S86>/Constant3'
+   *  Memory: '<S78>/Memory1'
+   *  Product: '<S86>/Product'
+   *  Product: '<S93>/Product11'
    */
   if ((int32_T)NACCBraytonCycle2017a_P.CompressorPressureFeedback_Mode == 1) {
     NACCBraytonCycle2017a_B.ndot_nc = NACCBraytonCycle2017a_B.ndot_lp;
   } else {
-    /* Product: '<S88>/Product8' incorporates:
-     *  Constant: '<S89>/M1'
+    /* Product: '<S93>/Product8' incorporates:
+     *  Constant: '<S94>/M1'
      */
     rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_eg[0] *
       NACCBraytonCycle2017a_P.th_M[0];
 
-    /* Sum: '<S88>/Sum2' */
-    rtb_Sum2_g = rtb_Product8_m[0];
+    /* Sum: '<S93>/Sum2' */
+    rtb_UnitOffset = rtb_Product8_m[0];
     for (i = 0; i < 6; i++) {
-      /* Product: '<S88>/Product8' incorporates:
-       *  Constant: '<S89>/M1'
+      /* Product: '<S93>/Product8' incorporates:
+       *  Constant: '<S94>/M1'
        */
       rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_eg[i + 1] *
         NACCBraytonCycle2017a_P.th_M[i + 1];
 
-      /* Sum: '<S88>/Sum2' incorporates:
-       *  Product: '<S88>/Product8'
+      /* Sum: '<S93>/Sum2' incorporates:
+       *  Product: '<S93>/Product8'
        */
-      rtb_Sum2_g += rtb_Product8_m[i + 1];
+      rtb_UnitOffset += rtb_Product8_m[i + 1];
     }
 
-    /* Saturate: '<S81>/Saturation1' */
+    /* Saturate: '<S86>/Saturation1' */
     if (NACCBraytonCycle2017a_B.Product1 >
         NACCBraytonCycle2017a_P.Saturation1_UpperSat) {
       rtb_Sum2_p5 = NACCBraytonCycle2017a_P.Saturation1_UpperSat;
@@ -1461,132 +3044,127 @@ static void NACCBraytonCycle2017a_output(void)
       rtb_Sum2_p5 = NACCBraytonCycle2017a_B.Product1;
     }
 
-    /* End of Saturate: '<S81>/Saturation1' */
+    /* End of Saturate: '<S86>/Saturation1' */
     NACCBraytonCycle2017a_B.ndot_nc = 1.0 /
-      (NACCBraytonCycle2017a_P.Constant3_Value * rtb_Sum2_g) *
-      NACCBraytonCycle2017a_DW.Memory1_PreviousInput[2] * rtb_Sum2_p5;
+      (NACCBraytonCycle2017a_P.Constant3_Value * rtb_UnitOffset) *
+      NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[2] * rtb_Sum2_p5;
   }
 
-  /* End of MultiPortSwitch: '<S73>/Mode Switch3' */
+  /* End of MultiPortSwitch: '<S78>/Mode Switch3' */
 
-  /* Outputs for Atomic SubSystem: '<S73>/T-p-State' */
+  /* Outputs for Atomic SubSystem: '<S78>/T-p-State' */
   NACCBraytonCycle2017a_TpState_f();
 
-  /* End of Outputs for SubSystem: '<S73>/T-p-State' */
+  /* End of Outputs for SubSystem: '<S78>/T-p-State' */
 
-  /* MultiPortSwitch: '<S73>/Mode Switch2' incorporates:
-   *  Constant: '<S73>/Constant4'
-   *  Constant: '<S73>/Constant6'
+  /* Product: '<S78>/Product5' incorporates:
+   *  Constant: '<S83>/M1'
    */
-  if ((int32_T)NACCBraytonCycle2017a_P.CompressorPressureFeedback_Mode == 1) {
-    rtb_ModeSwitch2 = NACCBraytonCycle2017a_B.p_d;
-  } else {
-    rtb_ModeSwitch2 = NACCBraytonCycle2017a_P.Constant6_Value;
-  }
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_ip[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
 
-  /* End of MultiPortSwitch: '<S73>/Mode Switch2' */
-
-  /* Product: '<S73>/Product2' incorporates:
-   *  Constant: '<S73>/T-normal'
-   */
-  rtb_Sum2_p5 = NACCBraytonCycle2017a_B.p_pg /
-    NACCBraytonCycle2017a_P.Tnormal_Value;
-
-  /* Math: '<S73>/Math Function'
-   *
-   * About '<S73>/Math Function':
-   *  Operator: sqrt
-   */
-  if (rtb_Sum2_p5 < 0.0) {
-    rtb_Sum2_p5 = -sqrt(fabs(rtb_Sum2_p5));
-  } else {
-    rtb_Sum2_p5 = sqrt(rtb_Sum2_p5);
-  }
-
-  /* End of Math: '<S73>/Math Function' */
-
-  /* Product: '<S73>/Product7' incorporates:
-   *  Inport: '<Root>/In4'
-   */
-  rtb_Product7 = NACCBraytonCycle2017a_U.In4 / rtb_Sum2_p5;
-
-  /* Sum: '<S77>/Sum2' */
-  rtb_UnitOffset = -0.0;
-  for (i = 0; i < 7; i++) {
-    /* Sum: '<S77>/Sum2' incorporates:
-     *  Constant: '<S85>/M1'
-     *  Product: '<S77>/Product8'
-     */
-    rtb_UnitOffset += NACCBraytonCycle2017a_B.psi_ip[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-
-    /* Product: '<S77>/Product8' incorporates:
-     *  Constant: '<S78>/M1'
-     *  Product: '<S73>/Product5'
-     */
-    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi_ip[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-  }
-
-  /* Product: '<S77>/Product11' */
-  rtb_Sum2_g = NACCBraytonCycle2017a_B.ndot_c0 * rtb_UnitOffset;
-
-  /* Sum: '<S73>/Sum' incorporates:
-   *  Sum: '<S100>/Sum'
-   *  Sum: '<S105>/Sum2'
-   *  Sum: '<S122>/Sum2'
-   *  Sum: '<S124>/Sum'
-   *  Sum: '<S129>/Sum2'
-   *  Sum: '<S142>/Sum2'
-   *  Sum: '<S149>/Sum2'
-   *  Sum: '<S165>/Sum2'
-   *  Sum: '<S179>/Sum2'
-   *  Sum: '<S245>/Sum2'
-   *  Sum: '<S289>/Sum2'
-   *  Sum: '<S322>/Sum2'
-   *  Sum: '<S388>/Sum2'
-   *  Sum: '<S421>/Sum2'
-   *  Sum: '<S465>/Sum2'
-   *  Sum: '<S55>/Sum2'
-   *  Sum: '<S61>/Sum2'
-   *  Sum: '<S69>/Sum2'
-   *  Sum: '<S77>/Sum2'
-   *  Sum: '<S88>/Sum2'
-   *  Sum: '<S98>/Sum2'
-   */
+  /* Sum: '<S78>/Sum' */
   rtb_UnitOffset = rtb_Product8_m[0];
   for (i = 0; i < 6; i++) {
+    /* Product: '<S78>/Product5' incorporates:
+     *  Constant: '<S83>/M1'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_ip[i + 1] *
+      NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S78>/Sum' incorporates:
+     *  Product: '<S78>/Product5'
+     */
     rtb_UnitOffset += rtb_Product8_m[i + 1];
   }
 
-  /* MultiPortSwitch: '<S75>/Multiport Switch1' incorporates:
-   *  Constant: '<S73>/Gas Konstant'
-   *  Constant: '<S75>/Constant1'
-   *  Constant: '<S84>/Constant'
-   *  Product: '<S75>/Divide'
-   *  RelationalOperator: '<S84>/Compare'
+  /* MultiPortSwitch: '<S80>/Multiport Switch1' incorporates:
+   *  Constant: '<S78>/Gas Konstant'
+   *  Constant: '<S80>/Constant1'
+   *  Constant: '<S89>/Constant'
+   *  Product: '<S80>/Divide'
+   *  RelationalOperator: '<S89>/Compare'
    */
   if (!(rtb_UnitOffset == NACCBraytonCycle2017a_P.Constant_Value_k)) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.th_const_R / rtb_UnitOffset;
+    rtb_Sum2_p5 = NACCBraytonCycle2017a_P.th_const_R / rtb_UnitOffset;
   } else {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.Divide2_value;
+    rtb_Sum2_p5 = NACCBraytonCycle2017a_P.Divide2_value;
   }
 
-  /* End of MultiPortSwitch: '<S75>/Multiport Switch1' */
+  /* End of MultiPortSwitch: '<S80>/Multiport Switch1' */
 
-  /* Product: '<S73>/Product4' incorporates:
-   *  Constant: '<S73>/Refrence R [J//g//K]'
-   *  Constant: '<S73>/p-normal'
-   *  Product: '<S73>/Product3'
-   *  Product: '<S73>/Product6'
+  /* MultiPortSwitch: '<S78>/Mode Switch2' incorporates:
+   *  Constant: '<S78>/Constant4'
+   *  Constant: '<S78>/Constant6'
    */
-  rtb_Product4 = 1.0 / rtb_ModeSwitch2 * NACCBraytonCycle2017a_P.pnormal_Value_l
-    * (rtb_Sum2_g * rtb_Sum2_p5) * (rtb_UnitOffset /
+  if ((int32_T)NACCBraytonCycle2017a_P.CompressorPressureFeedback_Mode == 1) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_B.p_d;
+  } else {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.Constant6_Value;
+  }
+
+  /* End of MultiPortSwitch: '<S78>/Mode Switch2' */
+
+  /* Product: '<S78>/Product2' incorporates:
+   *  Constant: '<S78>/T-normal'
+   */
+  rtb_MathFunction_p = NACCBraytonCycle2017a_B.p_pg /
+    NACCBraytonCycle2017a_P.Tnormal_Value_o;
+
+  /* Math: '<S78>/Math Function'
+   *
+   * About '<S78>/Math Function':
+   *  Operator: sqrt
+   */
+  if (rtb_MathFunction_p < 0.0) {
+    rtb_MathFunction_p = -sqrt(fabs(rtb_MathFunction_p));
+  } else {
+    rtb_MathFunction_p = sqrt(rtb_MathFunction_p);
+  }
+
+  /* End of Math: '<S78>/Math Function' */
+
+  /* Product: '<S78>/Product7' incorporates:
+   *  Inport: '<Root>/In4'
+   */
+  rtb_Product7_d = NACCBraytonCycle2017a_U.In4 / rtb_MathFunction_p;
+
+  /* Product: '<S82>/Product8' incorporates:
+   *  Constant: '<S90>/M1'
+   */
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_ip[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
+
+  /* Sum: '<S82>/Sum2' */
+  rtb_Sum2_k = rtb_Product8_m[0];
+  for (i = 0; i < 6; i++) {
+    /* Product: '<S82>/Product8' incorporates:
+     *  Constant: '<S90>/M1'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_ip[i + 1] *
+      NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S82>/Sum2' incorporates:
+     *  Product: '<S82>/Product8'
+     */
+    rtb_Sum2_k += rtb_Product8_m[i + 1];
+  }
+
+  /* Product: '<S78>/Product4' incorporates:
+   *  Constant: '<S78>/Refrence R [J//g//K]'
+   *  Constant: '<S78>/p-normal'
+   *  Product: '<S78>/Product3'
+   *  Product: '<S78>/Product6'
+   *  Product: '<S82>/Product11'
+   */
+  rtb_Product4_i = NACCBraytonCycle2017a_B.ndot_c0 * rtb_Sum2_k *
+    rtb_MathFunction_p * (1.0 / rtb_UnitOffset *
+    NACCBraytonCycle2017a_P.pnormal_Value_l) * (rtb_Sum2_p5 /
     NACCBraytonCycle2017a_P.RefrenceRJgK_Value);
 
-  /* Lookup2D: '<S83>/Lookup Table (2-D)1' */
+  /* Lookup2D: '<S88>/Lookup Table (2-D)1' */
   /*
-   * About '<S83>/Lookup Table (2-D)1':
+   * About '<S88>/Lookup Table (2-D)1':
    * Input0  Data Type:  Floating Point real_T
    * Input1  Data Type:  Floating Point real_T
    * Output0 Data Type:  Floating Point real_T
@@ -1597,59 +3175,60 @@ static void NACCBraytonCycle2017a_output(void)
    * Table Data  parameter uses the same data type and scaling as Output0
    */
   Look2D_real_T_real_T_real_T( &(rtb_PRatio),
-    NACCBraytonCycle2017a_P.CompressorPressureFeedback_Pres, rtb_Product7,
-    NACCBraytonCycle2017a_P.CompressorPressureFeedback_RPM, 2U, rtb_Product4,
+    NACCBraytonCycle2017a_P.CompressorPressureFeedback_Pres, rtb_Product7_d,
+    NACCBraytonCycle2017a_P.CompressorPressureFeedback_RPM, 2U, rtb_Product4_i,
     NACCBraytonCycle2017a_P.CompressorPressureFeedback_mdot, 3U);
 
-  /* Product: '<S83>/Divide2' incorporates:
-   *  Constant: '<S83>/Constant1'
-   *  Constant: '<S83>/Constant3'
-   *  Constant: '<S90>/Constant'
-   *  Constant: '<S91>/Constant'
-   *  Constant: '<S92>/Constant'
-   *  Constant: '<S93>/Constant'
-   *  DataTypeConversion: '<S83>/Data Type Conversion'
-   *  DataTypeConversion: '<S83>/Data Type Conversion1'
-   *  DataTypeConversion: '<S83>/Data Type Conversion2'
-   *  Logic: '<S83>/Logical Operator'
-   *  Lookup2D: '<S83>/Lookup Table (2-D)1'
-   *  Product: '<S83>/Divide'
-   *  Product: '<S83>/Divide1'
-   *  RelationalOperator: '<S90>/Compare'
-   *  RelationalOperator: '<S91>/Compare'
-   *  RelationalOperator: '<S92>/Compare'
-   *  RelationalOperator: '<S93>/Compare'
-   *  Sum: '<S83>/Add1'
+  /* Product: '<S88>/Divide2' incorporates:
+   *  Constant: '<S88>/Constant1'
+   *  Constant: '<S88>/Constant3'
+   *  Constant: '<S95>/Constant'
+   *  Constant: '<S96>/Constant'
+   *  Constant: '<S97>/Constant'
+   *  Constant: '<S98>/Constant'
+   *  DataTypeConversion: '<S88>/Data Type Conversion'
+   *  DataTypeConversion: '<S88>/Data Type Conversion1'
+   *  DataTypeConversion: '<S88>/Data Type Conversion2'
+   *  Logic: '<S88>/Logical Operator'
+   *  Lookup2D: '<S88>/Lookup Table (2-D)1'
+   *  Product: '<S88>/Divide'
+   *  Product: '<S88>/Divide1'
+   *  RelationalOperator: '<S95>/Compare'
+   *  RelationalOperator: '<S96>/Compare'
+   *  RelationalOperator: '<S97>/Compare'
+   *  RelationalOperator: '<S98>/Compare'
+   *  Sum: '<S88>/Add1'
    */
-  rtb_UnitOffset = (((real_T)(rtb_Product7 >
-    NACCBraytonCycle2017a_P.CompareToConstant1_const) * rtb_Product7 /
-                     NACCBraytonCycle2017a_P.Constant1_Value_d2 + (real_T)
-                     ((rtb_Product7 >=
-                       NACCBraytonCycle2017a_P.CompareToConstant3_const) &&
-                      (rtb_Product7 <=
-                       NACCBraytonCycle2017a_P.CompareToConstant4_const))) +
-                    (real_T)(rtb_Product7 <
-    NACCBraytonCycle2017a_P.CompareToConstant2_const) * rtb_Product7 /
-                    NACCBraytonCycle2017a_P.Constant3_Value_b) * rtb_PRatio;
+  rtb_Sum2_k = (((real_T)(rtb_Product7_d >
+    NACCBraytonCycle2017a_P.CompareToConstant1_const_m) * rtb_Product7_d /
+                 NACCBraytonCycle2017a_P.Constant1_Value_d2 + (real_T)
+                 ((rtb_Product7_d >=
+                   NACCBraytonCycle2017a_P.CompareToConstant3_const) &&
+                  (rtb_Product7_d <=
+                   NACCBraytonCycle2017a_P.CompareToConstant4_const))) + (real_T)
+                (rtb_Product7_d <
+                 NACCBraytonCycle2017a_P.CompareToConstant2_const_l) *
+                rtb_Product7_d / NACCBraytonCycle2017a_P.Constant3_Value_b) *
+    rtb_PRatio;
 
-  /* Saturate: '<S83>/p_ratio >= 1' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.p_ratio1_UpperSat) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_ratio1_UpperSat;
+  /* Saturate: '<S88>/p_ratio >= 1' */
+  if (rtb_Sum2_k > NACCBraytonCycle2017a_P.p_ratio1_UpperSat) {
+    rtb_Sum2_k = NACCBraytonCycle2017a_P.p_ratio1_UpperSat;
   } else {
-    if (rtb_UnitOffset < NACCBraytonCycle2017a_P.p_ratio1_LowerSat) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.p_ratio1_LowerSat;
+    if (rtb_Sum2_k < NACCBraytonCycle2017a_P.p_ratio1_LowerSat) {
+      rtb_Sum2_k = NACCBraytonCycle2017a_P.p_ratio1_LowerSat;
     }
   }
 
-  /* End of Saturate: '<S83>/p_ratio >= 1' */
+  /* End of Saturate: '<S88>/p_ratio >= 1' */
 
-  /* Product: '<S73>/Product14' */
-  NACCBraytonCycle2017a_B.p2 = rtb_ModeSwitch2 * rtb_UnitOffset;
+  /* Product: '<S78>/Product14' */
+  NACCBraytonCycle2017a_B.p2 = rtb_UnitOffset * rtb_Sum2_k;
 
-  /* Outputs for Atomic SubSystem: '<S73>/S-p-State' */
+  /* Outputs for Atomic SubSystem: '<S78>/S-p-State' */
 
-  /* S-Function (th_SpState_S): '<S79>/S-Function' */
-  /* Block <S79>/S-Function */
+  /* S-Function (th_SpState_S): '<S84>/S-Function' */
+  /* Block <S84>/S-Function */
   {
     Par param;
     flow inflow;
@@ -1686,19 +3265,19 @@ static void NACCBraytonCycle2017a_output(void)
 
     // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
     pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] -
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] -
       pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_a[7] +
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_aq[7] +
       pNASA1->len * 5);
 
     // coefficients for the polynomial representing the liquid cp
@@ -1737,7 +3316,7 @@ static void NACCBraytonCycle2017a_output(void)
     param.pNASA = pNASA;
     param.pNASA1 = pNASA1;
     param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_dj;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_d;
     param.y_index_len = (int) 21;
     param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_h[1] - 1);
     param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_c[24] - 24);
@@ -1762,12 +3341,12 @@ static void NACCBraytonCycle2017a_output(void)
     /* Map outputs */
     outflow.nr_flows = 1;
     outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_f;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_d;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_do;
     outflow.p_ = &NACCBraytonCycle2017a_B.p_gc;
     outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_e;
     outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_a;
     outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_c;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_b;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_br;
     outflow.x = &NACCBraytonCycle2017a_B.x_p[0];
     outflow.psi = &NACCBraytonCycle2017a_B.psi_g[0];
     (&NACCBraytonCycle2017a_B.error_codes_do)[0] = th_S_p_State(&inflow,&param,
@@ -1778,13 +3357,13 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* End of Outputs for SubSystem: '<S73>/S-p-State' */
+  /* End of Outputs for SubSystem: '<S78>/S-p-State' */
 
-  /* Lookup2D: '<S73>/Lookup Table (2-D)2' incorporates:
+  /* Lookup2D: '<S78>/Lookup Table (2-D)2' incorporates:
    *  Inport: '<Root>/In4'
    */
   /*
-   * About '<S73>/Lookup Table (2-D)2':
+   * About '<S78>/Lookup Table (2-D)2':
    * Input0  Data Type:  Floating Point real_T
    * Input1  Data Type:  Floating Point real_T
    * Output0 Data Type:  Floating Point real_T
@@ -1797,22 +3376,22 @@ static void NACCBraytonCycle2017a_output(void)
   Look2D_real_T_real_T_real_T( &(rtb_eta),
     NACCBraytonCycle2017a_P.CompressorPressureFeedback_effi,
     NACCBraytonCycle2017a_U.In4,
-    NACCBraytonCycle2017a_P.CompressorPressureFeedback_RPM, 2U, rtb_Product4,
+    NACCBraytonCycle2017a_P.CompressorPressureFeedback_RPM, 2U, rtb_Product4_i,
     NACCBraytonCycle2017a_P.CompressorPressureFeedback_mdot, 3U);
 
-  /* Sum: '<S73>/Sum2' incorporates:
+  /* Sum: '<S78>/Sum2' incorporates:
    *  Inport: '<Root>/In4'
-   *  Lookup2D: '<S73>/Lookup Table (2-D)2'
-   *  Product: '<S73>/Product1'
-   *  Sum: '<S73>/Sum1'
+   *  Lookup2D: '<S78>/Lookup Table (2-D)2'
+   *  Product: '<S78>/Product1'
+   *  Sum: '<S78>/Sum1'
    */
   NACCBraytonCycle2017a_B.Sum2 = (NACCBraytonCycle2017a_B.Hdot_e -
     NACCBraytonCycle2017a_B.Hdot_du) / rtb_eta + NACCBraytonCycle2017a_B.Hdot_du;
 
-  /* Outputs for Atomic SubSystem: '<S73>/H-p-State with Heat Exchange' */
+  /* Outputs for Atomic SubSystem: '<S78>/H-p-State with Heat Exchange' */
 
-  /* S-Function (th_HpStateHeatExchange_S): '<S76>/S-Function' */
-  /* Block <S76>/S-Function*/
+  /* S-Function (th_HpStateHeatExchange_S): '<S81>/S-Function' */
+  /* Block <S81>/S-Function*/
   {
     Par param;
     flow inflow;
@@ -1929,7 +3508,7 @@ static void NACCBraytonCycle2017a_output(void)
     outflow.nr_flows = 1;
     outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_l;
     outflow.T_ = &NACCBraytonCycle2017a_B.T_j;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_b;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_bs;
     outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_jv;
     outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_p;
     outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_l1;
@@ -1945,233 +3524,353 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* End of Outputs for SubSystem: '<S73>/H-p-State with Heat Exchange' */
+  /* End of Outputs for SubSystem: '<S78>/H-p-State with Heat Exchange' */
 
-  /* Sum: '<S179>/Sum2' */
-  rtb_UnitOffset = -0.0;
-  for (i = 0; i < 7; i++) {
-    /* Sum: '<S179>/Sum2' incorporates:
-     *  Constant: '<S183>/M1'
-     *  Product: '<S179>/Product8'
-     */
-    rtb_UnitOffset += NACCBraytonCycle2017a_B.psi_al[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-
-    /* Memory: '<S8>/Memory4' */
-    NACCBraytonCycle2017a_B.psi[i] =
-      NACCBraytonCycle2017a_DW.Memory4_PreviousInput[i];
-
-    /* Product: '<S179>/Product8' incorporates:
-     *  Constant: '<S425>/M1'
-     *  Product: '<S421>/Product8'
-     */
-    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-  }
-
-  /* Outport: '<Root>/Out5' incorporates:
-   *  Constant: '<S14>/addition factor1'
-   *  Gain: '<S14>/Gain1'
-   *  Gain: '<S14>/Gain2'
-   *  Product: '<S179>/Product11'
-   *  Sum: '<S14>/Add'
+  /* Product: '<S103>/Product8' incorporates:
+   *  Constant: '<S104>/M1'
    */
-  NACCBraytonCycle2017a_Y.Out5 = NACCBraytonCycle2017a_B.ndot_l * rtb_UnitOffset
-    * NACCBraytonCycle2017a_P.Gain2_Gain_mh *
-    NACCBraytonCycle2017a_P.Gain1_Gain_p +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_f;
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
 
-  /* Outport: '<Root>/Out6' incorporates:
-   *  Constant: '<S13>/addition factor1'
-   *  Gain: '<S13>/Gain1'
-   *  Sum: '<S13>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out6 = NACCBraytonCycle2017a_P.Gain1_Gain_k *
-    NACCBraytonCycle2017a_B.T_j +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_k;
-
-  /* Outport: '<Root>/Out7' incorporates:
-   *  Constant: '<S25>/addition factor1'
-   *  Gain: '<S25>/Gain1'
-   *  Sum: '<S25>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out7 = NACCBraytonCycle2017a_P.Gain1_Gain_lj *
-    NACCBraytonCycle2017a_B.p_b +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_mr;
-
-  /* Outport: '<Root>/Out8' incorporates:
-   *  Constant: '<Root>/Constant3'
-   *  Constant: '<S34>/addition factor1'
-   *  Gain: '<S34>/Gain1'
-   *  Product: '<Root>/Product1'
-   *  Sum: '<S34>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out8 = (NACCBraytonCycle2017a_P.Gain1_Gain_m *
-    NACCBraytonCycle2017a_B.Hdot_jv +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_d) *
-    NACCBraytonCycle2017a_P.Constant3_Value_d;
-
-  /* Sum: '<S421>/Sum2' incorporates:
-   *  Sum: '<S100>/Sum'
-   *  Sum: '<S105>/Sum2'
-   *  Sum: '<S122>/Sum2'
-   *  Sum: '<S124>/Sum'
-   *  Sum: '<S129>/Sum2'
-   *  Sum: '<S142>/Sum2'
-   *  Sum: '<S149>/Sum2'
-   *  Sum: '<S165>/Sum2'
-   *  Sum: '<S179>/Sum2'
-   *  Sum: '<S245>/Sum2'
-   *  Sum: '<S289>/Sum2'
-   *  Sum: '<S322>/Sum2'
-   *  Sum: '<S388>/Sum2'
-   *  Sum: '<S465>/Sum2'
-   *  Sum: '<S55>/Sum2'
-   *  Sum: '<S61>/Sum2'
-   *  Sum: '<S69>/Sum2'
-   *  Sum: '<S73>/Sum'
-   *  Sum: '<S77>/Sum2'
-   *  Sum: '<S88>/Sum2'
-   *  Sum: '<S98>/Sum2'
-   */
-  rtb_UnitOffset = rtb_Product8_m[0];
+  /* Sum: '<S103>/Sum2' */
+  rtb_Sum2_k = rtb_Product8_m[0];
   for (i = 0; i < 6; i++) {
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
+    /* Product: '<S103>/Product8' incorporates:
+     *  Constant: '<S104>/M1'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi[i + 1] *
+      NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S103>/Sum2' incorporates:
+     *  Product: '<S103>/Product8'
+     */
+    rtb_Sum2_k += rtb_Product8_m[i + 1];
   }
 
-  /* Outport: '<Root>/Out9' incorporates:
-   *  Constant: '<S36>/addition factor1'
-   *  Gain: '<S36>/Gain1'
-   *  Gain: '<S36>/Gain2'
-   *  Memory: '<S8>/Memory9'
-   *  Product: '<S421>/Product11'
-   *  Sum: '<S36>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out9 = NACCBraytonCycle2017a_DW.Memory9_PreviousInput *
-    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_g *
-    NACCBraytonCycle2017a_P.Gain1_Gain_g2 +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_h;
+  /* Product: '<S103>/Product11' */
+  rtb_Sum2_k *= NACCBraytonCycle2017a_B.ndot_e;
 
-  /* Outport: '<Root>/Out10' incorporates:
-   *  Constant: '<S35>/addition factor1'
-   *  Gain: '<S35>/Gain1'
-   *  Memory: '<S8>/Memory1'
-   *  Sum: '<S35>/Add'
+  /* Sum: '<S100>/Sum' incorporates:
+   *  Gain: '<S100>/Gain'
+   *  Math: '<S100>/Math Function'
+   *  Memory: '<S13>/Memory2'
    */
-  NACCBraytonCycle2017a_Y.Out10 = NACCBraytonCycle2017a_P.Gain1_Gain_lr *
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_md;
+  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory2_PreviousInput - rtb_Sum2_k *
+    rtb_Sum2_k * NACCBraytonCycle2017a_P.Gain_Gain_d;
 
-  /* Outport: '<Root>/Out11' incorporates:
-   *  Constant: '<S37>/addition factor1'
-   *  Gain: '<S37>/Gain1'
-   *  Memory: '<S8>/Memory2'
-   *  Sum: '<S37>/Add'
+  /* MinMax: '<S100>/MinMax' incorporates:
+   *  Constant: '<S100>/p_downstrem_min'
    */
-  NACCBraytonCycle2017a_Y.Out11 = NACCBraytonCycle2017a_P.Gain1_Gain_mv *
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_c;
+  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_e) ||
+        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_e))) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_e;
+  }
 
-  /* Outport: '<Root>/Out12' incorporates:
-   *  Constant: '<Root>/Constant5'
-   *  Constant: '<S38>/addition factor1'
-   *  Gain: '<S38>/Gain1'
-   *  Memory: '<S8>/Memory3'
-   *  Product: '<Root>/Product2'
-   *  Sum: '<S38>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out12 = (NACCBraytonCycle2017a_P.Gain1_Gain_e *
-    NACCBraytonCycle2017a_DW.Memory3_PreviousInput +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_b) *
-    NACCBraytonCycle2017a_P.Constant5_Value;
+  /* End of MinMax: '<S100>/MinMax' */
 
-  /* Product: '<S100>/Product2' incorporates:
-   *  Constant: '<S100>/T-normal'
-   *  Memory: '<S8>/Memory1'
+  /* Saturate: '<S100>/Saturation' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_f) {
+    NACCBraytonCycle2017a_B.Saturation_p =
+      NACCBraytonCycle2017a_P.Saturation_UpperSat_f;
+  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_p) {
+    NACCBraytonCycle2017a_B.Saturation_p =
+      NACCBraytonCycle2017a_P.Saturation_LowerSat_p;
+  } else {
+    NACCBraytonCycle2017a_B.Saturation_p = rtb_UnitOffset;
+  }
+
+  /* End of Saturate: '<S100>/Saturation' */
+
+  /* Sum: '<S101>/Sum7' incorporates:
+   *  Inport: '<Root>/In5'
+   *  Memory: '<S13>/Memory3'
    */
-  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b /
+  NACCBraytonCycle2017a_B.Sum7 = NACCBraytonCycle2017a_DW.Memory3_PreviousInput
+    + NACCBraytonCycle2017a_U.In5;
+
+  /* Outputs for Atomic SubSystem: '<S101>/H-p-State with HeatLoss' */
+
+  /* S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
+  /* Block <S102>/S-Function*/
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace HpTrace;
+    Options HpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.T_env = 288.15;
+    param.k_loss = 0.0;
+    param.A_total = 1.0;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_h;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_pk;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_b[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_g[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    HpOpt.derivative_neighbor_factor = 0.02;
+    HpOpt.x_conv_limit = 0.0001;
+    HpOpt.y_conv_limit = 1.0E-6;
+    HpOpt.max_iterations = (int)100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_e;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_p;
+    inflow.psi = &NACCBraytonCycle2017a_B.psi[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Sum7;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_bl;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_gf;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_a1;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_b;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_n;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_f;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_aq;
+    outflow.x = &NACCBraytonCycle2017a_B.x_ff[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_f[0];
+    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_d;
+    (&NACCBraytonCycle2017a_B.error_codes_d)[0] = th_H_p_State_heat_Exchange
+      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
+    (&NACCBraytonCycle2017a_B.num_iterations_j)[0] = HpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S101>/H-p-State with HeatLoss' */
+
+  /* Product: '<S105>/Product2' incorporates:
+   *  Constant: '<S105>/T-normal'
+   *  Memory: '<S9>/Memory1'
+   */
+  rtb_Sum2_k = NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b /
     NACCBraytonCycle2017a_P.Tnormal_Value_j;
 
-  /* Math: '<S100>/Math Function'
+  /* Math: '<S105>/Math Function'
    *
-   * About '<S100>/Math Function':
+   * About '<S105>/Math Function':
    *  Operator: sqrt
    */
-  if (rtb_UnitOffset < 0.0) {
-    rtb_UnitOffset = -sqrt(fabs(rtb_UnitOffset));
+  if (rtb_Sum2_k < 0.0) {
+    rtb_Sum2_p5 = -sqrt(fabs(rtb_Sum2_k));
   } else {
-    rtb_UnitOffset = sqrt(rtb_UnitOffset);
+    rtb_Sum2_p5 = sqrt(rtb_Sum2_k);
   }
 
-  /* End of Math: '<S100>/Math Function' */
+  /* End of Math: '<S105>/Math Function' */
 
-  /* Product: '<S100>/Product7' incorporates:
+  /* Product: '<S105>/Product7' incorporates:
    *  Constant: '<S6>/RPM'
    */
-  rtb_ModeSwitch2 = NACCBraytonCycle2017a_P.RPM_Value / rtb_UnitOffset;
+  rtb_Sum2_k = NACCBraytonCycle2017a_P.RPM_Value_n / rtb_Sum2_p5;
 
-  /* Switch: '<S115>/Switch2' incorporates:
-   *  Constant: '<S103>/Constant'
-   *  Constant: '<S103>/Constant4'
-   *  RelationalOperator: '<S115>/LowerRelop1'
-   *  RelationalOperator: '<S115>/UpperRelop'
-   *  Switch: '<S115>/Switch'
+  /* Switch: '<S120>/Switch2' incorporates:
+   *  Constant: '<S108>/Constant'
+   *  Constant: '<S108>/Constant4'
+   *  RelationalOperator: '<S120>/LowerRelop1'
+   *  RelationalOperator: '<S120>/UpperRelop'
+   *  Switch: '<S120>/Switch'
    */
-  if (rtb_ModeSwitch2 > NACCBraytonCycle2017a_P.Constant_Value_d) {
-    rtb_Switch2 = NACCBraytonCycle2017a_P.Constant_Value_d;
-  } else if (rtb_ModeSwitch2 < NACCBraytonCycle2017a_P.Constant4_Value) {
-    /* Switch: '<S115>/Switch' incorporates:
-     *  Constant: '<S103>/Constant4'
+  if (rtb_Sum2_k > NACCBraytonCycle2017a_P.Constant_Value_d) {
+    rtb_Switch2_e = NACCBraytonCycle2017a_P.Constant_Value_d;
+  } else if (rtb_Sum2_k < NACCBraytonCycle2017a_P.Constant4_Value) {
+    /* Switch: '<S120>/Switch' incorporates:
+     *  Constant: '<S108>/Constant4'
      */
-    rtb_Switch2 = NACCBraytonCycle2017a_P.Constant4_Value;
+    rtb_Switch2_e = NACCBraytonCycle2017a_P.Constant4_Value;
   } else {
-    rtb_Switch2 = rtb_ModeSwitch2;
+    rtb_Switch2_e = rtb_Sum2_k;
   }
 
-  /* End of Switch: '<S115>/Switch2' */
+  /* End of Switch: '<S120>/Switch2' */
 
-  /* Switch: '<S108>/Switch2' incorporates:
-   *  Constant: '<S100>/Constant1'
-   *  Inport: '<Root>/In6'
-   *  Memory: '<S8>/Memory2'
-   *  RelationalOperator: '<S108>/LowerRelop1'
-   *  RelationalOperator: '<S108>/UpperRelop'
-   *  Switch: '<S108>/Switch'
+  /* Switch: '<S113>/Switch2' incorporates:
+   *  Constant: '<Root>/Constant10'
+   *  Constant: '<S105>/Constant1'
+   *  Memory: '<S9>/Memory2'
+   *  RelationalOperator: '<S113>/LowerRelop1'
+   *  RelationalOperator: '<S113>/UpperRelop'
+   *  Switch: '<S113>/Switch'
    */
-  if (NACCBraytonCycle2017a_U.In6 >
-      NACCBraytonCycle2017a_DW.Memory2_PreviousInput) {
-    NACCBraytonCycle2017a_B.Switch2 =
-      NACCBraytonCycle2017a_DW.Memory2_PreviousInput;
-  } else if (NACCBraytonCycle2017a_U.In6 <
+  if (NACCBraytonCycle2017a_P.Constant10_Value >
+      NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o) {
+    NACCBraytonCycle2017a_B.Switch2_g =
+      NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o;
+  } else if (NACCBraytonCycle2017a_P.Constant10_Value <
              NACCBraytonCycle2017a_P.Constant1_Value_g) {
-    /* Switch: '<S108>/Switch' incorporates:
-     *  Constant: '<S100>/Constant1'
+    /* Switch: '<S113>/Switch' incorporates:
+     *  Constant: '<S105>/Constant1'
      */
-    NACCBraytonCycle2017a_B.Switch2 = NACCBraytonCycle2017a_P.Constant1_Value_g;
+    NACCBraytonCycle2017a_B.Switch2_g =
+      NACCBraytonCycle2017a_P.Constant1_Value_g;
   } else {
-    NACCBraytonCycle2017a_B.Switch2 = NACCBraytonCycle2017a_U.In6;
+    NACCBraytonCycle2017a_B.Switch2_g = NACCBraytonCycle2017a_P.Constant10_Value;
   }
 
-  /* End of Switch: '<S108>/Switch2' */
+  /* End of Switch: '<S113>/Switch2' */
 
-  /* Product: '<S100>/Product8' incorporates:
-   *  Memory: '<S8>/Memory2'
+  /* Product: '<S105>/Product8' incorporates:
+   *  Memory: '<S9>/Memory2'
    */
-  rtb_PR = 1.0 / NACCBraytonCycle2017a_B.Switch2 *
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput;
+  rtb_PR_e = 1.0 / NACCBraytonCycle2017a_B.Switch2_g *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o;
 
-  /* MultiPortSwitch: '<S100>/Multiport Switch' incorporates:
-   *  Constant: '<S100>/T-normal1'
-   *  Memory: '<S8>/Memory9'
-   *  Product: '<S100>/Product9'
+  /* MultiPortSwitch: '<S105>/Multiport Switch' incorporates:
+   *  Constant: '<S105>/T-normal1'
+   *  Memory: '<S9>/Memory9'
+   *  Product: '<S105>/Product9'
    */
   if ((int32_T)NACCBraytonCycle2017a_P.HPGasTurbine_Mode == 1) {
-    NACCBraytonCycle2017a_B.MultiportSwitch =
-      NACCBraytonCycle2017a_DW.Memory9_PreviousInput;
-  } else {
-    /* Lookup2D: '<S103>/Lookup Table (2-D)' */
+    NACCBraytonCycle2017a_B.MultiportSwitch_i =
+      NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i;
+
+    /* Product: '<S110>/Product8' incorporates:
+     *  Constant: '<S122>/M1'
+     *  Memory: '<S9>/Memory9'
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     */
+    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_k[0] *
+      NACCBraytonCycle2017a_P.th_M[0];
+
+    /* Sum: '<S110>/Sum2' incorporates:
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     */
+    rtb_MathFunction_p = rtb_Product8_m[0];
+    for (i = 0; i < 6; i++) {
+      /* Product: '<S110>/Product8' incorporates:
+       *  Constant: '<S122>/M1'
+       *  MultiPortSwitch: '<S105>/Multiport Switch1'
+       */
+      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_k[i + 1] *
+        NACCBraytonCycle2017a_P.th_M[i + 1];
+
+      /* Sum: '<S110>/Sum2' incorporates:
+       *  MultiPortSwitch: '<S105>/Multiport Switch1'
+       *  Product: '<S110>/Product8'
+       */
+      rtb_MathFunction_p += rtb_Product8_m[i + 1];
+    }
+
+    /* Product: '<S110>/Product11' incorporates:
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     */
+    rtb_Product11_mh = NACCBraytonCycle2017a_B.MultiportSwitch_i *
+      rtb_MathFunction_p;
+
+    /* Lookup: '<S105>/Efficiency Lookup Table' incorporates:
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     *  Product: '<S110>/Product11'
+     */
     /*
-     * About '<S103>/Lookup Table (2-D)':
+     * About '<S105>/Efficiency Lookup Table':
+     * Input0  Data Type:  Floating Point real_T
+     * Output0 Data Type:  Floating Point real_T
+     * Lookup Method: Linear_Endpoint
+     *
+     * XData parameter uses the same data type and scaling as Input0
+     * YData parameter uses the same data type and scaling as Output0
+     */
+    LookUp_real_T_real_T( &(rtb_EfficiencyLookupTable_e),
+                         NACCBraytonCycle2017a_P.HPGasTurbine_efficiency,
+                         rtb_Product11_mh,
+                         NACCBraytonCycle2017a_P.HPGasTurbine_mdot2, 4U);
+
+    /* MultiPortSwitch: '<S105>/Multiport Switch1' incorporates:
+     *  Lookup: '<S105>/Efficiency Lookup Table'
+     *  Product: '<S110>/Product11'
+     */
+    rtb_Sum2_k = rtb_EfficiencyLookupTable_e;
+  } else {
+    /* Lookup2D: '<S108>/Lookup Table (2-D)' */
+    /*
+     * About '<S108>/Lookup Table (2-D)':
      * Input0  Data Type:  Floating Point real_T
      * Input1  Data Type:  Floating Point real_T
      * Output0 Data Type:  Floating Point real_T
@@ -2182,117 +3881,148 @@ static void NACCBraytonCycle2017a_output(void)
      * Table Data  parameter uses the same data type and scaling as Output0
      */
     Look2D_real_T_real_T_real_T( &(rtb_mdotequivalent_k),
-      NACCBraytonCycle2017a_P.LookupTable2D_Table, rtb_Switch2,
-      NACCBraytonCycle2017a_P.LookupTable2D_RowIdx, 5U, rtb_PR,
+      NACCBraytonCycle2017a_P.LookupTable2D_Table, rtb_Switch2_e,
+      NACCBraytonCycle2017a_P.LookupTable2D_RowIdx, 5U, rtb_PR_e,
       NACCBraytonCycle2017a_P.LookupTable2D_ColIdx, 20U);
 
-    /* Product: '<S103>/Divide1' incorporates:
-     *  Constant: '<S103>/Constant1'
-     *  Constant: '<S103>/Constant2'
-     *  Constant: '<S111>/Constant'
-     *  Constant: '<S112>/Constant'
-     *  Constant: '<S113>/Constant'
-     *  Constant: '<S114>/Constant'
-     *  DataTypeConversion: '<S103>/Data Type Conversion1'
-     *  DataTypeConversion: '<S103>/Data Type Conversion2'
-     *  DataTypeConversion: '<S103>/Data Type Conversion3'
-     *  Logic: '<S103>/Logical Operator2'
-     *  Lookup2D: '<S103>/Lookup Table (2-D)'
-     *  Product: '<S103>/Divide'
-     *  Product: '<S103>/Divide3'
-     *  RelationalOperator: '<S111>/Compare'
-     *  RelationalOperator: '<S112>/Compare'
-     *  RelationalOperator: '<S113>/Compare'
-     *  RelationalOperator: '<S114>/Compare'
-     *  Sum: '<S103>/Add2'
+    /* Product: '<S108>/Divide1' incorporates:
+     *  Constant: '<S108>/Constant1'
+     *  Constant: '<S108>/Constant2'
+     *  Constant: '<S116>/Constant'
+     *  Constant: '<S117>/Constant'
+     *  Constant: '<S118>/Constant'
+     *  Constant: '<S119>/Constant'
+     *  DataTypeConversion: '<S108>/Data Type Conversion1'
+     *  DataTypeConversion: '<S108>/Data Type Conversion2'
+     *  DataTypeConversion: '<S108>/Data Type Conversion3'
+     *  Logic: '<S108>/Logical Operator2'
+     *  Lookup2D: '<S108>/Lookup Table (2-D)'
+     *  Product: '<S108>/Divide'
+     *  Product: '<S108>/Divide3'
+     *  RelationalOperator: '<S116>/Compare'
+     *  RelationalOperator: '<S117>/Compare'
+     *  RelationalOperator: '<S118>/Compare'
+     *  RelationalOperator: '<S119>/Compare'
+     *  Sum: '<S108>/Add2'
      */
-    rtb_ModeSwitch2 = (((real_T)(rtb_ModeSwitch2 >
-      NACCBraytonCycle2017a_P.CompareToConstant1_const_h) * rtb_ModeSwitch2 /
-                        NACCBraytonCycle2017a_P.Constant1_Value + (real_T)
-                        ((rtb_ModeSwitch2 >=
-                          NACCBraytonCycle2017a_P.CompareToConstant5_const) &&
-                         (rtb_ModeSwitch2 <=
-                          NACCBraytonCycle2017a_P.CompareToConstant6_const))) +
-                       (real_T)(rtb_ModeSwitch2 <
-      NACCBraytonCycle2017a_P.CompareToConstant2_const_f) * rtb_ModeSwitch2 /
-                       NACCBraytonCycle2017a_P.Constant2_Value) *
+    rtb_MathFunction_p = (((real_T)(rtb_Sum2_k >
+      NACCBraytonCycle2017a_P.CompareToConstant1_const_h) * rtb_Sum2_k /
+      NACCBraytonCycle2017a_P.Constant1_Value + (real_T)((rtb_Sum2_k >=
+      NACCBraytonCycle2017a_P.CompareToConstant5_const_m) && (rtb_Sum2_k <=
+      NACCBraytonCycle2017a_P.CompareToConstant6_const_f))) + (real_T)
+                          (rtb_Sum2_k <
+      NACCBraytonCycle2017a_P.CompareToConstant2_const_f) * rtb_Sum2_k /
+                          NACCBraytonCycle2017a_P.Constant2_Value) *
       rtb_mdotequivalent_k;
 
-    /* Saturate: '<S103>/Saturation' */
-    if (rtb_ModeSwitch2 > NACCBraytonCycle2017a_P.Saturation_UpperSat) {
-      rtb_ModeSwitch2 = NACCBraytonCycle2017a_P.Saturation_UpperSat;
+    /* Saturate: '<S108>/Saturation' */
+    if (rtb_MathFunction_p > NACCBraytonCycle2017a_P.Saturation_UpperSat) {
+      rtb_MathFunction_p = NACCBraytonCycle2017a_P.Saturation_UpperSat;
     } else {
-      if (rtb_ModeSwitch2 < NACCBraytonCycle2017a_P.Saturation_LowerSat) {
-        rtb_ModeSwitch2 = NACCBraytonCycle2017a_P.Saturation_LowerSat;
+      if (rtb_MathFunction_p < NACCBraytonCycle2017a_P.Saturation_LowerSat) {
+        rtb_MathFunction_p = NACCBraytonCycle2017a_P.Saturation_LowerSat;
       }
     }
 
-    /* End of Saturate: '<S103>/Saturation' */
+    /* End of Saturate: '<S108>/Saturation' */
 
-    /* Product: '<S100>/Product1' incorporates:
-     *  Constant: '<S100>/p-normal'
-     *  Memory: '<S8>/Memory2'
-     *  Product: '<S100>/Product3'
+    /* Product: '<S105>/Product1' incorporates:
+     *  Constant: '<S105>/p-normal'
+     *  Memory: '<S9>/Memory2'
+     *  Product: '<S105>/Product3'
      */
-    rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory2_PreviousInput /
-      NACCBraytonCycle2017a_P.pnormal_Value / rtb_UnitOffset * rtb_ModeSwitch2;
+    rtb_Sum2_p5 = NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o /
+      NACCBraytonCycle2017a_P.pnormal_Value / rtb_Sum2_p5 * rtb_MathFunction_p;
 
-    /* Product: '<S100>/Product5' incorporates:
-     *  Constant: '<S106>/M1'
+    /* Product: '<S105>/Product5' incorporates:
+     *  Constant: '<S111>/M1'
      */
-    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi[0] *
+    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_k[0] *
       NACCBraytonCycle2017a_P.th_M[0];
 
-    /* Sum: '<S100>/Sum' */
-    rtb_ModeSwitch2 = rtb_Product8_m[0];
+    /* Sum: '<S105>/Sum' */
+    rtb_MathFunction_p = rtb_Product8_m[0];
     for (i = 0; i < 6; i++) {
-      /* Product: '<S100>/Product5' incorporates:
-       *  Constant: '<S106>/M1'
+      /* Product: '<S105>/Product5' incorporates:
+       *  Constant: '<S111>/M1'
        */
-      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi[i + 1] *
+      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_k[i + 1] *
         NACCBraytonCycle2017a_P.th_M[i + 1];
 
-      /* Sum: '<S100>/Sum' incorporates:
-       *  Product: '<S100>/Product5'
+      /* Sum: '<S105>/Sum' incorporates:
+       *  Product: '<S105>/Product5'
        */
-      rtb_ModeSwitch2 += rtb_Product8_m[i + 1];
+      rtb_MathFunction_p += rtb_Product8_m[i + 1];
     }
 
-    NACCBraytonCycle2017a_B.MultiportSwitch = 1.0 / rtb_ModeSwitch2 *
-      rtb_UnitOffset;
+    NACCBraytonCycle2017a_B.MultiportSwitch_i = 1.0 / rtb_MathFunction_p *
+      rtb_Sum2_p5;
+
+    /* Lookup2D: '<S108>/Lookup Table (2-D)2' incorporates:
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     *  Product: '<S105>/Product9'
+     */
+    /*
+     * About '<S108>/Lookup Table (2-D)2':
+     * Input0  Data Type:  Floating Point real_T
+     * Input1  Data Type:  Floating Point real_T
+     * Output0 Data Type:  Floating Point real_T
+     * Lookup Method: Linear_Endpoint
+     *
+     * Row Data    parameter uses the same data type and scaling as Input0
+     * Column Data parameter uses the same data type and scaling as Input1
+     * Table Data  parameter uses the same data type and scaling as Output0
+     */
+    Look2D_real_T_real_T_real_T( &(rtb_u_j),
+      NACCBraytonCycle2017a_P.LookupTable2D2_Table, rtb_Switch2_e,
+      NACCBraytonCycle2017a_P.LookupTable2D2_RowIdx, 5U, rtb_PR_e,
+      NACCBraytonCycle2017a_P.LookupTable2D2_ColIdx, 20U);
+
+    /* Saturate: '<S108>/Saturation1' incorporates:
+     *  MultiPortSwitch: '<S105>/Multiport Switch1'
+     */
+    if (rtb_u_j > NACCBraytonCycle2017a_P.Saturation1_UpperSat_k) {
+      rtb_Sum2_k = NACCBraytonCycle2017a_P.Saturation1_UpperSat_k;
+    } else if (rtb_u_j < NACCBraytonCycle2017a_P.Saturation1_LowerSat_d) {
+      rtb_Sum2_k = NACCBraytonCycle2017a_P.Saturation1_LowerSat_d;
+    } else {
+      rtb_Sum2_k = rtb_u_j;
+    }
+
+    /* End of Saturate: '<S108>/Saturation1' */
   }
 
-  /* End of MultiPortSwitch: '<S100>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S105>/Multiport Switch' */
 
-  /* Gain: '<S109>/Gain' */
+  /* Gain: '<S114>/Gain' */
   NACCBraytonCycle2017a_B.ndot_k = NACCBraytonCycle2017a_P.Gain_Gain_c *
-    NACCBraytonCycle2017a_B.MultiportSwitch;
+    NACCBraytonCycle2017a_B.MultiportSwitch_i;
 
-  /* Gain: '<S109>/Gain1' incorporates:
-   *  Memory: '<S8>/Memory1'
+  /* Gain: '<S114>/Gain1' incorporates:
+   *  Memory: '<S9>/Memory1'
    */
-  NACCBraytonCycle2017a_B.T = NACCBraytonCycle2017a_P.Gain1_Gain_o *
+  NACCBraytonCycle2017a_B.T_d = NACCBraytonCycle2017a_P.Gain1_Gain_oi *
     NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b;
 
-  /* Gain: '<S109>/Gain2' incorporates:
-   *  Memory: '<S8>/Memory2'
+  /* Gain: '<S114>/Gain2' incorporates:
+   *  Memory: '<S9>/Memory2'
    */
-  NACCBraytonCycle2017a_B.p = NACCBraytonCycle2017a_P.Gain2_Gain_n *
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput;
+  NACCBraytonCycle2017a_B.p_b = NACCBraytonCycle2017a_P.Gain2_Gain_n *
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o;
   for (i = 0; i < 7; i++) {
-    /* Gain: '<S109>/Gain3' incorporates:
-     *  Memory: '<S8>/Memory8'
+    /* Gain: '<S114>/Gain3' incorporates:
+     *  Memory: '<S9>/Memory8'
      */
-    NACCBraytonCycle2017a_B.x[i] = NACCBraytonCycle2017a_P.Gain3_Gain_e *
-      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i];
+    NACCBraytonCycle2017a_B.x_f[i] = NACCBraytonCycle2017a_P.Gain3_Gain_e *
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l[i];
 
-    /* Gain: '<S109>/Gain4' */
+    /* Gain: '<S114>/Gain4' */
     NACCBraytonCycle2017a_B.psi_e[i] = NACCBraytonCycle2017a_P.Gain4_Gain_g *
-      NACCBraytonCycle2017a_B.psi[i];
+      NACCBraytonCycle2017a_B.psi_k[i];
   }
 
-  /* S-Function (th_TpxState_S): '<S109>/S-Function1' */
-  /*Block <S109>/S-Function1*/
+  /* S-Function (th_TpxState_S): '<S114>/S-Function1' */
+  /*Block <S114>/S-Function1*/
   {
     Par param;
     flow pflow;
@@ -2373,7 +4103,7 @@ static void NACCBraytonCycle2017a_output(void)
     param.pNASA1 = pNASA1;
     param.pCp_liq = pCp_liq;
     param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction1_P12_m;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction1_P12_mj;
     param.y_index_len = (int) 21;
     param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P13_h[1] - 1);
     param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P14_n[24] - 24);
@@ -2387,27 +4117,27 @@ static void NACCBraytonCycle2017a_output(void)
     /* Map inputs */
     pflow.nr_flows = 1;
     pflow.ndot_ = (double *)&NACCBraytonCycle2017a_B.ndot_k;
-    pflow.T_ = (double *)&NACCBraytonCycle2017a_B.T;
-    pflow.p_ = (double *)&NACCBraytonCycle2017a_B.p;
-    pflow.x = (double *)&NACCBraytonCycle2017a_B.x[0];
+    pflow.T_ = (double *)&NACCBraytonCycle2017a_B.T_d;
+    pflow.p_ = (double *)&NACCBraytonCycle2017a_B.p_b;
+    pflow.x = (double *)&NACCBraytonCycle2017a_B.x_f[0];
     pflow.psi = (double *)&NACCBraytonCycle2017a_B.psi_e[0];
 
     /* Map outputs */
-    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot;
-    pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot;
-    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot;
-    pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot;
-    error = (int *) &NACCBraytonCycle2017a_B.SFunction1_o5;
+    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot_f;
+    pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot_c;
+    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot_i;
+    pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot_b;
+    error = (int *) &NACCBraytonCycle2017a_B.SFunction1_o5_g;
     error[0] = th_T_p_x_State_new (&pflow, &param);
     EUfree(pNASA);
     EUfree(pNASA1);
     EUfree(pCp_liq);
   }
 
-  /* Outputs for Atomic SubSystem: '<S100>/S-p-State' */
+  /* Outputs for Atomic SubSystem: '<S105>/S-p-State' */
 
-  /* S-Function (th_SpState_S): '<S107>/S-Function' */
-  /* Block <S107>/S-Function */
+  /* S-Function (th_SpState_S): '<S112>/S-Function' */
+  /* Block <S112>/S-Function */
   {
     Par param;
     flow inflow;
@@ -2427,19 +4157,19 @@ static void NACCBraytonCycle2017a_output(void)
     /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
        angehaengt. Dies muss hier wieder abgezogen werden.) */
     pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] -
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] -
                           pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_h[7] +
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hl[7] +
                           pNASA->len * 5);
 
     // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
@@ -2513,18 +4243,18 @@ static void NACCBraytonCycle2017a_output(void)
     /* Map inputs */
     inflow.nr_flows = 1;
     inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_k;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2_g;
     inflow.psi = &NACCBraytonCycle2017a_B.psi_e[0];
-    inflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot;
+    inflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_c;
 
     /* Map outputs */
     outflow.nr_flows = 1;
     outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_n;
     outflow.T_ = &NACCBraytonCycle2017a_B.T_m;
     outflow.p_ = &NACCBraytonCycle2017a_B.p_n;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_j;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_jo;
     outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_kk;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_hm;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_h;
     outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_c;
     outflow.x = &NACCBraytonCycle2017a_B.x_d[0];
     outflow.psi = &NACCBraytonCycle2017a_B.psi_l[0];
@@ -2536,114 +4266,34 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* End of Outputs for SubSystem: '<S100>/S-p-State' */
+  /* End of Outputs for SubSystem: '<S105>/S-p-State' */
 
-  /* MultiPortSwitch: '<S100>/Multiport Switch1' incorporates:
-   *  Constant: '<S100>/T-normal2'
-   *  Lookup: '<S100>/Efficiency Lookup Table'
-   *  Product: '<S105>/Product11'
+  /* Product: '<S105>/Product10' incorporates:
+   *  Gain: '<S105>/Gain1'
+   *  Sum: '<S105>/Sum3'
    */
-  if ((int32_T)NACCBraytonCycle2017a_P.HPGasTurbine_Mode == 1) {
-    /* Product: '<S105>/Product8' incorporates:
-     *  Constant: '<S117>/M1'
-     */
-    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi[0] *
-      NACCBraytonCycle2017a_P.th_M[0];
+  rtb_Sum2_k = (NACCBraytonCycle2017a_B.Hdot_jo - NACCBraytonCycle2017a_B.Hdot_f)
+    * (NACCBraytonCycle2017a_P.Gain1_Gain_h * rtb_Sum2_k);
 
-    /* Sum: '<S105>/Sum2' */
-    rtb_ModeSwitch2 = rtb_Product8_m[0];
-    for (i = 0; i < 6; i++) {
-      /* Product: '<S105>/Product8' incorporates:
-       *  Constant: '<S117>/M1'
-       */
-      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi[i + 1] *
-        NACCBraytonCycle2017a_P.th_M[i + 1];
-
-      /* Sum: '<S105>/Sum2' incorporates:
-       *  Product: '<S105>/Product8'
-       */
-      rtb_ModeSwitch2 += rtb_Product8_m[i + 1];
-    }
-
-    /* Product: '<S105>/Product11' */
-    rtb_Product11_mh = NACCBraytonCycle2017a_B.MultiportSwitch * rtb_ModeSwitch2;
-
-    /* Lookup: '<S100>/Efficiency Lookup Table' incorporates:
-     *  Product: '<S105>/Product11'
-     */
-    /*
-     * About '<S100>/Efficiency Lookup Table':
-     * Input0  Data Type:  Floating Point real_T
-     * Output0 Data Type:  Floating Point real_T
-     * Lookup Method: Linear_Endpoint
-     *
-     * XData parameter uses the same data type and scaling as Input0
-     * YData parameter uses the same data type and scaling as Output0
-     */
-    LookUp_real_T_real_T( &(rtb_EfficiencyLookupTable_e),
-                         NACCBraytonCycle2017a_P.HPGasTurbine_efficiency,
-                         rtb_Product11_mh,
-                         NACCBraytonCycle2017a_P.HPGasTurbine_mdot2, 4U);
-    rtb_UnitOffset = rtb_EfficiencyLookupTable_e;
+  /* Saturate: '<S105>/Saturation1' */
+  if (rtb_Sum2_k > NACCBraytonCycle2017a_P.Saturation1_UpperSat_d) {
+    rtb_Sum2_k = NACCBraytonCycle2017a_P.Saturation1_UpperSat_d;
   } else {
-    /* Lookup2D: '<S103>/Lookup Table (2-D)2' */
-    /*
-     * About '<S103>/Lookup Table (2-D)2':
-     * Input0  Data Type:  Floating Point real_T
-     * Input1  Data Type:  Floating Point real_T
-     * Output0 Data Type:  Floating Point real_T
-     * Lookup Method: Linear_Endpoint
-     *
-     * Row Data    parameter uses the same data type and scaling as Input0
-     * Column Data parameter uses the same data type and scaling as Input1
-     * Table Data  parameter uses the same data type and scaling as Output0
-     */
-    Look2D_real_T_real_T_real_T( &(rtb_u_j),
-      NACCBraytonCycle2017a_P.LookupTable2D2_Table, rtb_Switch2,
-      NACCBraytonCycle2017a_P.LookupTable2D2_RowIdx, 5U, rtb_PR,
-      NACCBraytonCycle2017a_P.LookupTable2D2_ColIdx, 20U);
-
-    /* Saturate: '<S103>/Saturation1' */
-    if (rtb_u_j > NACCBraytonCycle2017a_P.Saturation1_UpperSat_k) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_k;
-    } else if (rtb_u_j < NACCBraytonCycle2017a_P.Saturation1_LowerSat_d) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_d;
-    } else {
-      rtb_UnitOffset = rtb_u_j;
-    }
-
-    /* End of Saturate: '<S103>/Saturation1' */
-  }
-
-  /* End of MultiPortSwitch: '<S100>/Multiport Switch1' */
-
-  /* Product: '<S100>/Product10' incorporates:
-   *  Gain: '<S100>/Gain1'
-   *  Sum: '<S100>/Sum3'
-   */
-  rtb_UnitOffset = (NACCBraytonCycle2017a_B.Hdot_j -
-                    NACCBraytonCycle2017a_B.Hdot) *
-    (NACCBraytonCycle2017a_P.Gain1_Gain_h * rtb_UnitOffset);
-
-  /* Saturate: '<S100>/Saturation1' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation1_UpperSat_d) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_d;
-  } else {
-    if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds;
+    if (rtb_Sum2_k < NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds) {
+      rtb_Sum2_k = NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds;
     }
   }
 
-  /* End of Saturate: '<S100>/Saturation1' */
+  /* End of Saturate: '<S105>/Saturation1' */
 
-  /* Sum: '<S100>/Subtract2' */
-  NACCBraytonCycle2017a_B.Subtract2 = rtb_UnitOffset +
-    NACCBraytonCycle2017a_B.Hdot;
+  /* Sum: '<S105>/Subtract2' */
+  NACCBraytonCycle2017a_B.Subtract2_k = rtb_Sum2_k +
+    NACCBraytonCycle2017a_B.Hdot_f;
 
-  /* Outputs for Atomic SubSystem: '<S100>/H-p-State with Heat Exchange' */
+  /* Outputs for Atomic SubSystem: '<S105>/H-p-State with Heat Exchange' */
 
-  /* S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
-  /* Block <S102>/S-Function*/
+  /* S-Function (th_HpStateHeatExchange_S): '<S107>/S-Function' */
+  /* Block <S107>/S-Function*/
   {
     Par param;
     flow inflow;
@@ -2697,13 +4347,13 @@ static void NACCBraytonCycle2017a_output(void)
 
     // coefficients for the polynomial representing the liquid cp
     pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_jo[7] -
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] -
       pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_jo[7] +
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
       pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_jo[7] +
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
       pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_jo[7] +
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
       pCp_liq->len * 2);
     param.nr_species = 7;
     param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
@@ -2736,7 +4386,7 @@ static void NACCBraytonCycle2017a_output(void)
     param.x_index_len = (int) 24;
     param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_i;
     param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_p[1] - 1);
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_pk[1] - 1);
     param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_h[24] - 24);
     param.liquid_eos_method = (int) (1.0);
     param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
@@ -2751,10 +4401,10 @@ static void NACCBraytonCycle2017a_output(void)
 
     /* Map inputs */
     inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.MultiportSwitch;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2;
-    inflow.psi = &NACCBraytonCycle2017a_B.psi[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Subtract2;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.MultiportSwitch_i;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2_g;
+    inflow.psi = &NACCBraytonCycle2017a_B.psi_k[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Subtract2_k;
 
     /* Map outputs */
     outflow.nr_flows = 1;
@@ -2776,203 +4426,268 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* End of Outputs for SubSystem: '<S100>/H-p-State with Heat Exchange' */
+  /* End of Outputs for SubSystem: '<S105>/H-p-State with Heat Exchange' */
 
-  /* Sum: '<S465>/Sum2' */
-  rtb_UnitOffset = -0.0;
-  for (i = 0; i < 7; i++) {
-    /* Sum: '<S465>/Sum2' incorporates:
-     *  Constant: '<S469>/M1'
-     *  Product: '<S465>/Product8'
-     */
-    rtb_UnitOffset += NACCBraytonCycle2017a_B.psi_i[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-
-    /* Product: '<S465>/Product8' incorporates:
-     *  Constant: '<S249>/M1'
-     *  Memory: '<S7>/Memory4'
-     *  Product: '<S245>/Product8'
-     */
-    rtb_Product8_m[i] = NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-  }
-
-  /* Outport: '<Root>/Out13' incorporates:
-   *  Constant: '<S40>/addition factor1'
-   *  Gain: '<S40>/Gain1'
-   *  Gain: '<S40>/Gain2'
-   *  Product: '<S465>/Product11'
-   *  Sum: '<S40>/Add'
+  /* Product: '<S127>/Product8' incorporates:
+   *  Constant: '<S128>/M1'
    */
-  NACCBraytonCycle2017a_Y.Out13 = NACCBraytonCycle2017a_B.ndot_nq *
-    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_o *
-    NACCBraytonCycle2017a_P.Gain1_Gain_n0 +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_kh;
+  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_n[0] *
+    NACCBraytonCycle2017a_P.th_M[0];
 
-  /* Outport: '<Root>/Out14' incorporates:
-   *  Constant: '<S39>/addition factor1'
-   *  Gain: '<S39>/Gain1'
-   *  Sum: '<S39>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out14 = NACCBraytonCycle2017a_P.Gain1_Gain_oq *
-    NACCBraytonCycle2017a_B.T_h +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_ok;
-
-  /* Outport: '<Root>/Out15' incorporates:
-   *  Constant: '<S15>/addition factor1'
-   *  Gain: '<S15>/Gain1'
-   *  Sum: '<S15>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out15 = NACCBraytonCycle2017a_P.Gain1_Gain_i *
-    NACCBraytonCycle2017a_B.p_g +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_f1;
-
-  /* Outport: '<Root>/Out16' incorporates:
-   *  Constant: '<Root>/Constant6'
-   *  Constant: '<S16>/addition factor1'
-   *  Gain: '<S16>/Gain1'
-   *  Product: '<Root>/Product3'
-   *  Sum: '<S16>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out16 = (NACCBraytonCycle2017a_P.Gain1_Gain_k3 *
-    NACCBraytonCycle2017a_B.Hdot_n +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_kx) *
-    NACCBraytonCycle2017a_P.Constant6_Value_l;
-
-  /* Sum: '<S245>/Sum2' incorporates:
-   *  Sum: '<S100>/Sum'
-   *  Sum: '<S105>/Sum2'
-   *  Sum: '<S122>/Sum2'
-   *  Sum: '<S124>/Sum'
-   *  Sum: '<S129>/Sum2'
-   *  Sum: '<S142>/Sum2'
-   *  Sum: '<S149>/Sum2'
-   *  Sum: '<S165>/Sum2'
-   *  Sum: '<S179>/Sum2'
-   *  Sum: '<S289>/Sum2'
-   *  Sum: '<S322>/Sum2'
-   *  Sum: '<S388>/Sum2'
-   *  Sum: '<S421>/Sum2'
-   *  Sum: '<S465>/Sum2'
-   *  Sum: '<S55>/Sum2'
-   *  Sum: '<S61>/Sum2'
-   *  Sum: '<S69>/Sum2'
-   *  Sum: '<S73>/Sum'
-   *  Sum: '<S77>/Sum2'
-   *  Sum: '<S88>/Sum2'
-   *  Sum: '<S98>/Sum2'
-   */
-  rtb_UnitOffset = rtb_Product8_m[0];
+  /* Sum: '<S127>/Sum2' */
+  rtb_Sum2_k = rtb_Product8_m[0];
   for (i = 0; i < 6; i++) {
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
+    /* Product: '<S127>/Product8' incorporates:
+     *  Constant: '<S128>/M1'
+     */
+    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_n[i + 1] *
+      NACCBraytonCycle2017a_P.th_M[i + 1];
+
+    /* Sum: '<S127>/Sum2' incorporates:
+     *  Product: '<S127>/Product8'
+     */
+    rtb_Sum2_k += rtb_Product8_m[i + 1];
   }
 
-  /* Outport: '<Root>/Out17' incorporates:
-   *  Constant: '<S20>/addition factor1'
-   *  Gain: '<S20>/Gain1'
-   *  Gain: '<S20>/Gain2'
-   *  Memory: '<S7>/Memory9'
-   *  Product: '<S245>/Product11'
-   *  Sum: '<S20>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out17 =
-    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a * rtb_UnitOffset *
-    NACCBraytonCycle2017a_P.Gain2_Gain_as *
-    NACCBraytonCycle2017a_P.Gain1_Gain_k0 +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_b5;
+  /* Product: '<S127>/Product11' */
+  rtb_Sum2_k *= NACCBraytonCycle2017a_B.ndot_ea;
 
-  /* Outport: '<Root>/Out18' incorporates:
-   *  Constant: '<S19>/addition factor1'
-   *  Gain: '<S19>/Gain1'
-   *  Memory: '<S7>/Memory1'
-   *  Sum: '<S19>/Add'
+  /* Sum: '<S124>/Sum' incorporates:
+   *  Gain: '<S124>/Gain'
+   *  Math: '<S124>/Math Function'
+   *  Memory: '<S12>/Memory2'
    */
-  NACCBraytonCycle2017a_Y.Out18 = NACCBraytonCycle2017a_P.Gain1_Gain_ea *
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_d1;
+  rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n - rtb_Sum2_k
+    * rtb_Sum2_k * NACCBraytonCycle2017a_P.Gain_Gain_cj;
 
-  /* Outport: '<Root>/Out19' incorporates:
-   *  Constant: '<S17>/addition factor1'
-   *  Gain: '<S17>/Gain1'
-   *  Memory: '<S7>/Memory2'
-   *  Sum: '<S17>/Add'
+  /* MinMax: '<S124>/MinMax' incorporates:
+   *  Constant: '<S124>/p_downstrem_min'
    */
-  NACCBraytonCycle2017a_Y.Out19 = NACCBraytonCycle2017a_P.Gain1_Gain_b *
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_g;
+  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_n) ||
+        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_n))) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_n;
+  }
 
-  /* Outport: '<Root>/Out20' incorporates:
-   *  Constant: '<Root>/Constant7'
-   *  Constant: '<S18>/addition factor1'
-   *  Gain: '<S18>/Gain1'
-   *  Memory: '<S7>/Memory3'
-   *  Product: '<Root>/Product4'
-   *  Sum: '<S18>/Add'
+  /* End of MinMax: '<S124>/MinMax' */
+
+  /* Saturate: '<S124>/Saturation' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_l) {
+    NACCBraytonCycle2017a_B.Saturation_l =
+      NACCBraytonCycle2017a_P.Saturation_UpperSat_l;
+  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_a) {
+    NACCBraytonCycle2017a_B.Saturation_l =
+      NACCBraytonCycle2017a_P.Saturation_LowerSat_a;
+  } else {
+    NACCBraytonCycle2017a_B.Saturation_l = rtb_UnitOffset;
+  }
+
+  /* End of Saturate: '<S124>/Saturation' */
+
+  /* Sum: '<S125>/Sum7' incorporates:
+   *  Inport: '<Root>/In7'
+   *  Memory: '<S12>/Memory3'
    */
-  NACCBraytonCycle2017a_Y.Out20 = (NACCBraytonCycle2017a_P.Gain1_Gain_fe *
-    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_l) *
-    NACCBraytonCycle2017a_P.Constant7_Value;
+  NACCBraytonCycle2017a_B.Sum7_h =
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e +
+    NACCBraytonCycle2017a_U.In7;
 
-  /* Bias: '<S155>/UnitOffset' incorporates:
-   *  Gain: '<S155>/UnitScale'
+  /* Outputs for Atomic SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+  /* S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
+  /* Block <S126>/S-Function*/
+  {
+    Par param;
+    flow inflow;
+    flow outflow;
+    Trace HpTrace;
+    Options HpOpt;
+
+    // Wird in Simulink nur einmal gemacht, hier jedes mal!
+    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
+    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
+    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
+    th_InitParameters(&param);
+    th_InitFlow(&inflow);
+    th_InitFlow(&outflow);
+
+    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
+    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
+       angehaengt. Dies muss hier wieder abgezogen werden.) */
+    pNASA->len = (int) 7 ;
+    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] -
+                          pNASA->len * 1);
+    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 0);
+    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 1);
+    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 2);
+    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 3);
+    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 4);
+    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
+                          pNASA->len * 5);
+
+    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
+    pNASA1->len = (int) 7;
+    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] -
+      pNASA1->len * 1);
+    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 0);
+    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 1);
+    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 2);
+    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 3);
+    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 4);
+    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
+      pNASA1->len * 5);
+
+    // coefficients for the polynomial representing the liquid cp
+    pCp_liq->len = (int) 7;
+    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] -
+      pCp_liq->len * 1);
+    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
+      pCp_liq->len * 0);
+    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
+      pCp_liq->len * 1);
+    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
+      pCp_liq->len * 2);
+    param.nr_species = 7;
+    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
+    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
+    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
+    param.T_env = 298.0;
+    param.k_loss = 0.0;
+    param.A_total = 1.0;
+    param.ndot_limit = 1.0E-9;
+    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_n;
+    param.water_index = (int) 0.0;
+    param.if97_index = (int) -1.0;
+    param.gas_eos_method = (int) 1.0;
+    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
+    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
+    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
+    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
+    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
+    param.pCp_liq = pCp_liq;
+    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
+    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
+    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
+    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
+    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
+    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
+    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
+    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
+    param.pNASA = pNASA;
+    param.pNASA1 = pNASA1;
+    param.x_index_len = (int) 24;
+    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_dx;
+    param.y_index_len = (int) 21;
+    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_j[1] - 1);
+    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_d[24] - 24);
+    param.liquid_eos_method = (int) (1.0);
+    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
+    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
+    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
+    param.evap_enth_T_min = (double*)
+      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
+    HpOpt.derivative_neighbor_factor = 0.02;
+    HpOpt.x_conv_limit = 0.0001;
+    HpOpt.y_conv_limit = 1.0E-6;
+    HpOpt.max_iterations = (int)100.0;
+
+    /* Map inputs */
+    inflow.nr_flows = 1;
+    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_ea;
+    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_l;
+    inflow.psi = &NACCBraytonCycle2017a_B.psi_n[0];
+    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Sum7_h;
+
+    /* Map outputs */
+    outflow.nr_flows = 1;
+    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_ol;
+    outflow.T_ = &NACCBraytonCycle2017a_B.T_e;
+    outflow.p_ = &NACCBraytonCycle2017a_B.p_a5;
+    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_i;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_ce;
+    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_m;
+    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_p;
+    outflow.x = &NACCBraytonCycle2017a_B.x_ac[0];
+    outflow.psi = &NACCBraytonCycle2017a_B.psi_a[0];
+    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_k;
+    (&NACCBraytonCycle2017a_B.error_codes_i0)[0] = th_H_p_State_heat_Exchange
+      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
+    (&NACCBraytonCycle2017a_B.num_iterations_f)[0] = HpTrace.iterations;
+    EUfree(pNASA);
+    EUfree(pNASA1);
+    EUfree(pCp_liq);
+  }
+
+  /* End of Outputs for SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+  /* Bias: '<S160>/UnitOffset' incorporates:
+   *  Gain: '<S160>/UnitScale'
    *  Inport: '<Root>/In10'
    */
-  rtb_ModeSwitch2 = NACCBraytonCycle2017a_P.UnitScale_Gain_e *
+  rtb_MathFunction_p = NACCBraytonCycle2017a_P.UnitScale_Gain_e *
     NACCBraytonCycle2017a_U.In10 + NACCBraytonCycle2017a_P.UnitOffset_Bias_f;
 
-  /* Bias: '<S156>/UnitOffset' incorporates:
-   *  Gain: '<S156>/UnitScale'
+  /* Bias: '<S161>/UnitOffset' incorporates:
+   *  Gain: '<S161>/UnitScale'
    *  Inport: '<Root>/In8'
    */
   NACCBraytonCycle2017a_B.UnitOffset_l =
     NACCBraytonCycle2017a_P.UnitScale_Gain_g * NACCBraytonCycle2017a_U.In8 +
     NACCBraytonCycle2017a_P.UnitOffset_Bias_h;
 
-  /* Bias: '<S157>/UnitOffset' incorporates:
-   *  Gain: '<S157>/UnitScale'
+  /* Bias: '<S162>/UnitOffset' incorporates:
+   *  Gain: '<S162>/UnitScale'
    *  Inport: '<Root>/In9'
    */
   NACCBraytonCycle2017a_B.UnitOffset_f =
     NACCBraytonCycle2017a_P.UnitScale_Gain_n * NACCBraytonCycle2017a_U.In9 +
     NACCBraytonCycle2017a_P.UnitOffset_Bias_mp;
 
-  /* If: '<S12>/If1' incorporates:
-   *  Constant: '<S12>/Constant1'
-   *  Constant: '<S12>/psi'
-   *  Constant: '<S153>/Sonstiges1'
+  /* If: '<S17>/If1' incorporates:
+   *  Constant: '<S158>/Sonstiges1'
+   *  Constant: '<S17>/Constant1'
+   *  Constant: '<S17>/psi'
    */
   if (NACCBraytonCycle2017a_P.Constant1_Value_k == 1.0) {
-    /* Outputs for IfAction SubSystem: '<S12>/MolarFlow' incorporates:
-     *  ActionPort: '<S152>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S17>/MolarFlow' incorporates:
+     *  ActionPort: '<S157>/Action Port'
      */
-    NACCBraytonCycle2017a_MolarFlow(rtb_ModeSwitch2,
+    NACCBraytonCycle2017a_MolarFlow(rtb_MathFunction_p,
       &NACCBraytonCycle2017a_B.ndot_ka);
 
-    /* End of Outputs for SubSystem: '<S12>/MolarFlow' */
+    /* End of Outputs for SubSystem: '<S17>/MolarFlow' */
   } else if (NACCBraytonCycle2017a_P.Constant1_Value_k == 2.0) {
-    /* Outputs for IfAction SubSystem: '<S12>/MassFlow' incorporates:
-     *  ActionPort: '<S151>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S17>/MassFlow' incorporates:
+     *  ActionPort: '<S156>/Action Port'
      */
-    NACCBraytonCycle2017a_MassFlow(rtb_ModeSwitch2,
+    NACCBraytonCycle2017a_MassFlow(rtb_MathFunction_p,
       NACCBraytonCycle2017a_P.NaturalGas_psi, &NACCBraytonCycle2017a_B.ndot_ka,
       (P_MassFlow_NACCBraytonCycle20_T *)&NACCBraytonCycle2017a_P.MassFlow_m);
 
-    /* End of Outputs for SubSystem: '<S12>/MassFlow' */
+    /* End of Outputs for SubSystem: '<S17>/MassFlow' */
   } else if (NACCBraytonCycle2017a_P.Constant1_Value_k == 3.0) {
-    /* Outputs for IfAction SubSystem: '<S12>/VolumeFlow' incorporates:
-     *  ActionPort: '<S158>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S17>/VolumeFlow' incorporates:
+     *  ActionPort: '<S163>/Action Port'
      */
 
-    /* Outputs for Atomic SubSystem: '<S158>/T-p-Vapor Fractions' */
+    /* Outputs for Atomic SubSystem: '<S163>/T-p-Vapor Fractions' */
     NACCBraytonC_TpVaporFractions_p();
 
-    /* End of Outputs for SubSystem: '<S158>/T-p-Vapor Fractions' */
+    /* End of Outputs for SubSystem: '<S163>/T-p-Vapor Fractions' */
 
-    /* S-Function (th_Density_S): '<S164>/S-Function' incorporates:
-     *  Constant: '<S12>/psi'
+    /* S-Function (th_Density_S): '<S169>/S-Function' incorporates:
+     *  Constant: '<S17>/psi'
      */
-    /*Block <S164>/S-Function*/
+    /*Block <S169>/S-Function*/
     {
       Par param;
       flow pflow;
@@ -3011,161 +4726,164 @@ static void NACCBraytonCycle2017a_output(void)
       (&NACCBraytonCycle2017a_B.SFunction_o3)[0] = calculated_density[2];
     }
 
-    /* Product: '<S165>/Product8' incorporates:
-     *  Constant: '<S12>/psi'
-     *  Constant: '<S166>/M1'
+    /* Product: '<S170>/Product8' incorporates:
+     *  Constant: '<S171>/M1'
+     *  Constant: '<S17>/psi'
      */
     rtb_Product8_m[0] = NACCBraytonCycle2017a_P.NaturalGas_psi[0] *
       NACCBraytonCycle2017a_P.th_M[0];
 
-    /* Sum: '<S165>/Sum2' */
-    rtb_Sum2_g = rtb_Product8_m[0];
+    /* Sum: '<S170>/Sum2' */
+    rtb_UnitOffset = rtb_Product8_m[0];
     for (i = 0; i < 6; i++) {
-      /* Product: '<S165>/Product8' incorporates:
-       *  Constant: '<S12>/psi'
-       *  Constant: '<S166>/M1'
+      /* Product: '<S170>/Product8' incorporates:
+       *  Constant: '<S171>/M1'
+       *  Constant: '<S17>/psi'
        */
       rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_P.NaturalGas_psi[i + 1] *
         NACCBraytonCycle2017a_P.th_M[i + 1];
 
-      /* Sum: '<S165>/Sum2' incorporates:
-       *  Product: '<S165>/Product8'
+      /* Sum: '<S170>/Sum2' incorporates:
+       *  Product: '<S170>/Product8'
        */
-      rtb_Sum2_g += rtb_Product8_m[i + 1];
+      rtb_UnitOffset += rtb_Product8_m[i + 1];
     }
 
-    /* Product: '<S163>/Product1' incorporates:
-     *  Constant: '<S163>/Constant'
-     *  Product: '<S163>/Product'
-     *  Product: '<S165>/Product11'
+    /* Product: '<S168>/Product1' incorporates:
+     *  Constant: '<S168>/Constant'
+     *  Product: '<S168>/Product'
+     *  Product: '<S170>/Product11'
      */
-    NACCBraytonCycle2017a_B.ndot_ka = rtb_ModeSwitch2 *
+    NACCBraytonCycle2017a_B.ndot_ka = rtb_MathFunction_p *
       NACCBraytonCycle2017a_B.SFunction_o2 /
-      (NACCBraytonCycle2017a_P.Constant_Value_bv * rtb_Sum2_g);
+      (NACCBraytonCycle2017a_P.Constant_Value_bv * rtb_UnitOffset);
 
-    /* End of Outputs for SubSystem: '<S12>/VolumeFlow' */
+    /* End of Outputs for SubSystem: '<S17>/VolumeFlow' */
   } else {
     if (NACCBraytonCycle2017a_P.Constant1_Value_k == 4.0) {
-      /* Outputs for IfAction SubSystem: '<S12>/Reservoir' incorporates:
-       *  ActionPort: '<S153>/Action Port'
+      /* Outputs for IfAction SubSystem: '<S17>/Reservoir' incorporates:
+       *  ActionPort: '<S158>/Action Port'
        */
       NACCBraytonCycle2017a_B.ndot_ka =
         NACCBraytonCycle2017a_P.Sonstiges1_Value_l;
 
-      /* End of Outputs for SubSystem: '<S12>/Reservoir' */
+      /* End of Outputs for SubSystem: '<S17>/Reservoir' */
     }
   }
 
-  /* End of If: '<S12>/If1' */
+  /* End of If: '<S17>/If1' */
 
-  /* Outputs for Atomic SubSystem: '<S12>/T-p-State' */
+  /* Outputs for Atomic SubSystem: '<S17>/T-p-State' */
   NACCBraytonCycle2017a_TpState_a();
 
-  /* End of Outputs for SubSystem: '<S12>/T-p-State' */
+  /* End of Outputs for SubSystem: '<S17>/T-p-State' */
 
-  /* Outputs for Atomic SubSystem: '<S11>/Mixer' */
-  /* Gain: '<S147>/Gain2' incorporates:
-   *  Memory: '<S7>/Memory2'
+  /* Outputs for Atomic SubSystem: '<S16>/Mixer' */
+  /* Gain: '<S152>/Gain2' incorporates:
+   *  Memory: '<S8>/Memory2'
    */
   NACCBraytonCycle2017a_B.p_h = NACCBraytonCycle2017a_P.Gain2_Gain_a *
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o;
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow;
 
-  /* MultiPortSwitch: '<S142>/Mode Switch' incorporates:
-   *  Constant: '<S11>/ratio'
-   *  Constant: '<S142>/Constan'
-   *  Memory: '<S7>/Memory9'
-   *  Product: '<S142>/Product5'
+  /* MultiPortSwitch: '<S147>/Mode Switch' incorporates:
+   *  Constant: '<S147>/Constan'
+   *  Constant: '<S16>/ratio'
+   *  Memory: '<S8>/Memory9'
+   *  Product: '<S147>/Product5'
    */
   if ((int32_T)NACCBraytonCycle2017a_P.Mixer_Mode == 1) {
-    rtb_Sum2_g = NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a;
+    rtb_UnitOffset = NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a;
   } else {
-    rtb_Sum2_g = NACCBraytonCycle2017a_B.ndot_nc *
+    rtb_UnitOffset = NACCBraytonCycle2017a_B.ndot_nc *
       NACCBraytonCycle2017a_P.ratio_Value;
   }
 
-  /* End of MultiPortSwitch: '<S142>/Mode Switch' */
+  /* End of MultiPortSwitch: '<S147>/Mode Switch' */
 
-  /* Sum: '<S142>/Add3' */
-  NACCBraytonCycle2017a_B.Add3 = NACCBraytonCycle2017a_B.ndot_nc + rtb_Sum2_g;
+  /* Sum: '<S147>/Add3' */
+  NACCBraytonCycle2017a_B.Add3 = NACCBraytonCycle2017a_B.ndot_nc +
+    rtb_UnitOffset;
 
-  /* Gain: '<S147>/Gain' */
+  /* Gain: '<S152>/Gain' */
   NACCBraytonCycle2017a_B.ndot_o = NACCBraytonCycle2017a_P.Gain_Gain_o *
-    rtb_Sum2_g;
+    rtb_UnitOffset;
 
-  /* Sum: '<S142>/Sum2' */
+  /* Sum: '<S147>/Sum2' */
   rtb_Sum2_p5 = -0.0;
   for (i = 0; i < 7; i++) {
-    /* Gain: '<S147>/Gain4' incorporates:
-     *  Memory: '<S7>/Memory4'
+    /* Gain: '<S152>/Gain4' incorporates:
+     *  Memory: '<S8>/Memory4'
      */
     NACCBraytonCycle2017a_B.psi_cv[i] = NACCBraytonCycle2017a_P.Gain4_Gain_o *
       NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[i];
 
-    /* Sum: '<S142>/Sum1' incorporates:
-     *  Product: '<S142>/Product1'
-     *  Product: '<S142>/Product8'
+    /* Sum: '<S147>/Sum1' incorporates:
+     *  Product: '<S147>/Product1'
+     *  Product: '<S147>/Product8'
      */
-    rtb_ModeSwitch2 = NACCBraytonCycle2017a_B.ndot_nc *
+    rtb_MathFunction_p = NACCBraytonCycle2017a_B.ndot_nc *
       NACCBraytonCycle2017a_B.psi_c[i] + NACCBraytonCycle2017a_B.ndot_o *
       NACCBraytonCycle2017a_B.psi_cv[i];
 
-    /* Sum: '<S142>/Sum2' */
-    rtb_Sum2_p5 += rtb_ModeSwitch2;
+    /* Sum: '<S147>/Sum2' */
+    rtb_Sum2_p5 += rtb_MathFunction_p;
 
-    /* Sum: '<S142>/Sum1' */
-    rtb_Product8_m[i] = rtb_ModeSwitch2;
+    /* Sum: '<S147>/Sum1' */
+    rtb_Product8_m[i] = rtb_MathFunction_p;
   }
 
-  /* MultiPortSwitch: '<S142>/Multiport Switch' incorporates:
-   *  Constant: '<S142>/Constant'
+  /* MultiPortSwitch: '<S147>/Multiport Switch' incorporates:
+   *  Constant: '<S147>/Constant'
    */
   if ((int32_T)NACCBraytonCycle2017a_P.Mixer_p_out_method == 1) {
-    /* MinMax: '<S142>/MinMax' */
+    /* MinMax: '<S147>/MinMax' */
     if ((NACCBraytonCycle2017a_B.p_pg < NACCBraytonCycle2017a_B.p_h) || rtIsNaN
         (NACCBraytonCycle2017a_B.p_h)) {
-      rtb_Sum2_g = NACCBraytonCycle2017a_B.p_pg;
+      rtb_UnitOffset = NACCBraytonCycle2017a_B.p_pg;
     } else {
-      rtb_Sum2_g = NACCBraytonCycle2017a_B.p_h;
+      rtb_UnitOffset = NACCBraytonCycle2017a_B.p_h;
     }
 
-    /* End of MinMax: '<S142>/MinMax' */
+    /* End of MinMax: '<S147>/MinMax' */
   } else {
-    /* Sum: '<S142>/Add1' */
-    rtb_ModeSwitch2 = NACCBraytonCycle2017a_B.ndot_nc + rtb_Sum2_g;
+    /* Sum: '<S147>/Add1' */
+    rtb_MathFunction_p = NACCBraytonCycle2017a_B.ndot_nc + rtb_UnitOffset;
 
-    /* MultiPortSwitch: '<S144>/Multiport Switch1' incorporates:
-     *  Constant: '<S148>/Constant'
-     *  Gain: '<S142>/mean if ndot1 and 2=0'
-     *  Product: '<S142>/Product3'
-     *  Product: '<S142>/Product4'
-     *  Product: '<S144>/Divide'
-     *  RelationalOperator: '<S148>/Compare'
-     *  Sum: '<S142>/Add'
-     *  Sum: '<S142>/Add2'
+    /* MultiPortSwitch: '<S149>/Multiport Switch1' incorporates:
+     *  Constant: '<S153>/Constant'
+     *  Gain: '<S147>/mean if ndot1 and 2=0'
+     *  Product: '<S147>/Product3'
+     *  Product: '<S147>/Product4'
+     *  Product: '<S149>/Divide'
+     *  RelationalOperator: '<S153>/Compare'
+     *  Sum: '<S147>/Add'
+     *  Sum: '<S147>/Add2'
      */
-    if (!(rtb_ModeSwitch2 == NACCBraytonCycle2017a_P.Constant_Value_f)) {
-      rtb_Sum2_g = (NACCBraytonCycle2017a_B.p_pg *
-                    NACCBraytonCycle2017a_B.ndot_nc +
-                    NACCBraytonCycle2017a_B.p_h * rtb_Sum2_g) / rtb_ModeSwitch2;
+    if (!(rtb_MathFunction_p == NACCBraytonCycle2017a_P.Constant_Value_f)) {
+      rtb_UnitOffset = (NACCBraytonCycle2017a_B.p_pg *
+                        NACCBraytonCycle2017a_B.ndot_nc +
+                        NACCBraytonCycle2017a_B.p_h * rtb_UnitOffset) /
+        rtb_MathFunction_p;
     } else {
-      rtb_Sum2_g = (NACCBraytonCycle2017a_B.p_pg + NACCBraytonCycle2017a_B.p_h) *
+      rtb_UnitOffset = (NACCBraytonCycle2017a_B.p_pg +
+                        NACCBraytonCycle2017a_B.p_h) *
         NACCBraytonCycle2017a_P.meanifndot1and20_Gain;
     }
 
-    /* End of MultiPortSwitch: '<S144>/Multiport Switch1' */
+    /* End of MultiPortSwitch: '<S149>/Multiport Switch1' */
   }
 
-  /* End of MultiPortSwitch: '<S142>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S147>/Multiport Switch' */
 
-  /* MultiPortSwitch: '<S142>/Multiport Switch1' incorporates:
-   *  Constant: '<S143>/Constant'
-   *  Gain: '<S142>/mean if ndot1 and 2 are zero'
-   *  Product: '<S142>/Product2'
-   *  RelationalOperator: '<S143>/Compare'
-   *  Sum: '<S142>/Sum5'
+  /* MultiPortSwitch: '<S147>/Multiport Switch1' incorporates:
+   *  Constant: '<S148>/Constant'
+   *  Gain: '<S147>/mean if ndot1 and 2 are zero'
+   *  Product: '<S147>/Product2'
+   *  RelationalOperator: '<S148>/Compare'
+   *  Sum: '<S147>/Sum5'
    */
   if (!(rtb_Sum2_p5 == NACCBraytonCycle2017a_P.Constant_Value_i)) {
-    /* Saturate: '<S142>/Saturation' */
+    /* Saturate: '<S147>/Saturation' */
     if (rtb_Sum2_p5 > NACCBraytonCycle2017a_P.Saturation_UpperSat_o) {
       rtb_Sum2_p5 = NACCBraytonCycle2017a_P.Saturation_UpperSat_o;
     } else {
@@ -3174,7 +4892,7 @@ static void NACCBraytonCycle2017a_output(void)
       }
     }
 
-    /* End of Saturate: '<S142>/Saturation' */
+    /* End of Saturate: '<S147>/Saturation' */
     for (i = 0; i < 7; i++) {
       NACCBraytonCycle2017a_B.MultiportSwitch1[i] = rtb_Product8_m[i] /
         rtb_Sum2_p5;
@@ -3187,66 +4905,66 @@ static void NACCBraytonCycle2017a_output(void)
     }
   }
 
-  /* End of MultiPortSwitch: '<S142>/Multiport Switch1' */
+  /* End of MultiPortSwitch: '<S147>/Multiport Switch1' */
 
-  /* Sum: '<S149>/Sum2' */
-  rtb_ModeSwitch2 = -0.0;
+  /* Sum: '<S154>/Sum2' */
+  rtb_Sum2_p5 = -0.0;
   for (i = 0; i < 7; i++) {
-    /* Sum: '<S149>/Sum2' incorporates:
-     *  Constant: '<S150>/M1'
-     *  Product: '<S149>/Product8'
+    /* Sum: '<S154>/Sum2' incorporates:
+     *  Constant: '<S155>/M1'
+     *  Product: '<S154>/Product8'
      */
-    rtb_ModeSwitch2 += NACCBraytonCycle2017a_B.MultiportSwitch1[i] *
+    rtb_Sum2_p5 += NACCBraytonCycle2017a_B.MultiportSwitch1[i] *
       NACCBraytonCycle2017a_P.th_M[i];
 
-    /* Gain: '<S147>/Gain3' incorporates:
-     *  Memory: '<S7>/Memory8'
+    /* Gain: '<S152>/Gain3' incorporates:
+     *  Memory: '<S8>/Memory8'
      */
     NACCBraytonCycle2017a_B.x_b[i] = NACCBraytonCycle2017a_P.Gain3_Gain_d *
       NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p[i];
   }
 
-  /* Product: '<S149>/Product11' */
-  rtb_ModeSwitch2 *= NACCBraytonCycle2017a_B.Add3;
+  /* Product: '<S154>/Product11' */
+  rtb_Sum2_p5 *= NACCBraytonCycle2017a_B.Add3;
 
-  /* Sum: '<S146>/Sum' incorporates:
-   *  Gain: '<S146>/Gain'
-   *  Math: '<S146>/Math Function'
+  /* Sum: '<S151>/Sum' incorporates:
+   *  Gain: '<S151>/Gain'
+   *  Math: '<S151>/Math Function'
    */
-  rtb_Sum2_g -= rtb_ModeSwitch2 * rtb_ModeSwitch2 *
+  rtb_UnitOffset -= rtb_Sum2_p5 * rtb_Sum2_p5 *
     NACCBraytonCycle2017a_P.Gain_Gain_a;
 
-  /* MinMax: '<S146>/MinMax' incorporates:
-   *  Constant: '<S146>/p_downstrem_min'
+  /* MinMax: '<S151>/MinMax' incorporates:
+   *  Constant: '<S151>/p_downstrem_min'
    */
-  if (!((rtb_Sum2_g > NACCBraytonCycle2017a_P.p_downstrem_min_Value) || rtIsNaN
-        (NACCBraytonCycle2017a_P.p_downstrem_min_Value))) {
-    rtb_Sum2_g = NACCBraytonCycle2017a_P.p_downstrem_min_Value;
+  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value) ||
+        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value))) {
+    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value;
   }
 
-  /* End of MinMax: '<S146>/MinMax' */
+  /* End of MinMax: '<S151>/MinMax' */
 
-  /* Saturate: '<S146>/Saturation' */
-  if (rtb_Sum2_g > NACCBraytonCycle2017a_P.Saturation_UpperSat_i) {
+  /* Saturate: '<S151>/Saturation' */
+  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_i) {
     NACCBraytonCycle2017a_B.Saturation_f =
       NACCBraytonCycle2017a_P.Saturation_UpperSat_i;
-  } else if (rtb_Sum2_g < NACCBraytonCycle2017a_P.Saturation_LowerSat_mf) {
+  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_mf) {
     NACCBraytonCycle2017a_B.Saturation_f =
       NACCBraytonCycle2017a_P.Saturation_LowerSat_mf;
   } else {
-    NACCBraytonCycle2017a_B.Saturation_f = rtb_Sum2_g;
+    NACCBraytonCycle2017a_B.Saturation_f = rtb_UnitOffset;
   }
 
-  /* End of Saturate: '<S146>/Saturation' */
+  /* End of Saturate: '<S151>/Saturation' */
 
-  /* Gain: '<S147>/Gain1' incorporates:
-   *  Memory: '<S7>/Memory1'
+  /* Gain: '<S152>/Gain1' incorporates:
+   *  Memory: '<S8>/Memory1'
    */
   NACCBraytonCycle2017a_B.T_g = NACCBraytonCycle2017a_P.Gain1_Gain_f *
     NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p;
 
-  /* S-Function (th_TpxState_S): '<S147>/S-Function1' */
-  /*Block <S147>/S-Function1*/
+  /* S-Function (th_TpxState_S): '<S152>/S-Function1' */
+  /*Block <S152>/S-Function1*/
   {
     Par param;
     flow pflow;
@@ -3347,7 +5065,7 @@ static void NACCBraytonCycle2017a_output(void)
     pflow.psi = (double *)&NACCBraytonCycle2017a_B.psi_cv[0];
 
     /* Map outputs */
-    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot_h5;
+    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot_h;
     pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot_l;
     pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot_n;
     pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot_i;
@@ -3358,14 +5076,14 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* Sum: '<S142>/Sum6' */
+  /* Sum: '<S147>/Sum6' */
   NACCBraytonCycle2017a_B.Sum6 = NACCBraytonCycle2017a_B.Hdot_c +
-    NACCBraytonCycle2017a_B.Hdot_h5;
+    NACCBraytonCycle2017a_B.Hdot_h;
 
-  /* Outputs for Atomic SubSystem: '<S142>/H-p-State with HeatLoss' */
+  /* Outputs for Atomic SubSystem: '<S147>/H-p-State with HeatLoss' */
 
-  /* S-Function (th_HpStateHeatExchange_S): '<S145>/S-Function' */
-  /* Block <S145>/S-Function*/
+  /* S-Function (th_HpStateHeatExchange_S): '<S150>/S-Function' */
+  /* Block <S150>/S-Function*/
   {
     Par param;
     flow inflow;
@@ -3484,7 +5202,7 @@ static void NACCBraytonCycle2017a_output(void)
     outflow.T_ = &NACCBraytonCycle2017a_B.T_go;
     outflow.p_ = &NACCBraytonCycle2017a_B.p_p;
     outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_cl;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_ex;
+    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_e;
     outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_k;
     outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_l;
     outflow.x = &NACCBraytonCycle2017a_B.x_j[0];
@@ -3498,1636 +5216,9 @@ static void NACCBraytonCycle2017a_output(void)
     EUfree(pCp_liq);
   }
 
-  /* End of Outputs for SubSystem: '<S142>/H-p-State with HeatLoss' */
+  /* End of Outputs for SubSystem: '<S147>/H-p-State with HeatLoss' */
 
-  /* End of Outputs for SubSystem: '<S11>/Mixer' */
-
-  /* Outputs for Atomic SubSystem: '<S57>/calculate  conversion' */
-
-  /* Constant: '<S57>/Reaction Coefficients' incorporates:
-   *  Constant: '<Root>/Constant1'
-   */
-  NACCBrayton_calculateconversion
-    (NACCBraytonCycle2017a_P.CombustionChamber_reaction,
-     NACCBraytonCycle2017a_B.psi_h, NACCBraytonCycle2017a_P.Constant1_Value_f,
-     &NACCBraytonCycle2017a_B.calculateconversion,
-     (P_calculateconversion_NACCBra_T *)
-     &NACCBraytonCycle2017a_P.calculateconversion);
-
-  /* End of Outputs for SubSystem: '<S57>/calculate  conversion' */
-
-  /* Product: '<S57>/Product' */
-  NACCBraytonCycle2017a_B.Product =
-    NACCBraytonCycle2017a_B.calculateconversion.Subtract5 *
-    NACCBraytonCycle2017a_B.ndot_m;
-
-  /* Product: '<S61>/Product8' incorporates:
-   *  Constant: '<S62>/M1'
-   */
-  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_h[0] *
-    NACCBraytonCycle2017a_P.th_M[0];
-
-  /* Sum: '<S61>/Sum2' */
-  rtb_UnitOffset = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    /* Product: '<S61>/Product8' incorporates:
-     *  Constant: '<S62>/M1'
-     */
-    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_h[i + 1] *
-      NACCBraytonCycle2017a_P.th_M[i + 1];
-
-    /* Sum: '<S61>/Sum2' incorporates:
-     *  Product: '<S61>/Product8'
-     */
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
-  }
-
-  /* Product: '<S61>/Product11' */
-  rtb_UnitOffset *= NACCBraytonCycle2017a_B.ndot_m;
-
-  /* Sum: '<S59>/Sum' incorporates:
-   *  Gain: '<S59>/Gain'
-   *  Math: '<S59>/Math Function'
-   */
-  rtb_UnitOffset = NACCBraytonCycle2017a_B.p_p - rtb_UnitOffset * rtb_UnitOffset
-    * NACCBraytonCycle2017a_P.Gain_Gain_m;
-
-  /* MinMax: '<S59>/MinMax' incorporates:
-   *  Constant: '<S59>/p_downstrem_min'
-   */
-  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_b) ||
-        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_b))) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_b;
-  }
-
-  /* End of MinMax: '<S59>/MinMax' */
-
-  /* Saturate: '<S59>/Saturation' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_a) {
-    NACCBraytonCycle2017a_B.Saturation =
-      NACCBraytonCycle2017a_P.Saturation_UpperSat_a;
-  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_l) {
-    NACCBraytonCycle2017a_B.Saturation =
-      NACCBraytonCycle2017a_P.Saturation_LowerSat_l;
-  } else {
-    NACCBraytonCycle2017a_B.Saturation = rtb_UnitOffset;
-  }
-
-  /* End of Saturate: '<S59>/Saturation' */
-
-  /* Outputs for Atomic SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* S-Function (th_HpStateHeatExchange_S): '<S58>/S-Function' */
-  /* Block <S58>/S-Function*/
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace HpTrace;
-    Options HpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] - pNASA->len *
-                          1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4[7] + pNASA->len *
-                          5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.T_env = 288.15;
-    param.k_loss = 0.0;
-    param.A_total = 10.0;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_d;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    HpOpt.derivative_neighbor_factor = 0.02;
-    HpOpt.x_conv_limit = 0.0001;
-    HpOpt.y_conv_limit = 1.0E-6;
-    HpOpt.max_iterations = (int)100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.Product;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation;
-    inflow.psi = &NACCBraytonCycle2017a_B.calculateconversion.Product6[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_cl;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_f2;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_h3;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_nt;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_ig;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_fv;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_mk;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_eg;
-    outflow.x = &NACCBraytonCycle2017a_B.x_il[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_j[0];
-    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_f;
-    (&NACCBraytonCycle2017a_B.error_codes_or)[0] = th_H_p_State_heat_Exchange
-      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
-    (&NACCBraytonCycle2017a_B.num_iterations_h)[0] = HpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* Outputs for Atomic SubSystem: '<S65>/calculate  conversion' */
-
-  /* Constant: '<S65>/Reaction Coefficients' incorporates:
-   *  Constant: '<Root>/Constant4'
-   */
-  NACCBrayton_calculateconversion
-    (NACCBraytonCycle2017a_P.CombustionChamber1_reaction,
-     NACCBraytonCycle2017a_B.psi_j, NACCBraytonCycle2017a_P.Constant4_Value_e,
-     &NACCBraytonCycle2017a_B.calculateconversion_n,
-     (P_calculateconversion_NACCBra_T *)
-     &NACCBraytonCycle2017a_P.calculateconversion_n);
-
-  /* End of Outputs for SubSystem: '<S65>/calculate  conversion' */
-
-  /* Product: '<S65>/Product' */
-  NACCBraytonCycle2017a_B.Product_a =
-    NACCBraytonCycle2017a_B.calculateconversion_n.Subtract5 *
-    NACCBraytonCycle2017a_B.ndot_f2;
-
-  /* Product: '<S69>/Product8' incorporates:
-   *  Constant: '<S70>/M1'
-   */
-  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_j[0] *
-    NACCBraytonCycle2017a_P.th_M[0];
-
-  /* Sum: '<S69>/Sum2' */
-  rtb_UnitOffset = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    /* Product: '<S69>/Product8' incorporates:
-     *  Constant: '<S70>/M1'
-     */
-    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_j[i + 1] *
-      NACCBraytonCycle2017a_P.th_M[i + 1];
-
-    /* Sum: '<S69>/Sum2' incorporates:
-     *  Product: '<S69>/Product8'
-     */
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
-  }
-
-  /* Product: '<S69>/Product11' */
-  rtb_UnitOffset *= NACCBraytonCycle2017a_B.ndot_f2;
-
-  /* Sum: '<S67>/Sum' incorporates:
-   *  Gain: '<S67>/Gain'
-   *  Math: '<S67>/Math Function'
-   */
-  rtb_UnitOffset = NACCBraytonCycle2017a_B.p_nt - rtb_UnitOffset *
-    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain_Gain_g;
-
-  /* MinMax: '<S67>/MinMax' incorporates:
-   *  Constant: '<S67>/p_downstrem_min'
-   */
-  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_p) ||
-        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_p))) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_p;
-  }
-
-  /* End of MinMax: '<S67>/MinMax' */
-
-  /* Saturate: '<S67>/Saturation' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_j) {
-    NACCBraytonCycle2017a_B.Saturation_l =
-      NACCBraytonCycle2017a_P.Saturation_UpperSat_j;
-  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_kc) {
-    NACCBraytonCycle2017a_B.Saturation_l =
-      NACCBraytonCycle2017a_P.Saturation_LowerSat_kc;
-  } else {
-    NACCBraytonCycle2017a_B.Saturation_l = rtb_UnitOffset;
-  }
-
-  /* End of Saturate: '<S67>/Saturation' */
-
-  /* Outputs for Atomic SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* S-Function (th_HpStateHeatExchange_S): '<S66>/S-Function' */
-  /* Block <S66>/S-Function*/
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace HpTrace;
-    Options HpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_e[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_g[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_j[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.T_env = 288.15;
-    param.k_loss = 45.0;
-    param.A_total = 10.0;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_j;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_o[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_b[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    HpOpt.derivative_neighbor_factor = 0.02;
-    HpOpt.x_conv_limit = 0.0001;
-    HpOpt.y_conv_limit = 1.0E-6;
-    HpOpt.max_iterations = (int)100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.Product_a;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_l;
-    inflow.psi = &NACCBraytonCycle2017a_B.calculateconversion_n.Product6[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_ig;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_oo;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_mo;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_k;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_jo;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_o;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_g;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_az;
-    outflow.x = &NACCBraytonCycle2017a_B.x_i[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_p[0];
-    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_pj;
-    (&NACCBraytonCycle2017a_B.error_codes_h)[0] = th_H_p_State_heat_Exchange
-      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
-    (&NACCBraytonCycle2017a_B.num_iterations_fx)[0] = HpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* Product: '<S289>/Product8' incorporates:
-   *  Constant: '<S293>/M1'
-   */
-  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_p[0] *
-    NACCBraytonCycle2017a_P.th_M[0];
-
-  /* Sum: '<S289>/Sum2' */
-  rtb_UnitOffset = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    /* Product: '<S289>/Product8' incorporates:
-     *  Constant: '<S293>/M1'
-     */
-    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_p[i + 1] *
-      NACCBraytonCycle2017a_P.th_M[i + 1];
-
-    /* Sum: '<S289>/Sum2' incorporates:
-     *  Product: '<S289>/Product8'
-     */
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
-  }
-
-  /* Outport: '<Root>/Out21' incorporates:
-   *  Constant: '<S24>/addition factor1'
-   *  Gain: '<S24>/Gain1'
-   *  Gain: '<S24>/Gain2'
-   *  Product: '<S289>/Product11'
-   *  Sum: '<S24>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out21 = NACCBraytonCycle2017a_B.ndot_oo *
-    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_e *
-    NACCBraytonCycle2017a_P.Gain1_Gain_nb +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_fu;
-
-  /* Outport: '<Root>/Out22' incorporates:
-   *  Constant: '<S23>/addition factor1'
-   *  Gain: '<S23>/Gain1'
-   *  Sum: '<S23>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out22 = NACCBraytonCycle2017a_P.Gain1_Gain_ck *
-    NACCBraytonCycle2017a_B.T_mo +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_e;
-
-  /* Outport: '<Root>/Out23' incorporates:
-   *  Constant: '<S21>/addition factor1'
-   *  Gain: '<S21>/Gain1'
-   *  Sum: '<S21>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out23 = NACCBraytonCycle2017a_P.Gain1_Gain_is *
-    NACCBraytonCycle2017a_B.p_k +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_hp;
-
-  /* Outport: '<Root>/Out24' incorporates:
-   *  Constant: '<Root>/Constant8'
-   *  Constant: '<S22>/addition factor1'
-   *  Gain: '<S22>/Gain1'
-   *  Product: '<Root>/Product5'
-   *  Sum: '<S22>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out24 = (NACCBraytonCycle2017a_P.Gain1_Gain_j *
-    NACCBraytonCycle2017a_B.Hdot_jo +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_dv) *
-    NACCBraytonCycle2017a_P.Constant8_Value;
-
-  /* Product: '<S124>/Product2' incorporates:
-   *  Constant: '<S124>/T-normal'
-   */
-  rtb_UnitOffset = NACCBraytonCycle2017a_B.T_mo /
-    NACCBraytonCycle2017a_P.Tnormal_Value_n;
-
-  /* Math: '<S124>/Math Function'
-   *
-   * About '<S124>/Math Function':
-   *  Operator: sqrt
-   */
-  if (rtb_UnitOffset < 0.0) {
-    rtb_ModeSwitch2 = -sqrt(fabs(rtb_UnitOffset));
-  } else {
-    rtb_ModeSwitch2 = sqrt(rtb_UnitOffset);
-  }
-
-  /* End of Math: '<S124>/Math Function' */
-
-  /* Product: '<S124>/Product7' incorporates:
-   *  Constant: '<S10>/RPM'
-   */
-  rtb_Sum2_p5 = NACCBraytonCycle2017a_P.RPM_Value_f / rtb_ModeSwitch2;
-
-  /* Switch: '<S139>/Switch2' incorporates:
-   *  Constant: '<S127>/Constant'
-   *  Constant: '<S127>/Constant4'
-   *  RelationalOperator: '<S139>/LowerRelop1'
-   *  RelationalOperator: '<S139>/UpperRelop'
-   *  Switch: '<S139>/Switch'
-   */
-  if (rtb_Sum2_p5 > NACCBraytonCycle2017a_P.Constant_Value_j) {
-    rtb_Switch2_f = NACCBraytonCycle2017a_P.Constant_Value_j;
-  } else if (rtb_Sum2_p5 < NACCBraytonCycle2017a_P.Constant4_Value_d) {
-    /* Switch: '<S139>/Switch' incorporates:
-     *  Constant: '<S127>/Constant4'
-     */
-    rtb_Switch2_f = NACCBraytonCycle2017a_P.Constant4_Value_d;
-  } else {
-    rtb_Switch2_f = rtb_Sum2_p5;
-  }
-
-  /* End of Switch: '<S139>/Switch2' */
-
-  /* Switch: '<S132>/Switch2' incorporates:
-   *  Constant: '<S124>/Constant1'
-   *  Inport: '<Root>/In11'
-   *  RelationalOperator: '<S132>/LowerRelop1'
-   *  RelationalOperator: '<S132>/UpperRelop'
-   *  Switch: '<S132>/Switch'
-   */
-  if (NACCBraytonCycle2017a_U.In11 > NACCBraytonCycle2017a_B.p_k) {
-    NACCBraytonCycle2017a_B.Switch2_n = NACCBraytonCycle2017a_B.p_k;
-  } else if (NACCBraytonCycle2017a_U.In11 <
-             NACCBraytonCycle2017a_P.Constant1_Value_e) {
-    /* Switch: '<S132>/Switch' incorporates:
-     *  Constant: '<S124>/Constant1'
-     */
-    NACCBraytonCycle2017a_B.Switch2_n =
-      NACCBraytonCycle2017a_P.Constant1_Value_e;
-  } else {
-    NACCBraytonCycle2017a_B.Switch2_n = NACCBraytonCycle2017a_U.In11;
-  }
-
-  /* End of Switch: '<S132>/Switch2' */
-
-  /* Product: '<S124>/Product8' */
-  rtb_PR_l = 1.0 / NACCBraytonCycle2017a_B.Switch2_n *
-    NACCBraytonCycle2017a_B.p_k;
-
-  /* MultiPortSwitch: '<S124>/Multiport Switch' incorporates:
-   *  Constant: '<S124>/T-normal1'
-   *  Product: '<S124>/Product9'
-   */
-  if ((int32_T)NACCBraytonCycle2017a_P.LPGasTurbine_Mode == 1) {
-    NACCBraytonCycle2017a_B.MultiportSwitch_h = NACCBraytonCycle2017a_B.ndot_oo;
-  } else {
-    /* Lookup2D: '<S127>/Lookup Table (2-D)' */
-    /*
-     * About '<S127>/Lookup Table (2-D)':
-     * Input0  Data Type:  Floating Point real_T
-     * Input1  Data Type:  Floating Point real_T
-     * Output0 Data Type:  Floating Point real_T
-     * Lookup Method: Linear_Endpoint
-     *
-     * Row Data    parameter uses the same data type and scaling as Input0
-     * Column Data parameter uses the same data type and scaling as Input1
-     * Table Data  parameter uses the same data type and scaling as Output0
-     */
-    Look2D_real_T_real_T_real_T( &(rtb_mdotequivalent),
-      NACCBraytonCycle2017a_P.LookupTable2D_Table_l, rtb_Switch2_f,
-      NACCBraytonCycle2017a_P.LookupTable2D_RowIdx_i, 5U, rtb_PR_l,
-      NACCBraytonCycle2017a_P.LookupTable2D_ColIdx_h, 20U);
-
-    /* Product: '<S127>/Divide1' incorporates:
-     *  Constant: '<S127>/Constant1'
-     *  Constant: '<S127>/Constant2'
-     *  Constant: '<S135>/Constant'
-     *  Constant: '<S136>/Constant'
-     *  Constant: '<S137>/Constant'
-     *  Constant: '<S138>/Constant'
-     *  DataTypeConversion: '<S127>/Data Type Conversion1'
-     *  DataTypeConversion: '<S127>/Data Type Conversion2'
-     *  DataTypeConversion: '<S127>/Data Type Conversion3'
-     *  Logic: '<S127>/Logical Operator2'
-     *  Lookup2D: '<S127>/Lookup Table (2-D)'
-     *  Product: '<S127>/Divide'
-     *  Product: '<S127>/Divide3'
-     *  RelationalOperator: '<S135>/Compare'
-     *  RelationalOperator: '<S136>/Compare'
-     *  RelationalOperator: '<S137>/Compare'
-     *  RelationalOperator: '<S138>/Compare'
-     *  Sum: '<S127>/Add2'
-     */
-    rtb_Sum2_p5 = (((real_T)(rtb_Sum2_p5 >
-      NACCBraytonCycle2017a_P.CompareToConstant1_const_k) * rtb_Sum2_p5 /
-                    NACCBraytonCycle2017a_P.Constant1_Value_h + (real_T)
-                    ((rtb_Sum2_p5 >=
-                      NACCBraytonCycle2017a_P.CompareToConstant5_const_n) &&
-                     (rtb_Sum2_p5 <=
-                      NACCBraytonCycle2017a_P.CompareToConstant6_const_i))) +
-                   (real_T)(rtb_Sum2_p5 <
-      NACCBraytonCycle2017a_P.CompareToConstant2_const_d) * rtb_Sum2_p5 /
-                   NACCBraytonCycle2017a_P.Constant2_Value_e) *
-      rtb_mdotequivalent;
-
-    /* Saturate: '<S127>/Saturation' */
-    if (rtb_Sum2_p5 > NACCBraytonCycle2017a_P.Saturation_UpperSat_e) {
-      rtb_Sum2_p5 = NACCBraytonCycle2017a_P.Saturation_UpperSat_e;
-    } else {
-      if (rtb_Sum2_p5 < NACCBraytonCycle2017a_P.Saturation_LowerSat_i) {
-        rtb_Sum2_p5 = NACCBraytonCycle2017a_P.Saturation_LowerSat_i;
-      }
-    }
-
-    /* End of Saturate: '<S127>/Saturation' */
-
-    /* Product: '<S124>/Product1' incorporates:
-     *  Constant: '<S124>/p-normal'
-     *  Product: '<S124>/Product3'
-     */
-    rtb_ModeSwitch2 = NACCBraytonCycle2017a_B.p_k /
-      NACCBraytonCycle2017a_P.pnormal_Value_k / rtb_ModeSwitch2 * rtb_Sum2_p5;
-
-    /* Product: '<S124>/Product5' incorporates:
-     *  Constant: '<S130>/M1'
-     */
-    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_p[0] *
-      NACCBraytonCycle2017a_P.th_M[0];
-
-    /* Sum: '<S124>/Sum' */
-    rtb_Sum2_p5 = rtb_Product8_m[0];
-    for (i = 0; i < 6; i++) {
-      /* Product: '<S124>/Product5' incorporates:
-       *  Constant: '<S130>/M1'
-       */
-      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_p[i + 1] *
-        NACCBraytonCycle2017a_P.th_M[i + 1];
-
-      /* Sum: '<S124>/Sum' incorporates:
-       *  Product: '<S124>/Product5'
-       */
-      rtb_Sum2_p5 += rtb_Product8_m[i + 1];
-    }
-
-    NACCBraytonCycle2017a_B.MultiportSwitch_h = 1.0 / rtb_Sum2_p5 *
-      rtb_ModeSwitch2;
-  }
-
-  /* End of MultiPortSwitch: '<S124>/Multiport Switch' */
-
-  /* Gain: '<S133>/Gain' */
-  NACCBraytonCycle2017a_B.ndot_i = NACCBraytonCycle2017a_P.Gain_Gain_l *
-    NACCBraytonCycle2017a_B.MultiportSwitch_h;
-
-  /* Gain: '<S133>/Gain1' */
-  NACCBraytonCycle2017a_B.T_e = NACCBraytonCycle2017a_P.Gain1_Gain_d *
-    NACCBraytonCycle2017a_B.T_mo;
-
-  /* Gain: '<S133>/Gain2' */
-  NACCBraytonCycle2017a_B.p_c = NACCBraytonCycle2017a_P.Gain2_Gain_oa *
-    NACCBraytonCycle2017a_B.p_k;
-  for (i = 0; i < 7; i++) {
-    /* Gain: '<S133>/Gain3' */
-    NACCBraytonCycle2017a_B.x_h[i] = NACCBraytonCycle2017a_P.Gain3_Gain_p *
-      NACCBraytonCycle2017a_B.x_i[i];
-
-    /* Gain: '<S133>/Gain4' */
-    NACCBraytonCycle2017a_B.psi_o[i] = NACCBraytonCycle2017a_P.Gain4_Gain_l *
-      NACCBraytonCycle2017a_B.psi_p[i];
-  }
-
-  /* S-Function (th_TpxState_S): '<S133>/S-Function1' */
-  /*Block <S133>/S-Function1*/
-  {
-    Par param;
-    flow pflow;
-    int* error;
-    nasa *pNASA = (nasa*)EUallocate(sizeof(nasa));
-    nasa *pNASA1 = (nasa*)EUallocate(sizeof(nasa));
-    th_SPoly3 *pCp_liq = (th_SPoly3*)EUallocate(sizeof(th_SPoly3));
-    th_InitParameters(&param);
-    th_InitFlow(&pflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P1_h[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P2_m[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.TpxState_Cp_liq_k[7] +
-      pCp_liq->len * 2);
-    param.nr_species = (int)7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.water_index = (int)0.0;
-    param.if97_index = (int)-1.0;
-    param.gas_eos_method = (int)1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.pCp_liq = pCp_liq;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction1_P12_mf;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P13_br[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction1_P14_g[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-
-    /* Map inputs */
-    pflow.nr_flows = 1;
-    pflow.ndot_ = (double *)&NACCBraytonCycle2017a_B.ndot_i;
-    pflow.T_ = (double *)&NACCBraytonCycle2017a_B.T_e;
-    pflow.p_ = (double *)&NACCBraytonCycle2017a_B.p_c;
-    pflow.x = (double *)&NACCBraytonCycle2017a_B.x_h[0];
-    pflow.psi = (double *)&NACCBraytonCycle2017a_B.psi_o[0];
-
-    /* Map outputs */
-    pflow.Hdot_ = (double *)&NACCBraytonCycle2017a_B.Hdot_h;
-    pflow.Sdot_ = (double *)&NACCBraytonCycle2017a_B.Sdot_e;
-    pflow.Gdot_ = (double *)&NACCBraytonCycle2017a_B.Gdot_h;
-    pflow.Cpdot_= (double *)&NACCBraytonCycle2017a_B.Cpdot_d;
-    error = (int *) &NACCBraytonCycle2017a_B.SFunction1_o5_j;
-    error[0] = th_T_p_x_State_new (&pflow, &param);
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* Outputs for Atomic SubSystem: '<S124>/S-p-State' */
-
-  /* S-Function (th_SpState_S): '<S131>/S-Function' */
-  /* Block <S131>/S-Function */
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace SpTrace;
-    Options SpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_g[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_n[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_i[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_m;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_k;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_n[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_j[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    SpOpt.derivative_neighbor_factor = 0.02;
-    SpOpt.x_conv_limit = 0.0001;
-    SpOpt.y_conv_limit = 1.0E-9;
-    SpOpt.max_iterations = (int) 100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_i;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2_n;
-    inflow.psi = &NACCBraytonCycle2017a_B.psi_o[0];
-    inflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_e;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_b;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_n;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_pc;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_d;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_k0;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_km;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_e;
-    outflow.x = &NACCBraytonCycle2017a_B.x_o[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_cu[0];
-    (&NACCBraytonCycle2017a_B.error_codes_i)[0] = th_S_p_State(&inflow,&param,
-      &SpOpt,&outflow,&SpTrace);
-    (&NACCBraytonCycle2017a_B.iter)[0] = SpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S124>/S-p-State' */
-
-  /* MultiPortSwitch: '<S124>/Multiport Switch1' incorporates:
-   *  Constant: '<S124>/T-normal2'
-   *  Lookup: '<S124>/Efficiency Lookup Table'
-   *  Product: '<S129>/Product11'
-   */
-  if ((int32_T)NACCBraytonCycle2017a_P.LPGasTurbine_Mode == 1) {
-    /* Product: '<S129>/Product8' incorporates:
-     *  Constant: '<S141>/M1'
-     */
-    rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_p[0] *
-      NACCBraytonCycle2017a_P.th_M[0];
-
-    /* Sum: '<S129>/Sum2' */
-    rtb_Sum2_g = rtb_Product8_m[0];
-    for (i = 0; i < 6; i++) {
-      /* Product: '<S129>/Product8' incorporates:
-       *  Constant: '<S141>/M1'
-       */
-      rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_p[i + 1] *
-        NACCBraytonCycle2017a_P.th_M[i + 1];
-
-      /* Sum: '<S129>/Sum2' incorporates:
-       *  Product: '<S129>/Product8'
-       */
-      rtb_Sum2_g += rtb_Product8_m[i + 1];
-    }
-
-    /* Product: '<S129>/Product11' */
-    rtb_Product11_d = NACCBraytonCycle2017a_B.MultiportSwitch_h * rtb_Sum2_g;
-
-    /* Lookup: '<S124>/Efficiency Lookup Table' incorporates:
-     *  Product: '<S129>/Product11'
-     */
-    /*
-     * About '<S124>/Efficiency Lookup Table':
-     * Input0  Data Type:  Floating Point real_T
-     * Output0 Data Type:  Floating Point real_T
-     * Lookup Method: Linear_Endpoint
-     *
-     * XData parameter uses the same data type and scaling as Input0
-     * YData parameter uses the same data type and scaling as Output0
-     */
-    LookUp_real_T_real_T( &(rtb_EfficiencyLookupTable),
-                         NACCBraytonCycle2017a_P.LPGasTurbine_efficiency,
-                         rtb_Product11_d,
-                         NACCBraytonCycle2017a_P.LPGasTurbine_mdot2, 4U);
-    rtb_UnitOffset = rtb_EfficiencyLookupTable;
-  } else {
-    /* Lookup2D: '<S127>/Lookup Table (2-D)2' */
-    /*
-     * About '<S127>/Lookup Table (2-D)2':
-     * Input0  Data Type:  Floating Point real_T
-     * Input1  Data Type:  Floating Point real_T
-     * Output0 Data Type:  Floating Point real_T
-     * Lookup Method: Linear_Endpoint
-     *
-     * Row Data    parameter uses the same data type and scaling as Input0
-     * Column Data parameter uses the same data type and scaling as Input1
-     * Table Data  parameter uses the same data type and scaling as Output0
-     */
-    Look2D_real_T_real_T_real_T( &(rtb_u),
-      NACCBraytonCycle2017a_P.LookupTable2D2_Table_l, rtb_Switch2_f,
-      NACCBraytonCycle2017a_P.LookupTable2D2_RowIdx_d, 5U, rtb_PR_l,
-      NACCBraytonCycle2017a_P.LookupTable2D2_ColIdx_g, 20U);
-
-    /* Saturate: '<S127>/Saturation1' */
-    if (rtb_u > NACCBraytonCycle2017a_P.Saturation1_UpperSat_m) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_m;
-    } else if (rtb_u < NACCBraytonCycle2017a_P.Saturation1_LowerSat_n) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_n;
-    } else {
-      rtb_UnitOffset = rtb_u;
-    }
-
-    /* End of Saturate: '<S127>/Saturation1' */
-  }
-
-  /* End of MultiPortSwitch: '<S124>/Multiport Switch1' */
-
-  /* Product: '<S124>/Product10' incorporates:
-   *  Gain: '<S124>/Gain1'
-   *  Sum: '<S124>/Sum3'
-   */
-  rtb_UnitOffset = (NACCBraytonCycle2017a_B.Hdot_d -
-                    NACCBraytonCycle2017a_B.Hdot_h) *
-    (NACCBraytonCycle2017a_P.Gain1_Gain_fh * rtb_UnitOffset);
-
-  /* Saturate: '<S124>/Saturation1' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation1_UpperSat_a) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_UpperSat_a;
-  } else {
-    if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation1_LowerSat_l) {
-      rtb_UnitOffset = NACCBraytonCycle2017a_P.Saturation1_LowerSat_l;
-    }
-  }
-
-  /* End of Saturate: '<S124>/Saturation1' */
-
-  /* Sum: '<S124>/Subtract2' */
-  NACCBraytonCycle2017a_B.Subtract2_o = rtb_UnitOffset +
-    NACCBraytonCycle2017a_B.Hdot_h;
-
-  /* Outputs for Atomic SubSystem: '<S124>/H-p-State with Heat Exchange' */
-
-  /* S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
-  /* Block <S126>/S-Function*/
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace HpTrace;
-    Options HpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_hi[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_b[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_b[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.T_env = 300.0;
-    param.k_loss = 0.0;
-    param.A_total = 0.0;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_a;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_n;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_cy[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_go[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    HpOpt.derivative_neighbor_factor = 0.02;
-    HpOpt.x_conv_limit = 0.0001;
-    HpOpt.y_conv_limit = 1.0E-6;
-    HpOpt.max_iterations = (int)100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.MultiportSwitch_h;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Switch2_n;
-    inflow.psi = &NACCBraytonCycle2017a_B.psi_p[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Subtract2_o;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_c;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_p;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_a;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_o;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_m;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_b;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_g;
-    outflow.x = &NACCBraytonCycle2017a_B.x_k[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_m[0];
-    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_p;
-    (&NACCBraytonCycle2017a_B.error_codes_j)[0] = th_H_p_State_heat_Exchange
-      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
-    (&NACCBraytonCycle2017a_B.num_iterations_a)[0] = HpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S124>/H-p-State with Heat Exchange' */
-
-  /* Sum: '<S388>/Sum2' */
-  rtb_UnitOffset = -0.0;
-  for (i = 0; i < 7; i++) {
-    /* Sum: '<S388>/Sum2' incorporates:
-     *  Constant: '<S392>/M1'
-     *  Product: '<S388>/Product8'
-     */
-    rtb_UnitOffset += NACCBraytonCycle2017a_B.psi_m[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-
-    /* Product: '<S388>/Product8' incorporates:
-     *  Constant: '<S99>/M1'
-     *  Product: '<S98>/Product8'
-     */
-    rtb_Product8_m[i] = NACCBraytonCycle2017a_B.psi_al[i] *
-      NACCBraytonCycle2017a_P.th_M[i];
-  }
-
-  /* Outport: '<Root>/Out25' incorporates:
-   *  Constant: '<S33>/addition factor1'
-   *  Gain: '<S33>/Gain1'
-   *  Gain: '<S33>/Gain2'
-   *  Product: '<S388>/Product11'
-   *  Sum: '<S33>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out25 = NACCBraytonCycle2017a_B.ndot_c *
-    rtb_UnitOffset * NACCBraytonCycle2017a_P.Gain2_Gain_h *
-    NACCBraytonCycle2017a_P.Gain1_Gain_gr +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_hc;
-
-  /* Outport: '<Root>/Out26' incorporates:
-   *  Constant: '<S32>/addition factor1'
-   *  Gain: '<S32>/Gain1'
-   *  Sum: '<S32>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out26 = NACCBraytonCycle2017a_P.Gain1_Gain_kz *
-    NACCBraytonCycle2017a_B.T_p +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_cl;
-
-  /* Outport: '<Root>/Out27' incorporates:
-   *  Constant: '<S30>/addition factor1'
-   *  Gain: '<S30>/Gain1'
-   *  Sum: '<S30>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out27 = NACCBraytonCycle2017a_P.Gain1_Gain_dv *
-    NACCBraytonCycle2017a_B.p_a +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_el;
-
-  /* Outport: '<Root>/Out28' incorporates:
-   *  Constant: '<Root>/Constant9'
-   *  Constant: '<S31>/addition factor1'
-   *  Gain: '<S31>/Gain1'
-   *  Product: '<Root>/Product6'
-   *  Sum: '<S31>/Add'
-   */
-  NACCBraytonCycle2017a_Y.Out28 = (NACCBraytonCycle2017a_P.Gain1_Gain_py *
-    NACCBraytonCycle2017a_B.Hdot_o +
-    NACCBraytonCycle2017a_P.additionfactor1_Value_gl) *
-    NACCBraytonCycle2017a_P.Constant9_Value;
-
-  /* Sum: '<S98>/Sum2' incorporates:
-   *  Sum: '<S100>/Sum'
-   *  Sum: '<S105>/Sum2'
-   *  Sum: '<S122>/Sum2'
-   *  Sum: '<S124>/Sum'
-   *  Sum: '<S129>/Sum2'
-   *  Sum: '<S142>/Sum2'
-   *  Sum: '<S149>/Sum2'
-   *  Sum: '<S165>/Sum2'
-   *  Sum: '<S179>/Sum2'
-   *  Sum: '<S245>/Sum2'
-   *  Sum: '<S289>/Sum2'
-   *  Sum: '<S322>/Sum2'
-   *  Sum: '<S388>/Sum2'
-   *  Sum: '<S421>/Sum2'
-   *  Sum: '<S465>/Sum2'
-   *  Sum: '<S55>/Sum2'
-   *  Sum: '<S61>/Sum2'
-   *  Sum: '<S69>/Sum2'
-   *  Sum: '<S73>/Sum'
-   *  Sum: '<S77>/Sum2'
-   *  Sum: '<S88>/Sum2'
-   */
-  rtb_UnitOffset = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
-  }
-
-  /* Product: '<S98>/Product11' */
-  rtb_UnitOffset *= NACCBraytonCycle2017a_B.ndot_l;
-
-  /* Sum: '<S95>/Sum' incorporates:
-   *  Gain: '<S95>/Gain'
-   *  Math: '<S95>/Math Function'
-   */
-  rtb_UnitOffset = NACCBraytonCycle2017a_B.p_b - rtb_UnitOffset * rtb_UnitOffset
-    * NACCBraytonCycle2017a_P.Gain_Gain_d;
-
-  /* MinMax: '<S95>/MinMax' incorporates:
-   *  Constant: '<S95>/p_downstrem_min'
-   */
-  if (!((rtb_UnitOffset > NACCBraytonCycle2017a_P.p_downstrem_min_Value_e) ||
-        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_e))) {
-    rtb_UnitOffset = NACCBraytonCycle2017a_P.p_downstrem_min_Value_e;
-  }
-
-  /* End of MinMax: '<S95>/MinMax' */
-
-  /* Saturate: '<S95>/Saturation' */
-  if (rtb_UnitOffset > NACCBraytonCycle2017a_P.Saturation_UpperSat_f) {
-    NACCBraytonCycle2017a_B.Saturation_p =
-      NACCBraytonCycle2017a_P.Saturation_UpperSat_f;
-  } else if (rtb_UnitOffset < NACCBraytonCycle2017a_P.Saturation_LowerSat_p) {
-    NACCBraytonCycle2017a_B.Saturation_p =
-      NACCBraytonCycle2017a_P.Saturation_LowerSat_p;
-  } else {
-    NACCBraytonCycle2017a_B.Saturation_p = rtb_UnitOffset;
-  }
-
-  /* End of Saturate: '<S95>/Saturation' */
-
-  /* Sum: '<S96>/Sum7' incorporates:
-   *  Inport: '<Root>/In5'
-   */
-  NACCBraytonCycle2017a_B.Sum7 = NACCBraytonCycle2017a_B.Hdot_jv +
-    NACCBraytonCycle2017a_U.In5;
-
-  /* Outputs for Atomic SubSystem: '<S96>/H-p-State with HeatLoss' */
-
-  /* S-Function (th_HpStateHeatExchange_S): '<S97>/S-Function' */
-  /* Block <S97>/S-Function*/
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace HpTrace;
-    Options HpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_a[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_l[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.T_env = 288.15;
-    param.k_loss = 0.0;
-    param.A_total = 1.0;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_h;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_pk;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_b[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_g[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    HpOpt.derivative_neighbor_factor = 0.02;
-    HpOpt.x_conv_limit = 0.0001;
-    HpOpt.y_conv_limit = 1.0E-6;
-    HpOpt.max_iterations = (int)100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_l;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_p;
-    inflow.psi = &NACCBraytonCycle2017a_B.psi_al[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Sum7;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_bl;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_gf;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_a1;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_b;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_n;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_f;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_aq;
-    outflow.x = &NACCBraytonCycle2017a_B.x_f[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_f[0];
-    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_d;
-    (&NACCBraytonCycle2017a_B.error_codes_d)[0] = th_H_p_State_heat_Exchange
-      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
-    (&NACCBraytonCycle2017a_B.num_iterations_j)[0] = HpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S96>/H-p-State with HeatLoss' */
-
-  /* Product: '<S122>/Product8' incorporates:
-   *  Constant: '<S123>/M1'
-   */
-  rtb_Product8_m[0] = NACCBraytonCycle2017a_B.psi_i[0] *
-    NACCBraytonCycle2017a_P.th_M[0];
-
-  /* Sum: '<S122>/Sum2' */
-  rtb_UnitOffset = rtb_Product8_m[0];
-  for (i = 0; i < 6; i++) {
-    /* Product: '<S122>/Product8' incorporates:
-     *  Constant: '<S123>/M1'
-     */
-    rtb_Product8_m[i + 1] = NACCBraytonCycle2017a_B.psi_i[i + 1] *
-      NACCBraytonCycle2017a_P.th_M[i + 1];
-
-    /* Sum: '<S122>/Sum2' incorporates:
-     *  Product: '<S122>/Product8'
-     */
-    rtb_UnitOffset += rtb_Product8_m[i + 1];
-  }
-
-  /* Product: '<S122>/Product11' */
-  rtb_UnitOffset *= NACCBraytonCycle2017a_B.ndot_nq;
-
-  /* Sum: '<S119>/Sum' incorporates:
-   *  Gain: '<S119>/Gain'
-   *  Math: '<S119>/Math Function'
-   */
-  rtb_Sum2_g = NACCBraytonCycle2017a_B.p_g - rtb_UnitOffset * rtb_UnitOffset *
-    NACCBraytonCycle2017a_P.Gain_Gain_cj;
-
-  /* MinMax: '<S119>/MinMax' incorporates:
-   *  Constant: '<S119>/p_downstrem_min'
-   */
-  if (!((rtb_Sum2_g > NACCBraytonCycle2017a_P.p_downstrem_min_Value_n) ||
-        rtIsNaN(NACCBraytonCycle2017a_P.p_downstrem_min_Value_n))) {
-    rtb_Sum2_g = NACCBraytonCycle2017a_P.p_downstrem_min_Value_n;
-  }
-
-  /* End of MinMax: '<S119>/MinMax' */
-
-  /* Saturate: '<S119>/Saturation' */
-  if (rtb_Sum2_g > NACCBraytonCycle2017a_P.Saturation_UpperSat_l) {
-    NACCBraytonCycle2017a_B.Saturation_lg =
-      NACCBraytonCycle2017a_P.Saturation_UpperSat_l;
-  } else if (rtb_Sum2_g < NACCBraytonCycle2017a_P.Saturation_LowerSat_a) {
-    NACCBraytonCycle2017a_B.Saturation_lg =
-      NACCBraytonCycle2017a_P.Saturation_LowerSat_a;
-  } else {
-    NACCBraytonCycle2017a_B.Saturation_lg = rtb_Sum2_g;
-  }
-
-  /* End of Saturate: '<S119>/Saturation' */
-
-  /* Sum: '<S120>/Sum7' incorporates:
-   *  Inport: '<Root>/In7'
-   */
-  NACCBraytonCycle2017a_B.Sum7_h = NACCBraytonCycle2017a_B.Hdot_n +
-    NACCBraytonCycle2017a_U.In7;
-
-  /* Outputs for Atomic SubSystem: '<S120>/H-p-State with HeatLoss' */
-
-  /* S-Function (th_HpStateHeatExchange_S): '<S121>/S-Function' */
-  /* Block <S121>/S-Function*/
-  {
-    Par param;
-    flow inflow;
-    flow outflow;
-    Trace HpTrace;
-    Options HpOpt;
-
-    // Wird in Simulink nur einmal gemacht, hier jedes mal!
-    th_SPoly3 *pCp_liq = (th_SPoly3*) EUallocate(sizeof(th_SPoly3));
-    nasa *pNASA = (nasa *) EUallocate(sizeof(nasa));
-    nasa *pNASA1= (nasa *) EUallocate(sizeof(nasa));
-    th_InitParameters(&param);
-    th_InitFlow(&inflow);
-    th_InitFlow(&outflow);
-
-    // pNASA: nasa coefficients for the temperature range 1000 - 6000 K
-    /* Achtung: Index fuer den Pointer wird automatisch auf Anzahl Spalten
-       angehaengt. Dies muss hier wieder abgezogen werden.) */
-    pNASA->len = (int) 7 ;
-    pNASA->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] -
-                          pNASA->len * 1);
-    pNASA->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 0);
-    pNASA->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 1);
-    pNASA->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 2);
-    pNASA->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 3);
-    pNASA->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 4);
-    pNASA->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P4_nq[7] +
-                          pNASA->len * 5);
-
-    // pNASA1: nasa coefficients for the temperature range 200 - 1000 K
-    pNASA1->len = (int) 7;
-    pNASA1->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] -
-      pNASA1->len * 1);
-    pNASA1->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 0);
-    pNASA1->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 1);
-    pNASA1->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 2);
-    pNASA1->E = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 3);
-    pNASA1->F = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 4);
-    pNASA1->G = (double*) (&NACCBraytonCycle2017a_P.SFunction_P5_c[7] +
-      pNASA1->len * 5);
-
-    // coefficients for the polynomial representing the liquid cp
-    pCp_liq->len = (int) 7;
-    pCp_liq->A = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] -
-      pCp_liq->len * 1);
-    pCp_liq->B = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
-      pCp_liq->len * 0);
-    pCp_liq->C = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
-      pCp_liq->len * 1);
-    pCp_liq->D = (double*) (&NACCBraytonCycle2017a_P.SFunction_P12_e5[7] +
-      pCp_liq->len * 2);
-    param.nr_species = 7;
-    param.T_low = (double*) NACCBraytonCycle2017a_P.th_NASA_T_min;
-    param.T_mid = (double*) NACCBraytonCycle2017a_P.th_NASA_T_mid;
-    param.T_hi = (double*) NACCBraytonCycle2017a_P.th_NASA_T_max;
-    param.T_env = 298.0;
-    param.k_loss = 0.0;
-    param.A_total = 1.0;
-    param.ndot_limit = 1.0E-9;
-    param.T_cal = &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_n;
-    param.water_index = (int) 0.0;
-    param.if97_index = (int) -1.0;
-    param.gas_eos_method = (int) 1.0;
-    param.T_fg_ref = (double*) NACCBraytonCycle2017a_P.th_T_fg_ref;
-    param.HM_ref = (double*) NACCBraytonCycle2017a_P.th_hm_fg;
-    param.SM_ref = (double*) NACCBraytonCycle2017a_P.th_sm_fg;
-    param.Cp_liq_min = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_min;
-    param.Cp_liq_max = (double*) NACCBraytonCycle2017a_P.th_Cp_liq_T_max;
-    param.pCp_liq = pCp_liq;
-    param.T_triple = (double*) NACCBraytonCycle2017a_P.th_T_triple;
-    param.T_cr = (double*) NACCBraytonCycle2017a_P.th_T_c;
-    param.P_cr = (double*) NACCBraytonCycle2017a_P.th_p_c;
-    param.acentric_factor= (double*) NACCBraytonCycle2017a_P.th_omega;
-    param.molar_weights = (double*) NACCBraytonCycle2017a_P.th_M;
-    param.antoine_A = (double*) NACCBraytonCycle2017a_P.th_Antoine_A;
-    param.antoine_B = (double*) NACCBraytonCycle2017a_P.th_Antoine_B;
-    param.antoine_C = (double*) NACCBraytonCycle2017a_P.th_Antoine_C;
-    param.pNASA = pNASA;
-    param.pNASA1 = pNASA1;
-    param.x_index_len = (int) 24;
-    param.x_index = (double*) NACCBraytonCycle2017a_P.SFunction_P17_dx;
-    param.y_index_len = (int) 21;
-    param.y_index = (double*) (&NACCBraytonCycle2017a_P.SFunction_P18_j[1] - 1);
-    param.table = (double*) (&NACCBraytonCycle2017a_P.SFunction_P19_d[24] - 24);
-    param.liquid_eos_method = (int) (1.0);
-    param.evap_enth_A = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_A);
-    param.evap_enth_B = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_B);
-    param.evap_enth_C = (double*) (NACCBraytonCycle2017a_P.th_evap_enth_C);
-    param.evap_enth_T_min = (double*)
-      (NACCBraytonCycle2017a_P.th_evap_enth_T_min);
-    HpOpt.derivative_neighbor_factor = 0.02;
-    HpOpt.x_conv_limit = 0.0001;
-    HpOpt.y_conv_limit = 1.0E-6;
-    HpOpt.max_iterations = (int)100.0;
-
-    /* Map inputs */
-    inflow.nr_flows = 1;
-    inflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_nq;
-    inflow.p_ = &NACCBraytonCycle2017a_B.Saturation_lg;
-    inflow.psi = &NACCBraytonCycle2017a_B.psi_i[0];
-    inflow.Hdot_ = &NACCBraytonCycle2017a_B.Sum7_h;
-
-    /* Map outputs */
-    outflow.nr_flows = 1;
-    outflow.ndot_ = &NACCBraytonCycle2017a_B.ndot_ol;
-    outflow.T_ = &NACCBraytonCycle2017a_B.T_ed;
-    outflow.p_ = &NACCBraytonCycle2017a_B.p_a5;
-    outflow.Hdot_ = &NACCBraytonCycle2017a_B.Hdot_i;
-    outflow.Sdot_ = &NACCBraytonCycle2017a_B.Sdot_c;
-    outflow.Gdot_ = &NACCBraytonCycle2017a_B.Gdot_m;
-    outflow.Cpdot_ = &NACCBraytonCycle2017a_B.Cpdot_p;
-    outflow.x = &NACCBraytonCycle2017a_B.x_ac[0];
-    outflow.psi = &NACCBraytonCycle2017a_B.psi_a[0];
-    outflow.Qenv = &NACCBraytonCycle2017a_B.Qenv_k;
-    (&NACCBraytonCycle2017a_B.error_codes_i0)[0] = th_H_p_State_heat_Exchange
-      (&inflow,&param,&HpOpt,&outflow,&HpTrace);
-    (&NACCBraytonCycle2017a_B.num_iterations_f)[0] = HpTrace.iterations;
-    EUfree(pNASA);
-    EUfree(pNASA1);
-    EUfree(pCp_liq);
-  }
-
-  /* End of Outputs for SubSystem: '<S120>/H-p-State with HeatLoss' */
+  /* End of Outputs for SubSystem: '<S16>/Mixer' */
 }
 
 /* Model update function */
@@ -5135,192 +5226,110 @@ static void NACCBraytonCycle2017a_update(void)
 {
   int32_T i;
 
-  /* Update for Memory: '<S73>/Memory1' incorporates:
-   *  Constant: '<S4>/PFin'
-   */
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[0] =
-    NACCBraytonCycle2017a_P.PFin_Value;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[1] =
-    NACCBraytonCycle2017a_P.PFin_Value;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[2] =
-    NACCBraytonCycle2017a_P.PFin_Value;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[3] =
-    NACCBraytonCycle2017a_P.PFin_Value;
-
-  /* Update for Memory: '<S81>/Memory' */
-  NACCBraytonCycle2017a_DW.Memory_PreviousInput =
-    NACCBraytonCycle2017a_B.Product1;
-
-  /* Update for Atomic SubSystem: '<S73>/S-p-State' */
-
-  /* Update for S-Function (th_SpState_S): '<S79>/S-Function' */
-
-  /* Block: <S79>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_mu;
-    double *T_out = &NACCBraytonCycle2017a_B.T_d;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S73>/S-p-State' */
-
-  /* Update for Atomic SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S76>/S-Function' */
-
-  /* Block: <S76>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p;
-    double *T_out = &NACCBraytonCycle2017a_B.T_j;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-  /* Update for Memory: '<S8>/Memory9' */
+  /* Update for Memory: '<S13>/Memory9' */
   NACCBraytonCycle2017a_DW.Memory9_PreviousInput =
+    NACCBraytonCycle2017a_B.ndot_l;
+
+  /* Update for Memory: '<S13>/Memory1' */
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput = NACCBraytonCycle2017a_B.T_j;
+
+  /* Update for Memory: '<S13>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput = NACCBraytonCycle2017a_B.p_bs;
+
+  /* Update for Memory: '<S13>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput =
+    NACCBraytonCycle2017a_B.Hdot_jv;
+
+  /* Update for Memory: '<S9>/Memory9' */
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i =
     NACCBraytonCycle2017a_B.ndot_bl;
 
-  /* Update for Memory: '<S8>/Memory1' */
+  /* Update for Memory: '<S9>/Memory1' */
   NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b =
     NACCBraytonCycle2017a_B.T_gf;
 
-  /* Update for Memory: '<S8>/Memory2' */
-  NACCBraytonCycle2017a_DW.Memory2_PreviousInput = NACCBraytonCycle2017a_B.p_a1;
+  /* Update for Memory: '<S9>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o =
+    NACCBraytonCycle2017a_B.p_a1;
 
-  /* Update for Memory: '<S8>/Memory3' */
-  NACCBraytonCycle2017a_DW.Memory3_PreviousInput =
+  /* Update for Memory: '<S9>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h =
     NACCBraytonCycle2017a_B.Hdot_b;
-  for (i = 0; i < 7; i++) {
-    /* Update for Memory: '<S8>/Memory4' */
-    NACCBraytonCycle2017a_DW.Memory4_PreviousInput[i] =
-      NACCBraytonCycle2017a_B.psi_f[i];
 
-    /* Update for Memory: '<S8>/Memory8' */
-    NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] =
-      NACCBraytonCycle2017a_B.x_f[i];
-  }
+  /* Update for Memory: '<S12>/Memory9' */
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv =
+    NACCBraytonCycle2017a_B.ndot_nq;
 
-  /* Update for Atomic SubSystem: '<S100>/S-p-State' */
+  /* Update for Memory: '<S12>/Memory1' */
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e = NACCBraytonCycle2017a_B.T_h;
 
-  /* Update for S-Function (th_SpState_S): '<S107>/S-Function' */
+  /* Update for Memory: '<S12>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n = NACCBraytonCycle2017a_B.p_g;
 
-  /* Block: <S107>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_f;
-    double *T_out = &NACCBraytonCycle2017a_B.T_m;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
+  /* Update for Memory: '<S12>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e =
+    NACCBraytonCycle2017a_B.Hdot_n;
 
-  /* End of Update for SubSystem: '<S100>/S-p-State' */
-
-  /* Update for Atomic SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
-
-  /* Block: <S102>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o;
-    double *T_out = &NACCBraytonCycle2017a_B.T_h;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-  /* Update for Memory: '<S7>/Memory9' */
+  /* Update for Memory: '<S8>/Memory9' */
   NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a =
     NACCBraytonCycle2017a_B.ndot_ol;
 
-  /* Update for Memory: '<S7>/Memory1' */
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p =
-    NACCBraytonCycle2017a_B.T_ed;
+  /* Update for Memory: '<S8>/Memory1' */
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p = NACCBraytonCycle2017a_B.T_e;
 
-  /* Update for Memory: '<S7>/Memory2' */
-  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o =
+  /* Update for Memory: '<S8>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow =
     NACCBraytonCycle2017a_B.p_a5;
 
-  /* Update for Memory: '<S7>/Memory3' */
+  /* Update for Memory: '<S8>/Memory3' */
   NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d =
     NACCBraytonCycle2017a_B.Hdot_i;
+
+  /* Update for Memory: '<S7>/Memory9' */
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b =
+    NACCBraytonCycle2017a_B.ndot_d;
+
+  /* Update for Memory: '<S7>/Memory1' */
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m =
+    NACCBraytonCycle2017a_B.T_po;
+
+  /* Update for Memory: '<S7>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e = NACCBraytonCycle2017a_B.p_c;
+
+  /* Update for Memory: '<S7>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m =
+    NACCBraytonCycle2017a_B.Hdot_k;
   for (i = 0; i < 7; i++) {
-    /* Update for Memory: '<S7>/Memory4' */
+    /* Update for Memory: '<S13>/Memory4' */
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput[i] =
+      NACCBraytonCycle2017a_B.psi_al[i];
+
+    /* Update for Memory: '<S9>/Memory4' */
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b[i] =
+      NACCBraytonCycle2017a_B.psi_f[i];
+
+    /* Update for Memory: '<S12>/Memory4' */
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f[i] =
+      NACCBraytonCycle2017a_B.psi_i[i];
+
+    /* Update for Memory: '<S8>/Memory4' */
     NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[i] =
       NACCBraytonCycle2017a_B.psi_a[i];
 
+    /* Update for Memory: '<S7>/Memory4' */
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i[i] =
+      NACCBraytonCycle2017a_B.psi_mo[i];
+
     /* Update for Memory: '<S7>/Memory8' */
-    NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p[i] =
-      NACCBraytonCycle2017a_B.x_ac[i];
+    NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] =
+      NACCBraytonCycle2017a_B.x_ok[i];
   }
 
-  /* Update for Atomic SubSystem: '<S11>/Mixer' */
+  /* Update for Atomic SubSystem: '<S129>/S-p-State' */
 
-  /* Update for Atomic SubSystem: '<S142>/H-p-State with HeatLoss' */
+  /* Update for S-Function (th_SpState_S): '<S136>/S-Function' */
 
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S145>/S-Function' */
-
-  /* Block: <S145>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK;
-    double *T_out = &NACCBraytonCycle2017a_B.T_go;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S142>/H-p-State with HeatLoss' */
-
-  /* End of Update for SubSystem: '<S11>/Mixer' */
-
-  /* Update for Atomic SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S58>/S-Function' */
-
-  /* Block: <S58>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j;
-    double *T_out = &NACCBraytonCycle2017a_B.T_h3;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* Update for Atomic SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S66>/S-Function' */
-
-  /* Block: <S66>/S-Function */
-  {
-    int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l;
-    double *T_out = &NACCBraytonCycle2017a_B.T_mo;
-    for (i=0;i<1;i++) {
-      T_cal [i] = T_out[i];
-    }
-  }
-
-  /* End of Update for SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* Update for Atomic SubSystem: '<S124>/S-p-State' */
-
-  /* Update for S-Function (th_SpState_S): '<S131>/S-Function' */
-
-  /* Block: <S131>/S-Function */
+  /* Block: <S136>/S-Function */
   {
     int i;
     real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_m;
@@ -5330,13 +5339,13 @@ static void NACCBraytonCycle2017a_update(void)
     }
   }
 
-  /* End of Update for SubSystem: '<S124>/S-p-State' */
+  /* End of Update for SubSystem: '<S129>/S-p-State' */
 
-  /* Update for Atomic SubSystem: '<S124>/H-p-State with Heat Exchange' */
+  /* Update for Atomic SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S131>/S-Function' */
 
-  /* Block: <S126>/S-Function */
+  /* Block: <S131>/S-Function */
   {
     int i;
     real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_a;
@@ -5346,13 +5355,131 @@ static void NACCBraytonCycle2017a_update(void)
     }
   }
 
-  /* End of Update for SubSystem: '<S124>/H-p-State with Heat Exchange' */
+  /* End of Update for SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-  /* Update for Atomic SubSystem: '<S96>/H-p-State with HeatLoss' */
+  /* Update for Memory: '<S11>/Memory4' */
+  for (i = 0; i < 7; i++) {
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e[i] =
+      NACCBraytonCycle2017a_B.psi_h[i];
+  }
 
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S97>/S-Function' */
+  /* End of Update for Memory: '<S11>/Memory4' */
 
-  /* Block: <S97>/S-Function */
+  /* Update for Memory: '<S11>/Memory9' */
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o =
+    NACCBraytonCycle2017a_B.ndot_m;
+
+  /* Update for Memory: '<S11>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m = NACCBraytonCycle2017a_B.p_p;
+
+  /* Update for Memory: '<S11>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a =
+    NACCBraytonCycle2017a_B.Hdot_cl;
+
+  /* Update for Atomic SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S63>/S-Function' */
+
+  /* Block: <S63>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1;
+    double *T_out = &NACCBraytonCycle2017a_B.T_mj;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* Update for Memory: '<S10>/Memory4' */
+  for (i = 0; i < 7; i++) {
+    NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m[i] =
+      NACCBraytonCycle2017a_B.psi_le[i];
+  }
+
+  /* End of Update for Memory: '<S10>/Memory4' */
+
+  /* Update for Memory: '<S10>/Memory9' */
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d =
+    NACCBraytonCycle2017a_B.ndot_nu;
+
+  /* Update for Memory: '<S10>/Memory2' */
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d = NACCBraytonCycle2017a_B.p_e;
+
+  /* Update for Memory: '<S10>/Memory3' */
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k =
+    NACCBraytonCycle2017a_B.Hdot_f5;
+
+  /* Update for Atomic SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S71>/S-Function' */
+
+  /* Block: <S71>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c;
+    double *T_out = &NACCBraytonCycle2017a_B.T_po;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* Update for Memory: '<S78>/Memory1' incorporates:
+   *  Constant: '<S4>/PFin'
+   */
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[0] =
+    NACCBraytonCycle2017a_P.PFin_Value;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[1] =
+    NACCBraytonCycle2017a_P.PFin_Value;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[2] =
+    NACCBraytonCycle2017a_P.PFin_Value;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[3] =
+    NACCBraytonCycle2017a_P.PFin_Value;
+
+  /* Update for Memory: '<S86>/Memory' */
+  NACCBraytonCycle2017a_DW.Memory_PreviousInput =
+    NACCBraytonCycle2017a_B.Product1;
+
+  /* Update for Atomic SubSystem: '<S78>/S-p-State' */
+
+  /* Update for S-Function (th_SpState_S): '<S84>/S-Function' */
+
+  /* Block: <S84>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_mu;
+    double *T_out = &NACCBraytonCycle2017a_B.T_do;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S78>/S-p-State' */
+
+  /* Update for Atomic SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S81>/S-Function' */
+
+  /* Block: <S81>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p;
+    double *T_out = &NACCBraytonCycle2017a_B.T_j;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+  /* Update for Atomic SubSystem: '<S101>/H-p-State with HeatLoss' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
+
+  /* Block: <S102>/S-Function */
   {
     int i;
     real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_h;
@@ -5362,23 +5489,91 @@ static void NACCBraytonCycle2017a_update(void)
     }
   }
 
-  /* End of Update for SubSystem: '<S96>/H-p-State with HeatLoss' */
+  /* End of Update for SubSystem: '<S101>/H-p-State with HeatLoss' */
 
-  /* Update for Atomic SubSystem: '<S120>/H-p-State with HeatLoss' */
+  /* Update for Memory: '<S9>/Memory8' */
+  for (i = 0; i < 7; i++) {
+    NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l[i] =
+      NACCBraytonCycle2017a_B.x_ff[i];
+  }
 
-  /* Update for S-Function (th_HpStateHeatExchange_S): '<S121>/S-Function' */
+  /* End of Update for Memory: '<S9>/Memory8' */
 
-  /* Block: <S121>/S-Function */
+  /* Update for Atomic SubSystem: '<S105>/S-p-State' */
+
+  /* Update for S-Function (th_SpState_S): '<S112>/S-Function' */
+
+  /* Block: <S112>/S-Function */
   {
     int i;
-    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_n;
-    double *T_out = &NACCBraytonCycle2017a_B.T_ed;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_f;
+    double *T_out = &NACCBraytonCycle2017a_B.T_m;
     for (i=0;i<1;i++) {
       T_cal [i] = T_out[i];
     }
   }
 
-  /* End of Update for SubSystem: '<S120>/H-p-State with HeatLoss' */
+  /* End of Update for SubSystem: '<S105>/S-p-State' */
+
+  /* Update for Atomic SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S107>/S-Function' */
+
+  /* Block: <S107>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o;
+    double *T_out = &NACCBraytonCycle2017a_B.T_h;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+  /* Update for Memory: '<S8>/Memory8' */
+  for (i = 0; i < 7; i++) {
+    NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p[i] =
+      NACCBraytonCycle2017a_B.x_ac[i];
+  }
+
+  /* End of Update for Memory: '<S8>/Memory8' */
+
+  /* Update for Atomic SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
+
+  /* Block: <S126>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_n;
+    double *T_out = &NACCBraytonCycle2017a_B.T_e;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+  /* Update for Atomic SubSystem: '<S16>/Mixer' */
+
+  /* Update for Atomic SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+  /* Update for S-Function (th_HpStateHeatExchange_S): '<S150>/S-Function' */
+
+  /* Block: <S150>/S-Function */
+  {
+    int i;
+    real_T *T_cal = (real_T*) &NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK;
+    double *T_out = &NACCBraytonCycle2017a_B.T_go;
+    for (i=0;i<1;i++) {
+      T_cal [i] = T_out[i];
+    }
+  }
+
+  /* End of Update for SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+  /* End of Update for SubSystem: '<S16>/Mixer' */
 
   /* Update absolute time for base rate */
   /* The "clockTick0" counts the number of times the code of this task has
@@ -5405,12 +5600,12 @@ static void NACCBraytonCycle2017a_initialize(void)
 {
   /* Start for IfAction SubSystem: '<S1>/VolumeFlow' */
 
-  /* Start for Atomic SubSystem: '<S48>/T-p-Vapor Fractions' */
+  /* Start for Atomic SubSystem: '<S53>/T-p-Vapor Fractions' */
   NACCBray_TpVaporFractions_Start();
 
-  /* End of Start for SubSystem: '<S48>/T-p-Vapor Fractions' */
+  /* End of Start for SubSystem: '<S53>/T-p-Vapor Fractions' */
 
-  /* Start for S-Function (th_Density_S): '<S54>/S-Function' incorporates:
+  /* Start for S-Function (th_Density_S): '<S59>/S-Function' incorporates:
    *  Constant: '<S1>/psi'
    */
   {
@@ -5424,399 +5619,324 @@ static void NACCBraytonCycle2017a_initialize(void)
 
   /* End of Start for SubSystem: '<S1>/T-p-State' */
 
-  /* Start for Atomic SubSystem: '<S73>/T-p-State' */
+  /* Start for S-Function (th_TpxState_S): '<S138>/S-Function1' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* Start for Atomic SubSystem: '<S129>/S-p-State' */
+
+  /* Start for S-Function (th_SpState_S): '<S136>/S-Function' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* End of Start for SubSystem: '<S129>/S-p-State' */
+
+  /* Start for Atomic SubSystem: '<S129>/H-p-State with Heat Exchange' */
+
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S131>/S-Function' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* End of Start for SubSystem: '<S129>/H-p-State with Heat Exchange' */
+
+  /* Start for Atomic SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S63>/S-Function' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* End of Start for SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+  /* Start for Atomic SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S71>/S-Function' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* End of Start for SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+  /* Start for Atomic SubSystem: '<S78>/T-p-State' */
   NACCBraytonCycl_TpState_j_Start();
 
-  /* End of Start for SubSystem: '<S73>/T-p-State' */
+  /* End of Start for SubSystem: '<S78>/T-p-State' */
 
-  /* Start for Atomic SubSystem: '<S73>/S-p-State' */
+  /* Start for Atomic SubSystem: '<S78>/S-p-State' */
 
-  /* Start for S-Function (th_SpState_S): '<S79>/S-Function' */
+  /* Start for S-Function (th_SpState_S): '<S84>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S73>/S-p-State' */
+  /* End of Start for SubSystem: '<S78>/S-p-State' */
 
-  /* Start for Atomic SubSystem: '<S73>/H-p-State with Heat Exchange' */
+  /* Start for Atomic SubSystem: '<S78>/H-p-State with Heat Exchange' */
 
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S76>/S-Function' */
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S81>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S73>/H-p-State with Heat Exchange' */
+  /* End of Start for SubSystem: '<S78>/H-p-State with Heat Exchange' */
 
-  /* Start for S-Function (th_TpxState_S): '<S109>/S-Function1' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* Start for Atomic SubSystem: '<S100>/S-p-State' */
-
-  /* Start for S-Function (th_SpState_S): '<S107>/S-Function' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* End of Start for SubSystem: '<S100>/S-p-State' */
-
-  /* Start for Atomic SubSystem: '<S100>/H-p-State with Heat Exchange' */
+  /* Start for Atomic SubSystem: '<S101>/H-p-State with HeatLoss' */
 
   /* Start for S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S100>/H-p-State with Heat Exchange' */
+  /* End of Start for SubSystem: '<S101>/H-p-State with HeatLoss' */
 
-  /* Start for IfAction SubSystem: '<S12>/VolumeFlow' */
-
-  /* Start for Atomic SubSystem: '<S158>/T-p-Vapor Fractions' */
-  NACCBr_TpVaporFractions_f_Start();
-
-  /* End of Start for SubSystem: '<S158>/T-p-Vapor Fractions' */
-
-  /* Start for S-Function (th_Density_S): '<S164>/S-Function' incorporates:
-   *  Constant: '<S12>/psi'
-   */
+  /* Start for S-Function (th_TpxState_S): '<S114>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S12>/VolumeFlow' */
+  /* Start for Atomic SubSystem: '<S105>/S-p-State' */
 
-  /* Start for Atomic SubSystem: '<S12>/T-p-State' */
-  NACCBraytonCycl_TpState_d_Start();
-
-  /* End of Start for SubSystem: '<S12>/T-p-State' */
-
-  /* Start for Atomic SubSystem: '<S11>/Mixer' */
-
-  /* Start for S-Function (th_TpxState_S): '<S147>/S-Function1' */
+  /* Start for S-Function (th_SpState_S): '<S112>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* Start for Atomic SubSystem: '<S142>/H-p-State with HeatLoss' */
+  /* End of Start for SubSystem: '<S105>/S-p-State' */
 
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S145>/S-Function' */
+  /* Start for Atomic SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S107>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S142>/H-p-State with HeatLoss' */
+  /* End of Start for SubSystem: '<S105>/H-p-State with Heat Exchange' */
 
-  /* End of Start for SubSystem: '<S11>/Mixer' */
-
-  /* Start for Atomic SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S58>/S-Function' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* End of Start for SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-  /* Start for Atomic SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S66>/S-Function' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* End of Start for SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-  /* Start for S-Function (th_TpxState_S): '<S133>/S-Function1' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* Start for Atomic SubSystem: '<S124>/S-p-State' */
-
-  /* Start for S-Function (th_SpState_S): '<S131>/S-Function' */
-  {
-    th_ThermolibInitialize();
-  }
-
-  /* End of Start for SubSystem: '<S124>/S-p-State' */
-
-  /* Start for Atomic SubSystem: '<S124>/H-p-State with Heat Exchange' */
+  /* Start for Atomic SubSystem: '<S125>/H-p-State with HeatLoss' */
 
   /* Start for S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S124>/H-p-State with Heat Exchange' */
+  /* End of Start for SubSystem: '<S125>/H-p-State with HeatLoss' */
 
-  /* Start for Atomic SubSystem: '<S96>/H-p-State with HeatLoss' */
+  /* Start for IfAction SubSystem: '<S17>/VolumeFlow' */
 
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S97>/S-Function' */
+  /* Start for Atomic SubSystem: '<S163>/T-p-Vapor Fractions' */
+  NACCBr_TpVaporFractions_f_Start();
+
+  /* End of Start for SubSystem: '<S163>/T-p-Vapor Fractions' */
+
+  /* Start for S-Function (th_Density_S): '<S169>/S-Function' incorporates:
+   *  Constant: '<S17>/psi'
+   */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S96>/H-p-State with HeatLoss' */
+  /* End of Start for SubSystem: '<S17>/VolumeFlow' */
 
-  /* Start for Atomic SubSystem: '<S120>/H-p-State with HeatLoss' */
+  /* Start for Atomic SubSystem: '<S17>/T-p-State' */
+  NACCBraytonCycl_TpState_d_Start();
 
-  /* Start for S-Function (th_HpStateHeatExchange_S): '<S121>/S-Function' */
+  /* End of Start for SubSystem: '<S17>/T-p-State' */
+
+  /* Start for Atomic SubSystem: '<S16>/Mixer' */
+
+  /* Start for S-Function (th_TpxState_S): '<S152>/S-Function1' */
   {
     th_ThermolibInitialize();
   }
 
-  /* End of Start for SubSystem: '<S120>/H-p-State with HeatLoss' */
+  /* Start for Atomic SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+  /* Start for S-Function (th_HpStateHeatExchange_S): '<S150>/S-Function' */
+  {
+    th_ThermolibInitialize();
+  }
+
+  /* End of Start for SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+  /* End of Start for SubSystem: '<S16>/Mixer' */
   {
     int32_T i;
 
-    /* InitializeConditions for Memory: '<S73>/Memory1' */
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput[0] =
-      NACCBraytonCycle2017a_P.Memory1_X0[0];
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput[1] =
-      NACCBraytonCycle2017a_P.Memory1_X0[1];
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput[2] =
-      NACCBraytonCycle2017a_P.Memory1_X0[2];
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput[3] =
-      NACCBraytonCycle2017a_P.Memory1_X0[3];
-
-    /* InitializeConditions for Memory: '<S81>/Memory' */
-    NACCBraytonCycle2017a_DW.Memory_PreviousInput =
-      NACCBraytonCycle2017a_P.Memory_X0;
-
-    /* InitializeConditions for Memory: '<S8>/Memory9' */
+    /* InitializeConditions for Memory: '<S13>/Memory9' */
     NACCBraytonCycle2017a_DW.Memory9_PreviousInput =
-      NACCBraytonCycle2017a_P.InitialCondition3_ndot;
+      NACCBraytonCycle2017a_P.InitialCondition7_ndot;
 
-    /* InitializeConditions for Memory: '<S8>/Memory1' */
-    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b =
-      NACCBraytonCycle2017a_P.Memory1_X0_n;
+    /* InitializeConditions for Memory: '<S13>/Memory1' */
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput =
+      NACCBraytonCycle2017a_P.Memory1_X0;
 
-    /* InitializeConditions for Memory: '<S8>/Memory2' */
+    /* InitializeConditions for Memory: '<S13>/Memory2' */
     NACCBraytonCycle2017a_DW.Memory2_PreviousInput =
       NACCBraytonCycle2017a_P.Memory2_X0;
 
-    /* InitializeConditions for Memory: '<S8>/Memory3' */
+    /* InitializeConditions for Memory: '<S13>/Memory3' */
     NACCBraytonCycle2017a_DW.Memory3_PreviousInput =
+      NACCBraytonCycle2017a_P.InitialCondition7_Hdot;
+
+    /* InitializeConditions for Memory: '<S9>/Memory9' */
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i =
+      NACCBraytonCycle2017a_P.InitialCondition3_ndot;
+
+    /* InitializeConditions for Memory: '<S9>/Memory1' */
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b =
+      NACCBraytonCycle2017a_P.Memory1_X0_n;
+
+    /* InitializeConditions for Memory: '<S9>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o =
+      NACCBraytonCycle2017a_P.Memory2_X0_d;
+
+    /* InitializeConditions for Memory: '<S9>/Memory3' */
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h =
       NACCBraytonCycle2017a_P.InitialCondition3_Hdot;
 
-    /* InitializeConditions for Memory: '<S7>/Memory9' */
+    /* InitializeConditions for Memory: '<S12>/Memory9' */
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv =
+      NACCBraytonCycle2017a_P.InitialCondition6_ndot;
+
+    /* InitializeConditions for Memory: '<S12>/Memory1' */
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e =
+      NACCBraytonCycle2017a_P.Memory1_X0_i;
+
+    /* InitializeConditions for Memory: '<S12>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n =
+      NACCBraytonCycle2017a_P.Memory2_X0_j;
+
+    /* InitializeConditions for Memory: '<S12>/Memory3' */
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e =
+      NACCBraytonCycle2017a_P.InitialCondition6_Hdot;
+
+    /* InitializeConditions for Memory: '<S8>/Memory9' */
     NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a =
       NACCBraytonCycle2017a_P.InitialCondition2_ndot;
 
-    /* InitializeConditions for Memory: '<S7>/Memory1' */
+    /* InitializeConditions for Memory: '<S8>/Memory1' */
     NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p =
       NACCBraytonCycle2017a_P.Memory1_X0_o;
 
-    /* InitializeConditions for Memory: '<S7>/Memory2' */
-    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o =
+    /* InitializeConditions for Memory: '<S8>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow =
       NACCBraytonCycle2017a_P.Memory2_X0_p;
 
-    /* InitializeConditions for Memory: '<S7>/Memory3' */
+    /* InitializeConditions for Memory: '<S8>/Memory3' */
     NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d =
       NACCBraytonCycle2017a_P.InitialCondition2_Hdot;
+
+    /* InitializeConditions for Memory: '<S7>/Memory9' */
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b =
+      NACCBraytonCycle2017a_P.InitialCondition1_ndot;
+
+    /* InitializeConditions for Memory: '<S7>/Memory1' */
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m =
+      NACCBraytonCycle2017a_P.Memory1_X0_l;
+
+    /* InitializeConditions for Memory: '<S7>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e =
+      NACCBraytonCycle2017a_P.Memory2_X0_l;
+
+    /* InitializeConditions for Memory: '<S7>/Memory3' */
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m =
+      NACCBraytonCycle2017a_P.InitialCondition1_Hdot;
+
+    /* InitializeConditions for Memory: '<S11>/Memory9' */
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o =
+      NACCBraytonCycle2017a_P.InitialCondition5_ndot;
+
+    /* InitializeConditions for Memory: '<S11>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m =
+      NACCBraytonCycle2017a_P.Memory2_X0_c;
+
+    /* InitializeConditions for Memory: '<S11>/Memory3' */
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a =
+      NACCBraytonCycle2017a_P.InitialCondition5_Hdot;
+
+    /* InitializeConditions for Memory: '<S10>/Memory9' */
+    NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d =
+      NACCBraytonCycle2017a_P.InitialCondition4_ndot;
+
+    /* InitializeConditions for Memory: '<S10>/Memory2' */
+    NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d =
+      NACCBraytonCycle2017a_P.Memory2_X0_c5;
+
+    /* InitializeConditions for Memory: '<S10>/Memory3' */
+    NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k =
+      NACCBraytonCycle2017a_P.InitialCondition4_Hdot;
+
+    /* InitializeConditions for Memory: '<S78>/Memory1' */
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[0] =
+      NACCBraytonCycle2017a_P.Memory1_X0_a[0];
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[1] =
+      NACCBraytonCycle2017a_P.Memory1_X0_a[1];
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[2] =
+      NACCBraytonCycle2017a_P.Memory1_X0_a[2];
+    NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[3] =
+      NACCBraytonCycle2017a_P.Memory1_X0_a[3];
+
+    /* InitializeConditions for Memory: '<S86>/Memory' */
+    NACCBraytonCycle2017a_DW.Memory_PreviousInput =
+      NACCBraytonCycle2017a_P.Memory_X0;
     for (i = 0; i < 7; i++) {
-      /* InitializeConditions for Memory: '<S8>/Memory4' */
+      /* InitializeConditions for Memory: '<S13>/Memory4' */
       NACCBraytonCycle2017a_DW.Memory4_PreviousInput[i] =
+        NACCBraytonCycle2017a_P.InitialCondition7_psi[i];
+
+      /* InitializeConditions for Memory: '<S9>/Memory4' */
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b[i] =
         NACCBraytonCycle2017a_P.InitialCondition3_psi[i];
 
-      /* InitializeConditions for Memory: '<S8>/Memory8' */
-      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] =
-        NACCBraytonCycle2017a_P.InitialCondition3_x[i];
+      /* InitializeConditions for Memory: '<S12>/Memory4' */
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f[i] =
+        NACCBraytonCycle2017a_P.InitialCondition6_psi[i];
 
-      /* InitializeConditions for Memory: '<S7>/Memory4' */
+      /* InitializeConditions for Memory: '<S8>/Memory4' */
       NACCBraytonCycle2017a_DW.Memory4_PreviousInput_p[i] =
         NACCBraytonCycle2017a_P.InitialCondition2_psi[i];
 
+      /* InitializeConditions for Memory: '<S7>/Memory4' */
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i[i] =
+        NACCBraytonCycle2017a_P.InitialCondition1_psi[i];
+
       /* InitializeConditions for Memory: '<S7>/Memory8' */
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] =
+        NACCBraytonCycle2017a_P.InitialCondition1_x[i];
+
+      /* InitializeConditions for Memory: '<S11>/Memory4' */
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e[i] =
+        NACCBraytonCycle2017a_P.InitialCondition5_psi[i];
+
+      /* InitializeConditions for Memory: '<S10>/Memory4' */
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m[i] =
+        NACCBraytonCycle2017a_P.InitialCondition4_psi[i];
+
+      /* InitializeConditions for Memory: '<S9>/Memory8' */
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l[i] =
+        NACCBraytonCycle2017a_P.InitialCondition3_x[i];
+
+      /* InitializeConditions for Memory: '<S8>/Memory8' */
       NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p[i] =
         NACCBraytonCycle2017a_P.InitialCondition2_x[i];
     }
 
     /* SystemInitialize for IfAction SubSystem: '<S1>/Reservoir' */
-    /* SystemInitialize for Outport: '<S43>/nan' */
+    /* SystemInitialize for Outport: '<S48>/nan' */
     NACCBraytonCycle2017a_B.ndot = NACCBraytonCycle2017a_P.nan_Y0;
 
     /* End of SystemInitialize for SubSystem: '<S1>/Reservoir' */
 
-    /* SystemInitialize for Atomic SubSystem: '<S73>/S-p-State' */
+    /* SystemInitialize for Atomic SubSystem: '<S129>/S-p-State' */
 
-    /* InitializeConditions for Atomic SubSystem: '<S73>/S-p-State' */
+    /* InitializeConditions for Atomic SubSystem: '<S129>/S-p-State' */
 
-    /* InitializeConditions for S-Function (th_SpState_S): '<S79>/S-Function' */
+    /* InitializeConditions for S-Function (th_SpState_S): '<S136>/S-Function' */
 
-    /* Block: <S79>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.SpState_T_initial;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_mu = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S73>/S-p-State' */
-
-    /* End of SystemInitialize for SubSystem: '<S73>/S-p-State' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S76>/S-Function' */
-
-    /* Block: <S76>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_e;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-    /* End of SystemInitialize for SubSystem: '<S73>/H-p-State with Heat Exchange' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S100>/S-p-State' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S100>/S-p-State' */
-
-    /* InitializeConditions for S-Function (th_SpState_S): '<S107>/S-Function' */
-
-    /* Block: <S107>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.SpState_T_initial_i;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_f = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S100>/S-p-State' */
-
-    /* End of SystemInitialize for SubSystem: '<S100>/S-p-State' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
-
-    /* Block: <S102>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_p;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-    /* End of SystemInitialize for SubSystem: '<S100>/H-p-State with Heat Exchange' */
-
-    /* SystemInitialize for IfAction SubSystem: '<S12>/Reservoir' */
-    /* SystemInitialize for Outport: '<S153>/nan' */
-    NACCBraytonCycle2017a_B.ndot_ka = NACCBraytonCycle2017a_P.nan_Y0_f;
-
-    /* End of SystemInitialize for SubSystem: '<S12>/Reservoir' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S11>/Mixer' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S142>/H-p-State with HeatLoss' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S142>/H-p-State with HeatLoss' */
-
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S145>/S-Function' */
-
-    /* Block: <S145>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.HpStatewithHeatLoss_T_initial_b;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S142>/H-p-State with HeatLoss' */
-
-    /* End of SystemInitialize for SubSystem: '<S142>/H-p-State with HeatLoss' */
-
-    /* End of SystemInitialize for SubSystem: '<S11>/Mixer' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S58>/S-Function' */
-
-    /* Block: <S58>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_initi;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-    /* End of SystemInitialize for SubSystem: '<S57>/H-p-State with Heat Exchange' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S66>/S-Function' */
-
-    /* Block: <S66>/S-Function */
-    {
-      const double *T_initial = (const double*)
-        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_g;
-
-      {
-        int_T i1;
-        for (i1=0; i1 < 1; i1++) {
-          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l = T_initial[0];
-        }
-      }
-    }
-
-    /* End of InitializeConditions for SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-    /* End of SystemInitialize for SubSystem: '<S65>/H-p-State with Heat Exchange' */
-
-    /* SystemInitialize for Atomic SubSystem: '<S124>/S-p-State' */
-
-    /* InitializeConditions for Atomic SubSystem: '<S124>/S-p-State' */
-
-    /* InitializeConditions for S-Function (th_SpState_S): '<S131>/S-Function' */
-
-    /* Block: <S131>/S-Function */
+    /* Block: <S136>/S-Function */
     {
       const double *T_initial = (const double*)
         &NACCBraytonCycle2017a_P.SpState_T_initial_n;
@@ -5829,17 +5949,17 @@ static void NACCBraytonCycle2017a_initialize(void)
       }
     }
 
-    /* End of InitializeConditions for SubSystem: '<S124>/S-p-State' */
+    /* End of InitializeConditions for SubSystem: '<S129>/S-p-State' */
 
-    /* End of SystemInitialize for SubSystem: '<S124>/S-p-State' */
+    /* End of SystemInitialize for SubSystem: '<S129>/S-p-State' */
 
-    /* SystemInitialize for Atomic SubSystem: '<S124>/H-p-State with Heat Exchange' */
+    /* SystemInitialize for Atomic SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-    /* InitializeConditions for Atomic SubSystem: '<S124>/H-p-State with Heat Exchange' */
+    /* InitializeConditions for Atomic SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S131>/S-Function' */
 
-    /* Block: <S126>/S-Function */
+    /* Block: <S131>/S-Function */
     {
       const double *T_initial = (const double*)
         &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_m;
@@ -5852,17 +5972,109 @@ static void NACCBraytonCycle2017a_initialize(void)
       }
     }
 
-    /* End of InitializeConditions for SubSystem: '<S124>/H-p-State with Heat Exchange' */
+    /* End of InitializeConditions for SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-    /* End of SystemInitialize for SubSystem: '<S124>/H-p-State with Heat Exchange' */
+    /* End of SystemInitialize for SubSystem: '<S129>/H-p-State with Heat Exchange' */
 
-    /* SystemInitialize for Atomic SubSystem: '<S96>/H-p-State with HeatLoss' */
+    /* SystemInitialize for Atomic SubSystem: '<S62>/H-p-State with Heat Exchange' */
 
-    /* InitializeConditions for Atomic SubSystem: '<S96>/H-p-State with HeatLoss' */
+    /* InitializeConditions for Atomic SubSystem: '<S62>/H-p-State with Heat Exchange' */
 
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S97>/S-Function' */
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S63>/S-Function' */
 
-    /* Block: <S97>/S-Function */
+    /* Block: <S63>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_initi;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1 = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+    /* End of SystemInitialize for SubSystem: '<S62>/H-p-State with Heat Exchange' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S71>/S-Function' */
+
+    /* Block: <S71>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_h;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+    /* End of SystemInitialize for SubSystem: '<S70>/H-p-State with Heat Exchange' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S78>/S-p-State' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S78>/S-p-State' */
+
+    /* InitializeConditions for S-Function (th_SpState_S): '<S84>/S-Function' */
+
+    /* Block: <S84>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.SpState_T_initial;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_mu = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S78>/S-p-State' */
+
+    /* End of SystemInitialize for SubSystem: '<S78>/S-p-State' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S81>/S-Function' */
+
+    /* Block: <S81>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_e;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+    /* End of SystemInitialize for SubSystem: '<S78>/H-p-State with Heat Exchange' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S101>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S101>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S102>/S-Function' */
+
+    /* Block: <S102>/S-Function */
     {
       const double *T_initial = (const double*)
         &NACCBraytonCycle2017a_P.HpStatewithHeatLoss_T_initial;
@@ -5875,17 +6087,63 @@ static void NACCBraytonCycle2017a_initialize(void)
       }
     }
 
-    /* End of InitializeConditions for SubSystem: '<S96>/H-p-State with HeatLoss' */
+    /* End of InitializeConditions for SubSystem: '<S101>/H-p-State with HeatLoss' */
 
-    /* End of SystemInitialize for SubSystem: '<S96>/H-p-State with HeatLoss' */
+    /* End of SystemInitialize for SubSystem: '<S101>/H-p-State with HeatLoss' */
 
-    /* SystemInitialize for Atomic SubSystem: '<S120>/H-p-State with HeatLoss' */
+    /* SystemInitialize for Atomic SubSystem: '<S105>/S-p-State' */
 
-    /* InitializeConditions for Atomic SubSystem: '<S120>/H-p-State with HeatLoss' */
+    /* InitializeConditions for Atomic SubSystem: '<S105>/S-p-State' */
 
-    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S121>/S-Function' */
+    /* InitializeConditions for S-Function (th_SpState_S): '<S112>/S-Function' */
 
-    /* Block: <S121>/S-Function */
+    /* Block: <S112>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.SpState_T_initial_i;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_f = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S105>/S-p-State' */
+
+    /* End of SystemInitialize for SubSystem: '<S105>/S-p-State' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S107>/S-Function' */
+
+    /* Block: <S107>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.HpStatewithHeatExchange_T_ini_p;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+    /* End of SystemInitialize for SubSystem: '<S105>/H-p-State with Heat Exchange' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S126>/S-Function' */
+
+    /* Block: <S126>/S-Function */
     {
       const double *T_initial = (const double*)
         &NACCBraytonCycle2017a_P.HpStatewithHeatLoss_T_initial_d;
@@ -5898,9 +6156,42 @@ static void NACCBraytonCycle2017a_initialize(void)
       }
     }
 
-    /* End of InitializeConditions for SubSystem: '<S120>/H-p-State with HeatLoss' */
+    /* End of InitializeConditions for SubSystem: '<S125>/H-p-State with HeatLoss' */
 
-    /* End of SystemInitialize for SubSystem: '<S120>/H-p-State with HeatLoss' */
+    /* End of SystemInitialize for SubSystem: '<S125>/H-p-State with HeatLoss' */
+
+    /* SystemInitialize for IfAction SubSystem: '<S17>/Reservoir' */
+    /* SystemInitialize for Outport: '<S158>/nan' */
+    NACCBraytonCycle2017a_B.ndot_ka = NACCBraytonCycle2017a_P.nan_Y0_f;
+
+    /* End of SystemInitialize for SubSystem: '<S17>/Reservoir' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S16>/Mixer' */
+
+    /* SystemInitialize for Atomic SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for Atomic SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+    /* InitializeConditions for S-Function (th_HpStateHeatExchange_S): '<S150>/S-Function' */
+
+    /* Block: <S150>/S-Function */
+    {
+      const double *T_initial = (const double*)
+        &NACCBraytonCycle2017a_P.HpStatewithHeatLoss_T_initial_b;
+
+      {
+        int_T i1;
+        for (i1=0; i1 < 1; i1++) {
+          NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK = T_initial[0];
+        }
+      }
+    }
+
+    /* End of InitializeConditions for SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+    /* End of SystemInitialize for SubSystem: '<S147>/H-p-State with HeatLoss' */
+
+    /* End of SystemInitialize for SubSystem: '<S16>/Mixer' */
   }
 }
 
@@ -5960,17 +6251,17 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
   NACCBraytonCycle2017a_P.Saturation_UpperSat_e = rtInf;
   NACCBraytonCycle2017a_P.Saturation_UpperSat_o = rtInf;
   NACCBraytonCycle2017a_P.Saturation_UpperSat_i = rtInf;
-  NACCBraytonCycle2017a_P.p_ratio1_UpperSat = rtInf;
-  NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds = rtMinusInf;
-  NACCBraytonCycle2017a_P.Saturation_UpperSat_a = rtInf;
-  NACCBraytonCycle2017a_P.Saturation_UpperSat_j = rtInf;
   NACCBraytonCycle2017a_P.Saturation1_LowerSat_l = rtMinusInf;
+  NACCBraytonCycle2017a_P.Saturation_UpperSat_g = rtInf;
+  NACCBraytonCycle2017a_P.Saturation_UpperSat_k = rtInf;
+  NACCBraytonCycle2017a_P.p_ratio1_UpperSat = rtInf;
   NACCBraytonCycle2017a_P.Saturation_UpperSat_f = rtInf;
+  NACCBraytonCycle2017a_P.Saturation1_LowerSat_ds = rtMinusInf;
   NACCBraytonCycle2017a_P.Saturation_UpperSat_l = rtInf;
-  NACCBraytonCycle2017a_P.calculateconversion_n.Saturation2_UpperSat = rtInf;
-  NACCBraytonCycle2017a_P.calculateconversion_n.Saturation2_UpperSat_l = rtInf;
+  NACCBraytonCycle2017a_P.calculateconversion_b.Saturation2_UpperSat = rtInf;
+  NACCBraytonCycle2017a_P.calculateconversion_b.Saturation2_UpperSat_m = rtInf;
   NACCBraytonCycle2017a_P.calculateconversion.Saturation2_UpperSat = rtInf;
-  NACCBraytonCycle2017a_P.calculateconversion.Saturation2_UpperSat_l = rtInf;
+  NACCBraytonCycle2017a_P.calculateconversion.Saturation2_UpperSat_m = rtInf;
 
   /* initialize real-time model */
   (void) memset((void *)NACCBraytonCycle2017a_M, 0,
@@ -6510,19 +6801,31 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     }
 
     for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_B.psi_k[i] = 0.0;
+    }
+
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_B.psi_n[i] = 0.0;
+    }
+
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_B.psi_b[i] = 0.0;
+    }
+
+    for (i = 0; i < 7; i++) {
       NACCBraytonCycle2017a_B.x[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.psi_e[i] = 0.0;
-    }
-
-    for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.x_h[i] = 0.0;
-    }
-
-    for (i = 0; i < 7; i++) {
       NACCBraytonCycle2017a_B.psi_o[i] = 0.0;
+    }
+
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_B.x_f[i] = 0.0;
+    }
+
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_B.psi_e[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
@@ -6602,7 +6905,7 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.x_f[i] = 0.0;
+      NACCBraytonCycle2017a_B.x_ff[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
@@ -6638,19 +6941,19 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.x_i[i] = 0.0;
+      NACCBraytonCycle2017a_B.x_ok[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.psi_p[i] = 0.0;
+      NACCBraytonCycle2017a_B.psi_mo[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.x_il[i] = 0.0;
+      NACCBraytonCycle2017a_B.x_dt[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.psi_j[i] = 0.0;
+      NACCBraytonCycle2017a_B.psi_le[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
@@ -6670,7 +6973,7 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     }
 
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_B.calculateconversion_n.Product6[i] = 0.0;
+      NACCBraytonCycle2017a_B.calculateconversion_b.Product6[i] = 0.0;
     }
 
     for (i = 0; i < 7; i++) {
@@ -6680,12 +6983,11 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.UnitOffset = 0.0;
     NACCBraytonCycle2017a_B.UnitOffset_h = 0.0;
     NACCBraytonCycle2017a_B.ndot = 0.0;
-    NACCBraytonCycle2017a_B.Product1 = 0.0;
-    NACCBraytonCycle2017a_B.p2 = 0.0;
-    NACCBraytonCycle2017a_B.Sum2 = 0.0;
+    NACCBraytonCycle2017a_B.ndot_e = 0.0;
+    NACCBraytonCycle2017a_B.ndot_ea = 0.0;
     NACCBraytonCycle2017a_B.Switch2 = 0.0;
     NACCBraytonCycle2017a_B.MultiportSwitch = 0.0;
-    NACCBraytonCycle2017a_B.ndot_k = 0.0;
+    NACCBraytonCycle2017a_B.ndot_i = 0.0;
     NACCBraytonCycle2017a_B.T = 0.0;
     NACCBraytonCycle2017a_B.p = 0.0;
     NACCBraytonCycle2017a_B.Hdot = 0.0;
@@ -6693,27 +6995,32 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.Gdot = 0.0;
     NACCBraytonCycle2017a_B.Cpdot = 0.0;
     NACCBraytonCycle2017a_B.Subtract2 = 0.0;
+    NACCBraytonCycle2017a_B.Product = 0.0;
+    NACCBraytonCycle2017a_B.Saturation = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_d = 0.0;
+    NACCBraytonCycle2017a_B.Product_a = 0.0;
+    NACCBraytonCycle2017a_B.Saturation_m = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_j = 0.0;
+    NACCBraytonCycle2017a_B.Product1 = 0.0;
+    NACCBraytonCycle2017a_B.p2 = 0.0;
+    NACCBraytonCycle2017a_B.Sum2 = 0.0;
+    NACCBraytonCycle2017a_B.Saturation_p = 0.0;
+    NACCBraytonCycle2017a_B.Sum7 = 0.0;
+    NACCBraytonCycle2017a_B.Switch2_g = 0.0;
+    NACCBraytonCycle2017a_B.MultiportSwitch_i = 0.0;
+    NACCBraytonCycle2017a_B.ndot_k = 0.0;
+    NACCBraytonCycle2017a_B.T_d = 0.0;
+    NACCBraytonCycle2017a_B.p_b = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_f = 0.0;
+    NACCBraytonCycle2017a_B.Sdot_c = 0.0;
+    NACCBraytonCycle2017a_B.Gdot_i = 0.0;
+    NACCBraytonCycle2017a_B.Cpdot_b = 0.0;
+    NACCBraytonCycle2017a_B.Subtract2_k = 0.0;
+    NACCBraytonCycle2017a_B.Saturation_l = 0.0;
+    NACCBraytonCycle2017a_B.Sum7_h = 0.0;
     NACCBraytonCycle2017a_B.UnitOffset_l = 0.0;
     NACCBraytonCycle2017a_B.UnitOffset_f = 0.0;
     NACCBraytonCycle2017a_B.ndot_ka = 0.0;
-    NACCBraytonCycle2017a_B.Product = 0.0;
-    NACCBraytonCycle2017a_B.Saturation = 0.0;
-    NACCBraytonCycle2017a_B.Product_a = 0.0;
-    NACCBraytonCycle2017a_B.Saturation_l = 0.0;
-    NACCBraytonCycle2017a_B.Switch2_n = 0.0;
-    NACCBraytonCycle2017a_B.MultiportSwitch_h = 0.0;
-    NACCBraytonCycle2017a_B.ndot_i = 0.0;
-    NACCBraytonCycle2017a_B.T_e = 0.0;
-    NACCBraytonCycle2017a_B.p_c = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_h = 0.0;
-    NACCBraytonCycle2017a_B.Sdot_e = 0.0;
-    NACCBraytonCycle2017a_B.Gdot_h = 0.0;
-    NACCBraytonCycle2017a_B.Cpdot_d = 0.0;
-    NACCBraytonCycle2017a_B.Subtract2_o = 0.0;
-    NACCBraytonCycle2017a_B.Saturation_p = 0.0;
-    NACCBraytonCycle2017a_B.Sum7 = 0.0;
-    NACCBraytonCycle2017a_B.Saturation_lg = 0.0;
-    NACCBraytonCycle2017a_B.Sum7_h = 0.0;
     NACCBraytonCycle2017a_B.T_c = 0.0;
     NACCBraytonCycle2017a_B.Hdot_c = 0.0;
     NACCBraytonCycle2017a_B.Sdot_k = 0.0;
@@ -6727,7 +7034,7 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.ndot_o = 0.0;
     NACCBraytonCycle2017a_B.Saturation_f = 0.0;
     NACCBraytonCycle2017a_B.T_g = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_h5 = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_h = 0.0;
     NACCBraytonCycle2017a_B.Sdot_l = 0.0;
     NACCBraytonCycle2017a_B.Gdot_n = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_i = 0.0;
@@ -6736,7 +7043,7 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.T_go = 0.0;
     NACCBraytonCycle2017a_B.p_p = 0.0;
     NACCBraytonCycle2017a_B.Hdot_cl = 0.0;
-    NACCBraytonCycle2017a_B.Sdot_ex = 0.0;
+    NACCBraytonCycle2017a_B.Sdot_e = 0.0;
     NACCBraytonCycle2017a_B.Gdot_k = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_l = 0.0;
     NACCBraytonCycle2017a_B.Qenv = 0.0;
@@ -6744,7 +7051,7 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.ndot_b = 0.0;
     NACCBraytonCycle2017a_B.T_n = 0.0;
     NACCBraytonCycle2017a_B.p_pc = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_d = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_d0 = 0.0;
     NACCBraytonCycle2017a_B.Sdot_k0 = 0.0;
     NACCBraytonCycle2017a_B.Gdot_km = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_e = 0.0;
@@ -6759,10 +7066,10 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.Qenv_p = 0.0;
     NACCBraytonCycle2017a_B.num_iterations_a = 0.0;
     NACCBraytonCycle2017a_B.ndot_ol = 0.0;
-    NACCBraytonCycle2017a_B.T_ed = 0.0;
+    NACCBraytonCycle2017a_B.T_e = 0.0;
     NACCBraytonCycle2017a_B.p_a5 = 0.0;
     NACCBraytonCycle2017a_B.Hdot_i = 0.0;
-    NACCBraytonCycle2017a_B.Sdot_c = 0.0;
+    NACCBraytonCycle2017a_B.Sdot_ce = 0.0;
     NACCBraytonCycle2017a_B.Gdot_m = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_p = 0.0;
     NACCBraytonCycle2017a_B.Qenv_k = 0.0;
@@ -6770,9 +7077,9 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.ndot_n = 0.0;
     NACCBraytonCycle2017a_B.T_m = 0.0;
     NACCBraytonCycle2017a_B.p_n = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_j = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_jo = 0.0;
     NACCBraytonCycle2017a_B.Sdot_kk = 0.0;
-    NACCBraytonCycle2017a_B.Gdot_hm = 0.0;
+    NACCBraytonCycle2017a_B.Gdot_h = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_c = 0.0;
     NACCBraytonCycle2017a_B.iter_n = 0.0;
     NACCBraytonCycle2017a_B.ndot_nq = 0.0;
@@ -6800,53 +7107,53 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     NACCBraytonCycle2017a_B.Gdot_fo = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_i4 = 0.0;
     NACCBraytonCycle2017a_B.ndot_f = 0.0;
-    NACCBraytonCycle2017a_B.T_d = 0.0;
+    NACCBraytonCycle2017a_B.T_do = 0.0;
     NACCBraytonCycle2017a_B.p_gc = 0.0;
     NACCBraytonCycle2017a_B.Hdot_e = 0.0;
     NACCBraytonCycle2017a_B.Sdot_a = 0.0;
     NACCBraytonCycle2017a_B.Gdot_c = 0.0;
-    NACCBraytonCycle2017a_B.Cpdot_b = 0.0;
+    NACCBraytonCycle2017a_B.Cpdot_br = 0.0;
     NACCBraytonCycle2017a_B.iter_j = 0.0;
     NACCBraytonCycle2017a_B.ndot_l = 0.0;
     NACCBraytonCycle2017a_B.T_j = 0.0;
-    NACCBraytonCycle2017a_B.p_b = 0.0;
+    NACCBraytonCycle2017a_B.p_bs = 0.0;
     NACCBraytonCycle2017a_B.Hdot_jv = 0.0;
     NACCBraytonCycle2017a_B.Sdot_p = 0.0;
     NACCBraytonCycle2017a_B.Gdot_l1 = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_h = 0.0;
     NACCBraytonCycle2017a_B.Qenv_b = 0.0;
     NACCBraytonCycle2017a_B.num_iterations_n = 0.0;
-    NACCBraytonCycle2017a_B.ndot_oo = 0.0;
-    NACCBraytonCycle2017a_B.T_mo = 0.0;
-    NACCBraytonCycle2017a_B.p_k = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_jo = 0.0;
-    NACCBraytonCycle2017a_B.Sdot_o = 0.0;
-    NACCBraytonCycle2017a_B.Gdot_g = 0.0;
-    NACCBraytonCycle2017a_B.Cpdot_az = 0.0;
-    NACCBraytonCycle2017a_B.Qenv_pj = 0.0;
-    NACCBraytonCycle2017a_B.num_iterations_fx = 0.0;
-    NACCBraytonCycle2017a_B.ndot_f2 = 0.0;
-    NACCBraytonCycle2017a_B.T_h3 = 0.0;
-    NACCBraytonCycle2017a_B.p_nt = 0.0;
-    NACCBraytonCycle2017a_B.Hdot_ig = 0.0;
-    NACCBraytonCycle2017a_B.Sdot_fv = 0.0;
-    NACCBraytonCycle2017a_B.Gdot_mk = 0.0;
-    NACCBraytonCycle2017a_B.Cpdot_eg = 0.0;
-    NACCBraytonCycle2017a_B.Qenv_f = 0.0;
-    NACCBraytonCycle2017a_B.num_iterations_h = 0.0;
+    NACCBraytonCycle2017a_B.ndot_d = 0.0;
+    NACCBraytonCycle2017a_B.T_po = 0.0;
+    NACCBraytonCycle2017a_B.p_c = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_k = 0.0;
+    NACCBraytonCycle2017a_B.Sdot_fc = 0.0;
+    NACCBraytonCycle2017a_B.Gdot_ny = 0.0;
+    NACCBraytonCycle2017a_B.Cpdot_o = 0.0;
+    NACCBraytonCycle2017a_B.Qenv_o = 0.0;
+    NACCBraytonCycle2017a_B.num_iterations_i = 0.0;
+    NACCBraytonCycle2017a_B.ndot_nu = 0.0;
+    NACCBraytonCycle2017a_B.T_mj = 0.0;
+    NACCBraytonCycle2017a_B.p_e = 0.0;
+    NACCBraytonCycle2017a_B.Hdot_f5 = 0.0;
+    NACCBraytonCycle2017a_B.Sdot_ki = 0.0;
+    NACCBraytonCycle2017a_B.Gdot_f0 = 0.0;
+    NACCBraytonCycle2017a_B.Cpdot_aw = 0.0;
+    NACCBraytonCycle2017a_B.Qenv_e = 0.0;
+    NACCBraytonCycle2017a_B.num_iterations_o = 0.0;
     NACCBraytonCycle2017a_B.ndot_lp = 0.0;
     NACCBraytonCycle2017a_B.T_gw = 0.0;
     NACCBraytonCycle2017a_B.p_d = 0.0;
     NACCBraytonCycle2017a_B.Hdot_a = 0.0;
     NACCBraytonCycle2017a_B.Sdot_c0 = 0.0;
-    NACCBraytonCycle2017a_B.Gdot_ny = 0.0;
+    NACCBraytonCycle2017a_B.Gdot_nyp = 0.0;
     NACCBraytonCycle2017a_B.Cpdot_f = 0.0;
     NACCBraytonCycle2017a_B.SFunction_o1_j = 0.0;
     NACCBraytonCycle2017a_B.SFunction_o2_f = 0.0;
     NACCBraytonCycle2017a_B.SFunction_o3_o = 0.0;
     NACCBraytonCycle2017a_B.ndot_nc = 0.0;
     NACCBraytonCycle2017a_B.p_pg = 0.0;
-    NACCBraytonCycle2017a_B.calculateconversion_n.Subtract5 = 0.0;
+    NACCBraytonCycle2017a_B.calculateconversion_b.Subtract5 = 0.0;
     NACCBraytonCycle2017a_B.calculateconversion.Subtract5 = 0.0;
   }
 
@@ -6857,11 +7164,6 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
   NACCBraytonCycle2017a_M->dwork = ((void *) &NACCBraytonCycle2017a_DW);
   (void) memset((void *)&NACCBraytonCycle2017a_DW, 0,
                 sizeof(DW_NACCBraytonCycle2017a_T));
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[0] = 0.0;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[1] = 0.0;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[2] = 0.0;
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput[3] = 0.0;
-  NACCBraytonCycle2017a_DW.Memory_PreviousInput = 0.0;
   NACCBraytonCycle2017a_DW.Memory9_PreviousInput = 0.0;
 
   {
@@ -6871,17 +7173,33 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
     }
   }
 
-  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b = 0.0;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput = 0.0;
   NACCBraytonCycle2017a_DW.Memory2_PreviousInput = 0.0;
   NACCBraytonCycle2017a_DW.Memory3_PreviousInput = 0.0;
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i = 0.0;
 
   {
     int32_T i;
     for (i = 0; i < 7; i++) {
-      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] = 0.0;
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b[i] = 0.0;
     }
   }
 
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o = 0.0;
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h = 0.0;
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv = 0.0;
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f[i] = 0.0;
+    }
+  }
+
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n = 0.0;
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e = 0.0;
   NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a = 0.0;
 
   {
@@ -6892,8 +7210,61 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
   }
 
   NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p = 0.0;
-  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow = 0.0;
   NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d = 0.0;
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b = 0.0;
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i[i] = 0.0;
+    }
+  }
+
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e = 0.0;
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m = 0.0;
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput[i] = 0.0;
+    }
+  }
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e[i] = 0.0;
+    }
+  }
+
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m = 0.0;
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a = 0.0;
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m[i] = 0.0;
+    }
+  }
+
+  NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d = 0.0;
+  NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d = 0.0;
+  NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k = 0.0;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[0] = 0.0;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[1] = 0.0;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[2] = 0.0;
+  NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l[3] = 0.0;
+  NACCBraytonCycle2017a_DW.Memory_PreviousInput = 0.0;
+
+  {
+    int32_T i;
+    for (i = 0; i < 7; i++) {
+      NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l[i] = 0.0;
+    }
+  }
 
   {
     int32_T i;
@@ -6911,8 +7282,8 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
   NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_h = 0.0;
   NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_mu = 0.0;
   NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p = 0.0;
-  NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l = 0.0;
-  NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j = 0.0;
+  NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c = 0.0;
+  NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1 = 0.0;
 
   /* external inputs */
   NACCBraytonCycle2017a_M->inputs = (((void*)&NACCBraytonCycle2017a_U));
@@ -6965,9 +7336,9 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
   NACCBraytonCycle2017a_M->Sizes.numU = (11);/* Number of model inputs */
   NACCBraytonCycle2017a_M->Sizes.sysDirFeedThru = (1);/* The model is direct feedthrough */
   NACCBraytonCycle2017a_M->Sizes.numSampTimes = (1);/* Number of sample times */
-  NACCBraytonCycle2017a_M->Sizes.numBlocks = (621);/* Number of blocks */
-  NACCBraytonCycle2017a_M->Sizes.numBlockIO = (238);/* Number of block outputs */
-  NACCBraytonCycle2017a_M->Sizes.numBlockPrms = (12738);/* Sum of parameter "widths" */
+  NACCBraytonCycle2017a_M->Sizes.numBlocks = (647);/* Number of blocks */
+  NACCBraytonCycle2017a_M->Sizes.numBlockIO = (245);/* Number of block outputs */
+  NACCBraytonCycle2017a_M->Sizes.numBlockPrms = (12800);/* Sum of parameter "widths" */
   return NACCBraytonCycle2017a_M;
 }
 
@@ -6979,9 +7350,9 @@ RT_MODEL_NACCBraytonCycle2017_T *NACCBraytonCycle2017a(void)
  * NI VeriStand Model Framework code generation
  *
  * Model : NACCBraytonCycle2017a
- * Model version : 1.138
+ * Model version : 1.151
  * VeriStand Model Framework version : 2017.0.1.0 (2017 f1)
- * Source generated on : Wed Mar 06 14:28:16 2019
+ * Source generated on : Wed Mar 06 17:30:56 2019
  *========================================================================*/
 
 /* This file contains automatically generated code for functions
@@ -10154,7 +10525,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 566,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function/P17",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_d), 0, 24, 2, 1132, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_g), 0, 24, 2, 1132, 0 },
 
   { 567,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function/P18",
@@ -10178,40 +10549,40 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 572,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P4",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P4_e[0]), 0, 49, 2, 1144, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P4_h[0]), 0, 49, 2, 1144, 0 },
 
   { 573,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P5",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P5_g[0]), 0, 49, 2, 1146, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P5_a[0]), 0, 49, 2, 1146, 0 },
 
   { 574,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P12",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P12_j[0]), 0, 28, 2, 1148, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P12_a[0]), 0, 28, 2, 1148, 0 },
 
   { 575,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P17",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_j), 0, 24, 2, 1150, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_g3), 0, 24, 2, 1150, 0 },
 
   { 576,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P18",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P18_o[0]), 0, 21, 2, 1152, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P18_p[0]), 0, 21, 2, 1152, 0 },
 
   { 577,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P19",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P19_b[0]), 0, 504, 2, 1154, 0
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P19_k[0]), 0, 504, 2, 1154, 0
   },
 
   { 578,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P20",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_e), 0, 1, 2, 1156, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_h), 0, 1, 2, 1156, 0 },
 
   { 579,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P28",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P28_d), 0, 1, 2, 1158, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P28_j), 0, 1, 2, 1158, 0 },
 
   { 580,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function/P33",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P33_p), 0, 1, 2, 1160, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P33_m), 0, 1, 2, 1160, 0 },
 
   { 581,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation1/UpperLimit",
@@ -10278,7 +10649,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 596,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P5",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P5_a[0]), 0, 49, 2, 1192, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P5_aq[0]), 0, 49, 2, 1192, 0 },
 
   { 597,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P12",
@@ -10286,7 +10657,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 598,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P17",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_dj), 0, 24, 2, 1196, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P17_d), 0, 24, 2, 1196, 0 },
 
   { 599,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P18",
@@ -10299,7 +10670,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 601,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P20",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_h), 0, 1, 2, 1202, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_h3), 0, 1, 2, 1202, 0 },
 
   { 602,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function/P25",
@@ -10471,8 +10842,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 642,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function/P12",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P12_jo[0]), 0, 28, 2, 1284, 0
-  },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P12_j[0]), 0, 28, 2, 1284, 0 },
 
   { 643,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function/P17",
@@ -10480,7 +10850,8 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 644,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function/P18",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P18_p[0]), 0, 21, 2, 1288, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P18_pk[0]), 0, 21, 2, 1288, 0
+  },
 
   { 645,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function/P19",
@@ -10503,7 +10874,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
     offsetof(P_NACCBraytonCycle2017a_T, Constant4_Value), 0, 1, 2, 1298, 0 },
 
   { 650, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function/P4",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P4_h[0]), 0, 49, 2, 1300, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P4_hl[0]), 0, 49, 2, 1300, 0 },
 
   { 651, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function/P5",
     offsetof(P_NACCBraytonCycle2017a_T, SFunction_P5_m[0]), 0, 49, 2, 1302, 0 },
@@ -10565,7 +10936,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 
   { 667,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function/P28",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P28_dr), 0, 1, 2, 1334, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P28_d), 0, 1, 2, 1334, 0 },
 
   { 668,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function/P33",
@@ -10691,7 +11062,7 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
   },
 
   { 698, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function/P20",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_ew), 0, 1, 2, 1396, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction_P20_e), 0, 1, 2, 1396, 0 },
 
   { 699, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function/P25",
     offsetof(P_NACCBraytonCycle2017a_T, SFunction_P25_p), 0, 1, 2, 1398, 0 },
@@ -10949,547 +11320,577 @@ static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
   { 772, "naccbraytoncycle2017a/Sensor1/addition factor1/Value", offsetof
     (P_NACCBraytonCycle2017a_T, additionfactor1_Value_f), 0, 1, 2, 1544, 0 },
 
-  { 773,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Memory1/X0",
-    offsetof(P_NACCBraytonCycle2017a_T, Memory1_X0), 0, 4, 2, 1546, 0 },
+  { 773, "naccbraytoncycle2017a/Sensor1/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_mh), 0, 1, 2, 1546, 0 },
 
-  { 774,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant4/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant4_Value_p), 0, 1, 2, 1548, 0 },
+  { 774, "naccbraytoncycle2017a/Sensor1/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_p), 0, 1, 2, 1548, 0 },
 
-  { 775,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Gain/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_f), 0, 1, 2, 1550, 0 },
+  { 775, "naccbraytoncycle2017a/Sensor/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_k), 0, 1, 2, 1550, 0 },
 
-  { 776,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/p_Relaxation/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, p_Relaxation_Gain), 0, 1, 2, 1552, 0 },
+  { 776, "naccbraytoncycle2017a/Initial Condition7/Memory1/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory1_X0), 0, 1, 2, 1552, 0 },
 
-  { 777,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_l), 0, 1, 2, 1554, 0 },
+  { 777, "naccbraytoncycle2017a/Sensor/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k), 0, 1, 2, 1554, 0 },
 
-  { 778,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_p), 0, 1, 2, 1556, 0
+  { 778, "naccbraytoncycle2017a/Sensor2/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_mr), 0, 1, 2, 1556, 0 },
+
+  { 779, "naccbraytoncycle2017a/Initial Condition7/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0), 0, 1, 2, 1558, 0 },
+
+  { 780, "naccbraytoncycle2017a/Sensor2/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_lj), 0, 1, 2, 1560, 0 },
+
+  { 781, "naccbraytoncycle2017a/Sensor3/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_d), 0, 1, 2, 1562, 0 },
+
+  { 782, "naccbraytoncycle2017a/Sensor3/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_m), 0, 1, 2, 1564, 0 },
+
+  { 783, "naccbraytoncycle2017a/Constant3/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant3_Value_d), 0, 1, 2, 1566, 0 },
+
+  { 784, "naccbraytoncycle2017a/Sensor5/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_h), 0, 1, 2, 1568, 0 },
+
+  { 785, "naccbraytoncycle2017a/Sensor5/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_g), 0, 1, 2, 1570, 0 },
+
+  { 786, "naccbraytoncycle2017a/Sensor5/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_g2), 0, 1, 2, 1572, 0 },
+
+  { 787, "naccbraytoncycle2017a/Sensor4/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_md), 0, 1, 2, 1574, 0 },
+
+  { 788, "naccbraytoncycle2017a/Initial Condition3/Memory1/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory1_X0_n), 0, 1, 2, 1576, 0 },
+
+  { 789, "naccbraytoncycle2017a/Sensor4/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_lr), 0, 1, 2, 1578, 0 },
+
+  { 790, "naccbraytoncycle2017a/Sensor6/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_c), 0, 1, 2, 1580, 0 },
+
+  { 791, "naccbraytoncycle2017a/Initial Condition3/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_d), 0, 1, 2, 1582, 0 },
+
+  { 792, "naccbraytoncycle2017a/Sensor6/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_mv), 0, 1, 2, 1584, 0 },
+
+  { 793, "naccbraytoncycle2017a/Sensor7/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_b), 0, 1, 2, 1586, 0 },
+
+  { 794, "naccbraytoncycle2017a/Sensor7/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_e), 0, 1, 2, 1588, 0 },
+
+  { 795, "naccbraytoncycle2017a/Constant5/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant5_Value), 0, 1, 2, 1590, 0 },
+
+  { 796, "naccbraytoncycle2017a/Sensor9/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_kh), 0, 1, 2, 1592, 0 },
+
+  { 797, "naccbraytoncycle2017a/Sensor9/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_o), 0, 1, 2, 1594, 0 },
+
+  { 798, "naccbraytoncycle2017a/Sensor9/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_n0), 0, 1, 2, 1596, 0 },
+
+  { 799, "naccbraytoncycle2017a/Sensor8/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_ok), 0, 1, 2, 1598, 0 },
+
+  { 800, "naccbraytoncycle2017a/Initial Condition6/Memory1/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory1_X0_i), 0, 1, 2, 1600, 0 },
+
+  { 801, "naccbraytoncycle2017a/Sensor8/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_o), 0, 1, 2, 1602, 0 },
+
+  { 802, "naccbraytoncycle2017a/Sensor10/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_f1), 0, 1, 2, 1604, 0 },
+
+  { 803, "naccbraytoncycle2017a/Initial Condition6/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_j), 0, 1, 2, 1606, 0 },
+
+  { 804, "naccbraytoncycle2017a/Sensor10/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_i), 0, 1, 2, 1608, 0 },
+
+  { 805, "naccbraytoncycle2017a/Sensor11/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_kx), 0, 1, 2, 1610, 0 },
+
+  { 806, "naccbraytoncycle2017a/Sensor11/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k3), 0, 1, 2, 1612, 0 },
+
+  { 807, "naccbraytoncycle2017a/Constant6/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant6_Value_l), 0, 1, 2, 1614, 0 },
+
+  { 808, "naccbraytoncycle2017a/Sensor15/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_b5), 0, 1, 2, 1616, 0 },
+
+  { 809, "naccbraytoncycle2017a/Sensor15/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_as), 0, 1, 2, 1618, 0 },
+
+  { 810, "naccbraytoncycle2017a/Sensor15/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k0), 0, 1, 2, 1620, 0 },
+
+  { 811, "naccbraytoncycle2017a/Sensor14/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_d1), 0, 1, 2, 1622, 0 },
+
+  { 812, "naccbraytoncycle2017a/Initial Condition2/Memory1/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory1_X0_o), 0, 1, 2, 1624, 0 },
+
+  { 813, "naccbraytoncycle2017a/Sensor14/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_ea), 0, 1, 2, 1626, 0 },
+
+  { 814, "naccbraytoncycle2017a/Sensor12/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_g), 0, 1, 2, 1628, 0 },
+
+  { 815, "naccbraytoncycle2017a/Initial Condition2/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_p), 0, 1, 2, 1630, 0 },
+
+  { 816, "naccbraytoncycle2017a/Sensor12/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_b), 0, 1, 2, 1632, 0 },
+
+  { 817, "naccbraytoncycle2017a/Sensor13/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_l), 0, 1, 2, 1634, 0 },
+
+  { 818, "naccbraytoncycle2017a/Sensor13/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_fe), 0, 1, 2, 1636, 0 },
+
+  { 819, "naccbraytoncycle2017a/Constant7/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant7_Value), 0, 1, 2, 1638, 0 },
+
+  { 820, "naccbraytoncycle2017a/Sensor19/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_fu), 0, 1, 2, 1640, 0 },
+
+  { 821, "naccbraytoncycle2017a/Sensor19/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_e), 0, 1, 2, 1642, 0 },
+
+  { 822, "naccbraytoncycle2017a/Sensor19/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_nb), 0, 1, 2, 1644, 0 },
+
+  { 823, "naccbraytoncycle2017a/Sensor18/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_e), 0, 1, 2, 1646, 0 },
+
+  { 824, "naccbraytoncycle2017a/Initial Condition1/Memory1/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory1_X0_l), 0, 1, 2, 1648, 0 },
+
+  { 825, "naccbraytoncycle2017a/Sensor18/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_ck), 0, 1, 2, 1650, 0 },
+
+  { 826, "naccbraytoncycle2017a/Sensor16/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_hp), 0, 1, 2, 1652, 0 },
+
+  { 827, "naccbraytoncycle2017a/Initial Condition1/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_l), 0, 1, 2, 1654, 0 },
+
+  { 828, "naccbraytoncycle2017a/Sensor16/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_is), 0, 1, 2, 1656, 0 },
+
+  { 829, "naccbraytoncycle2017a/Sensor17/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_dv), 0, 1, 2, 1658, 0 },
+
+  { 830, "naccbraytoncycle2017a/Sensor17/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_j), 0, 1, 2, 1660, 0 },
+
+  { 831, "naccbraytoncycle2017a/Constant8/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant8_Value), 0, 1, 2, 1662, 0 },
+
+  { 832, "naccbraytoncycle2017a/Sensor27/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_hc), 0, 1, 2, 1664, 0 },
+
+  { 833, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-normal/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Tnormal_Value), 0, 1, 2, 1666, 0 },
+
+  { 834, "naccbraytoncycle2017a/LP Gas Turbine/RPM/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, RPM_Value), 0, 1, 2, 1668, 0 },
+
+  { 835, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/LUTs/Constant/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_j), 0, 1, 2, 1670, 0 },
+
+  { 836, "naccbraytoncycle2017a/Constant11/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant11_Value), 0, 1, 2, 1672, 0 },
+
+  { 837, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_l), 0, 1, 2, 1674, 0 },
+
+  { 838, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain1_Gain_d), 0, 1, 2, 1676, 0 },
+
+  { 839, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain2_Gain_oa), 0, 1, 2, 1678, 0 },
+
+  { 840, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain3_Gain_p), 0, 1, 2, 1680, 0 },
+
+  { 841, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain4_Gain_l), 0, 1, 2, 1682, 0 },
+
+  { 842,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P1_h[0]), 0, 49, 2, 1684, 0 },
+
+  { 843,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P2_m[0]), 0, 49, 2, 1686, 0 },
+
+  { 844,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P12_m), 0, 24, 2, 1688, 0 },
+
+  { 845,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P13_br[0]), 0, 21, 2, 1690, 0
   },
 
-  { 779,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_k), 0, 1, 2, 1558, 0
+  { 846,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P14_g[0]), 0, 504, 2, 1692, 0
   },
 
-  { 780,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Memory/X0",
-    offsetof(P_NACCBraytonCycle2017a_T, Memory_X0), 0, 1, 2, 1560, 0 },
+  { 847,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P15_k), 0, 1, 2, 1694, 0 },
 
-  { 781,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-normal/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Tnormal_Value), 0, 1, 2, 1562, 0 },
+  { 848,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P21_j), 0, 1, 2, 1696, 0 },
 
-  { 782,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant1/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant1_Value_d2), 0, 1, 2, 1564, 0 },
+  { 849, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_fh), 0, 1, 2, 1698, 0 },
 
-  { 783,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant3/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant3_Value_b), 0, 1, 2, 1566, 0 },
-
-  { 784,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-normal/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, pnormal_Value_l), 0, 1, 2, 1568, 0 },
-
-  { 785,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Divide2/Compare To Zero/Constant/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_k), 0, 1, 2, 1570, 0 },
-
-  { 786,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Refrence R [J//g//K]/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, RefrenceRJgK_Value), 0, 1, 2, 1572, 0 },
-
-  { 787,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, p_ratio1_UpperSat), 0, 1, 2, 1574, 0 },
-
-  { 788,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, p_ratio1_LowerSat), 0, 1, 2, 1576, 0 },
-
-  { 789, "naccbraytoncycle2017a/Sensor1/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_mh), 0, 1, 2, 1578, 0 },
-
-  { 790, "naccbraytoncycle2017a/Sensor1/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_p), 0, 1, 2, 1580, 0 },
-
-  { 791, "naccbraytoncycle2017a/Sensor/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_k), 0, 1, 2, 1582, 0 },
-
-  { 792, "naccbraytoncycle2017a/Sensor/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k), 0, 1, 2, 1584, 0 },
-
-  { 793, "naccbraytoncycle2017a/Sensor2/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_mr), 0, 1, 2, 1586, 0 },
-
-  { 794, "naccbraytoncycle2017a/Sensor2/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_lj), 0, 1, 2, 1588, 0 },
-
-  { 795, "naccbraytoncycle2017a/Sensor3/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_d), 0, 1, 2, 1590, 0 },
-
-  { 796, "naccbraytoncycle2017a/Sensor3/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_m), 0, 1, 2, 1592, 0 },
-
-  { 797, "naccbraytoncycle2017a/Constant3/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant3_Value_d), 0, 1, 2, 1594, 0 },
-
-  { 798, "naccbraytoncycle2017a/Sensor5/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_h), 0, 1, 2, 1596, 0 },
-
-  { 799, "naccbraytoncycle2017a/Sensor5/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_g), 0, 1, 2, 1598, 0 },
-
-  { 800, "naccbraytoncycle2017a/Sensor5/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_g2), 0, 1, 2, 1600, 0 },
-
-  { 801, "naccbraytoncycle2017a/Sensor4/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_md), 0, 1, 2, 1602, 0 },
-
-  { 802, "naccbraytoncycle2017a/Initial Condition3/Memory1/X0", offsetof
-    (P_NACCBraytonCycle2017a_T, Memory1_X0_n), 0, 1, 2, 1604, 0 },
-
-  { 803, "naccbraytoncycle2017a/Sensor4/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_lr), 0, 1, 2, 1606, 0 },
-
-  { 804, "naccbraytoncycle2017a/Sensor6/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_c), 0, 1, 2, 1608, 0 },
-
-  { 805, "naccbraytoncycle2017a/Initial Condition3/Memory2/X0", offsetof
-    (P_NACCBraytonCycle2017a_T, Memory2_X0), 0, 1, 2, 1610, 0 },
-
-  { 806, "naccbraytoncycle2017a/Sensor6/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_mv), 0, 1, 2, 1612, 0 },
-
-  { 807, "naccbraytoncycle2017a/Sensor7/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_b), 0, 1, 2, 1614, 0 },
-
-  { 808, "naccbraytoncycle2017a/Sensor7/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_e), 0, 1, 2, 1616, 0 },
-
-  { 809, "naccbraytoncycle2017a/Constant5/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant5_Value), 0, 1, 2, 1618, 0 },
-
-  { 810, "naccbraytoncycle2017a/Sensor9/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_kh), 0, 1, 2, 1620, 0 },
-
-  { 811, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-normal/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Tnormal_Value_j), 0, 1, 2, 1622, 0 },
-
-  { 812, "naccbraytoncycle2017a/HP Gas Turbine/RPM/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, RPM_Value), 0, 1, 2, 1624, 0 },
-
-  { 813, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/LUTs/Constant/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_d), 0, 1, 2, 1626, 0 },
-
-  { 814, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_c), 0, 1, 2, 1628, 0 },
-
-  { 815, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain1_Gain_o), 0, 1, 2, 1630, 0 },
-
-  { 816, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain2_Gain_n), 0, 1, 2, 1632, 0 },
-
-  { 817, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain3_Gain_e), 0, 1, 2, 1634, 0 },
-
-  { 818, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain4_Gain_g), 0, 1, 2, 1636, 0 },
-
-  { 819,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P1_o[0]), 0, 49, 2, 1638, 0 },
-
-  { 820,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P2_h[0]), 0, 49, 2, 1640, 0 },
-
-  { 821,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P12_m), 0, 24, 2, 1642, 0 },
-
-  { 822,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P13_h[0]), 0, 21, 2, 1644, 0
-  },
-
-  { 823,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P14_n[0]), 0, 504, 2, 1646, 0
-  },
-
-  { 824,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P15_j), 0, 1, 2, 1648, 0 },
-
-  { 825,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P21_m), 0, 1, 2, 1650, 0 },
-
-  { 826, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_h), 0, 1, 2, 1652, 0 },
-
-  { 827, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_UpperSat_d), 0, 1, 2, 1654,
+  { 850, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_UpperSat_a), 0, 1, 2, 1700,
     0 },
 
-  { 828, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_LowerSat_ds), 0, 1, 2, 1656,
+  { 851, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_LowerSat_l), 0, 1, 2, 1702,
     0 },
 
-  { 829, "naccbraytoncycle2017a/Sensor9/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_o), 0, 1, 2, 1658, 0 },
+  { 852, "naccbraytoncycle2017a/Sensor27/Gain2/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain2_Gain_h), 0, 1, 2, 1704, 0 },
 
-  { 830, "naccbraytoncycle2017a/Sensor9/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_n0), 0, 1, 2, 1660, 0 },
+  { 853, "naccbraytoncycle2017a/Sensor27/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_gr), 0, 1, 2, 1706, 0 },
 
-  { 831, "naccbraytoncycle2017a/Sensor8/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_ok), 0, 1, 2, 1662, 0 },
+  { 854, "naccbraytoncycle2017a/Sensor26/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_cl), 0, 1, 2, 1708, 0 },
 
-  { 832, "naccbraytoncycle2017a/Sensor8/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_oq), 0, 1, 2, 1664, 0 },
+  { 855, "naccbraytoncycle2017a/Sensor26/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_kz), 0, 1, 2, 1710, 0 },
 
-  { 833, "naccbraytoncycle2017a/Sensor10/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_f1), 0, 1, 2, 1666, 0 },
+  { 856, "naccbraytoncycle2017a/Sensor24/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_el), 0, 1, 2, 1712, 0 },
 
-  { 834, "naccbraytoncycle2017a/Sensor10/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_i), 0, 1, 2, 1668, 0 },
+  { 857, "naccbraytoncycle2017a/Sensor24/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_dv), 0, 1, 2, 1714, 0 },
 
-  { 835, "naccbraytoncycle2017a/Sensor11/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_kx), 0, 1, 2, 1670, 0 },
+  { 858, "naccbraytoncycle2017a/Sensor25/addition factor1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_gl), 0, 1, 2, 1716, 0 },
 
-  { 836, "naccbraytoncycle2017a/Sensor11/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k3), 0, 1, 2, 1672, 0 },
+  { 859, "naccbraytoncycle2017a/Sensor25/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_py), 0, 1, 2, 1718, 0 },
 
-  { 837, "naccbraytoncycle2017a/Constant6/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant6_Value_l), 0, 1, 2, 1674, 0 },
+  { 860, "naccbraytoncycle2017a/Constant9/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant9_Value), 0, 1, 2, 1720, 0 },
 
-  { 838, "naccbraytoncycle2017a/Sensor15/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_b5), 0, 1, 2, 1676, 0 },
+  { 861, "naccbraytoncycle2017a/Constant1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant1_Value_em), 0, 1, 2, 1722, 0 },
 
-  { 839, "naccbraytoncycle2017a/Sensor15/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_as), 0, 1, 2, 1678, 0 },
+  { 862, "naccbraytoncycle2017a/Initial Condition5/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_c), 0, 1, 2, 1724, 0 },
 
-  { 840, "naccbraytoncycle2017a/Sensor15/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_k0), 0, 1, 2, 1680, 0 },
-
-  { 841, "naccbraytoncycle2017a/Sensor14/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_d1), 0, 1, 2, 1682, 0 },
-
-  { 842, "naccbraytoncycle2017a/Initial Condition2/Memory1/X0", offsetof
-    (P_NACCBraytonCycle2017a_T, Memory1_X0_o), 0, 1, 2, 1684, 0 },
-
-  { 843, "naccbraytoncycle2017a/Sensor14/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_ea), 0, 1, 2, 1686, 0 },
-
-  { 844, "naccbraytoncycle2017a/Sensor12/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_g), 0, 1, 2, 1688, 0 },
-
-  { 845, "naccbraytoncycle2017a/Initial Condition2/Memory2/X0", offsetof
-    (P_NACCBraytonCycle2017a_T, Memory2_X0_p), 0, 1, 2, 1690, 0 },
-
-  { 846, "naccbraytoncycle2017a/Sensor12/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_b), 0, 1, 2, 1692, 0 },
-
-  { 847, "naccbraytoncycle2017a/Sensor13/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_l), 0, 1, 2, 1694, 0 },
-
-  { 848, "naccbraytoncycle2017a/Sensor13/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_fe), 0, 1, 2, 1696, 0 },
-
-  { 849, "naccbraytoncycle2017a/Constant7/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant7_Value), 0, 1, 2, 1698, 0 },
-
-  { 850, "naccbraytoncycle2017a/Sensor19/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_fu), 0, 1, 2, 1700, 0 },
-
-  { 851, "naccbraytoncycle2017a/Natural Gas/Constant1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant1_Value_k), 0, 1, 2, 1702, 0 },
-
-  { 852, "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitScale/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_e), 0, 1, 2, 1704, 0 },
-
-  { 853, "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitOffset/Bias",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_f), 0, 1, 2, 1706, 0 },
-
-  { 854, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitScale/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_g), 0, 1, 2, 1708, 0 },
-
-  { 855, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset/Bias",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_h), 0, 1, 2, 1710, 0 },
-
-  { 856, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitScale/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_n), 0, 1, 2, 1712, 0 },
-
-  { 857, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset/Bias",
-    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_mp), 0, 1, 2, 1714, 0 },
-
-  { 858, "naccbraytoncycle2017a/Constant1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant1_Value_f), 0, 1, 2, 1716, 0 },
-
-  { 859,
+  { 863,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Gain/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_m), 0, 1, 2, 1718, 0 },
-
-  { 860,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/p_downstrem_min/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_b), 0, 1, 2, 1720,
-    0 },
-
-  { 861,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_a), 0, 1, 2, 1722, 0
-  },
-
-  { 862,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_l), 0, 1, 2, 1724, 0
-  },
-
-  { 863, "naccbraytoncycle2017a/Constant4/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant4_Value_e), 0, 1, 2, 1726, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_lp), 0, 1, 2, 1726, 0 },
 
   { 864,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Gain/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_g), 0, 1, 2, 1728, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/p_downstrem_min/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_h), 0, 1, 2, 1728,
+    0 },
 
   { 865,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/p_downstrem_min/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_p), 0, 1, 2, 1730,
-    0 },
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_g), 0, 1, 2, 1730, 0
+  },
 
   { 866,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_j), 0, 1, 2, 1732, 0
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_d), 0, 1, 2, 1732, 0
   },
 
-  { 867,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_kc), 0, 1, 2, 1734,
+  { 867, "naccbraytoncycle2017a/Constant4/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant4_Value_b), 0, 1, 2, 1734, 0 },
+
+  { 868, "naccbraytoncycle2017a/Initial Condition4/Memory2/X0", offsetof
+    (P_NACCBraytonCycle2017a_T, Memory2_X0_c5), 0, 1, 2, 1736, 0 },
+
+  { 869,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Gain/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_m), 0, 1, 2, 1738, 0 },
+
+  { 870,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/p_downstrem_min/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_b), 0, 1, 2, 1740,
     0 },
 
-  { 868, "naccbraytoncycle2017a/Sensor19/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_e), 0, 1, 2, 1736, 0 },
+  { 871,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_k), 0, 1, 2, 1742, 0
+  },
 
-  { 869, "naccbraytoncycle2017a/Sensor19/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_nb), 0, 1, 2, 1738, 0 },
+  { 872,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_c), 0, 1, 2, 1744, 0
+  },
 
-  { 870, "naccbraytoncycle2017a/Sensor18/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_e), 0, 1, 2, 1740, 0 },
+  { 873,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Memory1/X0",
+    offsetof(P_NACCBraytonCycle2017a_T, Memory1_X0_a), 0, 4, 2, 1746, 0 },
 
-  { 871, "naccbraytoncycle2017a/Sensor18/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_ck), 0, 1, 2, 1742, 0 },
+  { 874,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant4/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant4_Value_p), 0, 1, 2, 1748, 0 },
 
-  { 872, "naccbraytoncycle2017a/Sensor16/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_hp), 0, 1, 2, 1744, 0 },
+  { 875,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Gain/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_f), 0, 1, 2, 1750, 0 },
 
-  { 873, "naccbraytoncycle2017a/Sensor16/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_is), 0, 1, 2, 1746, 0 },
+  { 876,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/p_Relaxation/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, p_Relaxation_Gain), 0, 1, 2, 1752, 0 },
 
-  { 874, "naccbraytoncycle2017a/Sensor17/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_dv), 0, 1, 2, 1748, 0 },
+  { 877,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_l), 0, 1, 2, 1754, 0 },
 
-  { 875, "naccbraytoncycle2017a/Sensor17/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_j), 0, 1, 2, 1750, 0 },
+  { 878,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_p), 0, 1, 2, 1756, 0
+  },
 
-  { 876, "naccbraytoncycle2017a/Constant8/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant8_Value), 0, 1, 2, 1752, 0 },
+  { 879,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_k), 0, 1, 2, 1758, 0
+  },
 
-  { 877, "naccbraytoncycle2017a/Sensor27/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_hc), 0, 1, 2, 1754, 0 },
+  { 880,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Memory/X0",
+    offsetof(P_NACCBraytonCycle2017a_T, Memory_X0), 0, 1, 2, 1760, 0 },
 
-  { 878, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-normal/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Tnormal_Value_n), 0, 1, 2, 1756, 0 },
+  { 881,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Divide2/Compare To Zero/Constant/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_k), 0, 1, 2, 1762, 0 },
 
-  { 879, "naccbraytoncycle2017a/LP Gas Turbine/RPM/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, RPM_Value_f), 0, 1, 2, 1758, 0 },
+  { 882,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-normal/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Tnormal_Value_o), 0, 1, 2, 1764, 0 },
 
-  { 880, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/LUTs/Constant/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_j), 0, 1, 2, 1760, 0 },
+  { 883,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant1/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant1_Value_d2), 0, 1, 2, 1766, 0 },
 
-  { 881, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_l), 0, 1, 2, 1762, 0 },
+  { 884,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant3/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant3_Value_b), 0, 1, 2, 1768, 0 },
 
-  { 882, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain1_Gain_d), 0, 1, 2, 1764, 0 },
-
-  { 883, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain2_Gain_oa), 0, 1, 2, 1766, 0 },
-
-  { 884, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain3_Gain_p), 0, 1, 2, 1768, 0 },
-
-  { 885, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, Gain4_Gain_l), 0, 1, 2, 1770, 0 },
+  { 885,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-normal/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, pnormal_Value_l), 0, 1, 2, 1770, 0 },
 
   { 886,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P1_h[0]), 0, 49, 2, 1772, 0 },
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Refrence R [J//g//K]/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, RefrenceRJgK_Value), 0, 1, 2, 1772, 0 },
 
   { 887,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P2_m[0]), 0, 49, 2, 1774, 0 },
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, p_ratio1_UpperSat), 0, 1, 2, 1774, 0 },
 
   { 888,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P12_mf), 0, 24, 2, 1776, 0 },
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, p_ratio1_LowerSat), 0, 1, 2, 1776, 0 },
 
-  { 889,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P13_br[0]), 0, 21, 2, 1778, 0
-  },
+  { 889, "naccbraytoncycle2017a/Compressor Pressure Feedback/PFin/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, PFin_Value), 0, 1, 2, 1778, 0 },
 
-  { 890,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P14_g[0]), 0, 504, 2, 1780, 0
-  },
+  { 890, "naccbraytoncycle2017a/Constant10/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant10_Value), 0, 1, 2, 1780, 0 },
 
-  { 891,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P15_k), 0, 1, 2, 1782, 0 },
+  { 891, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Gain/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain_Gain_d), 0, 1, 2, 1782, 0 },
 
-  { 892,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21",
-    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P21_j), 0, 1, 2, 1784, 0 },
-
-  { 893, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_fh), 0, 1, 2, 1786, 0 },
-
-  { 894, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_UpperSat_a), 0, 1, 2, 1788,
+  { 892, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/p_downstrem_min/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_e), 0, 1, 2, 1784,
     0 },
 
-  { 895, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_LowerSat_l), 0, 1, 2, 1790,
+  { 893, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_f), 0, 1, 2, 1786, 0
+  },
+
+  { 894, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_p), 0, 1, 2, 1788, 0
+  },
+
+  { 895, "naccbraytoncycle2017a/HP Gas Turbine/RPM/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, RPM_Value_n), 0, 1, 2, 1790, 0 },
+
+  { 896, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-normal/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Tnormal_Value_j), 0, 1, 2, 1792, 0 },
+
+  { 897, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/LUTs/Constant/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, Constant_Value_d), 0, 1, 2, 1794, 0 },
+
+  { 898, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Gain1/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain1_Gain_h), 0, 1, 2, 1796, 0 },
+
+  { 899, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain_Gain_c), 0, 1, 2, 1798, 0 },
+
+  { 900, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain1_Gain_oi), 0, 1, 2, 1800, 0 },
+
+  { 901, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain2_Gain_n), 0, 1, 2, 1802, 0 },
+
+  { 902, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain3_Gain_e), 0, 1, 2, 1804, 0 },
+
+  { 903, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, Gain4_Gain_g), 0, 1, 2, 1806, 0 },
+
+  { 904,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P1_o[0]), 0, 49, 2, 1808, 0 },
+
+  { 905,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P2_h[0]), 0, 49, 2, 1810, 0 },
+
+  { 906,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P12_mj), 0, 24, 2, 1812, 0 },
+
+  { 907,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P13_h[0]), 0, 21, 2, 1814, 0
+  },
+
+  { 908,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P14_n[0]), 0, 504, 2, 1816, 0
+  },
+
+  { 909,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P15_j), 0, 1, 2, 1818, 0 },
+
+  { 910,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21",
+    offsetof(P_NACCBraytonCycle2017a_T, SFunction1_P21_m), 0, 1, 2, 1820, 0 },
+
+  { 911, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_UpperSat_d), 0, 1, 2, 1822,
     0 },
 
-  { 896, "naccbraytoncycle2017a/Sensor27/Gain2/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain2_Gain_h), 0, 1, 2, 1792, 0 },
-
-  { 897, "naccbraytoncycle2017a/Sensor27/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_gr), 0, 1, 2, 1794, 0 },
-
-  { 898, "naccbraytoncycle2017a/Sensor26/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_cl), 0, 1, 2, 1796, 0 },
-
-  { 899, "naccbraytoncycle2017a/Sensor26/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_kz), 0, 1, 2, 1798, 0 },
-
-  { 900, "naccbraytoncycle2017a/Sensor24/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_el), 0, 1, 2, 1800, 0 },
-
-  { 901, "naccbraytoncycle2017a/Sensor24/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_dv), 0, 1, 2, 1802, 0 },
-
-  { 902, "naccbraytoncycle2017a/Sensor25/addition factor1/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, additionfactor1_Value_gl), 0, 1, 2, 1804, 0 },
-
-  { 903, "naccbraytoncycle2017a/Sensor25/Gain1/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain1_Gain_py), 0, 1, 2, 1806, 0 },
-
-  { 904, "naccbraytoncycle2017a/Constant9/Value", offsetof
-    (P_NACCBraytonCycle2017a_T, Constant9_Value), 0, 1, 2, 1808, 0 },
-
-  { 905, "naccbraytoncycle2017a/Compressor Pressure Feedback/PFin/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, PFin_Value), 0, 1, 2, 1810, 0 },
-
-  { 906, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Gain/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain_Gain_d), 0, 1, 2, 1812, 0 },
-
-  { 907, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/p_downstrem_min/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_e), 0, 1, 2, 1814,
+  { 912, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation1_LowerSat_ds), 0, 1, 2, 1824,
     0 },
 
-  { 908, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_f), 0, 1, 2, 1816, 0
-  },
+  { 913, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Gain/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, Gain_Gain_cj), 0, 1, 2, 1826, 0 },
 
-  { 909, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_p), 0, 1, 2, 1818, 0
-  },
-
-  { 910, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Gain/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, Gain_Gain_cj), 0, 1, 2, 1820, 0 },
-
-  { 911, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/p_downstrem_min/Value",
-    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_n), 0, 1, 2, 1822,
+  { 914, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/p_downstrem_min/Value",
+    offsetof(P_NACCBraytonCycle2017a_T, p_downstrem_min_Value_n), 0, 1, 2, 1828,
     0 },
 
-  { 912, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/UpperLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_l), 0, 1, 2, 1824, 0
+  { 915, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/UpperLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_UpperSat_l), 0, 1, 2, 1830, 0
   },
 
-  { 913, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/LowerLimit",
-    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_a), 0, 1, 2, 1826, 0
+  { 916, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/LowerLimit",
+    offsetof(P_NACCBraytonCycle2017a_T, Saturation_LowerSat_a), 0, 1, 2, 1832, 0
   },
 
-  { 914, "naccbraytoncycle2017a/Natural Gas/MassFlow/Gain/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, MassFlow_m.Gain_Gain), 0, 1, 2, 1828, 0 },
+  { 917, "naccbraytoncycle2017a/Natural Gas/Constant1/Value", offsetof
+    (P_NACCBraytonCycle2017a_T, Constant1_Value_k), 0, 1, 2, 1834, 0 },
 
-  { 915,
+  { 918, "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitScale/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_e), 0, 1, 2, 1836, 0 },
+
+  { 919, "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitOffset/Bias",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_f), 0, 1, 2, 1838, 0 },
+
+  { 920, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitScale/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_g), 0, 1, 2, 1840, 0 },
+
+  { 921, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset/Bias",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_h), 0, 1, 2, 1842, 0 },
+
+  { 922, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitScale/Gain",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitScale_Gain_n), 0, 1, 2, 1844, 0 },
+
+  { 923, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset/Bias",
+    offsetof(P_NACCBraytonCycle2017a_T, UnitOffset_Bias_mp), 0, 1, 2, 1846, 0 },
+
+  { 924, "naccbraytoncycle2017a/Natural Gas/MassFlow/Gain/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, MassFlow_m.Gain_Gain), 0, 1, 2, 1848, 0 },
+
+  { 925,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Gain1/Gain",
-    offsetof(P_NACCBraytonCycle2017a_T, calculateconversion_n.Gain1_Gain), 0, 1,
-    2, 1830, 0 },
+    offsetof(P_NACCBraytonCycle2017a_T, calculateconversion_b.Gain1_Gain), 0, 1,
+    2, 1850, 0 },
 
-  { 916,
+  { 926,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/UpperLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion_n.Saturation2_UpperSat), 0, 1, 2, 1832, 0 },
+             calculateconversion_b.Saturation2_UpperSat), 0, 1, 2, 1852, 0 },
 
-  { 917,
+  { 927,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/LowerLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion_n.Saturation2_LowerSat), 0, 1, 2, 1834, 0 },
+             calculateconversion_b.Saturation2_LowerSat), 0, 1, 2, 1854, 0 },
 
-  { 918,
+  { 928,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion_n.Saturation2_UpperSat_l), 0, 1, 2, 1836, 0 },
+             calculateconversion_b.Saturation2_UpperSat_m), 0, 1, 2, 1856, 0 },
 
-  { 919,
+  { 929,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion_n.Saturation2_LowerSat_h), 0, 1, 2, 1838, 0 },
+             calculateconversion_b.Saturation2_LowerSat_p), 0, 1, 2, 1858, 0 },
 
-  { 920,
+  { 930,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Gain1/Gain",
     offsetof(P_NACCBraytonCycle2017a_T, calculateconversion.Gain1_Gain), 0, 1, 2,
-    1840, 0 },
+    1860, 0 },
 
-  { 921,
+  { 931,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/UpperLimit",
     offsetof(P_NACCBraytonCycle2017a_T, calculateconversion.Saturation2_UpperSat),
-    0, 1, 2, 1842, 0 },
+    0, 1, 2, 1862, 0 },
 
-  { 922,
+  { 932,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/LowerLimit",
     offsetof(P_NACCBraytonCycle2017a_T, calculateconversion.Saturation2_LowerSat),
-    0, 1, 2, 1844, 0 },
+    0, 1, 2, 1864, 0 },
 
-  { 923,
+  { 933,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion.Saturation2_UpperSat_l), 0, 1, 2, 1846, 0 },
+             calculateconversion.Saturation2_UpperSat_m), 0, 1, 2, 1866, 0 },
 
-  { 924,
+  { 934,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit",
     offsetof(P_NACCBraytonCycle2017a_T,
-             calculateconversion.Saturation2_LowerSat_h), 0, 1, 2, 1848, 0 },
+             calculateconversion.Saturation2_LowerSat_p), 0, 1, 2, 1868, 0 },
 
-  { 925, "naccbraytoncycle2017a/Ambient air/MassFlow/Gain/Gain", offsetof
-    (P_NACCBraytonCycle2017a_T, MassFlow.Gain_Gain), 0, 1, 2, 1850, 0 },
+  { 935, "naccbraytoncycle2017a/Ambient air/MassFlow/Gain/Gain", offsetof
+    (P_NACCBraytonCycle2017a_T, MassFlow.Gain_Gain), 0, 1, 2, 1870, 0 },
 };
 
-static int32_t NI_ParamListSize DataSection(".NIVS.paramlistsize") = 926;
+static int32_t NI_ParamListSize DataSection(".NIVS.paramlistsize") = 936;
 static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
 {
   1, 1,                                /* Parameter at index 0 */
@@ -12265,7 +12666,7 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 770 */
   1, 1,                                /* Parameter at index 771 */
   1, 1,                                /* Parameter at index 772 */
-  1, 4,                                /* Parameter at index 773 */
+  1, 1,                                /* Parameter at index 773 */
   1, 1,                                /* Parameter at index 774 */
   1, 1,                                /* Parameter at index 775 */
   1, 1,                                /* Parameter at index 776 */
@@ -12311,11 +12712,11 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 816 */
   1, 1,                                /* Parameter at index 817 */
   1, 1,                                /* Parameter at index 818 */
-  7, 7,                                /* Parameter at index 819 */
-  7, 7,                                /* Parameter at index 820 */
-  24, 1,                               /* Parameter at index 821 */
-  1, 21,                               /* Parameter at index 822 */
-  24, 21,                              /* Parameter at index 823 */
+  1, 1,                                /* Parameter at index 819 */
+  1, 1,                                /* Parameter at index 820 */
+  1, 1,                                /* Parameter at index 821 */
+  1, 1,                                /* Parameter at index 822 */
+  1, 1,                                /* Parameter at index 823 */
   1, 1,                                /* Parameter at index 824 */
   1, 1,                                /* Parameter at index 825 */
   1, 1,                                /* Parameter at index 826 */
@@ -12334,11 +12735,11 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 839 */
   1, 1,                                /* Parameter at index 840 */
   1, 1,                                /* Parameter at index 841 */
-  1, 1,                                /* Parameter at index 842 */
-  1, 1,                                /* Parameter at index 843 */
-  1, 1,                                /* Parameter at index 844 */
-  1, 1,                                /* Parameter at index 845 */
-  1, 1,                                /* Parameter at index 846 */
+  7, 7,                                /* Parameter at index 842 */
+  7, 7,                                /* Parameter at index 843 */
+  24, 1,                               /* Parameter at index 844 */
+  1, 21,                               /* Parameter at index 845 */
+  24, 21,                              /* Parameter at index 846 */
   1, 1,                                /* Parameter at index 847 */
   1, 1,                                /* Parameter at index 848 */
   1, 1,                                /* Parameter at index 849 */
@@ -12365,7 +12766,7 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 870 */
   1, 1,                                /* Parameter at index 871 */
   1, 1,                                /* Parameter at index 872 */
-  1, 1,                                /* Parameter at index 873 */
+  1, 4,                                /* Parameter at index 873 */
   1, 1,                                /* Parameter at index 874 */
   1, 1,                                /* Parameter at index 875 */
   1, 1,                                /* Parameter at index 876 */
@@ -12378,11 +12779,11 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 883 */
   1, 1,                                /* Parameter at index 884 */
   1, 1,                                /* Parameter at index 885 */
-  7, 7,                                /* Parameter at index 886 */
-  7, 7,                                /* Parameter at index 887 */
-  24, 1,                               /* Parameter at index 888 */
-  1, 21,                               /* Parameter at index 889 */
-  24, 21,                              /* Parameter at index 890 */
+  1, 1,                                /* Parameter at index 886 */
+  1, 1,                                /* Parameter at index 887 */
+  1, 1,                                /* Parameter at index 888 */
+  1, 1,                                /* Parameter at index 889 */
+  1, 1,                                /* Parameter at index 890 */
   1, 1,                                /* Parameter at index 891 */
   1, 1,                                /* Parameter at index 892 */
   1, 1,                                /* Parameter at index 893 */
@@ -12396,11 +12797,11 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 901 */
   1, 1,                                /* Parameter at index 902 */
   1, 1,                                /* Parameter at index 903 */
-  1, 1,                                /* Parameter at index 904 */
-  1, 1,                                /* Parameter at index 905 */
-  1, 1,                                /* Parameter at index 906 */
-  1, 1,                                /* Parameter at index 907 */
-  1, 1,                                /* Parameter at index 908 */
+  7, 7,                                /* Parameter at index 904 */
+  7, 7,                                /* Parameter at index 905 */
+  24, 1,                               /* Parameter at index 906 */
+  1, 21,                               /* Parameter at index 907 */
+  24, 21,                              /* Parameter at index 908 */
   1, 1,                                /* Parameter at index 909 */
   1, 1,                                /* Parameter at index 910 */
   1, 1,                                /* Parameter at index 911 */
@@ -12418,6 +12819,16 @@ static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
   1, 1,                                /* Parameter at index 923 */
   1, 1,                                /* Parameter at index 924 */
   1, 1,                                /* Parameter at index 925 */
+  1, 1,                                /* Parameter at index 926 */
+  1, 1,                                /* Parameter at index 927 */
+  1, 1,                                /* Parameter at index 928 */
+  1, 1,                                /* Parameter at index 929 */
+  1, 1,                                /* Parameter at index 930 */
+  1, 1,                                /* Parameter at index 931 */
+  1, 1,                                /* Parameter at index 932 */
+  1, 1,                                /* Parameter at index 933 */
+  1, 1,                                /* Parameter at index 934 */
+  1, 1,                                /* Parameter at index 935 */
 };
 
 static NI_Signal NI_SigList[] DataSection(".NIVS.siglist") =
@@ -12469,2248 +12880,2348 @@ static NI_Signal NI_SigList[] DataSection(".NIVS.siglist") =
     (B_NACCBraytonCycle2017a_T, ndot) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2,
     0, 0 },
 
-  { 14,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Product1",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, Product1) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+  { 14, "naccbraytoncycle2017a/Initial Condition7/Memory9", 0, "ndot", offsetof
+    (B_NACCBraytonCycle2017a_T, ndot_e) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
+    2, 0, 0 },
 
-  { 15,
-    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Product14",
-    0, "p2", offsetof(B_NACCBraytonCycle2017a_T, p2) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
-
-  { 16, "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Sum2",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, Sum2) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
-
-  { 17, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 1)",
+  { 15, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 1)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (0*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 18, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 2)",
+  { 16, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 2)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (1*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 19, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 3)",
+  { 17, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 3)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (2*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 20, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 4)",
+  { 18, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 4)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (3*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 21, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 5)",
+  { 19, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 5)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (4*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 22, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 6)",
+  { 20, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 6)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (5*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 23, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 7)",
+  { 21, "naccbraytoncycle2017a/Initial Condition7/Memory4", 0, "psi(1, 7)",
     offsetof(B_NACCBraytonCycle2017a_T, psi) + (6*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 24,
-    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation Dynamic/Switch2", 0,
+  { 22, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 1)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (0*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 23, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 2)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (1*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 24, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 3)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (2*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 25, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 4)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (3*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 26, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 5)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (4*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 27, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 6)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (5*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 28, "naccbraytoncycle2017a/Initial Condition3/Memory4", 0, "psi(1, 7)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_k) + (6*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 29, "naccbraytoncycle2017a/Initial Condition6/Memory9", 0, "ndot", offsetof
+    (B_NACCBraytonCycle2017a_T, ndot_ea) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
+    2, 0, 0 },
+
+  { 30, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 1)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (0*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 31, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 2)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (1*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 32, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 3)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (2*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 33, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 4)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (3*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 34, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 5)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (4*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 35, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 6)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (5*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 36, "naccbraytoncycle2017a/Initial Condition6/Memory4", 0, "psi(1, 7)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_n) + (6*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 37, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 1)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (0*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 38, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 2)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (1*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 39, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 3)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (2*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 40, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 4)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (3*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 41, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 5)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (4*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 42, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 6)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (5*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 43, "naccbraytoncycle2017a/Initial Condition1/Memory4", 0, "psi(1, 7)",
+    offsetof(B_NACCBraytonCycle2017a_T, psi_b) + (6*sizeof(real_T)), BLOCKIO_SIG,
+    14, 1, 2, 0, 0 },
+
+  { 44,
+    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation Dynamic/Switch2", 0,
     "", offsetof(B_NACCBraytonCycle2017a_T, Switch2) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 25, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Multiport Switch", 0, "",
+  { 45, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Multiport Switch", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 26, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain", 0,
-    "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_k) + (0*sizeof(real_T)),
+  { 46, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain", 0,
+    "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_i) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 27, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1", 0, "T",
+  { 47, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1", 0, "T",
     offsetof(B_NACCBraytonCycle2017a_T, T) + (0*sizeof(real_T)), BLOCKIO_SIG, 0,
     1, 2, 0, 0 },
 
-  { 28, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2", 0, "p",
+  { 48, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2", 0, "p",
     offsetof(B_NACCBraytonCycle2017a_T, p) + (0*sizeof(real_T)), BLOCKIO_SIG, 0,
     1, 2, 0, 0 },
 
-  { 29, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 49, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 30, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 50, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 31, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 51, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 32, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 52, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 33, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 53, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 34, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 54, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 35, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+  { 55, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
     "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 36, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (0*sizeof(real_T)),
+  { 56, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 37, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (1*sizeof(real_T)),
+  { 57, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 38, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (2*sizeof(real_T)),
+  { 58, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 39, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (3*sizeof(real_T)),
+  { 59, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 40, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (4*sizeof(real_T)),
+  { 60, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 41, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (5*sizeof(real_T)),
+  { 61, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 42, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (6*sizeof(real_T)),
+  { 62, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 43, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+  { 63, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
     0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 44, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+  { 64, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
     1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 45, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+  { 65, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
     2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 46, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+  { 66, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
     3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 47, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Subtract2", 0, "",
+  { 67, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Subtract2", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Subtract2) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 48, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset", 0, "",
-    offsetof(B_NACCBraytonCycle2017a_T, UnitOffset_l) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
-
-  { 49, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset", 0, "",
-    offsetof(B_NACCBraytonCycle2017a_T, UnitOffset_f) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
-
-  { 50, "naccbraytoncycle2017a/Natural Gas/Merge1", 0, "ndot", offsetof
-    (B_NACCBraytonCycle2017a_T, ndot_ka) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
-    2, 0, 0 },
-
-  { 51, "naccbraytoncycle2017a/Combustion Chamber/Reactor/Product", 0, "",
+  { 68, "naccbraytoncycle2017a/Combustion Chamber/Reactor/Product", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Product) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 52,
+  { 69,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, Saturation) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 53, "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Product", 0, "",
+  { 70, "naccbraytoncycle2017a/Initial Condition5/Memory3", 0, "Hdot", offsetof
+    (B_NACCBraytonCycle2017a_T, Hdot_d) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
+    2, 0, 0 },
+
+  { 71, "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Product", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Product_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 54,
+  { 72,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, Saturation_l) + (0*sizeof(real_T)),
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, Saturation_m) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 55,
-    "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation Dynamic/Switch2", 0,
-    "", offsetof(B_NACCBraytonCycle2017a_T, Switch2_n) + (0*sizeof(real_T)),
+  { 73, "naccbraytoncycle2017a/Initial Condition4/Memory3", 0, "Hdot", offsetof
+    (B_NACCBraytonCycle2017a_T, Hdot_j) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
+    2, 0, 0 },
+
+  { 74,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Product1",
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, Product1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 56, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Multiport Switch", 0, "",
-    offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch_h) + (0*sizeof(real_T)),
+  { 75,
+    "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Product14",
+    0, "p2", offsetof(B_NACCBraytonCycle2017a_T, p2) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 57, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain", 0,
-    "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_i) + (0*sizeof(real_T)),
+  { 76, "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Sum2",
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, Sum2) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 58, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1", 0, "T",
-    offsetof(B_NACCBraytonCycle2017a_T, T_e) + (0*sizeof(real_T)), BLOCKIO_SIG,
-    0, 1, 2, 0, 0 },
-
-  { 59, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2", 0, "p",
-    offsetof(B_NACCBraytonCycle2017a_T, p_c) + (0*sizeof(real_T)), BLOCKIO_SIG,
-    0, 1, 2, 0, 0 },
-
-  { 60, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 61, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (1*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 62, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (2*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 63, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (3*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 64, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (4*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 65, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (5*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 66, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
-    "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x_h) + (6*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 67, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 68, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (1*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 69, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (2*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 70, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (3*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 71, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (4*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 72, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (5*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 73, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
-    "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_o) + (6*sizeof(real_T)),
-    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
-
-  { 74, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
-    0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_h) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 75, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
-    1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_e) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 76, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
-    2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_h) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 77, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
-    3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_d) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 78, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Subtract2", 0, "",
-    offsetof(B_NACCBraytonCycle2017a_T, Subtract2_o) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
-
-  { 79, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation", 0, "",
+  { 77, "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Saturation_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 80, "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/Sum7", 0, "",
+  { 78, "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/Sum7", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Sum7) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 81, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation", 0, "",
-    offsetof(B_NACCBraytonCycle2017a_T, Saturation_lg) + (0*sizeof(real_T)),
+  { 79,
+    "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation Dynamic/Switch2", 0,
+    "", offsetof(B_NACCBraytonCycle2017a_T, Switch2_g) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 82, "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/Sum7", 0, "",
+  { 80, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Multiport Switch", 0, "",
+    offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch_i) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 81, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain", 0,
+    "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_k) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 82, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1", 0, "T",
+    offsetof(B_NACCBraytonCycle2017a_T, T_d) + (0*sizeof(real_T)), BLOCKIO_SIG,
+    0, 1, 2, 0, 0 },
+
+  { 83, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2", 0, "p",
+    offsetof(B_NACCBraytonCycle2017a_T, p_b) + (0*sizeof(real_T)), BLOCKIO_SIG,
+    0, 1, 2, 0, 0 },
+
+  { 84, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 85, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (1*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 86, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (2*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 87, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (3*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 88, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (4*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 89, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (5*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 90, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3", 0,
+    "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (6*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 91, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 92, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (1*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 93, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (2*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 94, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (3*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 95, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (4*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 96, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (5*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 97, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4", 0,
+    "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_e) + (6*sizeof(real_T)),
+    BLOCKIO_SIG, 14, 1, 2, 0, 0 },
+
+  { 98, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+    0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_f) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 99, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+    1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_c) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 100, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+    2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_i) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 101, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+    3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_b) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 102, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Subtract2", 0, "",
+    offsetof(B_NACCBraytonCycle2017a_T, Subtract2_k) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 103, "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation", 0, "",
+    offsetof(B_NACCBraytonCycle2017a_T, Saturation_l) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 104, "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/Sum7", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Sum7_h) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 83, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain1", 0, "T",
+  { 105, "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset", 0, "",
+    offsetof(B_NACCBraytonCycle2017a_T, UnitOffset_l) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 106, "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset", 0, "",
+    offsetof(B_NACCBraytonCycle2017a_T, UnitOffset_f) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 0, 1, 2, 0, 0 },
+
+  { 107, "naccbraytoncycle2017a/Natural Gas/Merge1", 0, "ndot", offsetof
+    (B_NACCBraytonCycle2017a_T, ndot_ka) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1,
+    2, 0, 0 },
+
+  { 108, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain1", 0, "T",
     offsetof(B_NACCBraytonCycle2017a_T, T_c) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 84, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 109, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 85, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 110, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 86, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 111, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 87, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 112, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 88, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 113, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 89, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 114, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 90, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
+  { 115, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x_a) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 91, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 116, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 92, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 117, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 93, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 118, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 94, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 119, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 95, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 120, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 96, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 121, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 97, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
+  { 122, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_c) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 98, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1", 0,
-    "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_c) + (0*sizeof(real_T)),
+  { 123, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
+    0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 99, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1", 1,
-    "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_k) + (0*sizeof(real_T)),
+  { 124, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
+    1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_k) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 100, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
+  { 125, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
     2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_j) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 101, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
+  { 126, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
     3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_j) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 102,
+  { 127,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 103,
+  { 128,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(2, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 104,
+  { 129,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(3, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 105,
+  { 130,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(4, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 106,
+  { 131,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(5, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 107,
+  { 132,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(6, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 108,
+  { 133,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1/(7, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 109,
+  { 134,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/VolumeFlow/Density/S-Function",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 110,
+  { 135,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/VolumeFlow/Density/S-Function",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o2) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 111,
+  { 136,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/VolumeFlow/Density/S-Function",
     2, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o3) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 112,
+  { 137,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 113,
+  { 138,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(2, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 114,
+  { 139,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(3, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 115,
+  { 140,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(4, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 116,
+  { 141,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(5, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 117,
+  { 142,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(6, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 118,
+  { 143,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1/(7, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_i) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 119, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain2", 0, "p",
+  { 144, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain2", 0, "p",
     offsetof(B_NACCBraytonCycle2017a_T, p_h) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 120, "naccbraytoncycle2017a/Mixer/Mixer/Add3", 0, "", offsetof
+  { 145, "naccbraytoncycle2017a/Mixer/Mixer/Add3", 0, "", offsetof
     (B_NACCBraytonCycle2017a_T, Add3) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2,
     0, 0 },
 
-  { 121, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain", 0, "ndot",
+  { 146, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain", 0, "ndot",
     offsetof(B_NACCBraytonCycle2017a_T, ndot_o) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 122, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 1)",
+  { 147, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 1)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 123, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 2)",
+  { 148, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 2)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 124, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 3)",
+  { 149, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 3)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 125, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 4)",
+  { 150, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 4)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 126, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 5)",
+  { 151, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 5)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 127, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 6)",
+  { 152, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 6)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 128, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 7)",
+  { 153, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain4", 0, "psi(1, 7)",
     offsetof(B_NACCBraytonCycle2017a_T, psi_cv) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 129, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 1)", 0, "",
+  { 154, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 1)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 130, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 2)", 0, "",
+  { 155, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 2)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 131, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 3)", 0, "",
+  { 156, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 3)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 132, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 4)", 0, "",
+  { 157, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 4)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 133, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 5)", 0, "",
+  { 158, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 5)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 134, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 6)", 0, "",
+  { 159, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 6)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 135, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 7)", 0, "",
+  { 160, "naccbraytoncycle2017a/Mixer/Mixer/Multiport Switch1/(1, 7)", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, MultiportSwitch1) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 136, "naccbraytoncycle2017a/Mixer/Mixer/Pressure_loss/Saturation", 0, "",
+  { 161, "naccbraytoncycle2017a/Mixer/Mixer/Pressure_loss/Saturation", 0, "",
     offsetof(B_NACCBraytonCycle2017a_T, Saturation_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 137, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain1", 0, "T",
+  { 162, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain1", 0, "T",
     offsetof(B_NACCBraytonCycle2017a_T, T_g) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 138, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 1)",
+  { 163, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 1)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (0*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 139, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 2)",
+  { 164, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 2)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (1*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 140, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 3)",
+  { 165, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 3)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (2*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 141, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 4)",
+  { 166, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 4)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (3*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 142, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 5)",
+  { 167, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 5)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (4*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 143, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 6)",
+  { 168, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 6)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (5*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 144, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 7)",
+  { 169, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/Gain3", 0, "x(1, 7)",
     offsetof(B_NACCBraytonCycle2017a_T, x_b) + (6*sizeof(real_T)), BLOCKIO_SIG,
     14, 1, 2, 0, 0 },
 
-  { 145, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 0, "Hdot",
-    offsetof(B_NACCBraytonCycle2017a_T, Hdot_h5) + (0*sizeof(real_T)),
+  { 170, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 0, "Hdot",
+    offsetof(B_NACCBraytonCycle2017a_T, Hdot_h) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 146, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 1, "Sdot",
+  { 171, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 1, "Sdot",
     offsetof(B_NACCBraytonCycle2017a_T, Sdot_l) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 147, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 2, "Gdot",
+  { 172, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 2, "Gdot",
     offsetof(B_NACCBraytonCycle2017a_T, Gdot_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 148, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 3,
+  { 173, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 3,
     "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_i) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 149, "naccbraytoncycle2017a/Mixer/Mixer/Sum6", 0, "", offsetof
+  { 174, "naccbraytoncycle2017a/Mixer/Mixer/Sum6", 0, "", offsetof
     (B_NACCBraytonCycle2017a_T, Sum6) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2,
     0, 0 },
 
-  { 150, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 175, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_m) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 151, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 176, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_go) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 152, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 177, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 153, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 178, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_cl) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 154, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
-    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_ex) + (0*sizeof(real_T)),
+  { 179, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_e) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 155, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 180, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_k) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 156, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 181, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_l) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 157, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 182, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 158, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 183, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 159, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 184, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 160, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 185, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 161, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 186, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 162, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 187, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 163, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 188, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_j) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 164, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 189, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 165, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 190, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 166, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 191, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 167, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 192, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 168, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 193, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 169, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 194, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 170, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 195, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_h) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 171, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 196, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 172, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 197, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations) +
     (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 173, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 0,
+  { 198, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 0,
     "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_b) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 174, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 1,
+  { 199, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 1,
     "T", offsetof(B_NACCBraytonCycle2017a_T, T_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 175, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 2,
+  { 200, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 2,
     "p", offsetof(B_NACCBraytonCycle2017a_T, p_pc) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 176, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 3,
-    "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_d) + (0*sizeof(real_T)),
+  { 201, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 3,
+    "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_d0) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 177, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 4,
+  { 202, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 4,
     "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_k0) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 178, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 5,
+  { 203, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 5,
     "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_km) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 179, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 6,
+  { 204, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 6,
     "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_e) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 180, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 205, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 181, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 206, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 182, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 207, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 183, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 208, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 184, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 209, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 185, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 210, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 186, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 211, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_o) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 187, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 212, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 188, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 213, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 189, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 214, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 190, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 215, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 191, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 216, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 192, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 217, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 193, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 218, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_cu) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 194, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 9,
+  { 219, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 9,
     "iter", offsetof(B_NACCBraytonCycle2017a_T, iter) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 195,
+  { 220,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 196,
+  { 221,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 197,
+  { 222,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 198,
+  { 223,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_o) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 199,
+  { 224,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_m) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 200,
+  { 225,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_b) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 201,
+  { 226,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_g) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 202,
+  { 227,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 203,
+  { 228,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 204,
+  { 229,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 205,
+  { 230,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 206,
+  { 231,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 207,
+  { 232,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 208,
+  { 233,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_k) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 209,
+  { 234,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 210,
+  { 235,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 211,
+  { 236,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 212,
+  { 237,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 213,
+  { 238,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 214,
+  { 239,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 215,
+  { 240,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_m) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 216,
+  { 241,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 217,
+  { 242,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_a)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 218,
+  { 243,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_ol) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 219,
+  { 244,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_ed) + (0*sizeof(real_T)),
+    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_e) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 220,
+  { 245,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_a5) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 221,
+  { 246,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_i) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 222,
+  { 247,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_c) + (0*sizeof(real_T)),
+    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_ce) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 223,
+  { 248,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_m) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 224,
+  { 249,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 225,
+  { 250,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 226,
+  { 251,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 227,
+  { 252,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 228,
+  { 253,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 229,
+  { 254,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 230,
+  { 255,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 231,
+  { 256,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ac) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 232,
+  { 257,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 233,
+  { 258,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 234,
+  { 259,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 235,
+  { 260,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 236,
+  { 261,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 237,
+  { 262,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 238,
+  { 263,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_a) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 239,
+  { 264,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_k) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 240,
+  { 265,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_f)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 241, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 0,
+  { 266, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 0,
     "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 242, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 1,
+  { 267, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 1,
     "T", offsetof(B_NACCBraytonCycle2017a_T, T_m) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 243, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 2,
+  { 268, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 2,
     "p", offsetof(B_NACCBraytonCycle2017a_T, p_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 244, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 3,
-    "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_j) + (0*sizeof(real_T)),
+  { 269, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 3,
+    "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_jo) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 245, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 4,
+  { 270, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 4,
     "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_kk) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 246, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 5,
-    "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_hm) + (0*sizeof(real_T)),
+  { 271, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 5,
+    "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_h) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 247, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 6,
+  { 272, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 6,
     "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 248, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 273, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 249, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 274, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 250, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 275, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 251, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 276, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 252, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 277, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 253, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 278, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 254, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
+  { 279, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 7,
     "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_d) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 255, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 280, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 256, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 281, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 257, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 282, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 258, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 283, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 259, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 284, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 260, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 285, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 261, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
+  { 286, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 8,
     "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_l) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 262, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 9,
+  { 287, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 9,
     "iter", offsetof(B_NACCBraytonCycle2017a_T, iter_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 263,
+  { 288,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_nq) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 264,
+  { 289,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_h) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 265,
+  { 290,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_g) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 266,
+  { 291,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 267,
+  { 292,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 268,
+  { 293,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_l) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 269,
+  { 294,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 270,
+  { 295,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 271,
+  { 296,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 272,
+  { 297,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 273,
+  { 298,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 274,
+  { 299,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 275,
+  { 300,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 276,
+  { 301,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dg) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 277,
+  { 302,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 278,
+  { 303,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 279,
+  { 304,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 280,
+  { 305,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 281,
+  { 306,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 282,
+  { 307,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 283,
+  { 308,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_i) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 284,
+  { 309,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 285,
+  { 310,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_d)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 286,
+  { 311,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_bl) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 287,
+  { 312,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_gf) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 288,
+  { 313,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_a1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 289,
+  { 314,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_b) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 290,
+  { 315,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_n) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 291,
+  { 316,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 292,
+  { 317,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_aq) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 293,
+  { 318,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (0*sizeof(real_T)),
+    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 294,
+  { 319,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (1*sizeof(real_T)),
+    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 295,
+  { 320,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (2*sizeof(real_T)),
+    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 296,
+  { 321,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (3*sizeof(real_T)),
+    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 297,
+  { 322,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (4*sizeof(real_T)),
+    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 298,
+  { 323,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (5*sizeof(real_T)),
+    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 299,
+  { 324,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
-    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_f) + (6*sizeof(real_T)),
+    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ff) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 300,
+  { 325,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 301,
+  { 326,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 302,
+  { 327,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 303,
+  { 328,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 304,
+  { 329,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 305,
+  { 330,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 306,
+  { 331,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_f) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 307,
+  { 332,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_d) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 308,
+  { 333,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_j)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 309,
+  { 334,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_c0) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 310,
+  { 335,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain2",
     0, "p", offsetof(B_NACCBraytonCycle2017a_T, p_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 311,
+  { 336,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 312,
+  { 337,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 313,
+  { 338,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 314,
+  { 339,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 315,
+  { 340,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 316,
+  { 341,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 317,
+  { 342,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain3",
     0, "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x_da) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 318,
+  { 343,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 319,
+  { 344,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 320,
+  { 345,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 321,
+  { 346,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 322,
+  { 347,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 323,
+  { 348,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 324,
+  { 349,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/Gain4",
     0, "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_ip) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 325,
+  { 350,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/S-Function1",
     0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_du) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 326,
+  { 351,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/S-Function1",
     1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_d) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 327,
+  { 352,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/S-Function1",
     2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_fo) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 328,
+  { 353,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/S-Function1",
     3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_i4) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 329,
+  { 354,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 330,
+  { 355,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(2, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 331,
+  { 356,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(3, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 332,
+  { 357,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(4, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 333,
+  { 358,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(5, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 334,
+  { 359,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(6, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 335,
+  { 360,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1/(7, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_c) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 336,
+  { 361,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 337,
+  { 362,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
-    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_d) + (0*sizeof(real_T)),
+    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_do) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 338,
+  { 363,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_gc) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 339,
+  { 364,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_e) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 340,
+  { 365,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 341,
+  { 366,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 342,
+  { 367,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
-    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_b) + (0*sizeof(real_T)),
+    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_br) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 343,
+  { 368,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 344,
+  { 369,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 345,
+  { 370,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 346,
+  { 371,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 347,
+  { 372,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 348,
+  { 373,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 349,
+  { 374,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_p) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 350,
+  { 375,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 351,
+  { 376,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 352,
+  { 377,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 353,
+  { 378,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 354,
+  { 379,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 355,
+  { 380,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 356,
+  { 381,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_g) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 357,
+  { 382,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     9, "iter", offsetof(B_NACCBraytonCycle2017a_T, iter_j) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 358,
+  { 383,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_l) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 359,
+  { 384,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_j) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 360,
+  { 385,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
-    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_b) + (0*sizeof(real_T)),
+    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_bs) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 361,
+  { 386,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_jv) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 362,
+  { 387,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_p) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 363,
+  { 388,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_l1) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 364,
+  { 389,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_h) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 365,
+  { 390,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 366,
+  { 391,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 367,
+  { 392,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 368,
+  { 393,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 369,
+  { 394,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 370,
+  { 395,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 371,
+  { 396,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ju) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 372,
+  { 397,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 373,
+  { 398,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 374,
+  { 399,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 375,
+  { 400,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 376,
+  { 401,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 377,
+  { 402,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 378,
+  { 403,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_al) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 379,
+  { 404,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_b) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 380,
+  { 405,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_n)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 381,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_oo) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 382,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_mo) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 383,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_k) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 384,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_jo) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 385,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_o) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 386,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_g) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 387,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_az) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 388,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 389,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (1*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 390,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (2*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 391,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (3*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 392,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (4*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 393,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (5*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 394,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_i) + (6*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 395,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (0*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 396,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (1*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 397,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (2*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 398,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (3*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 399,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (4*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 400,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (5*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 401,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_p) + (6*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
-
-  { 402,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_pj) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 403,
-    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_fx)
-    + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 404,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_f2) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
-  { 405,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_h3) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
-
   { 406,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_nt) + (0*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_d) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 407,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_ig) + (0*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_po) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 408,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_fv) + (0*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_c) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 409,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_mk) + (0*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_k) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 410,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_eg) + (0*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_fc) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 411,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_ny) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 412,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (1*sizeof(real_T)),
-    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_o) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
   { 413,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (2*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 414,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (3*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 415,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (4*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 416,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (5*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 417,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_il) + (6*sizeof(real_T)),
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 418,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (0*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (5*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 419,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (1*sizeof
-    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_ok) + (6*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 420,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (2*sizeof
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 421,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (3*sizeof
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 422,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (4*sizeof
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 423,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (5*sizeof
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 424,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_j) + (6*sizeof
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 425,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_f) + (0*sizeof(real_T)),
-    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (5*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
   { 426,
-    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_h)
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_mo) + (6*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 427,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_o) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 428,
+    "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
+    10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_i)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 427, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain", 0,
+  { 429,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    0, "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_nu) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 430,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    1, "T", offsetof(B_NACCBraytonCycle2017a_T, T_mj) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 431,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    2, "p", offsetof(B_NACCBraytonCycle2017a_T, p_e) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 432,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    3, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_f5) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 433,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    4, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_ki) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 434,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    5, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_f0) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 435,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    6, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_aw) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 436,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 437,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (1*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 438,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (2*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 439,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (3*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 440,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (4*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 441,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (5*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 442,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    7, "x(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_dt) + (6*sizeof(real_T)),
+    BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 443,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (0*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 444,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(2, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (1*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 445,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(3, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (2*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 446,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(4, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (3*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 447,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(5, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (4*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 448,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(6, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (5*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 449,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    8, "psi(7, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_le) + (6*sizeof
+    (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
+
+  { 450,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    9, "Qenv", offsetof(B_NACCBraytonCycle2017a_T, Qenv_e) + (0*sizeof(real_T)),
+    BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 451,
+    "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
+    10, "num_iterations", offsetof(B_NACCBraytonCycle2017a_T, num_iterations_o)
+    + (0*sizeof(real_T)), BLOCKIO_SIG, 66, 1, 2, 0, 0 },
+
+  { 452, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain", 0,
     "ndot", offsetof(B_NACCBraytonCycle2017a_T, ndot_lp) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 428, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain1", 0, "T",
+  { 453, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain1", 0, "T",
     offsetof(B_NACCBraytonCycle2017a_T, T_gw) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 429, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain2", 0, "p",
+  { 454, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain2", 0, "p",
     offsetof(B_NACCBraytonCycle2017a_T, p_d) + (0*sizeof(real_T)), BLOCKIO_SIG,
     0, 1, 2, 0, 0 },
 
-  { 430, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 455, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 431, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 456, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 432, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 457, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 433, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 458, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 434, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 459, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 435, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 460, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 436, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
+  { 461, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain3", 0,
     "x(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, x_g) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 437, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 462, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 1)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 438, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 463, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 2)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (1*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 439, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 464, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 3)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (2*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 440, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 465, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 4)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (3*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 441, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 466, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 5)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (4*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 442, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 467, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 6)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (5*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 443, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
+  { 468, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/Gain4", 0,
     "psi(1, 7)", offsetof(B_NACCBraytonCycle2017a_T, psi_eg) + (6*sizeof(real_T)),
     BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 444, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
+  { 469, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
     0, "Hdot", offsetof(B_NACCBraytonCycle2017a_T, Hdot_a) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 445, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
+  { 470, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
     1, "Sdot", offsetof(B_NACCBraytonCycle2017a_T, Sdot_c0) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 446, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
-    2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_ny) + (0*sizeof(real_T)),
+  { 471, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
+    2, "Gdot", offsetof(B_NACCBraytonCycle2017a_T, Gdot_nyp) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 447, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
+  { 472, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
     3, "Cpdot", offsetof(B_NACCBraytonCycle2017a_T, Cpdot_f) + (0*sizeof(real_T)),
     BLOCKIO_SIG, 66, 1, 2, 0, 0 },
 
-  { 448,
+  { 473,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 449,
+  { 474,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(2, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 450,
+  { 475,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(3, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 451,
+  { 476,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(4, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 452,
+  { 477,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(5, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 453,
+  { 478,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(6, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 454,
+  { 479,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1/(7, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_n) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 455,
+  { 480,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/VolumeFlow/Density/S-Function",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o1_j) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 456,
+  { 481,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/VolumeFlow/Density/S-Function",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o2_f) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 457,
+  { 482,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/VolumeFlow/Density/S-Function",
     2, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o3_o) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 458,
+  { 483,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (0*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 459,
+  { 484,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(2, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (1*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 460,
+  { 485,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(3, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (2*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 461,
+  { 486,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(4, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (3*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 462,
+  { 487,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(5, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (4*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 463,
+  { 488,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(6, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (5*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 464,
+  { 489,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1/(7, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o1_o) + (6*sizeof
     (real_T)), BLOCKIO_SIG, 25, 1, 2, 0, 0 },
 
-  { 465, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+  { 490, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
     4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 466, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1",
-    4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_j) + (0*sizeof
+  { 491, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1",
+    4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_g) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 467, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
+  { 492, "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-x-State/S-Function1",
     4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_d) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 468,
+  { 493,
     "naccbraytoncycle2017a/Natural Gas/T-p-State/T-p-Vapor Fractions/S-Function1",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o2) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 469,
+  { 494,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/VolumeFlow/Density/S-Function",
     3, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o4) + (0*sizeof(int32_T)),
     BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 470,
+  { 495,
     "naccbraytoncycle2017a/Natural Gas/VolumeFlow/T-p-Vapor Fractions/S-Function1",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o2_g) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 471, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 4, "",
+  { 496, "naccbraytoncycle2017a/Mixer/Mixer/T-p-x-State1/S-Function1", 4, "",
     offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_m) + (0*sizeof(int32_T)),
     BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 472, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
+  { 497, "naccbraytoncycle2017a/Mixer/Mixer/H-p-State with HeatLoss/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 473, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 10,
+  { 498, "naccbraytoncycle2017a/LP Gas Turbine/Turbine/S-p-State/S-Function", 10,
     "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_i) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 474,
+  { 499,
     "naccbraytoncycle2017a/LP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_j) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 475,
+  { 500,
     "naccbraytoncycle2017a/LP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_i0) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 476, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 10,
+  { 501, "naccbraytoncycle2017a/HP Gas Turbine/Turbine/S-p-State/S-Function", 10,
     "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_o) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 477,
+  { 502,
     "naccbraytoncycle2017a/HP Gas Turbine/Turbine/H-p-State with Heat Exchange/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_m) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 478,
+  { 503,
     "naccbraytoncycle2017a/HP CTAH/Heat-Addition/subsystem/H-p-State with HeatLoss/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_d) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 479,
+  { 504,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-x-State/S-Function1",
     4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_mw) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 480,
+  { 505,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-p-State/T-p-Vapor Fractions/S-Function1",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o2_b) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 481,
+  { 506,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/S-p-State/S-Function",
     10, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_do) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 482,
+  { 507,
     "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/H-p-State with Heat Exchange/S-Function",
     11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_p) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 483,
+  { 508,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/H-p-State with Heat Exchange/S-Function",
-    11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_h) + (0*
+    11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_m4) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 484,
+  { 509,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/H-p-State with Heat Exchange/S-Function",
-    11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_or) + (0*
+    11, "error_codes", offsetof(B_NACCBraytonCycle2017a_T, error_codes_n) + (0*
     sizeof(int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 485, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
+  { 510, "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-x-State/S-Function1",
     4, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o5_o) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 486,
+  { 511,
     "naccbraytoncycle2017a/Ambient air/T-p-State/T-p-Vapor Fractions/S-Function1",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o2_gm) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 487,
+  { 512,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/VolumeFlow/Density/S-Function",
     3, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction_o4_a) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 488,
+  { 513,
     "naccbraytoncycle2017a/Ambient air/VolumeFlow/T-p-Vapor Fractions/S-Function1",
     1, "", offsetof(B_NACCBraytonCycle2017a_T, SFunction1_o2_p) + (0*sizeof
     (int32_T)), BLOCKIO_SIG, 6, 1, 2, 0, 0 },
 
-  { 489,
+  { 514,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Subtract5",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Subtract5)
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Subtract5)
     + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 490,
+  { 515,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 1)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (0*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 491,
+  { 516,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 2)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (1*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 492,
+  { 517,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 3)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (2*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 493,
+  { 518,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 4)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (3*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 494,
+  { 519,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 5)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (4*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 495,
+  { 520,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 6)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (5*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 496,
+  { 521,
     "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Product6/(1, 7)",
-    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_n.Product6) +
+    0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion_b.Product6) +
     (6*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 497,
+  { 522,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Subtract5",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Subtract5) +
     (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
-  { 498,
+  { 523,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 1)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (0*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 499,
+  { 524,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 2)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (1*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 500,
+  { 525,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 3)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (2*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 501,
+  { 526,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 4)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (3*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 502,
+  { 527,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 5)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (4*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 503,
+  { 528,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 6)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (5*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
 
-  { 504,
+  { 529,
     "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Product6/(1, 7)",
     0, "", offsetof(B_NACCBraytonCycle2017a_T, calculateconversion.Product6) +
     (6*sizeof(real_T)), BLOCKIO_SIG, 14, 1, 2, 0, 0 },
@@ -14718,7 +15229,7 @@ static NI_Signal NI_SigList[] DataSection(".NIVS.siglist") =
   { -1, "", -1, "", 0, 0, 0 }
 };
 
-static int32_t NI_SigListSize DataSection(".NIVS.siglistsize") = 505;
+static int32_t NI_SigListSize DataSection(".NIVS.siglistsize") = 530;
 static int32_t NI_VirtualBlockSources[1];
 static int32_t NI_SigDimList[] DataSection(".NIVS.sigdimlist") =
 { 1, 1
@@ -14821,8 +15332,8 @@ NI_Task NI_TaskList[] DataSection(".NIVS.tasklist") =
 int32_t NI_NumTasks DataSection(".NIVS.numtasks") = 1;
 static const char* NI_CompiledModelName DataSection(".NIVS.compiledmodelname") =
   "NACCBraytonCycle2017a";
-static const char* NI_CompiledModelVersion = "1.138";
-static const char* NI_CompiledModelDateTime = "Wed Mar 06 14:28:16 2019";
+static const char* NI_CompiledModelVersion = "1.151";
+static const char* NI_CompiledModelDateTime = "Wed Mar 06 17:30:56 2019";
 static const char* NI_builder DataSection(".NIVS.builder") =
   "NI Model Framework 2017.0.1.0 (2017 f1) for Simulink Coder 8.12 (R2017a)";
 static const char* NI_BuilderVersion DataSection(".NIVS.builderversion") =
@@ -15634,7 +16145,7 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
        NULL)) {
     if (*numContStates < 0 || *numDiscStates < 0 || *numClockTicks < 0) {
       *numContStates = 0;
-      *numDiscStates = 96;
+      *numDiscStates = 156;
       *numClockTicks = NUMST - TID01EQ;
       return NI_OK;
     }
@@ -15642,26 +16153,6 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
 
   if ((discStates != NULL) && (discStatesNames != NULL)) {
     idx = 0;
-    discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 0, 33, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 1, 33, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 2, 33, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 3, 33, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory_PreviousInput, 0, 0, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory_PreviousInput");
     discStates[idx] = NIRT_GetValueByDataType
       (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
@@ -15674,9 +16165,9 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     }
 
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b, 0, 0, 0);
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b");
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput");
     discStates[idx] = NIRT_GetValueByDataType
       (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
@@ -15685,13 +16176,52 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
       (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
            "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i");
     for (count = 0; count < 7; count++) {
       discStates[idx] = NIRT_GetValueByDataType
-        (&NACCBraytonCycle2017a_DW.Memory8_PreviousInput, count, 14, 0);
+        (&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b, count, 14, 0);
       strcpy(discStatesNames + (idx++ * 100),
-             "&NACCBraytonCycle2017a_DW.Memory8_PreviousInput");
+             "&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b");
     }
 
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv");
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f");
+    }
+
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e");
     discStates[idx] = NIRT_GetValueByDataType
       (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
@@ -15708,13 +16238,108 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     strcpy(discStatesNames + (idx++ * 100),
            "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o, 0, 0, 0);
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o");
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow");
     discStates[idx] = NIRT_GetValueByDataType
       (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
            "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b");
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i");
+    }
+
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m");
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory8_PreviousInput, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory8_PreviousInput");
+    }
+
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e");
+    }
+
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a");
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m");
+    }
+
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 0, 33, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 1, 33, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 2, 33, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 3, 33, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&NACCBraytonCycle2017a_DW.Memory_PreviousInput, 0, 0, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&NACCBraytonCycle2017a_DW.Memory_PreviousInput");
+    for (count = 0; count < 7; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
+        (&NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l, count, 14, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l");
+    }
+
     for (count = 0; count < 7; count++) {
       discStates[idx] = NIRT_GetValueByDataType
         (&NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p, count, 14, 0);
@@ -15759,13 +16384,13 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     strcpy(discStatesNames + (idx++ * 100),
            "&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l, 0, 0, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l");
+           "&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j, 0, 0, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j");
+           "&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1");
     discStates[idx] = NIRT_GetValueByDataType
       (&NACCBraytonCycle2017a_DW.SFunction_PWORK, 0, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
@@ -15911,37 +16536,37 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     strcpy(discStatesNames + (idx++ * 100),
            "&NACCBraytonCycle2017a_DW.SFunction_PWORK_mg");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 0, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 0, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_j");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 1, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 1, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_j");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 2, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 2, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_j");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 3, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 3, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_j");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 0, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 0, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_o");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 1, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 1, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_o");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 2, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 2, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_o");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai");
     discStates[idx] = NIRT_GetValueByDataType
-      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 3, 30, 0);
+      (&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 3, 30, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_o");
+           "&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai");
   }
 
   if ((clockTicks != NULL) && (clockTicksNames != NULL)) {
@@ -15967,16 +16592,6 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
   int32_t idx = 0;
   if (discStates != NULL) {
     idx = 0;
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 0,
-      discStates[idx++], 33, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 1,
-      discStates[idx++], 33, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 2,
-      discStates[idx++], 33, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 3,
-      discStates[idx++], 33, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory_PreviousInput, 0,
-      discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput, 0,
       discStates[idx++], 0, 0);
     for (count = 0; count < 7; count++) {
@@ -15984,17 +16599,38 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
         count, discStates[idx++], 14, 0);
     }
 
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b, 0,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput, 0,
       discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput, 0,
       discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput, 0,
       discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_i, 0,
+      discStates[idx++], 0, 0);
     for (count = 0; count < 7; count++) {
-      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory8_PreviousInput,
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_b,
         count, discStates[idx++], 14, 0);
     }
 
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_b, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_h, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_iv,
+      0, discStates[idx++], 0, 0);
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_f,
+        count, discStates[idx++], 14, 0);
+    }
+
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_e, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_n, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_e, 0,
+      discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_a, 0,
       discStates[idx++], 0, 0);
     for (count = 0; count < 7; count++) {
@@ -16004,10 +16640,65 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
 
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_p, 0,
       discStates[idx++], 0, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_o, 0,
-      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_ow,
+      0, discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_d, 0,
       discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_b, 0,
+      discStates[idx++], 0, 0);
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_i,
+        count, discStates[idx++], 14, 0);
+    }
+
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_m, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_e, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_m, 0,
+      discStates[idx++], 0, 0);
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory8_PreviousInput,
+        count, discStates[idx++], 14, 0);
+    }
+
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_e,
+        count, discStates[idx++], 14, 0);
+    }
+
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_o, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_m, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_a, 0,
+      discStates[idx++], 0, 0);
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory4_PreviousInput_m,
+        count, discStates[idx++], 14, 0);
+    }
+
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory9_PreviousInput_d, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory2_PreviousInput_d, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory3_PreviousInput_k, 0,
+      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 0,
+      discStates[idx++], 33, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 1,
+      discStates[idx++], 33, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 2,
+      discStates[idx++], 33, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory1_PreviousInput_l, 3,
+      discStates[idx++], 33, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory_PreviousInput, 0,
+      discStates[idx++], 0, 0);
+    for (count = 0; count < 7; count++) {
+      NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory8_PreviousInput_l,
+        count, discStates[idx++], 14, 0);
+    }
+
     for (count = 0; count < 7; count++) {
       NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.Memory8_PreviousInput_p,
         count, discStates[idx++], 14, 0);
@@ -16031,10 +16722,10 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
       0, discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_p, 0,
       discStates[idx++], 0, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_l, 0,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_c, 0,
       discStates[idx++], 0, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_j, 0,
-      discStates[idx++], 0, 0);
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_T_CAL_DWORK_o1,
+      0, discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK, 0,
       discStates[idx++], 30, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK, 1,
@@ -16107,21 +16798,21 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
       discStates[idx++], 30, 0);
     NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_mg, 3,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 0,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 0,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 1,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 1,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 2,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 2,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_j, 3,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_cz, 3,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 0,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 0,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 1,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 1,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 2,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 2,
       discStates[idx++], 30, 0);
-    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_o, 3,
+    NIRT_SetValueByDataType(&NACCBraytonCycle2017a_DW.SFunction_PWORK_ai, 3,
       discStates[idx++], 30, 0);
   }
 
