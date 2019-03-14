@@ -33,7 +33,7 @@
 	<Property Name="varPersistentID:{22020562-43A4-46A4-B264-DE2E5172FC31}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Operating Case_R</Property>
 	<Property Name="varPersistentID:{22A7BE39-BB2B-4195-9010-241FA13F7A5D}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/mdot HP CTAH Out</Property>
 	<Property Name="varPersistentID:{22C8475C-D92D-45E4-8751-9CAB50656949}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/BT-43</Property>
-	<Property Name="varPersistentID:{2314680E-5FAA-4F6A-8451-09136ABB0863}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/SysFluidTemps_R</Property>
+	<Property Name="varPersistentID:{2314680E-5FAA-4F6A-8451-09136ABB0863}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/SysFluidTemps_R</Property>
 	<Property Name="varPersistentID:{23CF1797-340C-40B3-B2AD-360AE88317A0}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/BT-29</Property>
 	<Property Name="varPersistentID:{25218E99-121D-4338-917C-F35903AE824D}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/VISA Out_R</Property>
 	<Property Name="varPersistentID:{26438078-AEC5-4995-8F63-6A4195C264A7}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/CX-11-1</Property>
@@ -43,9 +43,9 @@
 	<Property Name="varPersistentID:{28E550DB-C005-4F0D-91F7-A8B8823937A2}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-1_R</Property>
 	<Property Name="varPersistentID:{2C9A54AF-1737-4066-9A06-FE0546C6B83A}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/Compressor Work</Property>
 	<Property Name="varPersistentID:{2D7E739F-6F42-4824-ACDB-C98BCFDC957B}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Flowmeters/FM-60</Property>
-	<Property Name="varPersistentID:{2E64BAEE-6E93-4A11-9A5F-4E74DF40C2DF}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/DAQ?_R</Property>
+	<Property Name="varPersistentID:{2E64BAEE-6E93-4A11-9A5F-4E74DF40C2DF}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/DAQ?_R</Property>
 	<Property Name="varPersistentID:{2FA7A395-6493-4DA9-9AC7-6D5948E92C1F}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-21_R</Property>
-	<Property Name="varPersistentID:{30B73F54-8A8F-4FF0-91F5-41F42EEF3A36}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/Flow Data?_R</Property>
+	<Property Name="varPersistentID:{30B73F54-8A8F-4FF0-91F5-41F42EEF3A36}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/Flow Data?_R</Property>
 	<Property Name="varPersistentID:{311AFDE6-7D2F-4AD4-9D8D-6651C0A3B1AB}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-3_R</Property>
 	<Property Name="varPersistentID:{3132F8ED-8D73-48C5-90A1-E3C405215E9F}" Type="Ref">/My Computer/BoP Libraries/BoPInputs.lvlib/NG Temp In</Property>
 	<Property Name="varPersistentID:{3162FAD3-4353-4D92-9382-1B10F4DF02CE}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-20_R</Property>
@@ -55,7 +55,7 @@
 	<Property Name="varPersistentID:{34571708-FA3F-4A71-A5DF-884ADD67BD6C}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Flowmeters_R/FM-60_R</Property>
 	<Property Name="varPersistentID:{358FA4F8-E4C8-4D48-A07D-BB0C55F8DDB5}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/BT-32</Property>
 	<Property Name="varPersistentID:{365AC614-247B-4CEA-9D0C-00B4AFE9808B}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/Temp HP CTAH Out</Property>
-	<Property Name="varPersistentID:{37F7C4D6-E3CF-4005-9109-172DD427B754}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/SysFlowRates_R</Property>
+	<Property Name="varPersistentID:{37F7C4D6-E3CF-4005-9109-172DD427B754}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/SysFlowRates_R</Property>
 	<Property Name="varPersistentID:{39790C35-FF30-4ADC-AECB-ADB365EEBA65}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/WT-26</Property>
 	<Property Name="varPersistentID:{3BAE476F-323D-4AF8-B3FA-B14CDA5597D6}" Type="Ref">/CIET-PXIe/PXI_Libraries/DAQ_Variables.lvlib/SysFlowRates</Property>
 	<Property Name="varPersistentID:{3BF7B955-8BC9-4D2C-820E-1A9A15DAD39B}" Type="Ref">/CIET-PXIe/PXI_Libraries/Core_Variables.lvlib/Output Voltage 1</Property>
@@ -137,7 +137,7 @@
 	<Property Name="varPersistentID:{8661BC19-CC20-4F5D-85B4-47DC1782D0DD}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/Pump Variables/Activate Pump</Property>
 	<Property Name="varPersistentID:{86C611D5-FCCE-4474-AF57-3B45B3D0AE24}" Type="Ref">/CIET-PXIe/PXI_Libraries/Core_Variables.lvlib/Output Current 2</Property>
 	<Property Name="varPersistentID:{877CFF30-96E1-4249-AD5F-05F872393AAD}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Status</Property>
-	<Property Name="varPersistentID:{8879E03C-4B2B-491B-97A5-808888211B9B}" Type="Ref">/My Computer/Result Libraries/ResultDAQ_Variables.lvlib/SysSurfTemps_R</Property>
+	<Property Name="varPersistentID:{8879E03C-4B2B-491B-97A5-808888211B9B}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/SysSurfTemps_R</Property>
 	<Property Name="varPersistentID:{88D4EB81-9E24-4ED4-A4DE-6D79CD6C6F64}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/BT-41</Property>
 	<Property Name="varPersistentID:{8AB86131-3D4B-47A9-A14F-56EB787423D3}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/Pump Variables/Pump Mass Flow Set-Point</Property>
 	<Property Name="varPersistentID:{8B49F19B-A7CB-4BA8-9DB3-136C68271B20}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Mass Flow Set-Point_R</Property>
@@ -262,9 +262,7 @@
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 		</Item>
 		<Item Name="Host Test VIs" Type="Folder">
-			<Item Name="Core_Host.vi" Type="VI" URL="../Core_Host.vi"/>
-			<Item Name="DAQ_Host.vi" Type="VI" URL="../DAQ_Host.vi"/>
-			<Item Name="VFD_Host.vi" Type="VI" URL="../VFD_Host.vi"/>
+			<Item Name="DAQ_Host_OPC UA.vi" Type="VI" URL="../DAQ_Host_OPC UA.vi"/>
 		</Item>
 		<Item Name="MIDI Libraries" Type="Folder"/>
 		<Item Name="Power Function" Type="Folder">
@@ -287,7 +285,6 @@
 			<Item Name="Data_Column_Headers.txt" Type="Document" URL="../Data_Column_Headers.txt"/>
 		</Item>
 		<Item Name="Result Libraries" Type="Folder">
-			<Item Name="ResultDAQ_Variables.lvlib" Type="Library" URL="../ResultDAQ_Variables.lvlib"/>
 			<Item Name="ResultNPSVariables.lvlib" Type="Library" URL="../ResultNPSVariables.lvlib"/>
 		</Item>
 		<Item Name="Server-Client VIs" Type="Folder">
@@ -308,6 +305,7 @@
 		<Item Name="BoP Model Control.vi" Type="VI" URL="../BoP Model Control.vi"/>
 		<Item Name="BoP Output Client.vi" Type="VI" URL="../BoP Output Client.vi"/>
 		<Item Name="Brain.vi" Type="VI" URL="../Brain.vi"/>
+		<Item Name="Electronic Procedure.vi" Type="VI" URL="../Electronic Procedure.vi"/>
 		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
 		<Item Name="Supervisor.vi" Type="VI" URL="../Supervisor.vi"/>
@@ -472,6 +470,7 @@ DirectoryIndex index.htm
 			<Item Name="DAQ_Variables.lvlib" Type="Library" URL="../DAQ_Variables.lvlib"/>
 			<Item Name="NPSVariables.lvlib" Type="Library" URL="../NPSVariables.lvlib"/>
 			<Item Name="ResultCore_Variables.lvlib" Type="Library" URL="../ResultCore_Variables.lvlib"/>
+			<Item Name="ResultDAQ_Variables.lvlib" Type="Library" URL="../ResultDAQ_Variables.lvlib"/>
 			<Item Name="ResultVFD_Variables.lvlib" Type="Library" URL="../ResultVFD_Variables.lvlib"/>
 			<Item Name="VFD_Variables.lvlib" Type="Library" URL="../VFD_Variables.lvlib"/>
 		</Item>
@@ -657,7 +656,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">40</Property>
+				<Property Name="Bld_version.build" Type="Int">47</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>
