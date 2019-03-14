@@ -2,6 +2,7 @@
 <Project Type="Project" LVVersion="17008000">
 	<Property Name="varPersistentID:{01A22E8F-F55B-4160-B022-664E76FF3DAE}" Type="Ref">/My Computer/Core_Variables.lvlib/Input Power Profile Array</Property>
 	<Property Name="varPersistentID:{02A6D697-FDC2-45BC-9A7D-EBE59348EBDD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-2_R</Property>
+	<Property Name="varPersistentID:{04C4F5A7-996B-4CC1-936B-D8D223C8325E}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Reset CTAH Controller Mode</Property>
 	<Property Name="varPersistentID:{0A5713F6-7B55-4F77-84B2-27A7E63865F4}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Exit Profile_R</Property>
 	<Property Name="varPersistentID:{0C08FA3F-0141-4E35-9B25-7CE4F2E3552E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-40_R</Property>
 	<Property Name="varPersistentID:{0C2CCD85-D303-49B8-A0C9-F1B1AE5A5E70}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Model</Property>
@@ -24,6 +25,7 @@
 	<Property Name="varPersistentID:{3104A8FD-B933-42CA-BD91-24A74BDDAD08}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/AT-01_R</Property>
 	<Property Name="varPersistentID:{3339D421-E3E6-40AE-9F8D-E7DFCF82F588}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-62_R</Property>
 	<Property Name="varPersistentID:{35E0D83D-B4CB-40F5-8D57-185403554E3B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-24_R</Property>
+	<Property Name="varPersistentID:{36562765-2D83-4DD6-9DFE-83305435DDF6}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop CTAH</Property>
 	<Property Name="varPersistentID:{383DB297-BB61-4B6E-B1A3-7CF02555FADA}" Type="Ref">/My Computer/DAQ_Variables.lvlib/PowersFreqs</Property>
 	<Property Name="varPersistentID:{384A1AE9-BF9F-4A8A-A0B2-9CDA85B41205}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-21_R</Property>
 	<Property Name="varPersistentID:{399DA0BA-AD02-4B68-A51B-4C2C49261275}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-12-SW_R</Property>
@@ -112,6 +114,7 @@
 	<Property Name="varPersistentID:{BAA06452-C7A5-41A3-8F60-40F1D576883E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-63_R</Property>
 	<Property Name="varPersistentID:{BB7D3133-F5A2-4B91-B331-7FC2CD21568B}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Status</Property>
 	<Property Name="varPersistentID:{BC484385-B7B7-4251-92F4-CD1B5A38D254}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Time_R</Property>
+	<Property Name="varPersistentID:{BCC88F37-9B43-4D72-813B-12FB35CFF3B4}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/CTAH Mode Memory</Property>
 	<Property Name="varPersistentID:{C7D4F4CE-76B2-4E16-80D0-11AEC6C7A399}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-31_R</Property>
 	<Property Name="varPersistentID:{C92AC5B3-2271-4960-87DA-557FE36EA635}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-S_R</Property>
 	<Property Name="varPersistentID:{CA5ABDE8-2614-4A5D-B44C-9588701C5962}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-41_R</Property>
@@ -155,6 +158,7 @@
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 		</Item>
 		<Item Name="Core_Variables.lvlib" Type="Library" URL="../Core_Variables.lvlib"/>
+		<Item Name="CTAH Controller.vi" Type="VI" URL="../CTAH Controller.vi"/>
 		<Item Name="DAQ_Variables.lvlib" Type="Library" URL="../DAQ_Variables.lvlib"/>
 		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
 		<Item Name="Reactor Read Client.vi" Type="VI" URL="../Reactor Read Client.vi"/>
