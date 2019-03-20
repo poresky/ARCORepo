@@ -772,167 +772,157 @@
 <parameter> Id = "770" Inline = "0" Name = "naccbraytoncycle2017a/Sensor23/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
 <parameter> Id = "771" Inline = "0" Name = "naccbraytoncycle2017a/Constant2/Value" Width = "1" DataType = "real_T" </parameter>
 <parameter> Id = "772" Inline = "0" Name = "naccbraytoncycle2017a/Sensor1/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "773" Inline = "0" Name = "naccbraytoncycle2017a/Sensor1/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "774" Inline = "0" Name = "naccbraytoncycle2017a/Sensor1/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "775" Inline = "0" Name = "naccbraytoncycle2017a/Sensor/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "776" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition7/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "777" Inline = "0" Name = "naccbraytoncycle2017a/Sensor/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "778" Inline = "0" Name = "naccbraytoncycle2017a/Sensor2/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "779" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition7/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "780" Inline = "0" Name = "naccbraytoncycle2017a/Sensor2/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "781" Inline = "0" Name = "naccbraytoncycle2017a/Sensor3/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "782" Inline = "0" Name = "naccbraytoncycle2017a/Sensor3/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "783" Inline = "0" Name = "naccbraytoncycle2017a/Constant3/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "784" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "785" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "786" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "787" Inline = "0" Name = "naccbraytoncycle2017a/Sensor4/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "788" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition3/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "789" Inline = "0" Name = "naccbraytoncycle2017a/Sensor4/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "790" Inline = "0" Name = "naccbraytoncycle2017a/Sensor6/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "791" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition3/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "792" Inline = "0" Name = "naccbraytoncycle2017a/Sensor6/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "793" Inline = "0" Name = "naccbraytoncycle2017a/Sensor7/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "794" Inline = "0" Name = "naccbraytoncycle2017a/Sensor7/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "795" Inline = "0" Name = "naccbraytoncycle2017a/Constant5/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "796" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "797" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "798" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "799" Inline = "0" Name = "naccbraytoncycle2017a/Sensor8/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "800" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition6/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "801" Inline = "0" Name = "naccbraytoncycle2017a/Sensor8/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "802" Inline = "0" Name = "naccbraytoncycle2017a/Sensor10/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "803" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition6/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "804" Inline = "0" Name = "naccbraytoncycle2017a/Sensor10/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "805" Inline = "0" Name = "naccbraytoncycle2017a/Sensor11/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "806" Inline = "0" Name = "naccbraytoncycle2017a/Sensor11/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "807" Inline = "0" Name = "naccbraytoncycle2017a/Constant6/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "808" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "809" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "810" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "811" Inline = "0" Name = "naccbraytoncycle2017a/Sensor14/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "812" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition2/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "813" Inline = "0" Name = "naccbraytoncycle2017a/Sensor14/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "814" Inline = "0" Name = "naccbraytoncycle2017a/Sensor12/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "815" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition2/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "816" Inline = "0" Name = "naccbraytoncycle2017a/Sensor12/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "817" Inline = "0" Name = "naccbraytoncycle2017a/Sensor13/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "818" Inline = "0" Name = "naccbraytoncycle2017a/Sensor13/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "819" Inline = "0" Name = "naccbraytoncycle2017a/Constant7/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "820" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "821" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "822" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "823" Inline = "0" Name = "naccbraytoncycle2017a/Sensor18/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "824" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition1/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "825" Inline = "0" Name = "naccbraytoncycle2017a/Sensor18/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "826" Inline = "0" Name = "naccbraytoncycle2017a/Sensor16/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "827" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition1/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "828" Inline = "0" Name = "naccbraytoncycle2017a/Sensor16/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "829" Inline = "0" Name = "naccbraytoncycle2017a/Sensor17/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "830" Inline = "0" Name = "naccbraytoncycle2017a/Sensor17/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "831" Inline = "0" Name = "naccbraytoncycle2017a/Constant8/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "832" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "833" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "834" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/RPM/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "835" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/LUTs/Constant/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "836" Inline = "0" Name = "naccbraytoncycle2017a/Constant11/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "837" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "838" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "839" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "840" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "841" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "842" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1" Width = "49" DataType = "real_T" </parameter>
-<parameter> Id = "843" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2" Width = "49" DataType = "real_T" </parameter>
-<parameter> Id = "844" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12" Width = "24" DataType = "real_T" </parameter>
-<parameter> Id = "845" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13" Width = "21" DataType = "real_T" </parameter>
-<parameter> Id = "846" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14" Width = "504" DataType = "real_T" </parameter>
-<parameter> Id = "847" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "848" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "849" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "850" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "851" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "852" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "853" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "854" Inline = "0" Name = "naccbraytoncycle2017a/Sensor26/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "855" Inline = "0" Name = "naccbraytoncycle2017a/Sensor26/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "856" Inline = "0" Name = "naccbraytoncycle2017a/Sensor24/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "857" Inline = "0" Name = "naccbraytoncycle2017a/Sensor24/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "858" Inline = "0" Name = "naccbraytoncycle2017a/Sensor25/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "859" Inline = "0" Name = "naccbraytoncycle2017a/Sensor25/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "860" Inline = "0" Name = "naccbraytoncycle2017a/Constant9/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "861" Inline = "0" Name = "naccbraytoncycle2017a/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "862" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition5/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "863" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "864" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "865" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "866" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "867" Inline = "0" Name = "naccbraytoncycle2017a/Constant4/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "868" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition4/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "869" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "870" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "871" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "872" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "873" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Memory1/X0" Width = "4" DataType = "real_T" </parameter>
-<parameter> Id = "874" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant4/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "875" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "876" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/p_Relaxation/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "877" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "878" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "879" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "880" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Memory/X0" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "881" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Divide2/Compare To Zero/Constant/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "882" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "883" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "884" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant3/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "885" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-normal/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "886" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Refrence R [J//g//K]/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "887" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "888" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "889" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PFin/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "890" Inline = "0" Name = "naccbraytoncycle2017a/Constant10/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "891" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "892" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "893" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "894" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "895" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/RPM/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "896" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "897" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/LUTs/Constant/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "898" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "899" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "900" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "901" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "902" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "903" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "904" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1" Width = "49" DataType = "real_T" </parameter>
-<parameter> Id = "905" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2" Width = "49" DataType = "real_T" </parameter>
-<parameter> Id = "906" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12" Width = "24" DataType = "real_T" </parameter>
-<parameter> Id = "907" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13" Width = "21" DataType = "real_T" </parameter>
-<parameter> Id = "908" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14" Width = "504" DataType = "real_T" </parameter>
-<parameter> Id = "909" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "910" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "911" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "912" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "913" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "914" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "915" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "916" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "917" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "918" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "919" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "920" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "921" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "922" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "923" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "924" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/MassFlow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "925" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "926" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "927" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "928" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "929" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "930" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "931" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "932" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "933" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "934" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
-<parameter> Id = "935" Inline = "0" Name = "naccbraytoncycle2017a/Ambient air/MassFlow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "773" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Memory1/X0" Width = "4" DataType = "real_T" </parameter>
+<parameter> Id = "774" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant4/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "775" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "776" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/p_Relaxation/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "777" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Constant/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "778" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "779" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "780" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Upstream to calculate mass flow/Memory/X0" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "781" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "782" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "783" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/Constant3/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "784" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-normal/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "785" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Divide2/Compare To Zero/Constant/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "786" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/Refrence R [J//g//K]/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "787" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "788" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PF compressor/p-ratio/p_ratio >= 1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "789" Inline = "0" Name = "naccbraytoncycle2017a/Sensor1/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "790" Inline = "0" Name = "naccbraytoncycle2017a/Sensor1/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "791" Inline = "0" Name = "naccbraytoncycle2017a/Sensor/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "792" Inline = "0" Name = "naccbraytoncycle2017a/Sensor/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "793" Inline = "0" Name = "naccbraytoncycle2017a/Sensor2/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "794" Inline = "0" Name = "naccbraytoncycle2017a/Sensor2/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "795" Inline = "0" Name = "naccbraytoncycle2017a/Sensor3/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "796" Inline = "0" Name = "naccbraytoncycle2017a/Sensor3/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "797" Inline = "0" Name = "naccbraytoncycle2017a/Constant3/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "798" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "799" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "800" Inline = "0" Name = "naccbraytoncycle2017a/Sensor5/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "801" Inline = "0" Name = "naccbraytoncycle2017a/Sensor4/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "802" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition3/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "803" Inline = "0" Name = "naccbraytoncycle2017a/Sensor4/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "804" Inline = "0" Name = "naccbraytoncycle2017a/Sensor6/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "805" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition3/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "806" Inline = "0" Name = "naccbraytoncycle2017a/Sensor6/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "807" Inline = "0" Name = "naccbraytoncycle2017a/Sensor7/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "808" Inline = "0" Name = "naccbraytoncycle2017a/Sensor7/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "809" Inline = "0" Name = "naccbraytoncycle2017a/Constant5/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "810" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "811" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "812" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/RPM/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "813" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/LUTs/Constant/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "814" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "815" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "816" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "817" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "818" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "819" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1" Width = "49" DataType = "real_T" </parameter>
+<parameter> Id = "820" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2" Width = "49" DataType = "real_T" </parameter>
+<parameter> Id = "821" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12" Width = "24" DataType = "real_T" </parameter>
+<parameter> Id = "822" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13" Width = "21" DataType = "real_T" </parameter>
+<parameter> Id = "823" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14" Width = "504" DataType = "real_T" </parameter>
+<parameter> Id = "824" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "825" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "826" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "827" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "828" Inline = "0" Name = "naccbraytoncycle2017a/HP Gas Turbine/Turbine/Saturation1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "829" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "830" Inline = "0" Name = "naccbraytoncycle2017a/Sensor9/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "831" Inline = "0" Name = "naccbraytoncycle2017a/Sensor8/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "832" Inline = "0" Name = "naccbraytoncycle2017a/Sensor8/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "833" Inline = "0" Name = "naccbraytoncycle2017a/Sensor10/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "834" Inline = "0" Name = "naccbraytoncycle2017a/Sensor10/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "835" Inline = "0" Name = "naccbraytoncycle2017a/Sensor11/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "836" Inline = "0" Name = "naccbraytoncycle2017a/Sensor11/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "837" Inline = "0" Name = "naccbraytoncycle2017a/Constant6/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "838" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "839" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "840" Inline = "0" Name = "naccbraytoncycle2017a/Sensor15/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "841" Inline = "0" Name = "naccbraytoncycle2017a/Sensor14/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "842" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition2/Memory1/X0" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "843" Inline = "0" Name = "naccbraytoncycle2017a/Sensor14/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "844" Inline = "0" Name = "naccbraytoncycle2017a/Sensor12/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "845" Inline = "0" Name = "naccbraytoncycle2017a/Initial Condition2/Memory2/X0" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "846" Inline = "0" Name = "naccbraytoncycle2017a/Sensor12/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "847" Inline = "0" Name = "naccbraytoncycle2017a/Sensor13/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "848" Inline = "0" Name = "naccbraytoncycle2017a/Sensor13/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "849" Inline = "0" Name = "naccbraytoncycle2017a/Constant7/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "850" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "851" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "852" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "853" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "854" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "855" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion1/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "856" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitScale/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "857" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/Unit Conversion2/UnitOffset/Bias" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "858" Inline = "0" Name = "naccbraytoncycle2017a/Constant1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "859" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "860" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "861" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "862" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/Pressure loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "863" Inline = "0" Name = "naccbraytoncycle2017a/Constant4/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "864" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "865" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "866" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "867" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/Pressure loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "868" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "869" Inline = "0" Name = "naccbraytoncycle2017a/Sensor19/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "870" Inline = "0" Name = "naccbraytoncycle2017a/Sensor18/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "871" Inline = "0" Name = "naccbraytoncycle2017a/Sensor18/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "872" Inline = "0" Name = "naccbraytoncycle2017a/Sensor16/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "873" Inline = "0" Name = "naccbraytoncycle2017a/Sensor16/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "874" Inline = "0" Name = "naccbraytoncycle2017a/Sensor17/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "875" Inline = "0" Name = "naccbraytoncycle2017a/Sensor17/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "876" Inline = "0" Name = "naccbraytoncycle2017a/Constant8/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "877" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "878" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-normal/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "879" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/RPM/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "880" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/LUTs/Constant/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "881" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "882" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "883" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "884" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain3/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "885" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/Gain4/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "886" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P1" Width = "49" DataType = "real_T" </parameter>
+<parameter> Id = "887" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P2" Width = "49" DataType = "real_T" </parameter>
+<parameter> Id = "888" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P12" Width = "24" DataType = "real_T" </parameter>
+<parameter> Id = "889" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P13" Width = "21" DataType = "real_T" </parameter>
+<parameter> Id = "890" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P14" Width = "504" DataType = "real_T" </parameter>
+<parameter> Id = "891" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P15" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "892" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/T-p-x-State/S-Function1/P21" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "893" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "894" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "895" Inline = "0" Name = "naccbraytoncycle2017a/LP Gas Turbine/Turbine/Saturation1/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "896" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/Gain2/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "897" Inline = "0" Name = "naccbraytoncycle2017a/Sensor27/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "898" Inline = "0" Name = "naccbraytoncycle2017a/Sensor26/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "899" Inline = "0" Name = "naccbraytoncycle2017a/Sensor26/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "900" Inline = "0" Name = "naccbraytoncycle2017a/Sensor24/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "901" Inline = "0" Name = "naccbraytoncycle2017a/Sensor24/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "902" Inline = "0" Name = "naccbraytoncycle2017a/Sensor25/addition factor1/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "903" Inline = "0" Name = "naccbraytoncycle2017a/Sensor25/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "904" Inline = "0" Name = "naccbraytoncycle2017a/Constant9/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "905" Inline = "0" Name = "naccbraytoncycle2017a/Compressor Pressure Feedback/PFin/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "906" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "907" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "908" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "909" Inline = "0" Name = "naccbraytoncycle2017a/HP CTAH/Pressure Loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "910" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "911" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/p_downstrem_min/Value" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "912" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "913" Inline = "0" Name = "naccbraytoncycle2017a/LP CTAH/Pressure Loss/Saturation/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "914" Inline = "0" Name = "naccbraytoncycle2017a/Natural Gas/MassFlow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "915" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "916" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "917" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "918" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "919" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber1/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "920" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Gain1/Gain" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "921" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "922" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "923" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/UpperLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "924" Inline = "0" Name = "naccbraytoncycle2017a/Combustion Chamber/Reactor/calculate  conversion/Subsystem1/Saturation2/LowerLimit" Width = "1" DataType = "real_T" </parameter>
+<parameter> Id = "925" Inline = "0" Name = "naccbraytoncycle2017a/Ambient air/MassFlow/Gain/Gain" Width = "1" DataType = "real_T" </parameter>
 </parameterlist>

@@ -224,19 +224,30 @@ boolean_T _isnan(real_T value)
 /*========================================================================*
  * External Functions
  *========================================================================*/
-extern RT_MODEL *MODEL(void);
-extern void MdlInitializeSizes(void);
-extern void MdlInitializeSampleTimes(void);
-extern void MdlStart(void);
-extern void MdlOutputs(int_T tid);
-extern void MdlUpdate(int_T tid);
-extern void MdlTerminate(void);
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+  /* The following functions are implemented by Simulink's generated code. The identifiers are prefixed with the
+     extern "c" directive when generating C++ code; as such we must do the same. */
+  extern RT_MODEL *MODEL(void);
+  extern void MdlInitializeSizes(void);
+  extern void MdlInitializeSampleTimes(void);
+  extern void MdlStart(void);
+  extern void MdlOutputs(int_T tid);
+  extern void MdlUpdate(int_T tid);
+  extern void MdlTerminate(void);
+  extern void rt_ODECreateIntegrationData(RTWSolverInfo *si);
+  extern void rt_ODEUpdateContinuousStates(RTWSolverInfo *si);
+
+#ifdef __cplusplus
+
+}
+#endif
 
 #if NCSTATES > 0
-
-extern void rt_ODECreateIntegrationData(RTWSolverInfo *si);
-extern void rt_ODEUpdateContinuousStates(RTWSolverInfo *si);
-
 #define rt_CreateIntegrationData(S)    rt_ODECreateIntegrationData(rtmGetRTWSolverInfo(S));
 #define rt_UpdateContinuousStates(S)   rt_ODEUpdateContinuousStates(rtmGetRTWSolverInfo(S));
 #else
@@ -259,17 +270,30 @@ static struct {
   boolean_T isModelStarted;
 } SITglobals;
 
-_SITexportglobals SITexportglobals;
-RT_MODEL *S = NULL;
+#ifdef __cplusplus
 
-/* Following functions are defined in <model name>.c */
-void SetExternalInputs(double *data, int_T* sampleHit);
-void SetExternalOutputs(double *data, int_T* sampleHit);
-int32_t NumInputPorts(void);
-int32_t NumOutputPorts(void);
-int32_t NI_InitParamDoubleBuf(void);
-int32_t NI_InitializeParamStruct(void);
-int32_t NI_InitExternalOutputs(void);
+extern "C" {
+
+#endif
+
+  _SITexportglobals SITexportglobals;
+  RT_MODEL *S = NULL;
+
+  /* Following functions are defined in <model name>.c */
+  void SetExternalInputs(double *data, int_T* sampleHit);
+  void SetExternalOutputs(double *data, int_T* sampleHit);
+  int32_t NumInputPorts(void);
+  int32_t NumOutputPorts(void);
+  int32_t NI_InitParamDoubleBuf(void);
+  int32_t NI_InitializeParamStruct(void);
+  int32_t NI_InitExternalOutputs(void);
+  extern const NI_Task NI_TaskList[];
+  extern const int32_t NI_NumTasks;
+
+#ifdef __cplusplus
+
+}
+#endif
 
 /*========================================================================*
  * Function: SetSITErrorMessage
@@ -1032,9 +1056,6 @@ DLL_EXPORT int32_t NIRT_ModelError(char* errmsg, int32_t *msglen)
 
   return retVal;
 }
-
-extern const NI_Task NI_TaskList[];
-extern const int32_t NI_NumTasks;
 
 /*========================================================================*
  * Function: NIRT_TaskRunTimeInfo
