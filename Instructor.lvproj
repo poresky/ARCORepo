@@ -213,6 +213,7 @@
 	<Property Name="varPersistentID:{AEDC5D8C-5744-497E-84B8-BF492259C538}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Output Current 1_S</Property>
 	<Property Name="varPersistentID:{AF97E79B-A97C-4369-BA83-33A3BD446F89}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-35</Property>
 	<Property Name="varPersistentID:{B030201D-3BA6-4A2F-AFDA-7AFE416CD4EA}" Type="Ref">/My Computer/Spoof Libraries/SpoofVFD_Variables.lvlib/GS1 Stop_S</Property>
+	<Property Name="varPersistentID:{B08289FC-5D30-4585-B4D3-5F3F99736CCD}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/CTAH Mode Memory</Property>
 	<Property Name="varPersistentID:{B11DD698-758A-40E5-951B-E936FBB82E1B}" Type="Ref">/My Computer/Spoof Libraries/SpoofCore_Variables.lvlib/Output Voltage 1_S</Property>
 	<Property Name="varPersistentID:{B1604A2A-8E35-43F6-AD37-A3DE0CB4818F}" Type="Ref">/My Computer/DAQ Libraries/Core_Variables.lvlib/Input Power Profile Array</Property>
 	<Property Name="varPersistentID:{B1EDF49B-CFD3-49CE-BFB2-18926313742A}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-24_R</Property>
@@ -241,6 +242,7 @@
 	<Property Name="varPersistentID:{CE61597F-3475-4D5D-85A9-22815DCC452D}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-40_S</Property>
 	<Property Name="varPersistentID:{CF834C3E-1E2D-4147-940C-19504B6421BC}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/WT-13</Property>
 	<Property Name="varPersistentID:{CFF4C686-6BEF-4366-A229-2DDE835C279A}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Exit Profile_R</Property>
+	<Property Name="varPersistentID:{D5819F06-BACC-4A97-9B4E-041850BC4673}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop CTAH</Property>
 	<Property Name="varPersistentID:{D65BB29C-E3BE-49CB-A628-7626501BF35A}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/ST-12-SW_S</Property>
 	<Property Name="varPersistentID:{D737C982-612A-4F9F-BE8B-E92EEC12161A}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/CX-10-4</Property>
 	<Property Name="varPersistentID:{D9563EE8-DA42-459F-9F03-B188F0D83E5B}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-4_R</Property>
@@ -269,6 +271,7 @@
 	<Property Name="varPersistentID:{E9653D9B-6B1C-4E62-A740-B504B64C1635}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Select Operation Mode_R</Property>
 	<Property Name="varPersistentID:{E9BD942A-B5C8-4032-B563-549340440EA0}" Type="Ref">/My Computer/DAQ Libraries/VFD_Variables.lvlib/TCHX Variables/Activate TCHX</Property>
 	<Property Name="varPersistentID:{EBCCD45A-11ED-4B98-A526-CBFB03FA02D5}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-22_R</Property>
+	<Property Name="varPersistentID:{ED68DEF8-64C5-46AE-8353-B29504DAD384}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Reset CTAH Controller Mode</Property>
 	<Property Name="varPersistentID:{ED778147-E336-4AD3-AF4F-7EAE0EF10712}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Spoof Enabled</Property>
 	<Property Name="varPersistentID:{F0B105C9-B675-4E3C-848C-73CCDA44D64E}" Type="Ref">/My Computer/DAQ Libraries/DAQ_Variables.lvlib/Flow Data?</Property>
 	<Property Name="varPersistentID:{F10E0650-4CB9-4133-977F-677E2BA5D9F0}" Type="Ref">/My Computer/DAQ Libraries/NPSVariables.lvlib/Thermocouples/ST-11</Property>
@@ -316,46 +319,13 @@
 			<Item Name="ResultNPSVariables.lvlib" Type="Library" URL="../ResultNPSVariables.lvlib"/>
 			<Item Name="ResultVFD_Variables.lvlib" Type="Library" URL="../ResultVFD_Variables.lvlib"/>
 		</Item>
-		<Item Name="ARCO Instructor Write Client.vi" Type="VI" URL="../../Networking VIs/ARCO Instructor Write Client.vi"/>
-		<Item Name="ARCO Main Server.vi" Type="VI" URL="../ARCO Main Server.vi"/>
-		<Item Name="ARCO Read Client.vi" Type="VI" URL="../../Networking VIs/ARCO Read Client.vi"/>
-		<Item Name="Chat_Instructor.vi" Type="VI" URL="../../Networking VIs/Chat_Instructor.vi"/>
+		<Item Name="Instructor Write Client.vi" Type="VI" URL="../Instructor Write Client.vi"/>
+		<Item Name="Instructor Read Client.vi" Type="VI" URL="../Instructor Read Client.vi"/>
+		<Item Name="Instructor Log.vi" Type="VI" URL="../Instructor Log.vi"/>
 		<Item Name="Instructor.vi" Type="VI" URL="../Instructor.vi"/>
-		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
-				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
-				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
-				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
-				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
-				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
-				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
-				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
-				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
-				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
-				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
-				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
-				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
-				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
-				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
-				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
-				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
-				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
-				<Item Name="Details Display Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Details Display Dialog.vi"/>
-				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
-				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
-				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
-				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
-				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
-				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
-				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
-				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
-				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
-				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
-				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
-				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
-				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="Read Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet.vi"/>
 				<Item Name="Read Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (DBL).vi"/>
@@ -367,17 +337,41 @@
 				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Read Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (I64).vi"/>
 				<Item Name="Read Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (string).vi"/>
+				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
+				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
+				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
+				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
+				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
+				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
+				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
+				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
+				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
+				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
+				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
+				<Item Name="Details Display Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Details Display Dialog.vi"/>
+				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
+				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
+				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
+				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
+				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
+				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
+				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
+				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
+				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
+				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
+				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
+				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
+				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 			</Item>
-			<Item Name="Add_Data_ARCO.vi" Type="VI" URL="../Add_Data_ARCO.vi"/>
-			<Item Name="Spoof_ARCO.vi" Type="VI" URL="../Spoof_ARCO.vi"/>
-			<Item Name="Spoof_ARCO_Boolean.vi" Type="VI" URL="../Spoof_ARCO_Boolean.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
-			<Item Name="No_Spoof_ARCO.vi" Type="VI" URL="../No_Spoof_ARCO.vi"/>
-			<Item Name="No_Spoof_ARCO_Boolean.vi" Type="VI" URL="../No_Spoof_ARCO_Boolean.vi"/>
-			<Item Name="No_Spoof_ARCO_Data.vi" Type="VI" URL="../No_Spoof_ARCO_Data.vi"/>
-			<Item Name="Spoof_ARCO_Data.vi" Type="VI" URL="../Spoof_ARCO_Data.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

@@ -11,10 +11,10 @@
 #define NI_MODELFRAMEWORK_H
 
 /* NI VeriStand Model Framework API version */
-#define NIMF_VER_MAJOR                 2017
+#define NIMF_VER_MAJOR                 2018
 #define NIMF_VER_MINOR                 0
 #define NIMF_VER_FIX                   0
-#define NIMF_VER_BUILD                 143
+#define NIMF_VER_BUILD                 81
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
