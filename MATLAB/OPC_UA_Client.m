@@ -29,9 +29,6 @@ readValue(uaClient,CIETDataNode)
 % Write node values
 writeValue(uaClient,CIETDataNode,[])
 
-DataNode = findNodeByName(uaClient.Namespace,'Message');
-readValue(uaClient,TempNode)
-writeValue(uaClient,TempNode,55);
 tic;
 Log = {};
 last = '';
@@ -63,5 +60,69 @@ for i = 1:10
         hold on
     end
 end
+%% Live data collection and plotting example
 
-    
+% Begin plotting live data for each temperature
+figure
+h = cell(1,52);
+for i = 1:52
+    h{i} = animatedline;
+end
+ax = gca;
+ax.YGrid = 'on';
+ax.YLim = [21.3 21.9];
+
+% Initialize CIETTemps array to collect 10 data points
+CIETTemps = zeros(10,52);
+
+elap = 0;
+
+% Begin timer
+tic;
+% For loop to collect data for 10 seconds
+for i = 1:100
+    tic
+    % Read current values
+    CurrentValues = readValue(uaClient,CIETDataNode);
+    % Pull out temperatures and assign to CIETTemps
+    CIETTemps(i,:) = CurrentValues(2:53)';
+    % Add points to animation
+    for j = 1:52
+        addpoints(h{j},i*0.1,CIETTemps(i,j));
+    end
+    % Update axes
+    ax.XLim = [i*0.1-1 i*0.1];
+    drawnow
+    % Pause until next second
+    pause(0.1-toc);
+    % Store elapsed time for testing
+    elap = elap + toc;
+end
+elap
+
+%% On-line statistics example
+ 
+% Initialize TempStats array to collect 10 data points
+CIETTemps = zeros(100,52);
+TempStats = cell(10,52);
+Outliers = cell(10,52);
+Rates = cell(10,52);
+
+% For loop to collect data for 10 seconds at 1 Hz
+for i = 1:10
+    tic
+    for j = 1:10
+        % Read current values
+        CurrentValues = readValue(uaClient,CIETDataNode);
+        % Pull out temperatures and assign to CIETTemps
+        CIETTemps(j+10*(i-1),:) = CurrentValues(2:53)';
+        % Pause until next time step
+        pause(0.1 - toc);
+    end
+    % Calculate basic statistics on the last 10 time steps
+    for k = 1:52
+        [TempStats{i,k},Outliers{i},Rates{i}] = ...
+            BasicStatsAnalysis(CIETTemps((1+10*(i-1)):(10*i),k), 10);
+    end
+    pause(1 - toc);
+end
