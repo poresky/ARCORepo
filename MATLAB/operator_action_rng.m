@@ -8,3 +8,9 @@ while true
     fprintf(fileID,'%6.0f\n',c');
     fclose(fileID);
 end
+
+%% Reset values
+c = [0,0,0,0,0,0,0,0,0,0]
+fileID=fopen('my_text2.txt','w');
+fprintf(fileID,'%6.0f\n',c');
+fclose(fileID);

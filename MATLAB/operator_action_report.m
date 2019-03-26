@@ -86,6 +86,6 @@ while true
     end
     pause(1)
 end
-
-% T = cell2table(e,'VariableNames', {'Time','Action','Value','Units'})
-% writetable(T, strcat(file))
+%% Write to file
+T = cell2table(e,'VariableNames', {'Time','Action','Value','Units'})
+writetable(T, strcat(filename))
