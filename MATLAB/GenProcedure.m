@@ -5,10 +5,8 @@ function States = GenProcedure(csvFileName,Headers)
 %% 
 % Configuration: Cassify the variable columns as controllable or measurable 
 % variables.
-    %controlVars = 7:9;
-    %measureVars = 10:22;
-    controlVars = 7:8;
-    measureVars = 9;
+    controlVars = 7:15;
+    measureVars = 16:17;
 %% 
 % Read the scheme structure file and prepare the output.
     States = readtable(csvFileName);
@@ -30,12 +28,7 @@ function States = GenProcedure(csvFileName,Headers)
         end 
         
         description = "";
-        summary = "";    
-        % Record data steps
-        if States{s,5} ~= ""
-            summary = "Record " + States{s,5};
-            description = description + "Record " + States{s,5} + ". ";
-        end     
+        summary = "";       
         
         % Set a control steps
         steps = find(~isnan(States{s,controlVars}));
@@ -43,6 +36,12 @@ function States = GenProcedure(csvFileName,Headers)
             summary = "Set " + Headers(i);
             description = description + "Set " + Headers(i) + " to " + States{s,i} + ". ";   
         end 
+
+        % Record data steps
+        if States{s,5} ~= ""
+            summary = "Record " + States{s,5};
+            description = description + "Record " + States{s,5} + ". ";
+        end             
         
         % Achieve a measurement steps
         steps = find(~isnan(States{s,measureVars}));
@@ -53,7 +52,7 @@ function States = GenProcedure(csvFileName,Headers)
                 summary = "Achieve " + Headers(i);
                 description = description + "Achieve " + Headers(i) + " of " + States{s,i} + ". ";   
             end 
-        end     
+        end          
         
         % Waiting steps
         if States{s,6} > 0

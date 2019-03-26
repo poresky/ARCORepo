@@ -6,8 +6,8 @@ function [state, description, summaries, bLights, time] = TrackState(systemVars,
 %% 
 % Configuration: Cassify the variable columns as controllable or measurable 
 % variables.
-    controlVars = 6:7;
-    measureVars = 8;
+    controlVars = 6:14;
+    measureVars = 15:16;
     tolerance = 0.02; % Tolerance for state advancement criteria
 %% 
 %     
