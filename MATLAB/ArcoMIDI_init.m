@@ -2,7 +2,7 @@
 try
 	inputCh = mididevice('Input','MIDI Mix');
 catch
-    warning("Midi controller not found. Manually intialize it when plugged in.");
+    warning('Midi controller not found. Manually intialize it when plugged in.');
 	bMIDISuccess = 0;
     return
 end
