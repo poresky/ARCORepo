@@ -53,6 +53,7 @@
 	<Property Name="varPersistentID:{3132F8ED-8D73-48C5-90A1-E3C405215E9F}" Type="Ref">/My Computer/BoP Libraries/BoPInputs.lvlib/NG Temp In</Property>
 	<Property Name="varPersistentID:{3162FAD3-4353-4D92-9382-1B10F4DF02CE}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-20_R</Property>
 	<Property Name="varPersistentID:{333F5A3B-D4E8-439F-B4A3-5209DA4BB7A1}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-34_R</Property>
+	<Property Name="varPersistentID:{334768C6-47ED-4E12-856A-3568925F86F1}" Type="Ref">/My Computer/Comms and Mgmt/Communication.lvlib/Operator Actions MASTER</Property>
 	<Property Name="varPersistentID:{337E4B97-FC60-4504-9E27-25B18C1C7FBB}" Type="Ref">/My Computer/BoP Libraries/BoPInputs.lvlib/CTAH 2 Heat Transfer Rate</Property>
 	<Property Name="varPersistentID:{34571708-FA3F-4A71-A5DF-884ADD67BD6C}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Flowmeters_R/FM-60_R</Property>
 	<Property Name="varPersistentID:{365AC614-247B-4CEA-9D0C-00B4AFE9808B}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/Temp HP CTAH Out</Property>
@@ -64,6 +65,7 @@
 	<Property Name="varPersistentID:{41191A1B-254D-43C9-9293-D287E6D6F8FD}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/WT-13_R</Property>
 	<Property Name="varPersistentID:{41744E9A-2310-4DC6-A1DE-D5D612A23919}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/SysFlowRates_R</Property>
 	<Property Name="varPersistentID:{446EEF1C-44E3-43EE-8E44-636EDA82FF0F}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/TCHX Variables/TCHX Frequency</Property>
+	<Property Name="varPersistentID:{44B7D7B8-8961-4777-8C21-C06A9A1C53EE}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop MATLAB Control</Property>
 	<Property Name="varPersistentID:{456187FA-E9D0-4E69-85D7-9A71FF77E90D}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-N_R</Property>
 	<Property Name="varPersistentID:{4653E6B6-A7DB-4DEE-849F-D33CC4114798}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/ST-13_R</Property>
 	<Property Name="varPersistentID:{46998C29-7800-45F6-B8E9-0500388B12F6}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/WT-13</Property>
@@ -148,6 +150,7 @@
 	<Property Name="varPersistentID:{9A6B0EE8-1DBB-4916-90DB-95E03BB8E6A7}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-23_R</Property>
 	<Property Name="varPersistentID:{9A8EC8E0-3926-455E-839A-D20D9850452E}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib/Output Current 2_R</Property>
 	<Property Name="varPersistentID:{9AC3B8BC-7943-4CD3-8BC7-09DC67577687}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-66_R</Property>
+	<Property Name="varPersistentID:{9AD81737-2052-4E09-B28C-D9B332CB36B1}" Type="Ref">/My Computer/MATLAB Control/MATLAB Booleans.lvlib/Action Recorder ON</Property>
 	<Property Name="varPersistentID:{9B79AC05-AB1A-4866-AA8E-4A6774B27A71}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib/Result TCHX Variables/TCHX Operating Case_R</Property>
 	<Property Name="varPersistentID:{9C5D9BC3-53EA-418C-8FB8-19ADA6990FAC}" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib/CTAH Variables/CTAH Outlet Set-Point</Property>
 	<Property Name="varPersistentID:{9CB65EC5-3807-43B2-80AA-8E37ADB52214}" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib/Thermocouples/WT-62</Property>
@@ -220,6 +223,7 @@
 	<Property Name="varPersistentID:{E2E6A8C2-42F6-4B00-9D46-92AAE5BD2852}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Frequency_R</Property>
 	<Property Name="varPersistentID:{E39FFA6E-A12E-4C59-862D-7CE84B95DDF0}" Type="Ref">/My Computer/MIDI Libraries/MIDI Variables.lvlib/Power Direct</Property>
 	<Property Name="varPersistentID:{E3C22089-4300-42CE-AB1A-D38E5A33D70B}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Frequency_R</Property>
+	<Property Name="varPersistentID:{E4D6C062-5350-4BFA-9928-022AAC20B9FA}" Type="Ref">/My Computer/MATLAB Control/MATLAB Booleans.lvlib/MATLAB Active</Property>
 	<Property Name="varPersistentID:{E58B23C6-0B06-4747-9DFA-48EE70183551}" Type="Ref">/My Computer/BoP Libraries/BoPOutputs.lvlib/Hdot Compressor In</Property>
 	<Property Name="varPersistentID:{E6467153-B7C8-4D8D-899B-D7C31210173A}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Connection</Property>
 	<Property Name="varPersistentID:{E712A7C5-B90B-403C-B956-138EA014AB85}" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib/Flow Data?_R</Property>
@@ -261,6 +265,9 @@
 			<Item Name="BoPInputs.lvlib" Type="Library" URL="../BoPInputs.lvlib"/>
 			<Item Name="BoPOutputs.lvlib" Type="Library" URL="../BoPOutputs.lvlib"/>
 		</Item>
+		<Item Name="Comms and Mgmt" Type="Folder">
+			<Item Name="Communication.lvlib" Type="Library" URL="../Communication.lvlib"/>
+		</Item>
 		<Item Name="Control Styles" Type="Folder">
 			<Item Name="Bulk TC Pointer.ctl" Type="VI" URL="../Bulk TC Pointer.ctl"/>
 			<Item Name="Modified Fill Bar Indicator.ctl" Type="VI" URL="../Modified Fill Bar Indicator.ctl"/>
@@ -271,6 +278,9 @@
 		</Item>
 		<Item Name="Host Test VIs" Type="Folder">
 			<Item Name="DAQ_Host_OPC UA.vi" Type="VI" URL="../DAQ_Host_OPC UA.vi"/>
+		</Item>
+		<Item Name="MATLAB Control" Type="Folder">
+			<Item Name="MATLAB Booleans.lvlib" Type="Library" URL="../MATLAB Booleans.lvlib"/>
 		</Item>
 		<Item Name="MIDI Libraries" Type="Folder">
 			<Item Name="MIDI Variables.lvlib" Type="Library" URL="../MIDI Variables.lvlib"/>
@@ -322,6 +332,7 @@
 		<Item Name="MIDI Controller.vi" Type="VI" URL="../MIDI Controller.vi"/>
 		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
+		<Item Name="Supervisor MATLAB Write Client.vi" Type="VI" URL="../Supervisor MATLAB Write Client.vi"/>
 		<Item Name="Supervisor.vi" Type="VI" URL="../Supervisor.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -437,7 +448,7 @@
 		<Property Name="target.server.viscripting.showScriptingOperationsInEditor" Type="Bool">false</Property>
 		<Property Name="target.WebServer.Config" Type="Str"># Web server configuration file.
 # Generated by LabVIEW 17.0.1f3
-# 11/29/2018 5:23:18 PM
+# 3/27/2019 9:51:23 AM
 
 #
 # Global Directives
@@ -670,7 +681,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">49</Property>
+				<Property Name="Bld_version.build" Type="Int">55</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>
@@ -679,12 +690,36 @@ DirectoryIndex index.htm
 				<Property Name="Destination[1].path" Type="Path">/c/ni-rt/startup/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1B2D3B98-1DB3-4756-86AB-EAC1A913783A}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1EEB258D-4AC1-4FED-A999-B3E5A2BD66D8}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/CIET-PXIe/Core.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultDAQ_Variables.lvlib</Property>
+				<Property Name="Source[10].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[10].type" Type="Str">Library</Property>
+				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultCore_Variables.lvlib</Property>
+				<Property Name="Source[11].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[11].type" Type="Str">Library</Property>
+				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/ResultVFD_Variables.lvlib</Property>
+				<Property Name="Source[12].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[12].type" Type="Str">Library</Property>
+				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/VFD_Variables.lvlib</Property>
+				<Property Name="Source[13].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[13].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[13].type" Type="Str">Library</Property>
+				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/CIET-PXIe/Hardware Files/GS1 Factory Reset.vi</Property>
+				<Property Name="Source[14].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[14].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/CIET-PXIe/DAQ_OPC UA.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
@@ -694,18 +729,33 @@ DirectoryIndex index.htm
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref"></Property>
-				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/CIET-PXIe/Hardware Files/Hardware_Power Supplies_Init.vi</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Exclude</Property>
 				<Property Name="Source[4].type" Type="Str">VI</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/CIET-PXIe/Hardware Files/Hardware_Power Supplies_Init.vi</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/CIET-PXIe/VFD.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
-				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/CIET-PXIe/VFD.vi</Property>
-				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[6].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">7</Property>
+				<Property Name="Source[6].Container.applyProperties" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/CIET-PXIe/Hardware Files</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/Core_Variables.lvlib</Property>
+				<Property Name="Source[7].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">Library</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/DAQ_Variables.lvlib</Property>
+				<Property Name="Source[8].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">Library</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/CIET-PXIe/PXI_Libraries/NPSVariables.lvlib</Property>
+				<Property Name="Source[9].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">15</Property>
 			</Item>
 		</Item>
 	</Item>
