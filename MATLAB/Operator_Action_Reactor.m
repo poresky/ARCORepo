@@ -63,6 +63,10 @@ if matlab_active == true
                     end
                     old_data(1,5) = new_data(1,5); disp(displayed_report)
                 end
+                if new_data(1,6) ~= old_data(1,6)
+                    displayed_report = ['Reactor operator changed TCHX frequency to ' num2str(tchx_freq) ' at ' num2str(timestamp) ' seconds'];
+                    old_data(1,6) = new_data(1,6); disp(displayed_report)
+                end
                 if new_data(1,7) ~= old_data(1,7)
                     if new_data(1,7) == 1
                         displayed_report = ['Reactor operator activated TCHX at ' num2str(timestamp) ' seconds'];

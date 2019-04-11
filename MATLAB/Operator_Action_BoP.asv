@@ -29,26 +29,34 @@ if matlab_active == true
         power_bool = boolean_control_actions(2); ctah_bool = boolean_control_actions(3); tchx_bool = boolean_control_actions(4); pump_bool = boolean_control_actions(5);
         [ciet_data, date_time_ciet] = readValue(uaClient, CIETDataNode);
         timestamp = ciet_data(1);
-        new_data = [timestamp, air_flow_rate, shaft_rpm, hpt_pr, lpt_pr, ng_flow_rate, ng_temp, ng_press, stop_bop];
+        new_data = [timestamp, air_flow_rate, shaft_rp];
         if operator_actions == true
                 if new_data(1,2) ~= old_data(1,2)
                     displayed_report = ['BoP operator changed air flow rate to ' num2str(air_flow_rate), ' at ' num2str(timestamp) ' seconds'];
+                end
+                old_data(1,2) = new_data(1,2); disp(displayed_report)
+                if new_data(1,2) ~= old_data(1,2)
+                    displayed_report = ['Reactor operator changed desired power to ' num2str(desired_power) ' at ' num2str(timestamp) ' seconds'];
                     old_data(1,2) = new_data(1,2); disp(displayed_report)
                 end
-                if new_data(1,3) ~= old_data(1,3)
-                    displayed_report = ['BoP operator changed shaft RPM to ' num2str(shaft_rpm) ' at ' num2str(timestamp) ' seconds'];
-                    old_data(1,3) = new_data(1,3); disp(displayed_report)
-                end
                 if new_data(1,4) ~= old_data(1,4)
-                    displayed_report = ['BoP operator changed HPT PR to ' num2str(hpt_pr) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['Reactor operator changed pump frequency to ' num2str(pump_freq) ' at ' num2str(timestamp) ' seconds'];
                     old_data(1,4) = new_data(1,4); disp(displayed_report)
                 end
                 if new_data(1,5) ~= old_data(1,5)
-                    displayed_report = ['BoP operator changed LPT PR to ' num2str(lpt_pr) ' at ' num2str(timestamp) ' seconds'];
+                    if new_data(1,5) == 1
+                        displayed_report = ['Reactor operator activated pump at ' num2str(timestamp) ' seconds'];
+                    else
+                        displayed_report = ['Reactor operator deactivated pump at ' num2str(timestamp) ' seconds'];
+                    end
                     old_data(1,5) = new_data(1,5); disp(displayed_report)
                 end
                 if new_data(1,7) ~= old_data(1,7)
-                    displayed_report = ['BoP operator changed NG flow rate to ' num2str(ng_flow_rate) ' at ' num2str(timestamp) ' seconds'];
+                    if new_data(1,7) == 1
+                        displayed_report = ['Reactor operator activated TCHX at ' num2str(timestamp) ' seconds'];
+                    else
+                        displayed_report = ['Reactor operator deactivated TCHX at ' num2str(timestamp) ' seconds'];
+                    end
                     old_data(1,7) = new_data(1,7); disp(displayed_report)
                 end
                 writeValue(uaClient,StringNode,[displayed_report])
