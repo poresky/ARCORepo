@@ -1,148 +1,104 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
-	<Property Name="varPersistentID:{01A22E8F-F55B-4160-B022-664E76FF3DAE}" Type="Ref">/My Computer/Core_Variables.lvlib/Input Power Profile Array</Property>
-	<Property Name="varPersistentID:{02A6D697-FDC2-45BC-9A7D-EBE59348EBDD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-2_R</Property>
-	<Property Name="varPersistentID:{04C4F5A7-996B-4CC1-936B-D8D223C8325E}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Reset CTAH Controller Mode</Property>
-	<Property Name="varPersistentID:{0A5713F6-7B55-4F77-84B2-27A7E63865F4}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Exit Profile_R</Property>
-	<Property Name="varPersistentID:{0C08FA3F-0141-4E35-9B25-7CE4F2E3552E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-40_R</Property>
-	<Property Name="varPersistentID:{0C2CCD85-D303-49B8-A0C9-F1B1AE5A5E70}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Model</Property>
-	<Property Name="varPersistentID:{0DF0F792-CF26-4116-9E60-0B0E08A0FA19}" Type="Ref">/My Computer/DAQ_Variables.lvlib/Flow Data?</Property>
-	<Property Name="varPersistentID:{0E65ABFB-07EE-48D3-A440-7F2FF2260043}" Type="Ref">/My Computer/VFD_Variables.lvlib/Pump Variables/Pump Mass Flow Set-Point</Property>
-	<Property Name="varPersistentID:{0E9C6707-0FFE-42AD-8840-0899FEB2B864}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Connection</Property>
-	<Property Name="varPersistentID:{0F57257D-AE9B-46C8-A73F-979ADE1784ED}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-N_R</Property>
-	<Property Name="varPersistentID:{110ACA4A-61F2-47B0-8D17-76086EEF6AD8}" Type="Ref">/My Computer/VFD_Variables.lvlib/CTAH Variables/CTAH Outlet Set-Point</Property>
-	<Property Name="varPersistentID:{1820B135-C8C6-4DFD-847C-0316903E22F5}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/GS1 Stop_R</Property>
-	<Property Name="varPersistentID:{1A292C42-B691-4F23-9FDC-0A2494F13A69}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/VFD Error Msg</Property>
-	<Property Name="varPersistentID:{1B76150E-590D-4E07-A6DA-DC6AD7B1390A}" Type="Ref">/My Computer/VFD_Variables.lvlib/TCHX Variables/TCHX Operating Case</Property>
-	<Property Name="varPersistentID:{1DAE48AB-DFFE-4DAA-AE7B-075799C38FF9}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result TCHX Variables/TCHX Frequency_R</Property>
-	<Property Name="varPersistentID:{1F484E67-5330-4C58-BB16-E31979937217}" Type="Ref">/My Computer/VFD_Variables.lvlib/Pump Variables/Pump Operating Case</Property>
-	<Property Name="varPersistentID:{1FB9BAE3-E829-4817-9627-23E03CB241D2}" Type="Ref">/My Computer/ResultDAQ_Variables.lvlib/SysFluidTemps_R</Property>
-	<Property Name="varPersistentID:{20712F31-EC62-466C-9B93-55E02B20DC39}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Chat Connection</Property>
-	<Property Name="varPersistentID:{2205B89D-04FE-48D7-98D1-BAA1037F3573}" Type="Ref">/My Computer/VFD_Variables.lvlib/TCHX Variables/Activate TCHX</Property>
-	<Property Name="varPersistentID:{2BD666E4-6214-4CC3-A422-FA513F008114}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result CTAH Variables/Activate CTAH_R</Property>
-	<Property Name="varPersistentID:{2C373187-C72D-4C49-9FE6-53E45E479F1B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-28_R</Property>
-	<Property Name="varPersistentID:{30F7BE4E-D2C5-405E-A947-4D08B2C6F275}" Type="Ref">/My Computer/Core_Variables.lvlib/Power Output On</Property>
-	<Property Name="varPersistentID:{3104A8FD-B933-42CA-BD91-24A74BDDAD08}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/AT-01_R</Property>
-	<Property Name="varPersistentID:{3339D421-E3E6-40AE-9F8D-E7DFCF82F588}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-62_R</Property>
-	<Property Name="varPersistentID:{35E0D83D-B4CB-40F5-8D57-185403554E3B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-24_R</Property>
-	<Property Name="varPersistentID:{36562765-2D83-4DD6-9DFE-83305435DDF6}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop CTAH</Property>
-	<Property Name="varPersistentID:{383DB297-BB61-4B6E-B1A3-7CF02555FADA}" Type="Ref">/My Computer/DAQ_Variables.lvlib/PowersFreqs</Property>
-	<Property Name="varPersistentID:{384A1AE9-BF9F-4A8A-A0B2-9CDA85B41205}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-21_R</Property>
-	<Property Name="varPersistentID:{399DA0BA-AD02-4B68-A51B-4C2C49261275}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-12-SW_R</Property>
-	<Property Name="varPersistentID:{3BC91AFF-A143-468D-A6BF-1DA6DFA710CE}" Type="Ref">/My Computer/ResultDAQ_Variables.lvlib/DAQ?_R</Property>
-	<Property Name="varPersistentID:{3E6EA457-D886-473A-B553-F5BC69307CAE}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-4_R</Property>
-	<Property Name="varPersistentID:{3FA63D20-6CFD-4D60-BF34-77234523529E}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Activate Pump_R</Property>
-	<Property Name="varPersistentID:{3FC32033-4DDA-4A15-8D5B-E6F94BAE8383}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-35_R</Property>
-	<Property Name="varPersistentID:{42947A6E-05FF-44A7-B13F-5F23418662E4}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Core Error Out_R</Property>
-	<Property Name="varPersistentID:{44572420-48EA-4028-8357-CE3525159325}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-E_R</Property>
-	<Property Name="varPersistentID:{449D4F88-30C8-4162-A28D-C7A189BB3F1C}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-25_R</Property>
-	<Property Name="varPersistentID:{45A99136-4C34-43A0-89A1-7E5B6B579644}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Broadcasting</Property>
-	<Property Name="varPersistentID:{46375E32-A058-4BF9-A54D-A4AF41FBCC0B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-33_R</Property>
-	<Property Name="varPersistentID:{46AF4A41-D95E-4652-819D-182DF26C17CD}" Type="Ref">/My Computer/Core_Variables.lvlib/Exit Profile</Property>
-	<Property Name="varPersistentID:{46F0099C-9D7B-466B-B830-2A069C071358}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-1_R</Property>
-	<Property Name="varPersistentID:{47664899-2F20-47DC-BE53-0AB2CE2D30EB}" Type="Ref">/My Computer/VFD_Variables.lvlib/CTAH Variables/CTAH Frequency</Property>
-	<Property Name="varPersistentID:{484A77E0-FD30-4874-ACF4-35D80B2EC03D}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-30_R</Property>
-	<Property Name="varPersistentID:{4A39D9BF-78F9-4516-B89D-608ECB2B37BE}" Type="Ref">/My Computer/Core_Variables.lvlib/Profile Step</Property>
-	<Property Name="varPersistentID:{4CB673E3-9335-4B0D-AA44-F70892CBF534}" Type="Ref">/My Computer/Core_Variables.lvlib/Core Error Out</Property>
-	<Property Name="varPersistentID:{4D46E009-9F01-49A6-8164-102041C70325}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Output Voltage 1_R</Property>
-	<Property Name="varPersistentID:{53B0D28E-77AC-4895-808B-A07960B7CE53}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-11-3_R</Property>
-	<Property Name="varPersistentID:{546E31D2-8A60-4C82-ACB3-69396FBA4DCD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-3_R</Property>
-	<Property Name="varPersistentID:{54949631-8971-4B13-AF6F-2B312279DAF1}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-12_R</Property>
-	<Property Name="varPersistentID:{55F54A5F-5EE6-4A03-8127-3248A71A111C}" Type="Ref">/My Computer/Core_Variables.lvlib/Output Current 1</Property>
-	<Property Name="varPersistentID:{5B5D0FE7-7DC7-4BCF-9B7A-7DDC208E0038}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Frequency_R</Property>
-	<Property Name="varPersistentID:{5C4C78B7-FA5F-4D46-B825-1B0A4CD3D94E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-11_R</Property>
-	<Property Name="varPersistentID:{5F6E620D-150D-41B4-A63F-E5B6580ECF1E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-13_R</Property>
-	<Property Name="varPersistentID:{6058D3C6-212A-49CC-AAD1-CAE78C907E01}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Input Power Profile Array_R</Property>
-	<Property Name="varPersistentID:{607753E6-6B69-4BC3-9BD7-5923CC442EA0}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-2_R</Property>
-	<Property Name="varPersistentID:{6093AA36-E4D3-4AF5-88F0-94B465D62781}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-65_R</Property>
-	<Property Name="varPersistentID:{60C8581D-61A1-49F6-BABB-436F0D423F3B}" Type="Ref">/My Computer/Core_Variables.lvlib/Desired Power</Property>
-	<Property Name="varPersistentID:{6280B2E7-560F-4A92-9010-286CC511ECF3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Input Read</Property>
-	<Property Name="varPersistentID:{6597317A-FEBE-4C97-9B9C-E6F9E20D5BC5}" Type="Ref">/My Computer/Core_Variables.lvlib/Power Output</Property>
-	<Property Name="varPersistentID:{65F2329B-1D45-45FF-ADFA-E7ACD50986E5}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-13_R</Property>
-	<Property Name="varPersistentID:{688624F2-0298-4920-A7A5-6F1D81515496}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Loop Period_R</Property>
-	<Property Name="varPersistentID:{69554547-33D0-41A5-93BF-22EAF9006E55}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Power Output On_R</Property>
-	<Property Name="varPersistentID:{6B2EC066-3D9B-4660-9700-492DB2FD738B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-27_R</Property>
-	<Property Name="varPersistentID:{6D842665-E018-4E72-8198-856934B4FCCD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/AT-02_R</Property>
-	<Property Name="varPersistentID:{6DFBCD73-C4F9-4EA1-A3F9-64AF72A645F1}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Output Current 1_R</Property>
-	<Property Name="varPersistentID:{7048703A-9E89-48ED-8054-09D0016EB777}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-10_R</Property>
-	<Property Name="varPersistentID:{70F40655-D96E-4107-B6C8-67A6B1066008}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-42_R</Property>
-	<Property Name="varPersistentID:{72EFF6FF-F25D-4C77-8ECE-9F03D2E7478D}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-10_R</Property>
-	<Property Name="varPersistentID:{73EB30B7-C6D1-42F8-BB95-5BDDB3CC0A8F}" Type="Ref">/My Computer/VFD_Variables.lvlib/Pump Variables/Pump Frequency</Property>
-	<Property Name="varPersistentID:{743540D3-8E92-470E-954A-F5A0F15DBEBC}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-23_R</Property>
-	<Property Name="varPersistentID:{754C5B20-1480-4F2B-BA95-078C999F71EF}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-12-N_R</Property>
-	<Property Name="varPersistentID:{75C6C5BC-0137-4C2F-9EF5-2DDD9794FBC3}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result TCHX Variables/TCHX Operating Case_R</Property>
-	<Property Name="varPersistentID:{767D5619-19DC-4150-AFCB-89980F1BF0E3}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Power Output_R</Property>
-	<Property Name="varPersistentID:{79311DF3-C73D-44E9-AD18-DCA57C812F5E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-4_R</Property>
-	<Property Name="varPersistentID:{7B8526B1-9364-4811-8F73-42BB2A1FDCC3}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Core Error Msg</Property>
-	<Property Name="varPersistentID:{7D974CED-66CF-47E6-A4D5-E7DB075F3BBD}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Write Connection</Property>
-	<Property Name="varPersistentID:{7E7AA38F-0D08-4396-8CE1-C33EAED2A223}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-60_R</Property>
-	<Property Name="varPersistentID:{7FD41756-D3C1-4B8B-937C-3B4D844FE8E7}" Type="Ref">/My Computer/VFD_Variables.lvlib/CTAH Variables/CTAH Operating Case</Property>
-	<Property Name="varPersistentID:{8160E632-C22A-4088-9313-8E4ED94E1838}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Operating Case_R</Property>
-	<Property Name="varPersistentID:{83B581B8-5B0A-4E36-9D77-573AB7D67D83}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Mass Flow Set-Point_R</Property>
-	<Property Name="varPersistentID:{84BAC114-4AB5-4C70-AD44-AD91DAABD2E0}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result Pump Variables/Pump Operating Case_R</Property>
-	<Property Name="varPersistentID:{860FAA5F-C7E2-432A-ADCF-2CB436D33719}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop BoP Output Write</Property>
-	<Property Name="varPersistentID:{87C2E634-256F-4D46-BBEF-27CBE5F9CB1A}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Desired Power_R</Property>
-	<Property Name="varPersistentID:{8ABF5B5E-1D75-4CE0-B225-0FAE29DE2A33}" Type="Ref">/My Computer/Core_Variables.lvlib/VISA Out</Property>
-	<Property Name="varPersistentID:{8D17B249-47BE-428A-9220-BEBEDE4B574C}" Type="Ref">/My Computer/Core_Variables.lvlib/Output Current 2</Property>
-	<Property Name="varPersistentID:{8ED22911-812E-43A3-92C2-14FEC40FB82A}" Type="Ref">/My Computer/VFD_Variables.lvlib/Pump Variables/Activate Pump</Property>
-	<Property Name="varPersistentID:{8FAB2B8E-FA6E-4FE7-B0CA-6960B5D2E2D1}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-34_R</Property>
-	<Property Name="varPersistentID:{925FFF20-DEF1-4971-89B5-A795D57F0BE9}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-60_R</Property>
-	<Property Name="varPersistentID:{95B40E3C-8E6C-47FD-A2FD-3462E8069294}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Read Connection</Property>
-	<Property Name="varPersistentID:{983DE0ED-0378-484F-8D2A-591DEA0BA934}" Type="Ref">/My Computer/Core_Variables.lvlib/Power Input Signal</Property>
-	<Property Name="varPersistentID:{98724DBB-8C5D-407B-96BA-48F64CE1B1D6}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/VISA Out_R</Property>
-	<Property Name="varPersistentID:{996BA9C6-9335-4631-A5D7-5EF06FF2070A}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Select Operation Mode_R</Property>
-	<Property Name="varPersistentID:{99EDCFB5-A5AB-4E09-B3B3-5D9DE047DD28}" Type="Ref">/My Computer/Core_Variables.lvlib/Output Voltage 1</Property>
-	<Property Name="varPersistentID:{9D1798F5-BAEC-4687-9E5A-2455CADB7DB8}" Type="Ref">/My Computer/DAQ_Variables.lvlib/SysFluidTemps</Property>
-	<Property Name="varPersistentID:{A04ADDEC-63B4-44DD-8D03-6F0F9D4B9533}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-20_R</Property>
-	<Property Name="varPersistentID:{A27F10F6-9ED5-49B0-BB48-ED6738E2B69E}" Type="Ref">/My Computer/Core_Variables.lvlib/Loop Period</Property>
-	<Property Name="varPersistentID:{A2F8289F-6925-478E-907E-8ACFA0CB4797}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-61_R</Property>
-	<Property Name="varPersistentID:{A30D7BB3-650F-49ED-A668-C2E909C5A65B}" Type="Ref">/My Computer/Core_Variables.lvlib/Shutdown</Property>
-	<Property Name="varPersistentID:{A3DE8B62-3E2C-48FA-B145-C4738337E69B}" Type="Ref">/My Computer/DAQ_Variables.lvlib/DAQ?</Property>
-	<Property Name="varPersistentID:{A6F45779-6670-44C3-8AFC-C19DDDA04BB5}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/DAQ Error Msg</Property>
-	<Property Name="varPersistentID:{A89B2749-CB74-46E6-BADE-80DB7895CC5A}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Frequency_R</Property>
-	<Property Name="varPersistentID:{A92D33AB-5E5A-4067-B70F-19A4A37BFEF1}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-40_R</Property>
-	<Property Name="varPersistentID:{AC2B7800-B44D-4AA0-A180-CAD2C8015829}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-11_R</Property>
-	<Property Name="varPersistentID:{AD2EB93C-37F9-4FA7-B452-9EB1A2911F55}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-67_R</Property>
-	<Property Name="varPersistentID:{AF0FCD26-9007-4566-A146-7739ED0223BC}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-22_R</Property>
-	<Property Name="varPersistentID:{AFFAA692-6F35-41BA-88CF-A1FCE5EC0464}" Type="Ref">/My Computer/DAQ_Variables.lvlib/SysSurfTemps</Property>
-	<Property Name="varPersistentID:{B1DA53ED-567A-469A-B291-575011E19BE1}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Spoof Enabled</Property>
-	<Property Name="varPersistentID:{B1FBD437-4D00-42F8-8D03-25ADFDED74BF}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Reading</Property>
-	<Property Name="varPersistentID:{B3E05971-3EE3-4140-BE0F-188404D82DE9}" Type="Ref">/My Computer/DAQ_Variables.lvlib/SysFlowRates</Property>
-	<Property Name="varPersistentID:{B716E84A-A569-455E-BDEC-C6106F037A9D}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Profile Step_R</Property>
-	<Property Name="varPersistentID:{B96FCBF4-2E8D-4FFD-8D7B-A052BF234C49}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-32_R</Property>
-	<Property Name="varPersistentID:{BA09F31D-697C-4CBA-9AED-9937D30A74FD}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-W_R</Property>
-	<Property Name="varPersistentID:{BAA06452-C7A5-41A3-8F60-40F1D576883E}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-63_R</Property>
-	<Property Name="varPersistentID:{BB7D3133-F5A2-4B91-B331-7FC2CD21568B}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Status</Property>
-	<Property Name="varPersistentID:{BC484385-B7B7-4251-92F4-CD1B5A38D254}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Time_R</Property>
-	<Property Name="varPersistentID:{BCC88F37-9B43-4D72-813B-12FB35CFF3B4}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/CTAH Mode Memory</Property>
-	<Property Name="varPersistentID:{C7D4F4CE-76B2-4E16-80D0-11AEC6C7A399}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-31_R</Property>
-	<Property Name="varPersistentID:{C92AC5B3-2271-4960-87DA-557FE36EA635}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-14-S_R</Property>
-	<Property Name="varPersistentID:{CA5ABDE8-2614-4A5D-B44C-9588701C5962}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-41_R</Property>
-	<Property Name="varPersistentID:{CB754709-26F5-4EF1-B840-47316305300B}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result CTAH Variables/CTAH Outlet Set-Point_R</Property>
-	<Property Name="varPersistentID:{CB83531A-9B2F-4D3B-8A53-063C9733B7BE}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Server Connection</Property>
-	<Property Name="varPersistentID:{CCEA01D3-FAD6-45B6-B30F-6B4020387C35}" Type="Ref">/My Computer/VFD_Variables.lvlib/GS1 Stop</Property>
-	<Property Name="varPersistentID:{CE7B36D8-F118-400A-80CD-E15A7299FEB1}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-29_R</Property>
-	<Property Name="varPersistentID:{D0589360-44F6-4EA8-9800-547DB185900A}" Type="Ref">/My Computer/Core_Variables.lvlib/Output Voltage 2</Property>
-	<Property Name="varPersistentID:{D1A9F60D-9F70-4D90-8D4D-AB852F837099}" Type="Ref">/My Computer/VFD_Variables.lvlib/TCHX Variables/TCHX Frequency</Property>
-	<Property Name="varPersistentID:{D213000B-25B2-415D-9A2D-6B73EA906B4B}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop Chat</Property>
-	<Property Name="varPersistentID:{D268527E-47DB-4BFF-8A03-FBA5001A7AE0}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/ST-12-SE_R</Property>
-	<Property Name="varPersistentID:{D406F287-7705-4A5C-9B2E-4F33A858E499}" Type="Ref">/My Computer/ResultDAQ_Variables.lvlib/SysFlowRates_R</Property>
-	<Property Name="varPersistentID:{D780DD3D-52A2-4705-9CF0-29862F26674B}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-30_R</Property>
-	<Property Name="varPersistentID:{D80BF07F-8B40-4499-8967-EC184EC50A79}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-43_R</Property>
-	<Property Name="varPersistentID:{DAF71F1C-F06B-418E-ADAE-CC28DFDF4EE7}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/BT-66_R</Property>
-	<Property Name="varPersistentID:{DB88C57D-3C9F-4921-8249-BF54EC150055}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Output Voltage 2_R</Property>
-	<Property Name="varPersistentID:{DFC246F6-87D3-4C3A-9384-F2DAAB087CA3}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Shutdown_R</Property>
-	<Property Name="varPersistentID:{E4C15DB8-90D9-4B9B-BBA1-83309AA7D082}" Type="Ref">/My Computer/Core_Variables.lvlib/Select Operation Mode</Property>
-	<Property Name="varPersistentID:{E57FE4E2-0EA5-445F-9325-0641E5C8A153}" Type="Ref">/My Computer/ResultVFD_Variables.lvlib/Result TCHX Variables/Activate TCHX_R</Property>
-	<Property Name="varPersistentID:{E9E56D4C-C3E1-4652-8101-9CAC0223E5CF}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Flowmeters_R/FM-20_R</Property>
-	<Property Name="varPersistentID:{EBB0D6D0-1AE9-494A-A892-BF8357B93238}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-26_R</Property>
-	<Property Name="varPersistentID:{ECA13BA6-FEB2-4084-BEB0-2808589E59FE}" Type="Ref">/My Computer/VFD_Variables.lvlib/CTAH Variables/Activate CTAH</Property>
-	<Property Name="varPersistentID:{F406ADDD-4D55-4239-8A1B-D15D2D403D68}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Power Input Signal_R</Property>
-	<Property Name="varPersistentID:{F71B5183-498D-4A44-9ABE-D52A1EBB9768}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/CX-10-1_R</Property>
-	<Property Name="varPersistentID:{F74DC466-FF55-4F9F-A8F6-F218B71068BB}" Type="Ref">/My Computer/ResultDAQ_Variables.lvlib/Flow Data?_R</Property>
-	<Property Name="varPersistentID:{F91BC954-DBD9-4ADD-8171-E968FA64EC3C}" Type="Ref">/My Computer/ResultNPSVariables.lvlib/Thermocouples_R/WT-64_R</Property>
-	<Property Name="varPersistentID:{FC68029D-093A-429F-A0C6-42996043FCB3}" Type="Ref">/My Computer/ResultCore_Variables.lvlib/Output Current 2_R</Property>
-	<Property Name="varPersistentID:{FD452C37-1DC1-453C-8D99-6CF8E063D463}" Type="Ref">/My Computer/ResultDAQ_Variables.lvlib/SysSurfTemps_R</Property>
+	<Property Name="varPersistentID:{01A22E8F-F55B-4160-B022-664E76FF3DAE}" Type="Ref">/My Computer/Reactor.lvlib/Core_Variables/Input Power Profile Array</Property>
+	<Property Name="varPersistentID:{02A6D697-FDC2-45BC-9A7D-EBE59348EBDD}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-11-2_R</Property>
+	<Property Name="varPersistentID:{0C08FA3F-0141-4E35-9B25-7CE4F2E3552E}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Flowmeters_R/FM-40_R</Property>
+	<Property Name="varPersistentID:{0DF0F792-CF26-4116-9E60-0B0E08A0FA19}" Type="Ref">/My Computer/Reactor.lvlib/DAQ_Variables/Flow Data?</Property>
+	<Property Name="varPersistentID:{0F57257D-AE9B-46C8-A73F-979ADE1784ED}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-14-N_R</Property>
+	<Property Name="varPersistentID:{110ACA4A-61F2-47B0-8D17-76086EEF6AD8}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/CTAH Variables/CTAH Outlet Set-Point</Property>
+	<Property Name="varPersistentID:{1B76150E-590D-4E07-A6DA-DC6AD7B1390A}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/TCHX Variables/TCHX Operating Case</Property>
+	<Property Name="varPersistentID:{1DAE48AB-DFFE-4DAA-AE7B-075799C38FF9}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result TCHX Variables/TCHX Frequency_R</Property>
+	<Property Name="varPersistentID:{1F484E67-5330-4C58-BB16-E31979937217}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/Pump Variables/Pump Operating Case</Property>
+	<Property Name="varPersistentID:{1FB9BAE3-E829-4817-9627-23E03CB241D2}" Type="Ref">/My Computer/Reactor.lvlib/ResultDAQVariables/SysFluidTemps_R</Property>
+	<Property Name="varPersistentID:{20712F31-EC62-466C-9B93-55E02B20DC39}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/Chat Connection</Property>
+	<Property Name="varPersistentID:{2205B89D-04FE-48D7-98D1-BAA1037F3573}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/TCHX Variables/Activate TCHX</Property>
+	<Property Name="varPersistentID:{2C373187-C72D-4C49-9FE6-53E45E479F1B}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-28_R</Property>
+	<Property Name="varPersistentID:{30F7BE4E-D2C5-405E-A947-4D08B2C6F275}" Type="Ref">/My Computer/Reactor.lvlib/Core_Variables/Power Output On</Property>
+	<Property Name="varPersistentID:{3104A8FD-B933-42CA-BD91-24A74BDDAD08}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/AT-01_R</Property>
+	<Property Name="varPersistentID:{3339D421-E3E6-40AE-9F8D-E7DFCF82F588}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-62_R</Property>
+	<Property Name="varPersistentID:{35E0D83D-B4CB-40F5-8D57-185403554E3B}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-24_R</Property>
+	<Property Name="varPersistentID:{36562765-2D83-4DD6-9DFE-83305435DDF6}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/Stop CTAH</Property>
+	<Property Name="varPersistentID:{384A1AE9-BF9F-4A8A-A0B2-9CDA85B41205}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-21_R</Property>
+	<Property Name="varPersistentID:{399DA0BA-AD02-4B68-A51B-4C2C49261275}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-12-SW_R</Property>
+	<Property Name="varPersistentID:{3E6EA457-D886-473A-B553-F5BC69307CAE}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-11-4_R</Property>
+	<Property Name="varPersistentID:{3FC32033-4DDA-4A15-8D5B-E6F94BAE8383}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-35_R</Property>
+	<Property Name="varPersistentID:{44572420-48EA-4028-8357-CE3525159325}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-14-E_R</Property>
+	<Property Name="varPersistentID:{449D4F88-30C8-4162-A28D-C7A189BB3F1C}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-25_R</Property>
+	<Property Name="varPersistentID:{46375E32-A058-4BF9-A54D-A4AF41FBCC0B}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-33_R</Property>
+	<Property Name="varPersistentID:{46AF4A41-D95E-4652-819D-182DF26C17CD}" Type="Ref">/My Computer/Reactor.lvlib/Core_Variables/Exit Profile</Property>
+	<Property Name="varPersistentID:{46F0099C-9D7B-466B-B830-2A069C071358}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-11-1_R</Property>
+	<Property Name="varPersistentID:{47664899-2F20-47DC-BE53-0AB2CE2D30EB}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/CTAH Variables/CTAH Frequency</Property>
+	<Property Name="varPersistentID:{484A77E0-FD30-4874-ACF4-35D80B2EC03D}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-30_R</Property>
+	<Property Name="varPersistentID:{4D46E009-9F01-49A6-8164-102041C70325}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Output Voltage 1_R</Property>
+	<Property Name="varPersistentID:{53B0D28E-77AC-4895-808B-A07960B7CE53}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-11-3_R</Property>
+	<Property Name="varPersistentID:{546E31D2-8A60-4C82-ACB3-69396FBA4DCD}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-10-3_R</Property>
+	<Property Name="varPersistentID:{54949631-8971-4B13-AF6F-2B312279DAF1}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-12_R</Property>
+	<Property Name="varPersistentID:{5B5D0FE7-7DC7-4BCF-9B7A-7DDC208E0038}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result Pump Variables/Pump Frequency_R</Property>
+	<Property Name="varPersistentID:{5C4C78B7-FA5F-4D46-B825-1B0A4CD3D94E}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-11_R</Property>
+	<Property Name="varPersistentID:{5F6E620D-150D-41B4-A63F-E5B6580ECF1E}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-13_R</Property>
+	<Property Name="varPersistentID:{6058D3C6-212A-49CC-AAD1-CAE78C907E01}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Input Power Profile Array_R</Property>
+	<Property Name="varPersistentID:{607753E6-6B69-4BC3-9BD7-5923CC442EA0}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-10-2_R</Property>
+	<Property Name="varPersistentID:{6093AA36-E4D3-4AF5-88F0-94B465D62781}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-65_R</Property>
+	<Property Name="varPersistentID:{60C8581D-61A1-49F6-BABB-436F0D423F3B}" Type="Ref">/My Computer/Reactor.lvlib/Core_Variables/Desired Power</Property>
+	<Property Name="varPersistentID:{65F2329B-1D45-45FF-ADFA-E7ACD50986E5}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-13_R</Property>
+	<Property Name="varPersistentID:{688624F2-0298-4920-A7A5-6F1D81515496}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Loop Period_R</Property>
+	<Property Name="varPersistentID:{6B2EC066-3D9B-4660-9700-492DB2FD738B}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-27_R</Property>
+	<Property Name="varPersistentID:{6D842665-E018-4E72-8198-856934B4FCCD}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/AT-02_R</Property>
+	<Property Name="varPersistentID:{6DFBCD73-C4F9-4EA1-A3F9-64AF72A645F1}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Output Current 1_R</Property>
+	<Property Name="varPersistentID:{7048703A-9E89-48ED-8054-09D0016EB777}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-10_R</Property>
+	<Property Name="varPersistentID:{70F40655-D96E-4107-B6C8-67A6B1066008}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-42_R</Property>
+	<Property Name="varPersistentID:{72EFF6FF-F25D-4C77-8ECE-9F03D2E7478D}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-10_R</Property>
+	<Property Name="varPersistentID:{73EB30B7-C6D1-42F8-BB95-5BDDB3CC0A8F}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/Pump Variables/Pump Frequency</Property>
+	<Property Name="varPersistentID:{743540D3-8E92-470E-954A-F5A0F15DBEBC}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-23_R</Property>
+	<Property Name="varPersistentID:{754C5B20-1480-4F2B-BA95-078C999F71EF}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-12-N_R</Property>
+	<Property Name="varPersistentID:{75C6C5BC-0137-4C2F-9EF5-2DDD9794FBC3}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result TCHX Variables/TCHX Operating Case_R</Property>
+	<Property Name="varPersistentID:{767D5619-19DC-4150-AFCB-89980F1BF0E3}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Power Output_R</Property>
+	<Property Name="varPersistentID:{79311DF3-C73D-44E9-AD18-DCA57C812F5E}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-10-4_R</Property>
+	<Property Name="varPersistentID:{7D974CED-66CF-47E6-A4D5-E7DB075F3BBD}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/Write Connection</Property>
+	<Property Name="varPersistentID:{7E7AA38F-0D08-4396-8CE1-C33EAED2A223}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-60_R</Property>
+	<Property Name="varPersistentID:{7FD41756-D3C1-4B8B-937C-3B4D844FE8E7}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/CTAH Variables/CTAH Operating Case</Property>
+	<Property Name="varPersistentID:{8160E632-C22A-4088-9313-8E4ED94E1838}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result CTAH Variables/CTAH Operating Case_R</Property>
+	<Property Name="varPersistentID:{84BAC114-4AB5-4C70-AD44-AD91DAABD2E0}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result Pump Variables/Pump Operating Case_R</Property>
+	<Property Name="varPersistentID:{87C2E634-256F-4D46-BBEF-27CBE5F9CB1A}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Desired Power_R</Property>
+	<Property Name="varPersistentID:{8ED22911-812E-43A3-92C2-14FEC40FB82A}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/Pump Variables/Activate Pump</Property>
+	<Property Name="varPersistentID:{8FAB2B8E-FA6E-4FE7-B0CA-6960B5D2E2D1}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-34_R</Property>
+	<Property Name="varPersistentID:{925FFF20-DEF1-4971-89B5-A795D57F0BE9}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Flowmeters_R/FM-60_R</Property>
+	<Property Name="varPersistentID:{95B40E3C-8E6C-47FD-A2FD-3462E8069294}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/Read Connection</Property>
+	<Property Name="varPersistentID:{996BA9C6-9335-4631-A5D7-5EF06FF2070A}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Select Operation Mode_R</Property>
+	<Property Name="varPersistentID:{A04ADDEC-63B4-44DD-8D03-6F0F9D4B9533}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-20_R</Property>
+	<Property Name="varPersistentID:{A2F8289F-6925-478E-907E-8ACFA0CB4797}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-61_R</Property>
+	<Property Name="varPersistentID:{A89B2749-CB74-46E6-BADE-80DB7895CC5A}" Type="Ref">/My Computer/Reactor.lvlib/ResultVFD_Variables/Result CTAH Variables/CTAH Frequency_R</Property>
+	<Property Name="varPersistentID:{A92D33AB-5E5A-4067-B70F-19A4A37BFEF1}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-40_R</Property>
+	<Property Name="varPersistentID:{AC2B7800-B44D-4AA0-A180-CAD2C8015829}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-11_R</Property>
+	<Property Name="varPersistentID:{AD2EB93C-37F9-4FA7-B452-9EB1A2911F55}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-67_R</Property>
+	<Property Name="varPersistentID:{AF0FCD26-9007-4566-A146-7739ED0223BC}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-22_R</Property>
+	<Property Name="varPersistentID:{B1FBD437-4D00-42F8-8D03-25ADFDED74BF}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/Stop Reading</Property>
+	<Property Name="varPersistentID:{B716E84A-A569-455E-BDEC-C6106F037A9D}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Profile Step_R</Property>
+	<Property Name="varPersistentID:{B96FCBF4-2E8D-4FFD-8D7B-A052BF234C49}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-32_R</Property>
+	<Property Name="varPersistentID:{BA09F31D-697C-4CBA-9AED-9937D30A74FD}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-14-W_R</Property>
+	<Property Name="varPersistentID:{BAA06452-C7A5-41A3-8F60-40F1D576883E}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-63_R</Property>
+	<Property Name="varPersistentID:{BC484385-B7B7-4251-92F4-CD1B5A38D254}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Time_R</Property>
+	<Property Name="varPersistentID:{BCC88F37-9B43-4D72-813B-12FB35CFF3B4}" Type="Ref">/My Computer/Reactor.lvlib/RemoteVIVariables/CTAH Mode Memory</Property>
+	<Property Name="varPersistentID:{C7D4F4CE-76B2-4E16-80D0-11AEC6C7A399}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-31_R</Property>
+	<Property Name="varPersistentID:{C92AC5B3-2271-4960-87DA-557FE36EA635}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-14-S_R</Property>
+	<Property Name="varPersistentID:{CA5ABDE8-2614-4A5D-B44C-9588701C5962}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-41_R</Property>
+	<Property Name="varPersistentID:{CE7B36D8-F118-400A-80CD-E15A7299FEB1}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-29_R</Property>
+	<Property Name="varPersistentID:{D1A9F60D-9F70-4D90-8D4D-AB852F837099}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/TCHX Variables/TCHX Frequency</Property>
+	<Property Name="varPersistentID:{D268527E-47DB-4BFF-8A03-FBA5001A7AE0}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/ST-12-SE_R</Property>
+	<Property Name="varPersistentID:{D406F287-7705-4A5C-9B2E-4F33A858E499}" Type="Ref">/My Computer/Reactor.lvlib/ResultDAQVariables/SysFlowRates_R</Property>
+	<Property Name="varPersistentID:{D780DD3D-52A2-4705-9CF0-29862F26674B}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Flowmeters_R/FM-30_R</Property>
+	<Property Name="varPersistentID:{D80BF07F-8B40-4499-8967-EC184EC50A79}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-43_R</Property>
+	<Property Name="varPersistentID:{DAF71F1C-F06B-418E-ADAE-CC28DFDF4EE7}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/BT-66_R</Property>
+	<Property Name="varPersistentID:{DB88C57D-3C9F-4921-8249-BF54EC150055}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Output Voltage 2_R</Property>
+	<Property Name="varPersistentID:{E4C15DB8-90D9-4B9B-BBA1-83309AA7D082}" Type="Ref">/My Computer/Reactor.lvlib/Core_Variables/Select Operation Mode</Property>
+	<Property Name="varPersistentID:{E9E56D4C-C3E1-4652-8101-9CAC0223E5CF}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Flowmeters_R/FM-20_R</Property>
+	<Property Name="varPersistentID:{EBB0D6D0-1AE9-494A-A892-BF8357B93238}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-26_R</Property>
+	<Property Name="varPersistentID:{ECA13BA6-FEB2-4084-BEB0-2808589E59FE}" Type="Ref">/My Computer/Reactor.lvlib/VFD_Variables/CTAH Variables/Activate CTAH</Property>
+	<Property Name="varPersistentID:{F406ADDD-4D55-4239-8A1B-D15D2D403D68}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Power Input Signal_R</Property>
+	<Property Name="varPersistentID:{F71B5183-498D-4A44-9ABE-D52A1EBB9768}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/CX-10-1_R</Property>
+	<Property Name="varPersistentID:{F91BC954-DBD9-4ADD-8171-E968FA64EC3C}" Type="Ref">/My Computer/Reactor.lvlib/ResultNPSVariables/Thermocouples_R/WT-64_R</Property>
+	<Property Name="varPersistentID:{FC68029D-093A-429F-A0C6-42996043FCB3}" Type="Ref">/My Computer/Reactor.lvlib/ResultCore_Variables/Output Current 2_R</Property>
+	<Property Name="varPersistentID:{FD452C37-1DC1-453C-8D99-6CF8E063D463}" Type="Ref">/My Computer/Reactor.lvlib/ResultDAQVariables/SysSurfTemps_R</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -157,19 +113,12 @@
 			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
 		</Item>
-		<Item Name="Core_Variables.lvlib" Type="Library" URL="../Core_Variables.lvlib"/>
 		<Item Name="CTAH Controller.vi" Type="VI" URL="../CTAH Controller.vi"/>
-		<Item Name="DAQ_Variables.lvlib" Type="Library" URL="../DAQ_Variables.lvlib"/>
 		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
 		<Item Name="Reactor Read Client.vi" Type="VI" URL="../Reactor Read Client.vi"/>
 		<Item Name="Reactor Write Client.vi" Type="VI" URL="../Reactor Write Client.vi"/>
+		<Item Name="Reactor.lvlib" Type="Library" URL="../Reactor.lvlib"/>
 		<Item Name="Reactor.vi" Type="VI" URL="../Reactor.vi"/>
-		<Item Name="RemoteVIVariables.lvlib" Type="Library" URL="../RemoteVIVariables.lvlib"/>
-		<Item Name="ResultCore_Variables.lvlib" Type="Library" URL="../ResultCore_Variables.lvlib"/>
-		<Item Name="ResultDAQ_Variables.lvlib" Type="Library" URL="../ResultDAQ_Variables.lvlib"/>
-		<Item Name="ResultNPSVariables.lvlib" Type="Library" URL="../ResultNPSVariables.lvlib"/>
-		<Item Name="ResultVFD_Variables.lvlib" Type="Library" URL="../ResultVFD_Variables.lvlib"/>
-		<Item Name="VFD_Variables.lvlib" Type="Library" URL="../VFD_Variables.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="__closeStorageFromObject.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/storage/Storage.llb/__closeStorageFromObject.vi"/>
