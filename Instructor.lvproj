@@ -186,6 +186,7 @@
 	<Property Name="varPersistentID:{96FBA94C-6F26-43F5-AB0A-6784971476B0}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/VISA Out_R</Property>
 	<Property Name="varPersistentID:{9722CEEB-0FAC-4E27-B44F-EDBF9C513A25}" Type="Ref">/My Computer/Result Libraries/ResultCore_Variables.lvlib/Profile Step_R</Property>
 	<Property Name="varPersistentID:{982C5D21-5BD7-4875-B7A4-DE3A8236B4A3}" Type="Ref">/My Computer/DAQ Libraries/DAQ_Variables.lvlib/SysSurfTemps</Property>
+	<Property Name="varPersistentID:{98B38A85-E9F5-4188-A8D3-D9DDBF333E47}" Type="Ref">/My Computer/RemoteVIVariables.lvlib/Stop MATLAB Control</Property>
 	<Property Name="varPersistentID:{9990D01E-EE49-4344-B74F-CA557AAC920C}" Type="Ref">/My Computer/Result Libraries/ResultNPSVariables.lvlib/Thermocouples_R/BT-66_R</Property>
 	<Property Name="varPersistentID:{99CBE7BF-320A-4F27-9297-334EDBB10EED}" Type="Ref">/My Computer/Spoof Libraries/SpoofNPSVariables.lvlib/Thermocouples_S/WT-10_S</Property>
 	<Property Name="varPersistentID:{9A76FF15-C3AB-46AC-8411-8F0472E14530}" Type="Ref">/My Computer/DAQ Libraries/Core_Variables.lvlib/Output Current 2</Property>
