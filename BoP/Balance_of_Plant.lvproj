@@ -6,6 +6,7 @@
 	<Property Name="varPersistentID:{061F65CD-92F1-4DA5-8B3D-D7611FEEC747}" Type="Ref">/My Computer/BoP.lvlib/Bop Management/Stop BoP Input</Property>
 	<Property Name="varPersistentID:{073DF4F3-9D70-4471-A51F-10A1D3483B5B}" Type="Ref">/My Computer/BoP.lvlib/BoPInputs/Shaft RPM</Property>
 	<Property Name="varPersistentID:{08F60C40-AEEC-4744-9211-92B327FC1C84}" Type="Ref">/My Computer/BoP.lvlib/BoPOutputs/Hdot HP CTAH Out</Property>
+	<Property Name="varPersistentID:{09FF8513-17E7-4B91-8F7D-452295D67D80}" Type="Ref">/My Computer/BoP.lvlib/Time_R</Property>
 	<Property Name="varPersistentID:{0A1D3398-6D78-44C3-A956-0014A43020EA}" Type="Ref">/My Computer/BoP.lvlib/BoPOutputs/Hdot Compressor In</Property>
 	<Property Name="varPersistentID:{0B7F67A2-E94C-4436-9D06-0334DFF2A088}" Type="Ref">/My Computer/BoP.lvlib/BoPOutputs/mdot Combustor Out</Property>
 	<Property Name="varPersistentID:{15BEEE7D-48E1-489E-A41D-83678EB76AC5}" Type="Ref">/My Computer/BoP.lvlib/BoPInputs/Ambient Pressure</Property>
