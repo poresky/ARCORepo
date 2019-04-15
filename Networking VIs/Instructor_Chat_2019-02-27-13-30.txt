@@ -1,6 +1,0 @@
-
- [1:18:47 PM] Supervisor: 
- [1:40:09 PM] Supervisor: I think the font for readings shouldn't be the same as font for desired inputs
- [1:40:23 PM] Supervisor: 
- [1:59:20 PM] Supervisor: set CTAH frequency back to original SS value
- [2:00:30 PM] Supervisor: 

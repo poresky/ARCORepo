@@ -60,8 +60,8 @@
 		<Item Name="BoP.lvlib" Type="Library" URL="../BoP.lvlib"/>
 		<Item Name="BoP.vi" Type="VI" URL="../BoP.vi"/>
 		<Item Name="Log BoP.vi" Type="VI" URL="../Log BoP.vi"/>
-		<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
-		<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
+		<Item Name="Remote VI Close.vi" Type="VI" URL="../../Remote VI Close.vi"/>
+		<Item Name="Remote VI Run.vi" Type="VI" URL="../../Remote VI Run.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
