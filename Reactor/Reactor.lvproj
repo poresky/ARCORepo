@@ -110,8 +110,8 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Support VIs" Type="Folder">
-			<Item Name="Remote VI Close.vi" Type="VI" URL="../Remote VI Close.vi"/>
-			<Item Name="Remote VI Run.vi" Type="VI" URL="../Remote VI Run.vi"/>
+			<Item Name="Remote VI Close.vi" Type="VI" URL="../../Remote VI Close.vi"/>
+			<Item Name="Remote VI Run.vi" Type="VI" URL="../../Remote VI Run.vi"/>
 		</Item>
 		<Item Name="CTAH Controller.vi" Type="VI" URL="../CTAH Controller.vi"/>
 		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
