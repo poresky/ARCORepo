@@ -257,8 +257,8 @@
 		<Item Name="Flow Data?_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">TRUE: Collecting mass flow rate data.
 FALSE: Stop collecting mass flow rate data to allow analog control of heater. </Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Real-Time Features</Property>
-			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="featurePacks" Type="Str">Description,Initial Value,Network,Real-Time Features</Property>
+			<Property Name="Initial Value:Value" Type="Str">True</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
