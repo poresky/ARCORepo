@@ -13,7 +13,7 @@
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -31,7 +31,7 @@
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -46,7 +46,7 @@
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -59,7 +59,7 @@
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -74,7 +74,7 @@
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -92,7 +92,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -107,7 +107,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -123,7 +123,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -138,7 +138,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -151,7 +151,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -164,7 +164,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -179,7 +179,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -197,7 +197,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -214,7 +214,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -228,7 +228,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -244,7 +244,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -260,7 +260,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -276,7 +276,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -292,7 +292,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -308,7 +308,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -324,7 +324,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -338,7 +338,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -352,7 +352,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -371,7 +371,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -385,7 +385,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -404,7 +404,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -423,7 +423,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -439,7 +439,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -455,7 +455,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -471,7 +471,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -489,7 +489,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -505,7 +505,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -521,7 +521,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -537,7 +537,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -553,7 +553,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -569,7 +569,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -585,7 +585,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -601,7 +601,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -617,7 +617,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -633,7 +633,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -649,7 +649,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -665,7 +665,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -681,7 +681,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -697,7 +697,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -713,7 +713,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -729,7 +729,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -745,7 +745,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -761,7 +761,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -777,7 +777,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -793,7 +793,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -809,7 +809,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -825,7 +825,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -841,7 +841,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -857,7 +857,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -873,7 +873,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -889,7 +889,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -905,7 +905,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -921,7 +921,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -937,7 +937,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -953,7 +953,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -969,7 +969,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -985,7 +985,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1001,7 +1001,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1017,7 +1017,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1033,7 +1033,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1049,7 +1049,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1065,7 +1065,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1081,7 +1081,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1097,7 +1097,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1113,7 +1113,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1129,7 +1129,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1145,7 +1145,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1161,7 +1161,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1177,7 +1177,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1193,7 +1193,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1209,7 +1209,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1225,7 +1225,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1241,7 +1241,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1257,7 +1257,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1273,7 +1273,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1289,7 +1289,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1305,7 +1305,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1322,7 +1322,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
 			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
-			<Property Name="Network:SingleWriter" Type="Str">True</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1340,7 +1340,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1356,7 +1356,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1376,7 +1376,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1392,7 +1392,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1412,7 +1412,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1428,7 +1428,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1448,7 +1448,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1463,7 +1463,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1479,7 +1479,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1498,7 +1498,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1516,7 +1516,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1531,7 +1531,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1547,7 +1547,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1565,7 +1565,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1580,7 +1580,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
@@ -1596,7 +1596,7 @@ FALSE: Stop collecting mass flow rate data to allow analog control of heater. </
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
-				<Property Name="Network:SingleWriter" Type="Str">True</Property>
+				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
 				<Property Name="Network:UseBuffering" Type="Str">False</Property>
 				<Property Name="numTypedefs" Type="UInt">0</Property>
