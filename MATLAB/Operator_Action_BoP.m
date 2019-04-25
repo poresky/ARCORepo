@@ -4,8 +4,10 @@ connect(uaClient)
 
 %% Define nodes from LabVIEW in MATLAB.
 MATLABBooleansNode = findNodeByName(uaClient.Namespace,'MATLAB Booleans');
-BoPInputsNode = findNodeByName(uaClient.Namespace,'BoPInputs');
+BoPInputsNode = findNodeByName(uaClient.Namespace,'BoP Inputs');
 CIETDataNode = findNodeByName(uaClient.Namespace,'CIET Data');
+[matlab_booleans, date_time_matlab] = readValue(uaClient,MATLABBooleansNode);
+matlab_active = matlab_booleans(1); operator_actions = matlab_booleans(2);
 
 %% Define string node in MATLAB. The output of this script is eventually written to this node to be displayed in LabVIEW.
 StringNode = findNodeByName(uaClient.Namespace,'Chat');
@@ -13,21 +15,24 @@ StringNode = findNodeByName(uaClient.Namespace,'Chat');
 %% For each line of data, check to see if previous value equals new value. If not, print a report of the change.
 % If want this script to output a comprehensive report of all operator actions, concatenate table with each new report and write to file on computer. 
 % variables air_flow_rate, shaft_rpm, hpt_pr, lpt_pr, ng_flow_rate, ng_temp, ng_press, stop_bop
-old_data = [0,0,0,0,0,0,0,0,0];
+[ciet_data, date_time_ciet] = readValue(uaClient, CIETDataNode);
+[bop_inputs, date_time_numeric] = readValue(uaClient,BoPInputsNode);
+old_data = [ciet_data(1), bop_inputs(3), bop_inputs(4), bop_inputs(5), bop_inputs(9), bop_inputs(8), bop_inputs(6), bop_inputs(7)];
 if matlab_active == true
     while matlab_active == true
         [ciet_data, date_time_ciet] = readValue(uaClient, CIETDataNode);
         [matlab_booleans, date_time_matlab] = readValue(uaClient,MATLABBooleansNode);
-        matlab_active = matlab_booleans(1); operator_actions = matlab_booleans(2);
-        [bop_actions, date_time_numeric] = readValue(uaClient, BoPInputsNode);
+        matlab_active = matlab_booleans(1); 
+        operator_actions = matlab_booleans(2);
+        [bop_inputs, date_time_numeric] = readValue(uaClient,BoPInputsNode);
         timestamp = ciet_data(1);
-        air_flow_rate = bop_actions(1);
-        shaft_rpm = bop_actions(12);
-        hpt_pr = bop_actions(7);
-        lpt_pr = bop_actions(8);
-        ng_flow_rate = bop_actions(9);
-        ng_temp = bop_actions(11);
-        ng_press = bop_actions(10);
+        air_flow_rate = bop_inputs(3);
+        shaft_rpm = bop_inputs(4);
+        hpt_pr = bop_inputs(5);
+        lpt_pr = bop_inputs(9);
+        ng_flow_rate = bop_inputs(8);
+        ng_temp = bop_inputs(6);
+        ng_press = bop_inputs(7);
         %stop_bop = bop_actions(?); 
         %new_data(9) is stop_bop when find node 
         new_data = [timestamp, air_flow_rate, shaft_rpm, hpt_pr, lpt_pr, ng_flow_rate, ng_temp, ng_press];
@@ -83,3 +88,6 @@ else
     disp('MATLAB is not active')
 end
 disp('MATLAB is no longer active')
+
+%% Write to local file on computer
+
