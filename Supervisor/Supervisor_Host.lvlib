@@ -7,10 +7,10 @@
 	<Item Name="BoPInputs" Type="Folder">
 		<Item Name="Air Flow Rate" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
@@ -24,10 +24,10 @@
 		</Item>
 		<Item Name="Ambient Pressure" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
@@ -41,10 +41,10 @@
 		</Item>
 		<Item Name="Ambient Temperature" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -56,10 +56,10 @@
 		</Item>
 		<Item Name="CTAH 1 Heat Transfer Rate" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -71,10 +71,10 @@
 		</Item>
 		<Item Name="CTAH 2 Heat Transfer Rate" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -86,10 +86,10 @@
 		</Item>
 		<Item Name="Hdot Compressor In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -101,10 +101,10 @@
 		</Item>
 		<Item Name="HPT PR" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -116,10 +116,10 @@
 		</Item>
 		<Item Name="LPT PR" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -131,10 +131,10 @@
 		</Item>
 		<Item Name="NG Flow Rate" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -146,10 +146,10 @@
 		</Item>
 		<Item Name="NG Pressure In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -161,10 +161,10 @@
 		</Item>
 		<Item Name="NG Temp In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -176,10 +176,10 @@
 		</Item>
 		<Item Name="Shaft RPM" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -193,10 +193,10 @@
 	<Item Name="BoPOutputs" Type="Folder">
 		<Item Name="Compressor Work" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -208,10 +208,10 @@
 		</Item>
 		<Item Name="Hdot Combustor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -223,10 +223,10 @@
 		</Item>
 		<Item Name="Hdot Compressor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -238,10 +238,10 @@
 		</Item>
 		<Item Name="Hdot HP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -253,10 +253,10 @@
 		</Item>
 		<Item Name="Hdot HPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -268,10 +268,10 @@
 		</Item>
 		<Item Name="Hdot LP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -283,10 +283,10 @@
 		</Item>
 		<Item Name="Hdot LPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -298,10 +298,10 @@
 		</Item>
 		<Item Name="HPT Work Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -315,10 +315,10 @@
 		</Item>
 		<Item Name="LPT Work Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -332,10 +332,10 @@
 		</Item>
 		<Item Name="mdot Combustor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -347,10 +347,10 @@
 		</Item>
 		<Item Name="mdot Compressor In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -362,10 +362,10 @@
 		</Item>
 		<Item Name="mdot Compressor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -377,10 +377,10 @@
 		</Item>
 		<Item Name="mdot HP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -392,10 +392,10 @@
 		</Item>
 		<Item Name="mdot HPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -407,10 +407,10 @@
 		</Item>
 		<Item Name="mdot LP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -422,10 +422,10 @@
 		</Item>
 		<Item Name="mdot LPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -437,10 +437,10 @@
 		</Item>
 		<Item Name="Press Combustor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -452,10 +452,10 @@
 		</Item>
 		<Item Name="Press Compressor In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -467,10 +467,10 @@
 		</Item>
 		<Item Name="Press Compressor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -482,10 +482,10 @@
 		</Item>
 		<Item Name="Press HP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -497,10 +497,10 @@
 		</Item>
 		<Item Name="Press HPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -512,10 +512,10 @@
 		</Item>
 		<Item Name="Press LP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -527,10 +527,10 @@
 		</Item>
 		<Item Name="Press LPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -542,10 +542,10 @@
 		</Item>
 		<Item Name="Temp Combustor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -557,10 +557,10 @@
 		</Item>
 		<Item Name="Temp Compressor In" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -572,10 +572,10 @@
 		</Item>
 		<Item Name="Temp Compressor Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -587,10 +587,10 @@
 		</Item>
 		<Item Name="Temp HP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -602,10 +602,10 @@
 		</Item>
 		<Item Name="Temp HPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -617,10 +617,10 @@
 		</Item>
 		<Item Name="Temp LP CTAH Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -632,10 +632,10 @@
 		</Item>
 		<Item Name="Temp LPT Out" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
-			<Property Name="Logging:Deadband" Type="Str">0.010000</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -709,6 +709,18 @@
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
+		<Item Name="Fault Diagnostics Active" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Supervisor_Host.lvlib/Matlab Booleans/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
 		<Item Name="MATLAB Active" Type="Variable">
 			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
@@ -731,7 +743,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -746,7 +758,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -761,7 +773,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -776,7 +788,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -791,7 +803,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -1869,6 +1881,36 @@
 			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"=!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
 	</Item>
+	<Item Name="Res" Type="Folder">
+		<Item Name="CTAH Res Gen" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.001</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.001</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Supervisor_Host.lvlib/Res/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="Heater Res Gen" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network,Logging</Property>
+			<Property Name="Logging:Deadband" Type="Str">0.001</Property>
+			<Property Name="Logging:LogData" Type="Str">True</Property>
+			<Property Name="Logging:LogEvents" Type="Str">True</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.001</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Supervisor.lvproj/My Computer/Supervisor_Host.lvlib/Res/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"=!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+	</Item>
 	<Item Name="ResultCore" Type="Folder">
 		<Item Name="Power Input Signal_R" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Signal given to core module; coerced desired power to be positive and less than a set upper bound (see Core.vi). </Property>
@@ -1960,7 +2002,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -1976,7 +2018,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -1992,7 +2034,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2008,7 +2050,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2026,7 +2068,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2042,7 +2084,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2058,7 +2100,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2074,7 +2116,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2090,7 +2132,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2106,7 +2148,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2122,7 +2164,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2138,7 +2180,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2154,7 +2196,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2170,7 +2212,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2186,7 +2228,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2202,7 +2244,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2218,7 +2260,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2234,7 +2276,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2250,7 +2292,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2266,7 +2308,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2282,7 +2324,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2298,7 +2340,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2314,7 +2356,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2330,7 +2372,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2346,7 +2388,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2362,7 +2404,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2378,7 +2420,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2394,7 +2436,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2410,7 +2452,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2426,7 +2468,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2442,7 +2484,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2458,7 +2500,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2474,7 +2516,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2490,7 +2532,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2506,7 +2548,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2522,7 +2564,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2538,7 +2580,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2554,7 +2596,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2570,7 +2612,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2586,7 +2628,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2602,7 +2644,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2618,7 +2660,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2634,7 +2676,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2650,7 +2692,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2666,7 +2708,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2682,7 +2724,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2698,7 +2740,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2714,7 +2756,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2730,7 +2772,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2746,7 +2788,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2762,7 +2804,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2778,7 +2820,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2794,7 +2836,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2810,7 +2852,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2826,7 +2868,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2842,7 +2884,7 @@
 				<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 				<Property Name="Logging:LogData" Type="Str">True</Property>
 				<Property Name="Logging:LogEvents" Type="Str">True</Property>
-				<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+				<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 				<Property Name="Network:BuffSize" Type="Str">50</Property>
 				<Property Name="Network:SingleWriter" Type="Str">False</Property>
 				<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2859,7 +2901,7 @@
 			<Property Name="Logging:Deadband" Type="Str">0.01</Property>
 			<Property Name="Logging:LogData" Type="Str">True</Property>
 			<Property Name="Logging:LogEvents" Type="Str">True</Property>
-			<Property Name="Logging:ValueRes" Type="Str">0.1</Property>
+			<Property Name="Logging:ValueRes" Type="Str">0.01</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>

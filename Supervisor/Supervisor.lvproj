@@ -63,6 +63,7 @@
 	<Property Name="varPersistentID:{3FAE6BD3-A028-48C3-9BA9-871600B44D1C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/mdot Combustor Out</Property>
 	<Property Name="varPersistentID:{41191A1B-254D-43C9-9293-D287E6D6F8FD}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-13_R</Property>
 	<Property Name="varPersistentID:{41744E9A-2310-4DC6-A1DE-D5D612A23919}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultDAQ/SysFlowRates_R</Property>
+	<Property Name="varPersistentID:{42DF86B9-2F31-4A12-8062-EFAC691321EF}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/Heater Res Gen</Property>
 	<Property Name="varPersistentID:{446EEF1C-44E3-43EE-8E44-636EDA82FF0F}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/VFD/TCHX Frequency</Property>
 	<Property Name="varPersistentID:{44B7D7B8-8961-4777-8C21-C06A9A1C53EE}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Stop MATLAB Control</Property>
 	<Property Name="varPersistentID:{456187FA-E9D0-4E69-85D7-9A71FF77E90D}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/ST-14-N_R</Property>
@@ -79,6 +80,7 @@
 	<Property Name="varPersistentID:{4EA29241-E465-4124-9D1A-A8F208D8AB0A}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/VFD/CTAH Frequency</Property>
 	<Property Name="varPersistentID:{52BCDD9B-B647-4E70-A571-4A752C99A87C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-64_R</Property>
 	<Property Name="varPersistentID:{545E74F7-D0FC-4B74-9B19-A66FCE9A4EF3}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Temp HPT Out</Property>
+	<Property Name="varPersistentID:{5465776F-479F-480F-8571-08F97D185F3C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/CTAH Res Gen</Property>
 	<Property Name="varPersistentID:{57666982-6DD5-4E22-A8BF-088C42F09460}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/Core/Loop Period</Property>
 	<Property Name="varPersistentID:{59574F5E-980B-4BFD-AD8C-67A5A70FDB56}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Flowmeters/FM-20_R</Property>
 	<Property Name="varPersistentID:{59E76222-CF3B-47FC-9512-5771BD5783B7}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-32_R</Property>
@@ -104,6 +106,7 @@
 	<Property Name="varPersistentID:{69DA3EE1-794D-4562-9B9B-2392BD56B328}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-62_R</Property>
 	<Property Name="varPersistentID:{69DED1F7-C0DB-4327-9BA2-3F46A4E46B1A}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPInputs/Air Flow Rate</Property>
 	<Property Name="varPersistentID:{6ABA775A-6120-4A6A-B87A-25F012A0273B}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-14-N</Property>
+	<Property Name="varPersistentID:{6B7945F6-8C82-45CE-9284-23CA6F0F6E67}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Matlab Booleans/Fault Diagnostics Active</Property>
 	<Property Name="varPersistentID:{6CD44A73-CCDE-4B3A-A424-06D542170C5F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-30</Property>
 	<Property Name="varPersistentID:{6CE6172E-A0D7-4E1E-A7D5-7F5B7D46AE93}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Spoof Enabled</Property>
 	<Property Name="varPersistentID:{6DB7CA32-DED8-4576-B1BD-8B87C784970A}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/CX-11-1</Property>
