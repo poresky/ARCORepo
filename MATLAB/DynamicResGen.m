@@ -1,4 +1,4 @@
-%% Start
+mi%% Start
 clear
 close all
 
@@ -191,68 +191,68 @@ if matlab_active == true
     while matlab_active == true
     if resgen == true
         t = 10; % 10 timesteps
-        HeaterStates.z = zeros(length(HeaterModel.z),t);
-        CTAHSTates.z = zeros(length(CTAHModel.z),t);
+        HeaterStates.z = zeros(length(HeaterModel.z),1);
+        CTAHSTates.z = zeros(length(CTAHModel.z),1);
         for i = 1:10
             % Read values from nodes and define as variables
             [numeric_control_actions, date_time_numeric] = readValue(uaClient, NumericControlNode); 
-            ctah_freq(i) = numeric_control_actions(5);
-            desired_power(i) = numeric_control_actions(8);
+            ctah_freq = numeric_control_actions(5);
+            desired_power = numeric_control_actions(8);
             [ciet_data, date_time_ciet] = readValue(uaClient, CIETDataNode);
-            CX101(i) = ciet_data(4);
-            CX102(i) = ciet_data(5);
-            CX103(i) = ciet_data(6);
-            CX104(i) = ciet_data(7);
-            CX111(i) = ciet_data(8);
-            CX112(i) = ciet_data(9);
-            CX113(i) = ciet_data(10);
-            CX114(i) = ciet_data(11);
-            WT10(i) = ciet_data(2);
-            BT11(i) = ciet_data(3);
-            FM40(i) = ciet_data(56);
-            ST14E(i) = ciet_data(49);
-            ST14W(i) = ciet_data(51);
-            ST14N(i) = ciet_data(48);
-            WT40(i) = ciet_data(30);
-            BT41(i) = ciet_data(31);
-            WT42(i) = ciet_data(32);
-            BT43(i) = ciet_data(33);
-            AT01(i) = ciet_data(52);
-            AT02(i) = ciet_data(53);
+            CX101 = ciet_data(4);
+            CX102 = ciet_data(5);
+            CX103 = ciet_data(6);
+            CX104 = ciet_data(7);
+            CX111 = ciet_data(8);
+            CX112 = ciet_data(9);
+            CX113 = ciet_data(10);
+            CX114 = ciet_data(11);
+            WT10 = ciet_data(2);
+            BT11 = ciet_data(3);
+            FM40 = ciet_data(56);
+            ST14E = ciet_data(49);
+            ST14W = ciet_data(51);
+            ST14N = ciet_data(48);
+            WT40 = ciet_data(30);
+            BT41 = ciet_data(31);
+            WT42 = ciet_data(32);
+            BT43 = ciet_data(33);
+            AT01 = ciet_data(52);
+            AT02 = ciet_data(53);
             pause(.1)
+            HeaterStates.z(1) = desired_power;
+            HeaterStates.z(2) = CX101;
+            HeaterStates.z(3) = CX103;
+            HeaterStates.z(4) = CX104;
+            HeaterStates.z(5) = CX111;
+            HeaterStates.z(6) = CX112;
+            HeaterStates.z(7) = CX113;
+            HeaterStates.z(8) = CX114;
+            HeaterStates.z(9) = CX114;
+            HeaterStates.z(10) = WT10;
+            HeaterStates.z(11) = BT11;
+            HeaterStates.z(12) = ST14E;
+            HeaterStates.z(13) = ST14W;
+            HeaterStates.z(14) = ST14N;
+            HeaterStates.z(15) = FM40;
+            CTAHStates.z(1) = ctah_freq;
+            CTAHStates.z(2) = WT40;
+            CTAHStates.z(3) = BT41;
+            CTAHStates.z(4) = WT42;
+            CTAHStates.z(5) = BT43;
+            CTAHStates.z(6) = AT01;
+            CTAHStates.z(7) = AT02;
+            % Create empty states
+            HeaterState1.TFH = (CX101+CX102+CX103+CX104+CX111+CX112+CX113+CX114)/8;
+            HeaterState1.TSH = (ST14E+ST14W+ST14N)/3;
+            CTAHState1.TFC = (BT41+WT40)/2;
+            CTAHState1.TSC = (WT42+WT40)/2;
+            rHeater = ResGenCIETHeater_1_6( HeaterStates.z, HeaterState1, HeaterModel.parameter_values, 0.1);
+            rCTAH = ResGenCTAH_1_6(CTAHStates.z, CTAHState1, CTAHModel.parameter_values, 0.1);
+            writeValue(uaClient,HeaterResGenNode,rHeater)
+            writeValue(uaClient,CTAHResGenNode,rCTAH)
         end
-        % Assemble states
-        HeaterStates.z(:,1) = desired_power;
-        HeaterStates.z(:,2) = CX101;
-        HeaterStates.z(:,3) = CX103;
-        HeaterStates.z(:,4) = CX104;
-        HeaterStates.z(:,5) = CX111;
-        HeaterStates.z(:,6) = CX112;
-        HeaterStates.z(:,7) = CX113;
-        HeaterStates.z(:,8) = CX114;
-        HeaterStates.z(:,9) = CX114;
-        HeaterStates.z(:,10) = WT10;
-        HeaterStates.z(:,11) = BT11;
-        HeaterStates.z(:,12) = ST14E;
-        HeaterStates.z(:,13) = ST14W;
-        HeaterStates.z(:,14) = ST14N;
-        HeaterStates.z(:,15) = FM40;
-        CTAHStates.z(:,1) = ctah_freq;
-        CTAHStates.z(:,2) = WT40;
-        CTAHStates.z(:,3) = BT41;
-        CTAHStates.z(:,4) = WT42;
-        CTAHStates.z(:,5) = BT42;
-        CTAHStates.z(:,6) = AT01;
-        CTAHStates.z(:,7) = AT02;
-        % Create empty states
-        HeaterState1.TFH = (CX101+CX102+CX103+CX104+CX111+CX112+CX113+CX114)/8;
-        HeaterState1.TSH = (ST14E+ST14W+ST14N)/3;
-        CTAHState1.TFC = (BT41+WT40)/2;
-        CTAHState1.TSC = 0;
         % Run residual generator
-        rHeater = ResGenCIETHeater_1_6( HeaterStates.z, HeaterState1, HeaterModel.parameter_values, 0.1);
-        rCTAH = ResGenCTAH_1_6(CTAHStates.z, CTAHState1, CTAHModel.parameter_values, 0.1);
-        writeValue(uaClient,ResGenNode,[rHeater rCTAH]);
     else
         disp('Fault diagnostics not active')
     end

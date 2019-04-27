@@ -1,5 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
+	<Property Name="CCSymbols" Type="Str"></Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Property Name="varPersistentID:{02D5FBF7-C1FA-4B60-A58B-C745720D6F8B}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-20_R</Property>
 	<Property Name="varPersistentID:{0419893D-B7F0-43F0-AFF3-5BA22A4AEEAB}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/ST-12-N_R</Property>
 	<Property Name="varPersistentID:{090D257D-F34A-40F2-8E22-F5CB31884FAD}" Type="Ref">/My Computer/Instructor.lvlib/SpoofCore_Variables/Desired Power_S</Property>
