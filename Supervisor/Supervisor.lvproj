@@ -13,6 +13,7 @@
 	<Property Name="varPersistentID:{0D2A40E0-6B0D-49ED-9F8E-4100AE3963DA}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Temp Compressor In</Property>
 	<Property Name="varPersistentID:{0D65D87B-060A-4A3C-B12A-EA701CFC6047}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-67</Property>
 	<Property Name="varPersistentID:{0E5A89F4-5CED-410A-AD74-B4C9DF20E50C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Flowmeters/FM-60</Property>
+	<Property Name="varPersistentID:{0FBFA5D1-8413-4D2D-8B1D-A368202E9C4F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/DHX Temp Out Res Gen</Property>
 	<Property Name="varPersistentID:{0FCFB9E2-2D11-4DAD-879E-143F4ECAF41B}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/CX-11-4</Property>
 	<Property Name="varPersistentID:{115FC75B-B5B1-4F34-BCE1-1113DAF1507C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/AT-02_R</Property>
 	<Property Name="varPersistentID:{12B1B12D-D293-4B7D-B9EC-0DE2DF638AA9}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-65_R</Property>
@@ -115,6 +116,7 @@
 	<Property Name="varPersistentID:{706C69AD-E501-4850-8014-4EEDF025ECFE}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-12-SW</Property>
 	<Property Name="varPersistentID:{7116F48F-61E7-41D0-BB57-D91E353AB91B}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Press LPT Out</Property>
 	<Property Name="varPersistentID:{713C1856-0F50-4397-A959-266A6C0B1302}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/Core/Power Input Signal</Property>
+	<Property Name="varPersistentID:{72BAF483-ED06-4AB7-BD51-ACE54764829F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/Heater Temp Out Res Gen</Property>
 	<Property Name="varPersistentID:{72CBBE9C-4CD8-46A2-BFA2-410AB5638530}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-42</Property>
 	<Property Name="varPersistentID:{73D2A31D-FCBF-4760-B85F-EB82337EF82D}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/CX-11-4_R</Property>
 	<Property Name="varPersistentID:{782FFE80-702A-43DC-82F6-C498D7598939}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Flowmeters/FM-20</Property>
@@ -143,6 +145,7 @@
 	<Property Name="varPersistentID:{97066C9A-7C9D-4610-8282-7688977E1847}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-27</Property>
 	<Property Name="varPersistentID:{978C8170-0414-45AE-962E-6860BAC7299E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-28_R</Property>
 	<Property Name="varPersistentID:{9A6B0EE8-1DBB-4916-90DB-95E03BB8E6A7}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-23_R</Property>
+	<Property Name="varPersistentID:{9AB6D11B-2679-4DF0-897A-02BFF6E4BFFE}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/CTAH Temp In Res Gen</Property>
 	<Property Name="varPersistentID:{9AC3B8BC-7943-4CD3-8BC7-09DC67577687}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-66_R</Property>
 	<Property Name="varPersistentID:{9AD81737-2052-4E09-B28C-D9B332CB36B1}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Matlab Booleans/Action Recorder ON</Property>
 	<Property Name="varPersistentID:{9CB65EC5-3807-43B2-80AA-8E37ADB52214}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-62</Property>
@@ -155,6 +158,7 @@
 	<Property Name="varPersistentID:{A92D17B2-E08A-4B12-B97B-6FDCB243EC7E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-26_R</Property>
 	<Property Name="varPersistentID:{A9A96109-4783-4A80-9251-9A475C9F666F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Read Connection</Property>
 	<Property Name="varPersistentID:{AA6340C3-9DA8-40BD-AABD-7C8FE9644671}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-10</Property>
+	<Property Name="varPersistentID:{ACD407C0-3428-4FEC-B4C9-E5E2FEBD1C0D}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/TCHX Temp In Res Gen</Property>
 	<Property Name="varPersistentID:{ADB5D955-7F33-4A38-83DE-4E24210FA9EC}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-12-N</Property>
 	<Property Name="varPersistentID:{ADF0ACAA-CD6D-475F-824C-8EA9237B5D50}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPInputs/HPT PR</Property>
 	<Property Name="varPersistentID:{AEBDE052-1CFC-4FAA-87DA-5E4CD86F8EDB}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/CX-10-2_R</Property>
@@ -615,7 +619,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">98</Property>
+				<Property Name="Bld_version.build" Type="Int">100</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>
