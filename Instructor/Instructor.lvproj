@@ -63,6 +63,7 @@
 	<Property Name="varPersistentID:{37934D49-7C0E-41DD-83B0-0F88A2C23D71}" Type="Ref">/My Computer/Instructor.lvlib/SpoofDAQ_Variables/Flow Data?_S</Property>
 	<Property Name="varPersistentID:{3919D6CA-CB19-47DF-A785-0D4F51933F83}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/WT-22</Property>
 	<Property Name="varPersistentID:{392C133D-D2E1-43DD-8335-0E38178DC98B}" Type="Ref">/My Computer/Instructor.lvlib/DAQ_Variables/PowersFreqs</Property>
+	<Property Name="varPersistentID:{39B55AA2-B722-485F-867A-4DAAC8D78F48}" Type="Ref">/My Computer/Instructor.lvlib/Res/CTAH Res Gen</Property>
 	<Property Name="varPersistentID:{3A029A30-5F53-49AE-91FE-641627EAF8E7}" Type="Ref">/My Computer/Instructor.lvlib/SpoofNPSVariables/ST-14-N_S</Property>
 	<Property Name="varPersistentID:{3A12D165-91B1-4F11-95A7-26BE173F36EA}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/WT-40</Property>
 	<Property Name="varPersistentID:{3AAD5D3D-A6A6-4F87-84A4-CFDA43E4B54C}" Type="Ref">/My Computer/Instructor.lvlib/ResultDAQ_Variables/SysFlowRates_R</Property>
@@ -90,9 +91,11 @@
 	<Property Name="varPersistentID:{4F17D939-2BC9-4D22-8E74-007362F15F92}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/WT-24</Property>
 	<Property Name="varPersistentID:{4F435BD7-03F8-4AAB-BAD4-4EB80D6C53D4}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/WT-20</Property>
 	<Property Name="varPersistentID:{4F842FB9-80C8-44A8-A3CA-C8F47ED0E0BF}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/WT-31</Property>
+	<Property Name="varPersistentID:{5084C83E-5B02-4270-AEE4-AC69D8DBE3D4}" Type="Ref">/My Computer/Instructor.lvlib/Res/Heater Res Gen</Property>
 	<Property Name="varPersistentID:{50A8182D-D37D-403A-B22D-26F02A1D39C9}" Type="Ref">/My Computer/Instructor.lvlib/Remote VI/Stop Broadcasting</Property>
 	<Property Name="varPersistentID:{51BBD523-56D3-47F8-AF22-60B1C23DEB77}" Type="Ref">/My Computer/Instructor.lvlib/SpoofNPSVariables/BT-32_S</Property>
 	<Property Name="varPersistentID:{532AB04C-88C4-4366-A868-38D957D1CBF6}" Type="Ref">/My Computer/Instructor.lvlib/SpoofCore_Variables/Loop Period_S</Property>
+	<Property Name="varPersistentID:{535C6FEF-28CE-424C-8C2C-7879C03A063C}" Type="Ref">/My Computer/Instructor.lvlib/Res/DHX Temp Out Res Gen</Property>
 	<Property Name="varPersistentID:{5418BBDA-4632-42B2-A829-AE15370700E5}" Type="Ref">/My Computer/Instructor.lvlib/SpoofVFD_Variables/Spoof Pump Variables/Pump Frequency_S</Property>
 	<Property Name="varPersistentID:{55844A85-1E5C-42D7-9F69-BE0651C866D4}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/BT-43_R</Property>
 	<Property Name="varPersistentID:{55E1D16A-6C21-4A5C-A51E-0529CE2EC2FD}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/CX-10-1_R</Property>
@@ -127,6 +130,7 @@
 	<Property Name="varPersistentID:{75518AFE-1C3E-46F5-893A-0170C130D0F5}" Type="Ref">/My Computer/Instructor.lvlib/VFD_Variables/Pump Variables/Activate Pump</Property>
 	<Property Name="varPersistentID:{761860D3-3012-49CD-8F87-C950493C35DB}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/ST-14-S_R</Property>
 	<Property Name="varPersistentID:{76E03618-0110-48F5-9A7A-41CDA73506B3}" Type="Ref">/My Computer/Instructor.lvlib/SpoofNPSVariables/FM-60_S</Property>
+	<Property Name="varPersistentID:{77B37319-5E5B-4DE8-860F-70D195CA8B5A}" Type="Ref">/My Computer/Instructor.lvlib/Res/CTAH Temp In Res Gen</Property>
 	<Property Name="varPersistentID:{7895D196-3BAE-432E-B00A-1120E6962241}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-42_R</Property>
 	<Property Name="varPersistentID:{79D5BEE9-C789-42FF-A18C-1967D024D47E}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-40_R</Property>
 	<Property Name="varPersistentID:{7B85E395-E533-4B8B-B18E-E14B18DA130A}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/BT-29_R</Property>
@@ -194,6 +198,7 @@
 	<Property Name="varPersistentID:{B7F1DF9F-1DFB-4F5D-ADB9-A76A5CDC67ED}" Type="Ref">/My Computer/Instructor.lvlib/NPSVariables/FM-60</Property>
 	<Property Name="varPersistentID:{B8221B52-F1FC-4ED2-A17A-E1C87D6AC3D5}" Type="Ref">/My Computer/Instructor.lvlib/SpoofNPSVariables/BT-30_S</Property>
 	<Property Name="varPersistentID:{B94A360F-73C7-4A95-B352-C43043FC49EA}" Type="Ref">/My Computer/Instructor.lvlib/SpoofVFD_Variables/Spoof TCHX Variables/TCHX Operating Case_S</Property>
+	<Property Name="varPersistentID:{B9A826FB-0B0E-4E5C-8C6E-13477A5ABC5F}" Type="Ref">/My Computer/Instructor.lvlib/Res/TCHX Temp In Res Gen</Property>
 	<Property Name="varPersistentID:{B9E68CF7-6E43-4BEA-8065-5BA7A2D77BF3}" Type="Ref">/My Computer/Instructor.lvlib/SpoofCore_Variables/Shutdown_S</Property>
 	<Property Name="varPersistentID:{BC0DE6A3-1498-4553-9C30-63AD87646451}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-35_R</Property>
 	<Property Name="varPersistentID:{BEB51822-268D-4951-A89C-A3A763094E27}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/CX-11-3_R</Property>
@@ -215,6 +220,7 @@
 	<Property Name="varPersistentID:{D9563EE8-DA42-459F-9F03-B188F0D83E5B}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/CX-10-4_R</Property>
 	<Property Name="varPersistentID:{DCADC31C-C5C4-43A5-91A6-CA2978498896}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-61_R</Property>
 	<Property Name="varPersistentID:{DCB40612-87F1-4793-81CA-14C60E01AFEA}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/WT-33_R</Property>
+	<Property Name="varPersistentID:{DD1D3C86-E4A5-4448-8AB1-31F7A11CEA18}" Type="Ref">/My Computer/Instructor.lvlib/Res/Heater Temp Out Res Gen</Property>
 	<Property Name="varPersistentID:{DD8974B0-013D-4CD3-851F-CD53FEF1599A}" Type="Ref">/My Computer/Instructor.lvlib/Core_Variables/Power Output</Property>
 	<Property Name="varPersistentID:{DFC9F3E9-7744-4F48-AA26-7A2B6273B74C}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/BT-34_R</Property>
 	<Property Name="varPersistentID:{E023BFC7-FC83-46CA-B050-E11D46ED91DA}" Type="Ref">/My Computer/Instructor.lvlib/ResultNPSVariables/BT-25_R</Property>
