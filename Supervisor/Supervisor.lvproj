@@ -134,6 +134,7 @@
 	<Property Name="varPersistentID:{829196B4-9330-414A-96A9-1017ABE930F5}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/ResultVFD/Activate CTAH_R</Property>
 	<Property Name="varPersistentID:{8509E30D-2EF8-4AA3-BA85-3B78726AFD54}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-25</Property>
 	<Property Name="varPersistentID:{85A7DB1F-8CDC-4559-B7F3-21E8BEC4730F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-11_R</Property>
+	<Property Name="varPersistentID:{862E612E-F4D8-4BAC-B28E-961070B895E1}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/Fault Detected Supervisor</Property>
 	<Property Name="varPersistentID:{8766CB51-6712-45DA-A185-A33598981AD0}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/CX-10-3</Property>
 	<Property Name="varPersistentID:{877CFF30-96E1-4249-AD5F-05F872393AAD}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Server Status</Property>
 	<Property Name="varPersistentID:{8C105CA9-25AD-43A6-81E8-40398A13883E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Temp LPT Out</Property>
@@ -143,6 +144,7 @@
 	<Property Name="varPersistentID:{9175698F-09DA-4A1A-8DBA-C5D60271018A}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-35</Property>
 	<Property Name="varPersistentID:{9245CEE4-A4F2-42C0-A69C-4B171D8D4904}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Flowmeters/FM-30</Property>
 	<Property Name="varPersistentID:{97066C9A-7C9D-4610-8282-7688977E1847}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-27</Property>
+	<Property Name="varPersistentID:{97795D76-04E0-4410-8230-E09955E7792C}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/DHX Temp Out Fault Active</Property>
 	<Property Name="varPersistentID:{978C8170-0414-45AE-962E-6860BAC7299E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/WT-28_R</Property>
 	<Property Name="varPersistentID:{9A6B0EE8-1DBB-4916-90DB-95E03BB8E6A7}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/BT-23_R</Property>
 	<Property Name="varPersistentID:{9AB6D11B-2679-4DF0-897A-02BFF6E4BFFE}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/CTAH Temp In Res Gen</Property>
@@ -159,6 +161,7 @@
 	<Property Name="varPersistentID:{A9A96109-4783-4A80-9251-9A475C9F666F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Read Connection</Property>
 	<Property Name="varPersistentID:{AA6340C3-9DA8-40BD-AABD-7C8FE9644671}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-10</Property>
 	<Property Name="varPersistentID:{ACD407C0-3428-4FEC-B4C9-E5E2FEBD1C0D}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/TCHX Temp In Res Gen</Property>
+	<Property Name="varPersistentID:{AD78DC13-D96C-4CFF-8E15-68AF95113D5F}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/TCHX Temp In Fault Active</Property>
 	<Property Name="varPersistentID:{ADB5D955-7F33-4A38-83DE-4E24210FA9EC}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/ST-12-N</Property>
 	<Property Name="varPersistentID:{ADF0ACAA-CD6D-475F-824C-8EA9237B5D50}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPInputs/HPT PR</Property>
 	<Property Name="varPersistentID:{AEBDE052-1CFC-4FAA-87DA-5E4CD86F8EDB}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/CX-10-2_R</Property>
@@ -169,6 +172,7 @@
 	<Property Name="varPersistentID:{B32A6405-E174-483D-A5A5-EF9CD5848995}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-60</Property>
 	<Property Name="varPersistentID:{B66E779E-D92B-49EF-9746-B60C52B239F6}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Hdot LP CTAH Out</Property>
 	<Property Name="varPersistentID:{B7395C25-E19F-44E4-9209-8A5EC445309F}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/Core/Shutdown</Property>
+	<Property Name="varPersistentID:{B7D06FA3-4B8B-4112-AA0D-9B4D2E770DF3}" Type="Ref">/My Computer/Supervisor_Host.lvlib/RemoteVI/Overview Stop</Property>
 	<Property Name="varPersistentID:{B988C9CC-C01B-437A-9AB3-D892D653E098}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/ResultVFD/Activate Pump_R</Property>
 	<Property Name="varPersistentID:{BC645C2E-4D13-4317-A222-A21251A46B94}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultCore/Power Input Signal_R</Property>
 	<Property Name="varPersistentID:{BDA25B8F-EE6F-41EE-A8CC-40ECE50BEE4E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-20</Property>
@@ -195,6 +199,7 @@
 	<Property Name="varPersistentID:{E21C42E1-2475-4F34-A45D-8B9D240CAAC6}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/ResultCore/Exit Profile_R</Property>
 	<Property Name="varPersistentID:{E2E6A8C2-42F6-4B00-9D46-92AAE5BD2852}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultVFD/Pump Frequency_R</Property>
 	<Property Name="varPersistentID:{E39FFA6E-A12E-4C59-862D-7CE84B95DDF0}" Type="Ref">/My Computer/Supervisor_Host.lvlib/MIDI/Power Direct</Property>
+	<Property Name="varPersistentID:{E3A9CBC2-5B88-4BE1-98A2-9F50F3DCCB23}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/CTAH Heat Removal Fault Active</Property>
 	<Property Name="varPersistentID:{E3C22089-4300-42CE-AB1A-D38E5A33D70B}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultVFD/CTAH Frequency_R</Property>
 	<Property Name="varPersistentID:{E4D6C062-5350-4BFA-9928-022AAC20B9FA}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Matlab Booleans/MATLAB Active</Property>
 	<Property Name="varPersistentID:{E5001B3F-4759-4AE4-A993-211A486F7765}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/Core/Power Output</Property>
@@ -205,6 +210,8 @@
 	<Property Name="varPersistentID:{ED0E705A-D32B-492B-86A0-668712B2F27E}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-43</Property>
 	<Property Name="varPersistentID:{ED7FAFA8-B89D-4520-B296-33022CB77B37}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Temp LP CTAH Out</Property>
 	<Property Name="varPersistentID:{EE86BCA0-DE5D-40CA-A870-ABC50E0C8EC5}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/ST-12-N_R</Property>
+	<Property Name="varPersistentID:{F050299D-E0F4-4E04-AFE8-D42997E75959}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/Heater Temp Out Fault Active</Property>
+	<Property Name="varPersistentID:{F06092FC-9A33-47CE-9235-0AA3D4066C95}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/Heater Control Fault Active</Property>
 	<Property Name="varPersistentID:{F12DAD20-E196-4200-BB70-C7FC71C7F6D9}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/BT-63</Property>
 	<Property Name="varPersistentID:{F181C1AA-D0F8-47AB-88AD-4E2FDAF5D120}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/Core/Select Operation Mode</Property>
 	<Property Name="varPersistentID:{F1AC59C4-FC96-4EF5-B530-64DB64879C46}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/AT-01</Property>
@@ -212,6 +219,7 @@
 	<Property Name="varPersistentID:{F2AEF100-CECA-455A-BACE-623590899C31}" Type="Ref">/My Computer/Supervisor_Host.lvlib/NPS/Thermocouples/WT-28</Property>
 	<Property Name="varPersistentID:{F4323E6E-1BD1-4935-A953-4F3089FD81F4}" Type="Ref">/My Computer/Supervisor_Host.lvlib/MIDI/Direct Control</Property>
 	<Property Name="varPersistentID:{F47C3D6A-E9E0-4A02-801D-A857D945823B}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPInputs/NG Flow Rate</Property>
+	<Property Name="varPersistentID:{F549F59D-8A78-4C3B-83A6-AE5505D249C3}" Type="Ref">/My Computer/Supervisor_Host.lvlib/Res/CTAH Temp In Fault Active</Property>
 	<Property Name="varPersistentID:{F7264D66-2705-4CAD-A5F2-80FC6A03E8A9}" Type="Ref">/My Computer/Supervisor_Host.lvlib/ResultNPS/Thermocouples/ST-14-W_R</Property>
 	<Property Name="varPersistentID:{F8E33592-59A6-4CA8-826F-11D88E856DB3}" Type="Ref">/My Computer/Supervisor_Host.lvlib/BoPOutputs/Hdot Combustor Out</Property>
 	<Property Name="varPersistentID:{F9775419-47AB-4662-8C24-ED64FF1BEFC7}" Type="Ref">/CIET-PXIe/PXI_Libraries/Supervisor_PXIe.lvlib/DAQ/DAQ?</Property>
@@ -283,6 +291,7 @@
 		<Item Name="Brain.vi" Type="VI" URL="../Brain.vi"/>
 		<Item Name="Electronic Procedure Debug.vi" Type="VI" URL="../Electronic Procedure Debug.vi"/>
 		<Item Name="MIDI Controller.vi" Type="VI" URL="../MIDI Controller.vi"/>
+		<Item Name="Operator Actions Log.vi" Type="VI" URL="../Operator Actions Log.vi"/>
 		<Item Name="Overview.vi" Type="VI" URL="../Overview.vi"/>
 		<Item Name="Supervisor.vi" Type="VI" URL="../Supervisor.vi"/>
 		<Item Name="Supervisor_Host.lvlib" Type="Library" URL="../Supervisor_Host.lvlib"/>
@@ -619,7 +628,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">100</Property>
+				<Property Name="Bld_version.build" Type="Int">104</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>

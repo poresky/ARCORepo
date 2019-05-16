@@ -8,7 +8,8 @@ BooleanControlNode = findNodeByName(uaClient.Namespace,'Boolean Control Actions'
 NumericControlNode = findNodeByName(uaClient.Namespace,'Numeric Control Actions');
 CIETDataNode = findNodeByName(uaClient.Namespace,'CIET Data');
 [matlab_booleans, date_time_matlab] = readValue(uaClient,MATLABBooleansNode);
-matlab_active = matlab_booleans(1); 
+matlab_active = matlab_booleans(1);
+OperatorActionsNode = findNodeByName(uaClient.Namespace,'Operator Actions');
 
 %% Define string node in MATLAB. The output of this script is eventually written to this node to be displayed in LabVIEW.
 StringNode = findNodeByName(uaClient.Namespace,'Chat');
@@ -80,7 +81,6 @@ if matlab_active == true
                     old_data(1,7) = new_data(1,7); 
                     disp(displayed_report)
                 end
-                writeValue(uaClient,StringNode,[displayed_report])
                 if new_data(1,8) ~= old_data(1,8)
                     if new_data(1,8) == 1
                         displayed_report = ['Reactor operator activated CTAH at ' num2str(timestamp) ' seconds'];
@@ -89,7 +89,9 @@ if matlab_active == true
                     end
                     old_data(1,8) = new_data(1,8); 
                     disp(displayed_report)
-                end   
+                end
+                %writeValue(uaClient,StringNode,[displayed_report])
+                writeValue(uaClient,OperatorActionsNode,[displayed_report])
         end
         pause(.1)
     end
