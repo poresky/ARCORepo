@@ -49,12 +49,12 @@ if matlab_active == true
                     disp(displayed_report)
                 end
                 if new_data(1,2) ~= old_data(1,2)
-                    displayed_report = ['Reactor operator changed desired power to ' num2str(desired_power) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['Reactor operator changed desired power to ' num2str(desired_power) ' W at ' num2str(timestamp) ' seconds'];
                     old_data(1,2) = new_data(1,2); 
                     disp(displayed_report)
                 end
                 if new_data(1,4) ~= old_data(1,4)
-                    displayed_report = ['Reactor operator changed pump frequency to ' num2str(pump_freq) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['Reactor operator changed pump frequency to ' num2str(pump_freq) ' Hz at ' num2str(timestamp) ' seconds'];
                     old_data(1,4) = new_data(1,4); 
                     disp(displayed_report)
                 end
@@ -68,7 +68,7 @@ if matlab_active == true
                     disp(displayed_report)
                 end
                 if new_data(1,6) ~= old_data(1,6)
-                    displayed_report = ['Reactor operator changed TCHX frequency to ' num2str(tchx_freq) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['Reactor operator changed TCHX frequency to ' num2str(tchx_freq) ' Hz at ' num2str(timestamp) ' seconds'];
                     old_data(1,6) = new_data(1,6); 
                     disp(displayed_report)
                 end

@@ -38,37 +38,38 @@ if matlab_active == true
         new_data = [timestamp, air_flow_rate, shaft_rpm, hpt_pr, lpt_pr, ng_flow_rate, ng_temp, ng_press];
         if operator_actions == true
                 if new_data(1,2) ~= old_data(1,2)
-                    displayed_report = ['BoP operator changed air flow rate to ' num2str(air_flow_rate), ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed air flow rate to ' num2str(air_flow_rate), ' kg/s at ' num2str(timestamp) ' seconds'];
                     old_data(1,2) = new_data(1,2); 
                     disp(displayed_report)
                 end
                 if new_data(1,3) ~= old_data(1,3)
-                    displayed_report = ['BoP operator changed shaft RPM to ' num2str(shaft_rpm) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed shaft RPM to ' num2str(shaft_rpm) ' RPM at ' num2str(timestamp) ' seconds'];
                     old_data(1,3) = new_data(1,3); 
                     disp(displayed_report)
                 end
                 if new_data(1,4) ~= old_data(1,4)
-                    displayed_report = ['BoP operator changed HPT PR to ' num2str(hpt_pr) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed HPT pressure to ' num2str(hpt_pr) ' bar at ' num2str(timestamp) ' seconds'];
                     old_data(1,4) = new_data(1,4); 
                     disp(displayed_report)
                 end
                 if new_data(1,5) ~= old_data(1,5)
-                    displayed_report = ['BoP operator changed LPT PR to ' num2str(lpt_pr) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed LPT pressure to ' num2str(lpt_pr) ' bar at ' num2str(timestamp) ' seconds'];
                     old_data(1,5) = new_data(1,5); 
                     disp(displayed_report)
                 end
                 if new_data(1,6) ~= old_data(1,6)
-                    displayed_report = ['BoP operator changed NG flow rate to ' num2str(ng_flow_rate) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed natural gas flow rate to ' num2str(ng_flow_rate) ' kg/s at ' num2str(timestamp) ' seconds'];
                     old_data(1,6) = new_data(1,6); 
                     disp(displayed_report)
                 end
                 if new_data(1,7) ~= old_data(1,7)
-                    displayed_report = ['BoP operator changed NG temperature to ' num2str(ng_temp) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['BoP operator changed natural gas temperature to ' num2str(ng_temp) ' C at ' num2str(timestamp) ' seconds'];
                     old_data(1,7) = new_data(1,7); 
                     disp(displayed_report)
                 end
                 if new_data(1,8) ~= old_data(1,8)
-                    displayed_report = ['Bop operator changed NG pressure to ' num2str(ng_press) ' at ' num2str(timestamp) ' seconds'];
+                    displayed_report = ['Bop operator changed natural gas pressure to ' num2str(ng_press) ' bar 
+                        at ' num2str(timestamp) ' seconds'];
                     old_data(1,8) = new_data(1,8); 
                     disp(displayed_report)
                 end
