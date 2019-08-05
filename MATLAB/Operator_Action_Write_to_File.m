@@ -1,4 +1,6 @@
 %% Writes data from ARCO/CIET into record of user actions.
+clear all
+clc
 prompt = 'file name?';
 file = input(prompt);
 filename = strcat(file, '.lvm');
