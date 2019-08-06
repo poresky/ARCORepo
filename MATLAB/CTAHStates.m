@@ -1,0 +1,11 @@
+function [CTAHStates,CTAHStates1] = CTAHStatesNew(NumericControls,CIETData)
+CTAHStates(1) = NumericControls.CTAHFreq;
+CTAHStates(2) = CIETData.WT40;
+CTAHStates(3) = CIETData.BT41;
+CTAHStates(4) = CIETData.WT42;
+CTAHStates(5) = CIETData.BT43;
+CTAHStates(6) = CIETData.AT01;
+CTAHStates(7) = CIETData.AT02;
+CTAHStates(8) = CIETData.FM40;
+CTAHStates1.TFC = mean(CTAHStates(2:5));
+CTAHStates1.TIC = mean(CTAHStates(6:7));
