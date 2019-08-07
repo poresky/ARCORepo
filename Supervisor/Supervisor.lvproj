@@ -628,7 +628,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">104</Property>
+				<Property Name="Bld_version.build" Type="Int">105</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>

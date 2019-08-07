@@ -5,14 +5,14 @@ close all
 %% Settings
 measurementInterval = 1;                % Number of timesteps over which the measurement readings will not be updated and the residual generator must predict.
 deltat = measurementInterval*0.1;       % Size of timestep between readings (in seconds)
-feedbackInterval = 10;                  % Number of timesteps before feedback values are reset with measurement data
+feedbackInterval = 5;                  % Number of timesteps before feedback values are reset with measurement data
 
 normalize = "true";     % Only enabled if [normalize = "true";]
 feedback  = "true";     % Only enabled if [feedback  = "true";]
 
 %% Define Parameter Values
 heaterParams = HeaterParams();
-CTAHparams = CTAHParamsNew();
+CTAHparams = CTAHParams();
 hotLegParams = HotLegTCParams();
 DRACSparams = DRACSParams();
 
@@ -65,19 +65,19 @@ if matlab_active == true
                 end
 
                 % Calculate residuals
-                [rHeater,                   heaterState_fb]     = ResGenCIETHeater( CIETHeaterState, heaterState_fb,       HeaterModel.parameter_values,   deltat);
-                [rCTAH,                     CTAHState_fb]       = ResGenCTAH(       CTAHState,       CTAHState_fb,         CTAHModel.parameter_values,     deltat);
-                [rCTAHIn,                   CTAHInState_fb]     = ResGenT1(         HotLegState,     CTAHInState_fb,       HotLegModel.parameter_values,   deltat);
-                [rHeaterOut,                heaterOutState_fb]  = ResGenT1(         HotLegState,     heaterOutState_fb,    HotLegModel.parameter_values,   deltat);
-                [rTCHXIn,                   TCHXInState_fb]     = ResGenT2(         DRACSState,      TCHXInState_fb,       DRACSModel.parameter_values,    deltat);
-                [rDRACSOut,                 DRACSOutState_fb]   = ResGenT2(         DRACSState,      DRACSOutState_fb,     DRACSModel.parameter_values,    deltat);
+                [rHeater,                   heaterState_fb]     = ResGenCIETHeater( CIETHeaterState, heaterState_fb,       heaterParams,   deltat);
+                [rCTAH,                     CTAHState_fb]       = ResGenCTAH(       CTAHState,       CTAHState_fb,         CTAHparams,     deltat);
+                %[rCTAHIn,                   CTAHState_fb]       = ResGenT1(         HotLegState,     CTAHState_fb,       hotLegParams,   deltat);
+                [rHeaterOut,                heaterOutState_fb]  = ResGenT1(         HotLegState,     heaterOutState_fb,    hotLegParams,   deltat);
+                %[rTCHXIn,                   TCHXInState_fb]     = ResGenT2(         DRACSState,      TCHXInState_fb,       DRACSparams,    deltat);
+                [rDRACSOut,                 DRACSOutState_fb]   = ResGenT2(         DRACSState,      DRACSOutState_fb,     DRACSparams,    deltat);
 
                 % Write values to server
                 writeValue(uaClient,HeaterResGenNode,rHeater)
                 writeValue(uaClient,CTAHResGenNode,rCTAH)
-                writeValue(uaClient,CTAHInResGenNode,rCTAHIn)
+                %writeValue(uaClient,CTAHInResGenNode,rCTAHIn)
                 writeValue(uaClient,HeaterOutResGenNode,rHeaterOut)
-                writeValue(uaClient,TCHXInResGenNode,rTCHXIn)
+                %writeValue(uaClient,TCHXInResGenNode,rTCHXIn)
                 writeValue(uaClient,DRACSOutResGenNode,rDRACSOut)
                 pause(deltat)
             end
