@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 [My Computer]
 My Computer = "192.168.1.1"
+=======
+[CIET-PXIe]
+CIET-PXIe = "192.168.1.4"
+
+[My Computer]
+My Computer = "192.168.1.2"
+>>>>>>> e8d9ed29d57be12293b1a4cd6427817b3a693317
 
