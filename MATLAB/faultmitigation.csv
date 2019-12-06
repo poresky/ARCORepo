@@ -1,0 +1,24 @@
+﻿Summary Override,Desc. Override,Comment,Control,Record,T,pump frequency,desired power,CTAH frequency,mass flow rate (FM-40),CTAH outlet temperature
+Start Action Table,This window will electronically guide you through the procedure for this experiment. This step will automatically advance in 15 seconds.,Comments here.,,,15,NaN,NaN,NaN,NaN,NaN
+,,,pump frequency,,0,5,,,,
+,,,pump frequency,,0,15,,,,
+,,,pump frequency,,0,25,,,,
+,,,pump frequency,pump frequency,0,,,,0.18,
+,,,desired power,,0,,8000,,,
+Cyber Fault,A potential cyber attack has been detected. Initiating cyber mitigation procedure. This step will automatically advance in 10 seconds.,,,,10,,,,,
+,,,,,0,,7500,,,
+,,,,,0,,7800,,,
+,,,,,0,,8000,,,
+Cyber Support,Request cybersecurity support from your experimental lead. This step will automatically advance in 20 seconds.,,,,15,,,,,
+Fault Resolved,The cybersecurity fault has been resolved. The normal procedure will continue. This step will automatically advance in 10 seconds.,,,,10,,,,,
+,,,,,0,,,,,80
+,,,CTAH frequency,,0,,,25,,
+CTAH Fault,A fault in the CTAH system has been detected. Intiating CTAH fault mitigation procedure. This step will automatically advance in 10 seconds.,,,,10,,,,,
+,,,,,0,,,5,,
+,,,,,30,,,,,
+,,,,CTAH outlet temperature,5,,,,,
+CTAH Blockages,Check the CTAH system for any blockages. This step will automatically advance in 60 seconds.,,,,15,,,,,
+Fault Resolved,The CTAH fault has been resolved. The normal procedure will continue. This step will automatically advance in 10 seconds.,,,,10,,,,,
+,,,CTAH frequency,CTAH frequency,0,,,,,80
+,,,,,0,,0,,,
+Complete,You have completed the experiment!,,,,0,,,,,

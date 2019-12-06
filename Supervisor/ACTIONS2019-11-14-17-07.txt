@@ -1,0 +1,36 @@
+
+ [5:06:17 PM] 
+ [5:11:10 PM] Reactor operator activated CTAH at 295.9 seconds
+ [5:11:22 PM] Reactor operator changed pump frequency to 0.1 Hz at 307.5 seconds
+ [5:11:31 PM] Reactor operator changed pump frequency to 0 Hz at 317.1 seconds
+ [5:12:47 PM] Reactor operator deactivated pump at 393.2 seconds
+ [5:12:50 PM] Reactor operator activated pump at 395.4 seconds
+ [5:20:00 PM] Reactor operator deactivated pump at 826.2 seconds
+ [5:20:22 PM] Reactor operator activated pump at 847.9 seconds
+ [5:21:28 PM] Reactor operator deactivated CTAH at 914 seconds
+ [5:21:31 PM] Reactor operator activated CTAH at 916.3 seconds
+ [5:21:44 PM] Reactor operator activated TCHX at 930.2 seconds
+ [5:21:48 PM] Reactor operator deactivated TCHX at 934 seconds
+ [5:21:50 PM] Reactor operator activated TCHX at 935.5 seconds
+ [5:21:53 PM] Reactor operator deactivated TCHX at 938.8 seconds
+ [5:24:10 PM] Reactor operator deactivated pump at 1076 seconds
+ [5:24:11 PM] Reactor operator activated pump at 1077 seconds
+ [5:24:13 PM] Reactor operator deactivated pump at 1079.2 seconds
+ [5:24:14 PM] Reactor operator activated pump at 1080.1 seconds
+ [5:24:16 PM] Reactor operator deactivated pump at 1081.9 seconds
+ [5:24:17 PM] Reactor operator activated pump at 1082.6 seconds
+ [5:29:42 PM] Reactor operator activated CTAH at 1407.9 seconds
+ [5:30:48 PM] Reactor operator changed pump frequency to 10 Hz at 1474.2 seconds
+ [5:32:12 PM] Reactor operator changed pump frequency to 20 Hz at 1557.3 seconds
+ [5:33:44 PM] Reactor operator changed pump frequency to 30 Hz at 1650.1 seconds
+ [5:33:58 PM] Reactor operator turned power output on at 1663.9 seconds
+ [5:34:17 PM] Reactor operator changed desired power to 8000 W at 1683.2 seconds
+ [5:35:09 PM] Reactor operator changed desired power to 0 W at 1735.1 seconds
+ [5:35:10 PM] Reactor operator turned power output off at 1736.3 seconds
+ [5:38:41 PM] Reactor operator turned power output on at 1947.2 seconds
+ [5:38:56 PM] Reactor operator changed desired power to 1000 W at 1961.9 seconds
+ [6:02:15 PM] Reactor operator changed desired power to 0 W at 3360.8999 seconds
+ [6:02:25 PM] Reactor operator changed pump frequency to 0 Hz at 3370.6001 seconds
+ [6:02:30 PM] Reactor operator turned power output off at 3376 seconds
+ [6:02:31 PM] Reactor operator deactivated CTAH at 3376.6001 seconds
+ [6:02:32 PM] Reactor operator deactivated pump at 3378 seconds

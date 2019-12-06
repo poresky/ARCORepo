@@ -1,0 +1,10 @@
+function NumericControls = NumericControls(numeric_control_actions)
+NumericControls.OpMode = numeric_control_actions(1);
+NumericControls.CTAHOp = numeric_control_actions(2);
+NumericControls.TCHXOp = numeric_control_actions(3);
+NumericControls.PumpOp = numeric_control_actions(4);
+NumericControls.CTAHFreq = numeric_control_actions(5);
+NumericControls.TCHXFreq = numeric_control_actions(6);
+NumericControls.PumpFreq = numeric_control_actions(7);
+NumericControls.DesiredPower = numeric_control_actions(8);
+NumericControls.InputPowerArray = numeric_control_actions(9:end);

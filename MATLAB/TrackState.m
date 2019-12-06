@@ -6,8 +6,8 @@ function [state, description, summaries, bLights, time] = TrackState(systemVars,
 %% 
 % Configuration: Classify the variable columns as controllable or measurable 
 % variables by index. 
-    controlVars = 6:14;
-    measureVars = 15:16;
+    controlVars = 6:10;
+    measureVars = 11:12;
     tolerance = 0.02; % Tolerance for state advancement criteria. 
 %% 
 %     

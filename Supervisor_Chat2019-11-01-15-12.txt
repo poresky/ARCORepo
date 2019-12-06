@@ -1,0 +1,2 @@
+
+ [3:12:09 PM] Supervisor has aborted communication.

@@ -1,0 +1,10 @@
+
+ [2:29:34 PM] 
+ [2:44:58 PM] Reactor: long delay for flow rate
+ [2:54:43 PM] Instructor: After mass flow set to 40 Hz, primary flow surged to ~0.21 and the threshold was successfully triggered
+ [2:55:02 PM] Instructor: Electronic Procedure successfully advanced on pump frequency changes
+ [2:56:30 PM] Instructor: EP succesfully advanced on primary flow value of 1.8
+ [2:58:56 PM] Instructor: 
+ [3:03:04 PM] Reactor: forgot when enabling spoof on instructor that it shuts down all vfds
+ [3:03:23 PM] Reactor: will stop all vis and restart experiment
+ [3:11:41 PM] Reactor has aborted communication.

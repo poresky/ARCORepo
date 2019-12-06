@@ -448,6 +448,7 @@ DirectoryIndex index.htm
 		<Item Name="Hardware Files" Type="Folder">
 			<Item Name="GS1 Factory Reset.vi" Type="VI" URL="../GS1 Factory Reset.vi"/>
 			<Item Name="Hardware_Power Supplies.vi" Type="VI" URL="../Hardware_Power Supplies.vi"/>
+			<Item Name="Hardware_Power Supplies_Analog.vi" Type="VI" URL="../Hardware_Power Supplies_Analog.vi"/>
 			<Item Name="Hardware_Power Supplies_Init.vi" Type="VI" URL="../Hardware_Power Supplies_Init.vi"/>
 		</Item>
 		<Item Name="PXI_Libraries" Type="Folder">
@@ -610,7 +611,6 @@ DirectoryIndex index.htm
 			<Item Name="GENser Revision Query.vi" Type="VI" URL="../../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser/GENser Revision Query.vi"/>
 			<Item Name="GENser Wait.vi" Type="VI" URL="../../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser/GENser Wait.vi"/>
 			<Item Name="GENser Write to Instrument.vi" Type="VI" URL="../../../../Program Files/National Instruments/LabVIEW 2016/instr.lib/GENser/GENser/GENser Write to Instrument.vi"/>
-			<Item Name="Hardware_Power Supplies_Analog.vi" Type="VI" URL="../Hardware_Power Supplies_Analog.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -628,7 +628,7 @@ DirectoryIndex index.htm
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D6568BAA-0D97-4BB4-9B63-FA22E6986473}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/c/ni-rt/startup</Property>
-				<Property Name="Bld_version.build" Type="Int">105</Property>
+				<Property Name="Bld_version.build" Type="Int">114</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">/c/ni-rt/startup</Property>
