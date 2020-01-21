@@ -1,4 +1,5 @@
 [ProjectWindow_Data]
+<<<<<<< HEAD
 ProjectExplorer.ClassicPosition[String] = "185,864,1307,1884"
 
 [AB_Cache_{0DF06F52-8FF9-4B62-919B-713A6FB06FB5}]
@@ -8,4 +9,7 @@ Cache_Path[Path] Line0002 = "52-8FF9-4B62-919B-713A6FB06FB5}.txt"
 [AB_Cache_{D6568BAA-0D97-4BB4-9B63-FA22E6986473}]
 Cache_Path[Path] Line0001 = "/C/Users/Darcy/AppData/Local/Temp/AB_Cache_{D6568B"
 Cache_Path[Path] Line0002 = "AA-0D97-4BB4-9B63-FA22E6986473}.txt"
+=======
+ProjectExplorer.ClassicPosition[String] = "231,719,1653,1839"
+>>>>>>> 58a5cd0b51a19f6f5fd225c18a0c8a9fcbe87e45
 
