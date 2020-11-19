@@ -1,0 +1,6 @@
+
+ [1:37:02 PM] 
+ [1:38:37 PM] Supervisor: 
+ [1:49:48 PM] Supervisor: Waiting for CTAH outlet to reach  80 C.
+ [1:50:47 PM] Supervisor: Flow meter is not updating in real time, there seems to be a slight delay but the value is accurate
+ [1:55:58 PM] Supervisor: 

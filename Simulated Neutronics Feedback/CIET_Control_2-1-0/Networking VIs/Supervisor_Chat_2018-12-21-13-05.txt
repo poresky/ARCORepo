@@ -1,0 +1,7 @@
+
+ [1:04:51 PM] 
+ [1:05:20 PM] Supervisor: 
+ [1:09:22 PM] Supervisor: It was noticed that the pump did not respond to frequency values of 30 Hz or less. Once a value larger than that was inserted the pump started up and reached the desired flow rate. The 
+ [1:10:01 PM] Supervisor: The VFD read the value that was being put in correctly, but the pump was not turning. This indicates a fault with the pump, and it might be time to order a new one. 
+ [1:10:50 PM] Supervisor: For the purposes of this test, we should be able to reach the flow rates we need, but further investigation will be necessary. 
+ [1:11:06 PM] Supervisor: 
