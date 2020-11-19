@@ -1,0 +1,2703 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>17.0</Version>
+<Cluster>
+<Name>CVT File Data</Name>
+<NumElts>2</NumElts>
+<Array>
+<Name>Tags</Name>
+<Dimsize>58</Dimsize> <!--Adjust to match number of tags-->
+
+<!-- Tag 1 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>Time</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value; use: 0.000000 -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Time from the DAQ collection start</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 2 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>Power Output</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Power output from the power supplies [W]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 3 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>FM-20</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Mass flow rate in the DHX branch, primary side [kg/s]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 4 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>FM-30</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Mass flow rate in bypass branch [kg/s]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 5 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>FM-40</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Mass flow rate in CTAH branch [kg/s]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 6 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>FM-60</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Mass flow rate in DRACS loop [kg/s]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 7 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-10</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at heater inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 8 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-11</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at heater inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 9 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-10-1</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, pre-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 10 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-10-2</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, pre-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 11 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-10-3</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, pre-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 12 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-10-4</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, pre-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 13 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-11-1</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 14 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-11-2</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 15 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-11-3</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 16 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>CX-11-4</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Conax temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 17 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-12</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 18 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-13</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at heater outlet, post-mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 19 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-20</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature above primary DHX, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 20 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-21</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature above primary DHX, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 21 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-22</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature above primary DHX, below mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 22 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-23</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature above primary DHX, below mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 23 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-24</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature below primary DHX, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 24 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-25</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature below primary DHX, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 25 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-26</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature below primary DHX, below mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 26 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-27</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature below primary DHX, below mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 27 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-28</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature below primary DHX, below check valve and flowmeter [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 28 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-29</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature below primary DHX, below check valve and flowmeter [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 29 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-30</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at bypass branch inlet, before flowmeter [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 30 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-31</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at bypass branch inlet, before flowmeter [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 31 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-32</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at bypass branch inlet, after flowmeter before needle valve split [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 32 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-33</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at bypass branch inlet, after flowmeter before needle valve split [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 33 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-34</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at bypass branch outlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 34 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-35</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at bypass branch outlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 35 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-40</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at CTAH outlet after mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 36 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-41</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at CTAH outlet after mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 37 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-42</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at CTAH inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 38 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-43</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at CTAH inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 39 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-60</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at DRACS DHX inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 40 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-61</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at DRACS DHX inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 41 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-62</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at DRACS DHX outlet, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 42 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-63</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at DRACS DHX outlet, above mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 43 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-64</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at TCHX inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 44 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-65</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at TCHX inlet [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 45 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>BT-66</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Bulk temperature at TCHX outlet, after mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 46 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>WT-67</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Wall temperature at TCHX outlet, after mixer [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 47 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-10</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater bottom [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 48 -->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-11</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater bottom-middle [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 49-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-12_N</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater middle, north position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 50-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-12_SE</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater middle, south-east position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 51-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-12_SW</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater middle, south-west position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 52-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-13</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater top-middle [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 53-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-14_N</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater top, north position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 54-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-14_E</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater top, east position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 55-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-14_S</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater top, south position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 56-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>ST-14_W</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Heater surface temperature at heater top, west position [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 57-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>AT-01</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Ambient temperature at manometer board primary level [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- Tag 58-->
+<Cluster>
+<Name>Tag</Name>
+<NumElts>4</NumElts>
+<EW>
+<Name>Data Type</Name>
+<Choice>Double</Choice>
+<Choice>Single</Choice>
+<Choice>I64</Choice>
+<Choice>I32</Choice>
+<Choice>I16</Choice>
+<Choice>I8</Choice>
+<Choice>U64</Choice>
+<Choice>U32</Choice>
+<Choice>U16</Choice>
+<Choice>U8</Choice>
+<Choice>String</Choice>
+<Choice>Boolean</Choice>
+<Choice>Array of U8</Choice>
+<Choice>Array of U16</Choice>
+<Choice>Array of U32</Choice>
+<Choice>Array of U64</Choice>
+<Choice>Array of I64</Choice>
+<Choice>Array of I32</Choice>
+<Choice>Array of I16</Choice>
+<Choice>Array of I8</Choice>
+<Choice>Array of Double</Choice>
+<Choice>Array of Single</Choice>
+<Choice>Array of Boolean</Choice>
+<Choice>Array of String</Choice>
+<Val>1</Val> <!-- Indicates choice of Data Type above; 1 indicates "Single" -->
+</EW>
+<String>
+<Name>Name</Name>
+<Val>AT-02</Val> <!-- Tag Name -->
+</String>
+<String>
+<Name>Value</Name>
+<Val>0.000000</Val> <!-- Tag Initial Value -->
+</String>
+<String>
+<Name>Description</Name>
+<Val>Ambient temperature at manometer board DRACS level [C]</Val> <!-- Tag Description -->
+</String>
+</Cluster>
+
+<!-- End of all tags -->
+
+</Array>
+<Array>
+<Name>Group Listings</Name>
+<Dimsize>0</Dimsize>
+<Cluster>
+<Name>Tag Grouping</Name>
+<NumElts>2</NumElts>
+<String>
+<Name>Group</Name>
+<Val></Val>
+</String>
+<Array>
+<Name>Tag Names</Name>
+<Dimsize>0</Dimsize>
+<String>
+<Name>Names</Name>
+<Val></Val>
+</String>
+</Array>
+</Cluster>
+</Array>
+</Cluster>
+</LVData>

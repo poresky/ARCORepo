@@ -1,0 +1,16 @@
+
+ [12:00:08 PM] 
+ [12:01:22 PM] Supervisor: 
+ [1:31:02 PM] Supervisor: Frequency response test was manually started within a couple of seconds of system time 5000 sec. The test is a PRBS 500 Watt amplitude, 255 bit at 10 second per bit input. It will have three periods resulting in 128 minutes of run time. 
+ [1:31:40 PM] Supervisor: The test was started around 1:23 pm and should conclude around 3:31 pm. 
+ [1:33:02 PM] Supervisor: The bypass loop was at a temperature of 43.5 Celsius at the start of the test. The flow rate dropped to 0.175 at the beginning of the test, with the long decrease in power (and therefore temperature).
+ [1:33:30 PM] Supervisor: The pump frequency will be kept constant at 38.2 Hz and the CTAH frequency will be kept constant at 24.4 Hz.
+ [1:36:44 PM] Supervisor: Note that the pump was switched to the old TCHX variable frequency drive, so the old steady state value of 19.2 Hz does not apply. The new VFD required higher operating frequencies to obtain the same flow rate. The flow rate was extrapolated from a linear correlation to get a frequency of 41 Hz for 0.18 kg/s at room temperature. The maximum limit was reset to 45 Hz in the VFD_No_TCHX.vi as well as the limits in the Reactor_V1.vi. The indicator on the front panel was also adjusted to allow for the display of higher frequencies. 
+ [1:39:31 PM] Supervisor: The second test will be a PRBS input with an amplitude of 500 Watts, a length of 511 bits per period at 10 seconds per bit. The input has 2 periods resulting in a test time of around 170 minutes. 
+ [4:02:34 PM] Supervisor: The first test started to repeat itself because I forgot to switch the operation mode from power profile input to resistance feedback. I killed the test with exit profile and let the system reach a steady state before starting the next test. 
+ [4:03:32 PM] Supervisor: The next test was started at 3:38 pm at a test time of 13100 seconds. The input is 170 minutes long, which means it should end around 6:28 pm.
+ [4:04:21 PM] Supervisor: The procedure should be updated to include the necessary steps for properly finding, loading, and running a frequency response test profile. 
+ [4:05:20 PM] Supervisor: Once the test is started, the operator should switch the " Select operation mode" back to "Resistance Feedback". 
+ [6:06:04 PM] Supervisor: The second test continuously operated at slightly above 0.180 kg/s. In the future, use 38.1 Hz for the fan speed instead of 38.2 Hz. 
+ [6:06:25 PM] Supervisor: Or even 38.0 Hz 
+ [6:31:32 PM] Supervisor: 

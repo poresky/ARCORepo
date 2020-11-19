@@ -1,0 +1,27 @@
+
+ [3:10:44 PM] 
+ [3:12:24 PM] Supervisor: 
+ [3:27:46 PM] Supervisor: "System Time" is not showing correctly.
+ [3:29:01 PM] Supervisor: 
+ [3:32:25 PM] Instructor: What's up brother
+ [3:34:58 PM] Supervisor: 
+ [3:51:17 PM] Supervisor: lj
+ [3:51:20 PM] Supervisor: 
+ [3:51:41 PM] Supervisor: Reaching steady state Mr. Instructor.
+ [3:52:04 PM] Supervisor: 
+ [3:53:44 PM] Instructor has aborted communication.
+ [3:53:52 PM] Supervisor: 
+ [3:57:35 PM] Supervisor: At 2000  Watts power I was unable to reach a CTAH outlet temperature of 80 C with the lowest possible fan frequency (3 Hz). Power was increased to 3000 W to allow for an outlet temperature of 80 C. 
+ [3:57:51 PM] Supervisor: 
+ [3:58:29 PM] Instructor: 
+ [3:58:49 PM] Supervisor: 
+ [3:59:04 PM] Instructor: 
+ [3:59:04 PM] Supervisor: 
+ [3:59:09 PM] Instructor: 
+ [3:59:49 PM] Supervisor: 
+ [4:21:41 PM] Instructor has aborted communication.
+ [4:27:23 PM] Supervisor: 
+ [4:55:39 PM] Instructor has aborted communication.
+ [4:57:52 PM] Supervisor: 
+ [5:22:15 PM] Instructor has aborted communication.
+ [5:33:51 PM] Supervisor: 

@@ -1,0 +1,9 @@
+
+ [10:44:58 AM] 
+ [10:48:58 AM] Supervisor: 
+ [10:57:39 AM] Supervisor: Started up pump and CTAH fan for test to make sure they are working. 
+ [10:58:20 AM] Supervisor: The flowmeter is lagged for some reason with this VI, not sure what is causing that, but I just looked on the coriolis flowmeter itself to get a flowrate of 648 kg/h, which is 0.18 kg/s. 
+ [10:59:36 AM] Supervisor: The power supplies were kept off during the general procedure, now we are going to turn off the flow data with the Collect Flow Data button, making it gray. We then follow the "Core Module Procedures" to switch from digital control to analog control with the power supplies. To do this, the power supplies and breakers should be off, and locked out. 
+ [11:00:09 AM] Supervisor: The test procedure does not have the analog control steps, so make sure to use the correct auxiliary procedure.
+ [11:00:45 AM] Supervisor: The section 7 of the test specific procedure is for an old test, so I will be going through and writing up a new one as we go through this experiment and troubleshoot. 
+ [11:18:01 AM] Supervisor: 

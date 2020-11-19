@@ -1,0 +1,34 @@
+function [P,prev_rho] = reactor_power(P0,rho0,dt,hard_drop,medium_drop,soft_drop,Tf,Tc)
+
+%Neutronics%
+
+lambda = .0785; %[s^-1] 
+Lambda = 5.02*10^(-4); %[s] Prompt Neutron Generation Time
+beta = .0065; %Delayed neutron fraction
+
+%Control Rod Worth%
+
+control_rod_worth_constant = 1.50505; %k = control_rod_worth_constant - control_rod_worth_coeffecient * amt_rod_in
+control_rod_worth_coeffecient = 1; %k = control_rod_worth_constant - control_rod_worth_coeffecient * amt_rod_in
+
+%Temperature Feedback%
+
+Fuel_Feedback = -6.7;
+Coolant_Feedback = -2.1;
+Tf_eq = 100;
+Tc_eq = 100;
+
+
+k = control_rod_drop(mean(hard_drop),mean(medium_drop),mean(soft_drop),control_rod_worth_constant,control_rod_worth_coeffecient);
+rho_T = rhoT(Tf,Tc,Fuel_Feedback,Coolant_Feedback,Tf_eq,Tc_eq);
+rho = (k-1)/k+rho_T;
+prev_rho=rho;
+
+s1 = (lambda*rho)/(beta-rho);
+s2 = (beta - rho)/(Lambda);
+[P] = power_function(P0,dt,rho,rho0,s1,s2,beta);
+if P<1
+ %   P = 1;
+%elseif P>10100
+%    P = 10100;
+%end

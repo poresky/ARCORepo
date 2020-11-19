@@ -1,0 +1,6 @@
+[CIET-PXIe]
+CIET-PXIe = "192.168.1.4"
+
+[My Computer]
+My Computer = "192.168.1.3"
+
