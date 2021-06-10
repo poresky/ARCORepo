@@ -1,0 +1,29 @@
+ [2:25:38 PM] 
+ [2:31:17 PM] Supervisor: Pump frequency: 25
+ [2:31:50 PM] Supervisor: Mass flow rate: 0.110
+ [2:36:28 PM] Supervisor: Raised pump frequency to 30.0 Hz
+ [2:37:24 PM] Supervisor: Raised pump frequency to 31.0 Hz
+ [2:38:20 PM] Supervisor: Raised pump frequency to 33.0 Hz
+ [2:42:41 PM] Supervisor: Achieved Mass flow rate FM-40 of 0.177
+ [2:51:51 PM] Reactor: primary flow rate gave yellow warning light
+ [2:54:31 PM] Supervisor: Warning was due to primary flow through FM-40 higher than setpoint of 0.180
+ [3:04:19 PM] Supervisor: Desired power reached, raising CTAH frequency
+ [3:04:26 PM] Reactor: set CTAH frequency to 5.0 hz
+ [3:05:19 PM] Reactor:  CTAH frequency to 10.0 hz
+ [3:06:10 PM] Reactor: set CTAH frequency to 15.0 hz
+ [3:07:13 PM] Reactor: set CTAH frequency to 20.0 hz
+ [3:07:58 PM] Reactor: set CTAH frequency to 25.0 hz
+ [3:10:20 PM] Reactor: set CTAH frequency to 26.0 hz
+ [3:11:01 PM] Reactor:  set CTAH frequency to 27.0 hz
+ [3:12:30 PM] Reactor: set CTAH frequency to 28.0 hz
+ [3:14:36 PM] Supervisor: Initiated CTAH fault procedure
+ [3:14:52 PM] Reactor:  set CTAH frequency to 30.0 hz
+ [3:16:04 PM] Reactor: set CTAH frequency to 25.0 hz
+ [3:16:24 PM] Supervisor: CTAH outlet tempterature WT-40 observed rising following raising frequency IAW procedure. Initialited fault procedure, temperature continues to rise 94.0 Hz
+ [3:16:50 PM] Supervisor: CTAH blockage found: foreign material blocking the fan.
+ [3:18:18 PM] Reactor: BT-43 gave yellow warning light
+ [3:18:49 PM] Reactor: BT-43 warning cleared
+ [3:19:25 PM] Reactor: set CTAH frequency to 28.0 hz
+ [3:21:18 PM] Reactor: set CTAH frequency to 30.0 hz
+ [3:21:26 PM] Supervisor: CTAH fault resolved.
+ [3:24:44 PM] Reactor: set CTAH frequency to 60.0 hz

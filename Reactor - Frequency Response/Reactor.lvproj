@@ -113,10 +113,10 @@
 			<Item Name="Remote VI Close.vi" Type="VI" URL="../../Remote VI Close.vi"/>
 			<Item Name="Remote VI Run.vi" Type="VI" URL="../../Remote VI Run.vi"/>
 		</Item>
-		<Item Name="CTAH Controller.vi" Type="VI" URL="../CTAH Controller.vi"/>
-		<Item Name="Reactor Log.vi" Type="VI" URL="../Reactor Log.vi"/>
-		<Item Name="Reactor Read Client.vi" Type="VI" URL="../Reactor Read Client.vi"/>
-		<Item Name="Reactor Write Client.vi" Type="VI" URL="../Reactor Write Client.vi"/>
+		<Item Name="CTAH Controller.vi" Type="VI" URL="../../Reactor/CTAH Controller.vi"/>
+		<Item Name="Reactor Log.vi" Type="VI" URL="../../Reactor/Reactor Log.vi"/>
+		<Item Name="Reactor Read Client.vi" Type="VI" URL="../../Reactor/Reactor Read Client.vi"/>
+		<Item Name="Reactor Write Client.vi" Type="VI" URL="../../Reactor/Reactor Write Client.vi"/>
 		<Item Name="Reactor.lvlib" Type="Library" URL="../Reactor.lvlib"/>
 		<Item Name="Reactor.vi" Type="VI" URL="../Reactor.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -389,7 +389,7 @@
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="PID_Gain_Converter.vi" Type="VI" URL="../PID_Gain_Converter.vi"/>
+			<Item Name="PID_Gain_Converter.vi" Type="VI" URL="../../Reactor/PID_Gain_Converter.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

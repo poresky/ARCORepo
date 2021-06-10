@@ -390,6 +390,8 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="PID_Gain_Converter.vi" Type="VI" URL="../PID_Gain_Converter.vi"/>
+			<Item Name="Threshold_CTAH_Inlet.vi" Type="VI" URL="../Threshold_CTAH_Inlet.vi"/>
+			<Item Name="Threshold_Mass_Flow_Rate.vi" Type="VI" URL="../Threshold_Mass_Flow_Rate.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

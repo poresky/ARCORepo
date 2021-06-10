@@ -6,6 +6,7 @@ connect(uaClient)
 MATLABBooleansNode = findNodeByName(uaClient.Namespace,'MATLAB Booleans');
 BooleanControlNode = findNodeByName(uaClient.Namespace,'Boolean Control Actions');
 NumericControlNode = findNodeByName(uaClient.Namespace,'Numeric Control Actions');
+StringControlNode = findNodeByName(uaClient.Namespace,'String Control Actions');
 CIETDataNode = findNodeByName(uaClient.Namespace,'CIET Data');
 [matlab_booleans, date_time_matlab] = readValue(uaClient,MATLABBooleansNode);
 matlab_active = matlab_booleans(1);
@@ -17,15 +18,18 @@ StringNode = findNodeByName(uaClient.Namespace,'Chat');
 %% For each line of data, check to see if previous value equals new value. If not, print a report of the change.
 % If want this script to output a comprehensive report of all operator actions, concatenate table with each new report and write to file on computer. 
 % Variables desired_power, power_bool, pump_freq, pump_bool, tchx_freq, tchx_bool, ctah_bool
-old_data = [0,0,0,0,0,0,0,0,0,0];
+old_data = [0,0,0,0,0,0,0,0,0,0,0,0];
 displayed_report = [];
 if matlab_active == true
     while matlab_active == true
         % Read values from nodes and define them a+s variables.
+        %[ctah_mode_memory, date_time_ctah] = readValue(uaClient,StringControlNode);
+        % ctah_op = ctah_mode_memory(1);
         [matlab_booleans, date_time_matlab] = readValue(uaClient,MATLABBooleansNode);
         matlab_active = matlab_booleans(1); 
         operator_actions = matlab_booleans(2);
         [numeric_control_actions, date_time_numeric] = readValue(uaClient, NumericControlNode);
+        ctah_op = numeric_control_actions(2);
         ctah_freq = numeric_control_actions(5); 
         tchx_freq = numeric_control_actions(6); 
         pump_freq = numeric_control_actions(7); 
@@ -37,7 +41,7 @@ if matlab_active == true
         pump_bool = boolean_control_actions(5);
         [ciet_data, date_time_ciet] = readValue(uaClient, CIETDataNode);
         timestamp = ciet_data(1);
-        new_data = [timestamp, desired_power, power_bool, pump_freq, pump_bool, tchx_freq, tchx_bool, ctah_bool];
+        new_data = [timestamp, desired_power, power_bool, pump_freq, pump_bool, tchx_freq, tchx_bool, ctah_bool, ctah_freq, ctah_op];
         if operator_actions == true
                 if new_data(1,3) ~= old_data(1,3)
                     if new_data(1,3) == 1
@@ -89,6 +93,14 @@ if matlab_active == true
                     end
                     old_data(1,8) = new_data(1,8); 
                     disp(displayed_report)
+                end
+                if new_data(1,9) ~= old_data(1,9)
+                    displayed_report = ['Reactor operator changed CTAH frequency to ' num2str(ctah_freq) ' Hz at ' num2str(timestamp) ' seconds'];
+                    old_data(1,9) = new_data(1,9);
+                    disp(displayed_report)
+                end
+                if new_data(1,10) ~= old_data(1,10)
+                    disp(new_data(1,10))
                 end
                 %writeValue(uaClient,StringNode,[displayed_report])
                 writeValue(uaClient,OperatorActionsNode,[displayed_report])
