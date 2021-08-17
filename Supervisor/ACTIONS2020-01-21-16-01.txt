@@ -1,0 +1,67 @@
+
+ [4:01:10 PM] 
+ [4:07:09 PM] Reactor operator activated CTAH at 360.1 seconds
+ [4:07:11 PM] Reactor operator activated pump at 362.1 seconds
+ [4:07:39 PM] Reactor operator changed pump frequency to 0.1 Hz at 390.9 seconds
+ [4:07:40 PM] Reactor operator changed pump frequency to 0.3 Hz at 391.3 seconds
+ [4:07:40 PM] Reactor operator changed pump frequency to 0.4 Hz at 391.4 seconds
+ [4:07:42 PM] Reactor operator changed pump frequency to 5 Hz at 393.7 seconds
+ [4:07:52 PM] Reactor operator changed pump frequency to 15 Hz at 404.1 seconds
+ [4:08:48 PM] Reactor operator changed pump frequency to 25 Hz at 459.7 seconds
+ [4:10:00 PM] Reactor operator changed pump frequency to 25.1 Hz at 531.6 seconds
+ [4:10:00 PM] Reactor operator changed pump frequency to 25.2 Hz at 531.9 seconds
+ [4:10:01 PM] Reactor operator changed pump frequency to 25.3 Hz at 532.3 seconds
+ [4:10:01 PM] Reactor operator changed pump frequency to 25.4 Hz at 532.5 seconds
+ [4:10:01 PM] Reactor operator changed pump frequency to 25.5 Hz at 532.7 seconds
+ [4:10:01 PM] Reactor operator changed pump frequency to 25.6 Hz at 532.8 seconds
+ [4:10:04 PM] Reactor operator changed pump frequency to 30 Hz at 535.6 seconds
+ [4:10:59 PM] Reactor operator changed pump frequency to 32 Hz at 590.6 seconds
+ [4:11:46 PM] Reactor operator changed pump frequency to 38 Hz at 637.8 seconds
+ [4:12:41 PM] Reactor operator changed pump frequency to 40 Hz at 692.8 seconds
+ [4:13:11 PM] Reactor operator changed pump frequency to 41 Hz at 722.9 seconds
+ [4:13:39 PM] Reactor operator changed pump frequency to 42 Hz at 750.8 seconds
+ [4:14:39 PM] Reactor operator changed pump frequency to 35 Hz at 811 seconds
+ [4:14:50 PM] Reactor operator changed pump frequency to 25 Hz at 821.7 seconds
+ [4:14:56 PM] Reactor operator changed desired power to 1000 W at 827.4 seconds
+ [4:14:57 PM] Reactor operator turned power output on at 828.9 seconds
+ [4:15:19 PM] Reactor operator changed pump frequency to 30 Hz at 850.8 seconds
+ [4:16:33 PM] Reactor operator changed pump frequency to 30.1 Hz at 924.3 seconds
+ [4:16:39 PM] Reactor operator changed pump frequency to 35 Hz at 930.8 seconds
+ [4:16:47 PM] Reactor operator changed desired power to 2000 W at 938.6 seconds
+ [4:17:00 PM] Reactor operator changed desired power to 3000 W at 951.7 seconds
+ [4:17:13 PM] Reactor operator changed desired power to 4000 W at 964.3 seconds
+ [4:17:24 PM] Reactor operator changed desired power to 5000 W at 975.7 seconds
+ [4:17:29 PM] Reactor operator changed desired power to 6000 W at 980.3 seconds
+ [4:17:42 PM] Reactor operator changed desired power to 8000 W at 994.1 seconds
+ [4:18:20 PM] Reactor operator changed pump frequency to 38 Hz at 1032.1 seconds
+ [4:19:29 PM] Reactor operator changed pump frequency to 37.9 Hz at 1101.1 seconds
+ [4:19:30 PM] Reactor operator changed pump frequency to 37.8 Hz at 1101.4 seconds
+ [4:19:30 PM] Reactor operator changed pump frequency to 37.7 Hz at 1101.6 seconds
+ [4:19:30 PM] Reactor operator changed pump frequency to 37.6 Hz at 1101.8 seconds
+ [4:19:30 PM] Reactor operator changed pump frequency to 37.5 Hz at 1101.9 seconds
+ [4:19:31 PM] Reactor operator changed pump frequency to 37.4 Hz at 1102.3 seconds
+ [4:19:31 PM] Reactor operator changed pump frequency to 37.3 Hz at 1102.4 seconds
+ [4:19:31 PM] Reactor operator changed pump frequency to 37.2 Hz at 1102.5 seconds
+ [4:19:31 PM] Reactor operator changed pump frequency to 37.1 Hz at 1102.8 seconds
+ [4:19:32 PM] Reactor operator changed pump frequency to 37 Hz at 1103.1 seconds
+ [4:19:32 PM] Reactor operator changed pump frequency to 36.9 Hz at 1103.6 seconds
+ [4:19:32 PM] Reactor operator changed pump frequency to 36.8 Hz at 1104.1 seconds
+ [4:19:33 PM] Reactor operator changed pump frequency to 36.7 Hz at 1104.5 seconds
+ [4:19:33 PM] Reactor operator changed pump frequency to 36.6 Hz at 1104.7 seconds
+ [4:19:34 PM] Reactor operator changed pump frequency to 36.5 Hz at 1106 seconds
+ [4:25:23 PM] Reactor operator changed desired power to 7750 W at 1454.8 seconds
+ [4:27:03 PM] Reactor operator deactivated CTAH at 1554.7 seconds
+ [4:27:04 PM] Reactor operator activated CTAH at 1555.7 seconds
+ [4:27:04 PM] Reactor operator changed desired power to 7750 W at 1555.8 seconds
+ [4:27:42 PM] Reactor operator changed desired power to 0 W at 1593.9 seconds
+ [4:27:57 PM] Reactor operator turned power output off at 1608.3 seconds
+ [4:28:28 PM] Reactor operator changed pump frequency to 36.4 Hz at 1639.3 seconds
+ [4:28:28 PM] Reactor operator changed pump frequency to 36.3 Hz at 1639.7 seconds
+ [4:28:28 PM] Reactor operator changed pump frequency to 36.2 Hz at 1639.9 seconds
+ [4:28:28 PM] Reactor operator changed pump frequency to 36.1 Hz at 1640 seconds
+ [4:28:29 PM] Reactor operator changed pump frequency to 36 Hz at 1640.5 seconds
+ [4:28:30 PM] Reactor operator changed pump frequency to 35.9 Hz at 1641.3 seconds
+ [4:28:30 PM] Reactor operator changed pump frequency to 35.8 Hz at 1641.8 seconds
+ [4:33:29 PM] Reactor operator changed pump frequency to 0 Hz at 1941 seconds
+ [4:33:32 PM] Reactor operator deactivated CTAH at 1943.9 seconds
+ [4:33:58 PM] Reactor operator deactivated pump at 1970 seconds

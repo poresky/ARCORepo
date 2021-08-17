@@ -287,6 +287,11 @@
 			<Item Name="Supervisor MATLAB Write Client.vi" Type="VI" URL="../Supervisor MATLAB Write Client.vi"/>
 			<Item Name="Supervisor Read Client.vi" Type="VI" URL="../Supervisor Read Client.vi"/>
 		</Item>
+		<Item Name="State Machine VIs" Type="Folder">
+			<Item Name="DAQ state machine with subvi.vi" Type="VI" URL="../../DAQ state machine/DAQ state machine with subvi.vi"/>
+			<Item Name="daqOpcUaWriter.vi" Type="VI" URL="../../DAQ state machine/daqOpcUaWriter.vi"/>
+			<Item Name="daqStreamReaderSubVi.vi" Type="VI" URL="../../DAQ state machine/daqStreamReaderSubVi.vi"/>
+		</Item>
 		<Item Name="BoP Model Control.vi" Type="VI" URL="../BoP Model Control.vi"/>
 		<Item Name="Brain.vi" Type="VI" URL="../Brain.vi"/>
 		<Item Name="Electronic Procedure Debug.vi" Type="VI" URL="../Electronic Procedure Debug.vi"/>
