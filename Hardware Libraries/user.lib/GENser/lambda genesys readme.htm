@@ -1,0 +1,433 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>lambda genesys readme</TITLE>
+<META NAME="subject" CONTENT="DC Power using LabView Drivers">
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<FONT FACE="Arial"><H2>Lambda Genesys Instrument Driver Readme</H2>
+</FONT><H4>Table of Contents:</H4><DIR>
+<DIR>
+
+<PRE><A HREF="#section_01">1.  Overview</A>
+<A HREF="#section_02">2.  Required Software</A>
+<A HREF="#section_03">3.  Installation Instructions</A>
+<A HREF="#section_04">4.  Accessing the Driver in LabVIEW</A>
+<A HREF="#section_05">5.  Using the Instrument Driver</A>
+<A HREF="#section_06">6.  Configuring the Instruments and Drivers</A>
+<A HREF="#section_07">7.  Addressing the Instrument</A>
+<A HREF="#section_08">8.  Checksum Message Checking </A>
+<A HREF="#section_09">9.  Custom Error Codes</A>
+<A HREF="#section_10">10. Unsupported Features</A>
+<A HREF="#section_11">11. Restrictions</A>
+<A HREF="#section_12">12. Known Issues</A>
+<A HREF="#section_13">13. Customer Support</A>
+<A HREF="#section_14">14. Revision History</A></PRE></DIR>
+</DIR>
+
+<H4><A NAME="section_01"></A>1. Overview</H4>
+<PRE>Instrument Driver Technology:&#9;Plug and Play
+Supported Language(s):  &#9;LabVIEW  6.1
+Supported Regional Settings:&#9;English and Universal desktops
+&#9;&#9;&#9;&#9;&#9;(period or comma separator for 
+&#9;&#9;&#9;&#9;&#9; number decimal point)
+
+Supported Models:  &#9;&#9;Lambda Genesys Series DC Power Supplies
+Models Tested:  &#9;&#9;750 and 1500 Watt, and Half-Rack
+Interfaces:&#9;&#9;&#9;Serial, RS-232 or RS-485
+Firmware Revision Tested:  &#9;Rev 1.9 and up
+
+Certified:  &#9;&#9;&#9;Yes
+NI Supported:  &#9;&#9;&#9;Yes
+Source Code Available:  &#9;Yes
+
+Driver Revision:  &#9;&#9;REV_B03, 07/2005, LV_6.1
+Original Release Date:  &#9;Aug 2003
+Current Revision Date:  &#9;Jul 2005</PRE>
+<H4><A NAME="section_02"></A>2. Required Software</H4>
+<PRE>Some software components need to be installed before using this 
+instrument driver. The minimum versions of these components are listed below,
+and can be downloaded from the Download Site.
+
+LabView   6.1  or later
+VISA      2.6  or later
+
+Note: VISA has additional software requirements. For example, NI-VISA requires 
+that NI-Serial be installed on your system. Check with VISA help for additional 
+support software and hardware requirements.    </PRE>
+<H4><A NAME="section_03"></A>3. Installation Instructions</H4>
+<PRE>Obtain a copy of the driver software.  It is packaged in a file with a name 
+similar to: 
+                "GENser.zip" 
+
+A)  Use Windows Explorer and navigate to folder:
+&#9;...\Program Files \National Instruments \LabVIEW...\instr.lib
+
+B)  Create a new folder: GENser
+
+C)  Use the ZIP utility, such as WinZip.exe,  to extract the driver files 
+    into the "GENser" folder
+
+D)  You will now have a "...\instr.lib\GENser\" folder containing:
+&#9;"GENser.llb"
+&#9;"_GENser.llb"
+&#9;five MNU menu files
+&#9;"lambda gen readme.htm" (this file)
+
+The menu files and VI libraries (LLB) make up an instrument driver. 
+The menu files allow you to view the driver VIs from the Functions palette.
+The "GENser.llb" VI library contains the instrument driver VIs.
+The "_GENser.llb"  VI library contains support drivers not normally used
+  by the programmer and they do not appear on the Function pallet (see next)</PRE>
+<H4><A NAME="section_04"></A>4. Accessing the Driver in LabVIEW</H4>
+<PRE>There is normally no need to view the library file because the driver 
+functions may be picked from a palette menu.
+
+A)  Right-click on a blank place on the VI diagram
+    See the "Functions" palette open.  Navigate:
+&#9;Functions -&gt;  
+&#9;&#9;Instrument I/O -&gt;  
+&#9;&#9;&#9;Instrument Drivers -&gt;  
+&#9;&#9;&#9;&#9;Lambda GENESYS Serial DC-Power
+
+B)  Alternately,  click diagram's menu bar:  
+&#9;Window -&gt;  "Show Functions Palette" and navigate the above menus </PRE>
+<H4><A NAME="section_05"></A>5. Using the Instrument Drivers</H4>
+<PRE>LabVIEW:
+To verify communication with your instrument and test a typical remote
+instrument operation, you should first open the Getting Started or Example 
+VIs the instrument driver. Look over each of the controls and set them 
+appropriately.  Generally, with the exception of the address field, the 
+defaults for most controls will be sufficient for your first run. You will 
+need to set the instrument resource name appropriately. After running the VI, 
+check to see that reasonable data was returned and an error was not reported 
+in the error cluster.
+
+You can right-click any object on the driver panel to see its description.
+
+After you have verified basic communication with your instrument, you might 
+want to customize instrument control for your needs. If your application 
+needs are similar to the Getting Started or Example VI, the simplest means of 
+creating a customized VI is to save a copy of the Getting Started or Example 
+VI by selecting "Save As" from the File menu. You can then modify this example 
+to meet your specific needs.
+
+For more details, reference the LabVIEW Help under:
+                                       Help » VI, Function, and How-To Help.&nbsp;</PRE>
+<H4><A NAME="section_06"></A>6. Configuring the Instruments and Drivers</H4>
+<PRE>The controls on the "Initialize.vi" driver must match the settings on the power
+supply you want to communicate to. See the Genesys Technical Manual, Chapter 7, 
+for details on setting the address and Baud rate for each instrument and for 
+selecting and connecting the RS-232 or RS-485 cables.
+
+On the "Initialize.vi" driver panel, click the "VISA name" control. A list of 
+all available RS-232 and RS-485 serial ports should drop down. If they do not, 
+there is a configuration problem with the VISA layer. The serial ports may be 
+checked by using the NI Measurement &amp; Automation Explorer (NI MAX) or similar 
+program. Right-click the "VISA name" control and select "Description" for more 
+information.</PRE>
+<H4><A NAME="section_07"></A>7. Addressing the Instrument</H4>
+<PRE>Every driver has a "GEN Addr" control terminal. This must be wired in the first 
+driver "Initialize.vi". Communication with the first instrument is verified when
+the driver is run.  
+
+For any driver used after "Initialize.vi", wiring the "GEN Addr" control is 
+optional. If the control is not wired, the driver command will be sent to the 
+last instrument that was addressed. This is called a 'sticky' address or
+address caching.</PRE>
+<H4><A NAME="Addr_Cache_Exception"><A NAME="section_08"></A></A>8. Checksum Message Checking</H4>
+<PRE>All messages sent to the Genesys power supply have a checksum added to the end
+of the message. The checksum is in the form "dollar sign" plus "two hex digits". 
+All responses from the power supply have a checksum which is verified by the 
+drivers.
+
+See "GENser Checksum Append.vi" and "GENser Checksum Verify.vi" in _GENser.llb.</PRE>
+<H4><A NAME="section_09"></A>9. Custom Error Codes</H4>
+<PRE>Every driver checks for errors and any found are returned in the "error out"
+cluster. There are three sources of errors and only the highest priority 
+error is returned:
+
+&#9;&#9;&#9;<B>ERROR TYPES</PRE></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=660>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<B><PRE>Priority</PRE></B></TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<B><PRE>Type</PRE></B></TD>
+<TD WIDTH="63%" VALIGN="TOP">
+<B><PRE>Description</PRE></B></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<PRE>Highest</PRE></TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<PRE>VISA Error</PRE></TD>
+<TD WIDTH="63%" VALIGN="TOP">
+<PRE>Returned by VISA functions such as Write or Read
+Examples: After command sent, no response received</PRE></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<PRE>Instrument Error</PRE></TD>
+<TD WIDTH="63%" VALIGN="TOP">
+<PRE>Error code returned by instrument. Expected an 
+"OK" response but received error such as "C01".
+Examples: see "COMMAND ERRORS" table below</PRE></TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<PRE>Lowest</PRE></TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<PRE>Driver Error</PRE></TD>
+<TD WIDTH="63%" VALIGN="TOP">
+<PRE>Driver found the command has a bad format or a
+response message is corrupted.
+Examples: see "RESPONSE ERRORS" table below</PRE></TD>
+</TR>
+</TABLE>
+
+<PRE>
+The VISA standard allows custom error codes in the range:
+&#9;&#9;-1073999873 to -1074001919  ( BFFC0801 to BFFC0FFF hex)
+The instrument errors are formulated in "GENser Convert Errors.vi".
+All returns are errors; there are no warnings.
+
+<B>&#9;&#9;&#9;EXAMPLES:  INSTRUMENT ERRORS</PRE></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=640>
+<TR><TD WIDTH="18%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Decimal Code</PRE></B></TD>
+<TD WIDTH="17%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Hex Code</PRE></B></TD>
+<TD WIDTH="65%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Meaning</PRE></B></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001663</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0901</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Execution error "E01". The voltage setting is too
+high and conflicts with over-voltage protection</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001662</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0902</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Execution error "E02". The voltage setting is too
+low and conflicts with under-voltage limit</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001660</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0904</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Execution error "E04". The over-voltage protection
+is too low and conflicts with the voltage setting</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001658</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0906</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Execution error "E06". The under-voltage limit
+is too high and conflicts with the voltage setting</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001657</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0907</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Execution error "E07". Attempt to turn the output
+ON while a fault is keeping the output OFF</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001407</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0A01</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Command error "C01". Illegal command or query</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001406</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0A02</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Command error "C02". Missing parameter. Command
+requires a value but the value is missing</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001405</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0A03</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Command error "C03". Illegal parameter. Command
+requires a value but value is wrong type</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001404</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0A04</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Command error "C04". Checksum error. Genesys  
+received message with checksum but checksum 
+calculation was not the same as received checksum </PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001403</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0A05</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Command error "C05". Setting out of range. Attempt
+to program a setting outside of the model rating</PRE></TD>
+</TR>
+</TABLE>
+
+<PRE>
+
+<B>&#9;&#9;&#9;EXAMPLES: DRIVER ERRORS</PRE></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=640>
+<TR><TD WIDTH="18%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Decimal Code</PRE></B></TD>
+<TD WIDTH="17%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Hex Code</PRE></B></TD>
+<TD WIDTH="65%" VALIGN="TOP" HEIGHT=22>
+<B><PRE>Meaning</PRE></B></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074003951</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0011</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>No response from "ID Query" in "Initialize.vi".
+May be an incorrect address setting or the
+instrument is not communicating</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001912</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0808</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>No response when switching to a new GEN address</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001910</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC080A</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>When switching to a new GEN address, a response 
+was received but it was not "OK"</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001908</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC080C</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Did not get response from GEN instrument when 
+first sending its address command</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001906</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC080E</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>When first sending a GEN it's address command, 
+received a response but it was not "OK" </PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001902</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0812</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Could not parse identity fields to get the
+model number ("GENvvv-ccc")</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001900</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0814</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Attempt to send query to "Write to Instrument".
+Cannot have "?" in command string</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001898</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0816</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Attempt to send command to "Read Instrument Data".
+Must have "?" in query string</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001896</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0818</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>After command, received a response but it was
+not "OK" or any valid error code</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001888</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0820</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Checksum error: did not verify CS returned in
+instrument response</PRE></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<PRE>-1074001886</PRE></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<PRE>BFFC0822</PRE></TD>
+<TD WIDTH="65%" VALIGN="TOP">
+<PRE>Checksum error: CS missing or wrong format</PRE></TD>
+</TR>
+</TABLE>
+
+<H4><A NAME="section_10"></A>10. Unsupported Features</H4>
+<PRE>The following Genesys capabilities are not supported by these drivers:
+- Event and Enable registers (FEVE, FENA, SEVE and SENA commands)
+- SRQ interrupts 
+- Calibration commands
+- Calibration Date (DATE? query)</PRE>
+<H4><A NAME="section_11"></A>11. Restrictions</H4>
+<H5>A. Applicable Genesys Firmware Revisions</H5>
+<PRE>The Genesys firmware revision may be read by using the driver:
+&#9;"GENser Revision Query.vi" 
+
+These drivers are fully compatible with Genesys units having firmware
+revision "1.9" or later (made after Aug 2004)</PRE>
+<H5>B. Restriction for Service Requesting</H5>
+<PRE>These drivers are <I>not</I> compatible with any programs that enables the
+Genesys Service Request registers (the "SENA nn" and "FENA nn" commands). 
+This is because the SRQ message from the Genesys (form "!nn") will be
+added to any response messages and interpreted as illegal characters</PRE>
+<H4><A NAME="section_12"></A>12. Known Issues</H4>
+<PRE>There are currently no known issues with this instrument driver.</PRE>
+<H4><A NAME="section_13"></A>13. Customer Support</H4>
+<PRE>For technical support and driver upgrades, you can contact Lambda at 
+the following telephone number:
+
+      Lambda Americas&#9;&#9;(732)922-9300 Ext 209 
+      Customer Service          <A HREF="mailto:dave.ransom@lambda.com">dave.ransom@lambda.com</A>
+      405 Essex Road
+      Neptune, New Jersey, 07753  USA
+
+Or visit our support web page at: 
+&#9;&#9;&#9;&#9;<A HREF="http://www.lambda-emi.com/service.htm">http://www.lambda-emi.com/service.htm</A>
+
+Or contact your Lambda Representative</PRE>
+<H4><A NAME="section_14"></A>14. Revision History</H4>
+<PRE>    REV_A00, 08/2003, LV_6.1
+&#9;Original Release
+    &#9;by Walter Heyck
+&#9;   Lambda Americas
+
+    REV_B03, 07/2005, LV_6.1
+&#9;Updated to make Plug-n-Play compatible, including:
+&#9;&#9;Adding the MNU files for the function pallet.
+&#9;&#9;Making error codes VISA compliant.
+&#9;&#9;Deleting the "GEN_Errors.txt" file
+&#9;by Walter Heyck
+&#9;   Lambda Americas</PRE></BODY>
+</HTML>
